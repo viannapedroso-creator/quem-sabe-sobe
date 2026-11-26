@@ -31,6 +31,11 @@
   document.addEventListener('pointerup', (e) => { if (e.target.closest('button')) telaCheia(); }, { once: true });
   botaoCheia();
 
+  // Dica só para iPhone/iPad no Safari, mostrada uma vez
+  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (ios && !emCheia() && !ler('dica_ios')) $('dicaIos').classList.remove('oculto');
+  $('bDicaIos').addEventListener('click', () => { $('dicaIos').classList.add('oculto'); guardar('dica_ios', '1'); });
+
   // Senha vinda do QR code
   const daUrl = Q.limparCodigo(new URLSearchParams(location.search).get('sala'));
   $('fCodigo').value = daUrl || (ler('sala') || '');
