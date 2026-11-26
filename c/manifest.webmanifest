@@ -1,0 +1,14 @@
+{
+  "name": "Quem sabe sobe! · Controle",
+  "short_name": "Quem sabe sobe!",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#EAF4FF",
+  "theme_color": "#EAF4FF",
+  "icons": [
+    { "src": "../img/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "../img/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

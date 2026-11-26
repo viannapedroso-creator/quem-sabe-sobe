@@ -13,6 +13,24 @@
   function erro(txt) { $('erro').textContent = txt || ''; }
   function vibrar(ms) { try { navigator.vibrate && navigator.vibrate(ms); } catch (e) {} }
 
+  // Tela cheia: esconde a barra do navegador (Android). No iPhone, o jeito é "Adicionar à Tela de Início".
+  const docEl = document.documentElement;
+  const podeCheia = !!(docEl.requestFullscreen || docEl.webkitRequestFullscreen);
+  const emCheia = () => !!(document.fullscreenElement || document.webkitFullscreenElement) || matchMedia('(display-mode: fullscreen), (display-mode: standalone)').matches;
+  function telaCheia() {
+    if (!podeCheia || emCheia()) return;
+    try {
+      const p = docEl.requestFullscreen ? docEl.requestFullscreen({ navigationUI: 'hide' }) : docEl.webkitRequestFullscreen();
+      Promise.resolve(p).then(() => { try { screen.orientation && screen.orientation.lock && screen.orientation.lock('landscape').catch(() => {}); } catch (e) {} }).catch(() => {});
+    } catch (e) {}
+  }
+  function botaoCheia() { $('cheia').classList.toggle('oculto', !podeCheia || emCheia()); }
+  document.addEventListener('fullscreenchange', botaoCheia); document.addEventListener('webkitfullscreenchange', botaoCheia);
+  $('cheia').addEventListener('click', telaCheia);
+  // O primeiro toque em qualquer botão já pede tela cheia
+  document.addEventListener('pointerup', (e) => { if (e.target.closest('button')) telaCheia(); }, { once: true });
+  botaoCheia();
+
   // Senha vinda do QR code
   const daUrl = Q.limparCodigo(new URLSearchParams(location.search).get('sala'));
   $('fCodigo').value = daUrl || (ler('sala') || '');
