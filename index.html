@@ -55,6 +55,90 @@
 #comecando p{font-size:34px;font-weight:800;color:var(--tinta2);margin:0;max-width:1200px}
 #fila{display:flex;gap:18px;justify-content:center;margin-top:20px}
 #fila img{height:220px}
+/* ===== Partida ===== */
+#corujaJogo{position:absolute;left:40px;bottom:24px;z-index:50;display:flex;align-items:flex-end;gap:10px;pointer-events:none;transition:all .4s}
+#corujaJogo img{height:230px;transition:height .4s}
+#corujaJogo .balao{position:relative;max-width:600px;font-size:30px;margin-bottom:120px}
+#corujaJogo.grande{left:90px;bottom:60px}
+#corujaJogo.grande img{height:470px}
+#corujaJogo.grande .balao{max-width:1180px;font-size:42px;margin-bottom:110px}
+.balao.surge{animation:surge .3s ease-out}
+@keyframes surge{0%{transform:scale(.9);opacity:.3}100%{transform:scale(1);opacity:1}}
+.topo-jogo{position:absolute;left:0;right:0;top:120px;text-align:center}
+.topo-jogo h1{font-size:64px}
+.topo-jogo p{margin:6px 0 0;font-size:28px;font-weight:800;color:var(--tinta2)}
+/* Explicação */
+#regras{position:absolute;right:120px;top:230px;width:900px;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:16px}
+#regras li{display:flex;align-items:center;gap:18px;background:#fff;border-radius:22px;padding:16px 22px;font-size:30px;font-weight:800;box-shadow:0 6px 0 var(--sombra-card);opacity:.45;transition:all .3s}
+#regras li b{flex:none;width:54px;height:54px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-size:30px}
+#regras li.ativa{opacity:1;transform:scale(1.04);box-shadow:0 6px 0 var(--amarelo-esc);background:#FFF6D6}
+#regras li.vista{opacity:.9}
+/* Portas */
+#portaTempo:empty{display:none}
+#portaTempo{position:absolute;right:90px;top:130px;font-family:Fredoka,sans-serif;font-weight:700;font-size:46px;background:#fff;border-radius:20px;padding:6px 22px;box-shadow:0 6px 0 var(--sombra-card)}
+#portas{position:absolute;left:0;right:0;top:300px;display:flex;justify-content:center;gap:70px}
+.porta{display:flex;flex-direction:column;align-items:center;gap:16px;transition:all .5s}
+.porta .folha{position:relative;width:340px;height:470px;border-radius:30px 30px 12px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:var(--tinta);padding:20px;text-align:center}
+.porta.amarelo .folha{background:var(--amarelo);box-shadow:0 12px 0 var(--amarelo-esc)}
+.porta.azul .folha{background:var(--azul);color:#fff;box-shadow:0 12px 0 var(--azul-esc)}
+.porta.vermelho .folha{background:var(--vermelho);color:#fff;box-shadow:0 12px 0 var(--vermelho-esc)}
+.porta .num{font-family:Fredoka,sans-serif;font-weight:700;font-size:120px;line-height:1;opacity:.35}
+.porta .cat{font-family:Fredoka,sans-serif;font-weight:700;font-size:44px;line-height:1.05}
+.porta .macaneta{position:absolute;right:30px;top:52%;width:28px;height:28px;border-radius:50%;background:#fff;opacity:.8}
+.porta .votos{display:flex;gap:4px;min-height:90px;flex-wrap:wrap;justify-content:center;width:340px}
+.porta .votos img{height:86px;animation:pula .4s ease-out}
+.porta.venceu{transform:scale(1.1)}
+.porta.venceu .folha{outline:8px solid #fff;outline-offset:6px}
+.porta.perdeu{opacity:.3;transform:scale(.92)}
+/* Pergunta */
+#pergunta .cabeca{position:absolute;left:130px;top:130px;display:flex;gap:16px;align-items:center}
+.chip-cat{font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;background:var(--amarelo);border-radius:999px;padding:8px 24px;box-shadow:0 5px 0 var(--amarelo-esc)}
+#pNum{font-size:28px;font-weight:900;color:var(--tinta2)}
+#pRelogio{position:absolute;right:110px;top:120px;width:200px;height:200px}
+#pRelogio svg{width:100%;height:100%}
+#pSeg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:80px}
+#pRelogio.urgente #pArco{stroke:var(--vermelho)}
+#pRelogio.urgente #pSeg{color:var(--vermelho-esc);animation:pulsa .5s infinite alternate}
+@keyframes pulsa{to{transform:scale(1.12)}}
+#pTexto{position:absolute;left:130px;top:220px;width:1430px;min-height:190px;padding:36px 44px;font-family:Fredoka,sans-serif;font-weight:700;font-size:58px;line-height:1.12;display:flex;align-items:center}
+.ops{position:absolute;left:130px;top:470px;width:1660px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.op{position:relative;display:flex;align-items:center;gap:20px;background:#fff;border-radius:24px;padding:18px 26px;min-height:112px;font-size:40px;font-weight:900;box-shadow:0 7px 0 var(--sombra-card);transition:all .35s;opacity:.55}
+.ops.abertas .op,.ops.revelado .op{opacity:1}
+.op b{flex:none;width:68px;height:68px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-size:40px;color:#fff}
+.op0 b{background:var(--azul)}.op1 b{background:var(--amarelo-esc)}.op2 b{background:var(--verde-esc)}.op3 b{background:var(--vermelho)}
+.ops.revelado .op{opacity:.35;transform:scale(.97)}
+.ops.revelado .op.certa{opacity:1;transform:scale(1.03);background:#E4F7DA;box-shadow:0 7px 0 var(--verde-esc);outline:6px solid var(--verde);outline-offset:-6px}
+.marcaram{position:absolute;right:18px;top:50%;transform:translateY(-50%);display:flex;gap:2px}
+.marcaram img{height:84px}
+#pJogadores{position:absolute;left:880px;right:24px;bottom:22px;display:flex;justify-content:center;gap:6px}
+.jp{position:relative;display:flex;flex-direction:column;align-items:center;width:120px;opacity:.55;transition:all .3s}
+.jp img{height:120px}
+.jp span{font-size:20px;font-weight:900;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.jp.respondeu{opacity:1}
+.jp.acertou{transform:translateY(-10px)}
+.jp .selo{top:-6px;right:4px;font-size:22px}
+.selo.azul{background:var(--azul);box-shadow:0 4px 0 var(--azul-esc)}
+.selo.vermelho{background:var(--vermelho);box-shadow:0 4px 0 var(--vermelho-esc)}
+.selo.cinza{background:#9AA6BF;box-shadow:0 4px 0 #6C7894}
+/* Placar */
+.placar{position:absolute;left:370px;top:220px;width:1180px;margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.placar li{display:flex;align-items:center;gap:18px;background:#fff;border-radius:22px;padding:4px 24px 4px 18px;height:66px;box-shadow:0 6px 0 var(--sombra-card);animation:entra .45s ease-out both}
+.placar li:nth-child(2){animation-delay:.06s}.placar li:nth-child(3){animation-delay:.12s}.placar li:nth-child(4){animation-delay:.18s}
+.placar li:nth-child(5){animation-delay:.24s}.placar li:nth-child(6){animation-delay:.3s}.placar li:nth-child(7){animation-delay:.36s}.placar li:nth-child(8){animation-delay:.42s}
+@keyframes entra{from{opacity:0;transform:translateX(60px)}}
+.placar li.lider{background:#FFF6D6;box-shadow:0 6px 0 var(--amarelo-esc)}
+.placar .pos{width:66px;font-family:Fredoka,sans-serif;font-weight:700;font-size:40px}
+.placar img{height:60px;width:60px;object-fit:contain}
+.placar .quem{width:250px;display:flex;flex-direction:column;line-height:1.1}
+.placar .quem b{font-family:Fredoka,sans-serif;font-size:32px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.placar .quem small{font-size:18px;font-weight:800;color:var(--tinta2)}
+.placar .barra{flex:1;height:24px;border-radius:999px;background:#E3EEFC;overflow:hidden}
+.placar .barra i{display:block;height:100%;border-radius:999px;background:var(--azul);transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.placar li.lider .barra i{background:var(--amarelo-esc)}
+.placar .pts{width:220px;text-align:right;font-family:Fredoka,sans-serif;font-weight:700;font-size:36px;display:flex;flex-direction:column;line-height:1}
+.placar .pts em{font-style:normal;font-size:22px;color:var(--verde-esc)}
+#fim .placar{top:225px}
+#deNovo{position:absolute;right:120px;bottom:60px;font-size:36px;padding:20px 44px;z-index:60}
 /* Aviso de configuração e conexão */
 #aviso{position:absolute;left:50%;top:40px;transform:translateX(-50%);z-index:9;font-size:22px;font-weight:900;border-radius:999px;padding:10px 22px;background:var(--vermelho);color:#fff}
 </style>
@@ -120,10 +204,47 @@
   <section id="comecando" class="tela oculto" aria-label="Começando">
     <div class="centro">
       <h1>Todo mundo pronto!</h1>
-      <p>A partida começa aqui. Próximo passo da construção: a Coruja explica o jogo e a primeira rodada.</p>
+      <p>Prestem atenção na Coruja!</p>
       <div id="fila"></div>
     </div>
   </section>
+
+  <section id="explica" class="tela oculto" aria-label="Como jogar">
+    <div class="topo-jogo"><h1>Como jogar</h1></div>
+    <ol id="regras">
+      <li><b>1</b>Pergunta na TV, resposta no celular</li>
+      <li><b>2</b>Acertou ganha pontos. Rápido ganha mais!</li>
+      <li><b>3</b>Vote na porta da categoria</li>
+      <li><b>4</b>Os pontos viram degraus na pirâmide</li>
+    </ol>
+  </section>
+
+  <section id="porta" class="tela oculto" aria-label="Escolha da porta">
+    <div class="topo-jogo"><h1>Escolham a porta!</h1><p id="portaTitulo"></p></div>
+    <span id="portaTempo"></span>
+    <div id="portas"></div>
+  </section>
+
+  <section id="pergunta" class="tela oculto" aria-label="Pergunta">
+    <div class="cabeca"><span class="chip-cat" id="pCat"></span><span id="pNum"></span></div>
+    <div id="pRelogio"><svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="#fff"/><circle cx="100" cy="100" r="90" fill="none" stroke="#DCEBFF" stroke-width="14"/><circle id="pArco" cx="100" cy="100" r="90" fill="none" stroke="#4F8DF7" stroke-width="14" stroke-linecap="round" stroke-dasharray="565" stroke-dashoffset="0" transform="rotate(-90 100 100)"/></svg><span id="pSeg">15</span></div>
+    <div id="pTexto" class="card"></div>
+    <div id="pOps" class="ops"></div>
+    <div id="pJogadores"></div>
+  </section>
+
+  <section id="ranking" class="tela oculto" aria-label="Placar">
+    <div class="topo-jogo"><h1 id="rTitulo">Placar</h1></div>
+    <ol id="rLista" class="placar"></ol>
+  </section>
+
+  <section id="fim" class="tela oculto" aria-label="Fim da fase">
+    <div class="topo-jogo"><h1>Fim da primeira fase!</h1><p>A pirâmide chega na próxima etapa da construção.</p></div>
+    <ol id="fLista" class="placar"></ol>
+    <button id="deNovo" class="btn amarelo" type="button">Jogar de novo</button>
+  </section>
+
+  <div id="corujaJogo" class="oculto" aria-live="polite"><img src="img/coruja.png" alt="Coruja"><div class="balao" id="balaoJogo"></div></div>
 
   <div id="aviso" class="oculto"></div>
 </div>
@@ -131,6 +252,7 @@
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
 <script src="js/config.js"></script>
 <script src="js/comum.js"></script>
+<script src="js/perguntas.js"></script>
 <script src="js/tv.js"></script>
 </body>
 </html>

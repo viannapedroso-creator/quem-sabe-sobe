@@ -66,7 +66,11 @@
   function sfx(nome) {
     try {
       ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
-      const tons = { sfx_entrar: [660, 990], sfx_toque: [520], sfx_comecar: [523, 659, 784, 1046], sfx_pronto: [784, 1046], sfx_sair: [440, 330] };
+      const tons = {
+        sfx_entrar: [660, 990], sfx_toque: [520], sfx_comecar: [523, 659, 784, 1046], sfx_pronto: [784, 1046], sfx_sair: [440, 330],
+        sfx_voto: [700], sfx_porta: [392, 523, 659], sfx_pergunta: [659, 880], sfx_resposta: [880], sfx_tique: [1200],
+        sfx_tempo: [330, 262], sfx_certo: [659, 880, 1175], sfx_errado: [220, 196], sfx_ranking: [523, 784], sfx_fim: [523, 659, 784, 1046, 1318]
+      };
       (tons[nome] || [600]).forEach((f, i) => {
         const o = ctx.createOscillator(), g = ctx.createGain(), t = ctx.currentTime + i * 0.09;
         o.type = 'triangle'; o.frequency.value = f; g.gain.setValueAtTime(0.0001, t);
@@ -76,5 +80,11 @@
     } catch (e) {}
   }
 
-  window.QSS = { PERSONAGENS, MAX_JOGADORES, novoCodigo, limparCodigo, limparNome, uid, esc, img, pers, configurado, conectar, falar, sfx };
+  // Regras da rodada (compartilhadas para TV e celular mostrarem os mesmos números)
+  const TEMPO_RESPOSTA = 15000, TEMPO_PORTA = 10000;
+  // Acerto vale de 500 a 1000: metade fixa, metade pela rapidez. Arredondado de 10 em 10.
+  function pontosPor(ms) { return 500 + Math.round((500 * Math.max(0, 1 - ms / TEMPO_RESPOSTA)) / 10) * 10; }
+  function fmt(n) { return Number(n || 0).toLocaleString('pt-BR'); }
+
+  window.QSS = { PERSONAGENS, MAX_JOGADORES, TEMPO_RESPOSTA, TEMPO_PORTA, novoCodigo, limparCodigo, limparNome, uid, esc, img, pers, configurado, conectar, falar, sfx, pontosPor, fmt };
 })();

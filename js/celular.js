@@ -81,7 +81,7 @@
     if (!eu) return;
     clearTimeout(esperaTimer);
     $('bEntrar').disabled = false; $('bEntrar').textContent = 'Entrar';
-    if (m.fase !== 'sala') { mostrar('olhe'); return; }
+    if (m.fase !== 'sala') { desenharPartida(m, eu); return; }
     if (!eu.char) { desenharGrade(m, eu); mostrar('escolher'); return; }
     desenharPronto(m, eu); mostrar('pronto');
   }
@@ -138,6 +138,120 @@
     if (!rede) return;
     if (confirmado) { confirmado = false; pintarBotao(0); rede.enviar('pronto', { pid, on: false }); }
     else rede.enviar('escolher', { pid, char: null });
+  });
+
+
+  // ---------- Partida ----------
+  let prazoLocal = 0, barra = null, tempoTotal = 1, chaveTela = '', meuVoto = {}, minhaResp = {}, vibrouRes = '';
+  const CORES = ['c0', 'c1', 'c2'];
+
+  function posicao(m, eu) {
+    const js = (m.jogadores || []).slice().sort((a, b) => b.pontos - a.pontos);
+    return 1 + js.filter((j) => j.pontos > eu.pontos).length;
+  }
+  function olhe(chip, tit, txt) {
+    $('olheChip').textContent = chip; $('olheTit').textContent = tit; $('olheTxt').textContent = txt;
+    mostrar('olhe');
+  }
+  // Barra de tempo: a TV manda quanto falta; o celular conta a partir do momento em que recebeu
+  function marcarPrazo(d, total, el) {
+    tempoTotal = total; barra = el;
+    prazoLocal = d && d.restante ? Date.now() + d.restante : 0;
+  }
+  (function anima() {
+    if (barra) {
+      const r = prazoLocal ? Math.max(0, prazoLocal - Date.now()) : 0;
+      barra.querySelector('i').style.width = (100 * r / tempoTotal).toFixed(1) + '%';
+      barra.classList.toggle('urgente', r > 0 && r < 5000);
+    }
+    requestAnimationFrame(anima);
+  })();
+
+  function desenharPartida(m, eu) {
+    const d = m.d || {};
+    const pos = posicao(m, eu), total = (m.jogadores || []).length;
+    switch (m.fase) {
+      case 'porta': {
+        const chave = 'porta' + d.num + (d.fechada ? 'f' + d.vencedora : '');
+        $('portaNum').textContent = `Pergunta ${d.num} de ${d.total}`;
+        marcarPrazo(d, Q.TEMPO_PORTA, $('portaTempo'));
+        const meu = meuVoto[d.num] !== undefined ? meuVoto[d.num] : (d.votos || {})[pid];
+        if (meuVoto[d.num] !== undefined && !d.fechada && (d.votos || {})[pid] !== meuVoto[d.num] && rede) rede.enviar('votar', { pid, i: meuVoto[d.num] });
+        if (chave + meu !== chaveTela) {
+          chaveTela = chave + meu;
+          $('portasCel').innerHTML = (d.portas || []).map((c, k) => {
+            const cls = d.fechada ? (k === d.vencedora ? ' meu' : ' apagada') : (meu === k ? ' meu' : '');
+            return `<button type="button" class="pt ${CORES[k]}${cls}" data-i="${k}" ${d.fechada ? 'disabled' : ''}><small>${k + 1}</small>${Q.esc(c)}</button>`;
+          }).join('');
+        }
+        mostrar('porta');
+        break;
+      }
+      case 'pergunta': {
+        const q = d.q || {};
+        const minha = minhaResp[q.id] !== undefined ? minhaResp[q.id] : null;
+        const naTv = (d.respondeu || []).includes(pid);
+        const enviada = minha !== null || naTv;
+        // Se a mensagem se perdeu, reenvia junto com a próxima atualização da TV
+        if (minha !== null && d.aberta && !naTv && rede) rede.enviar('responder', { pid, qid: q.id, op: minha });
+        $('qCat').textContent = (q.cat || '').toUpperCase(); $('qNum').textContent = `Pergunta ${d.num} de ${d.total}`;
+        $('qTexto').textContent = q.texto || '';
+        marcarPrazo(d.aberta ? d : null, Q.TEMPO_RESPOSTA, $('qTempo'));
+        const chave = q.id + '|' + d.aberta + '|' + minha + '|' + enviada;
+        if (chave !== chaveTela) {
+          chaveTela = chave;
+          $('opsCel').className = !d.aberta ? 'fechado' : enviada ? 'enviado' : '';
+          $('opsCel').innerHTML = (q.ops || []).map((o, k) =>
+            `<button type="button" class="oc oc${k}${minha === k ? ' meu' : ''}" data-op="${k}" ${!d.aberta || enviada ? 'disabled' : ''}><b>${'ABCD'[k]}</b><span>${Q.esc(o)}</span></button>`).join('');
+        }
+        $('qMsg').textContent = enviada ? 'Resposta enviada! Agora é torcer.' : d.aberta ? 'Toque na resposta. Rápido vale mais!' : 'Ouça a pergunta…';
+        mostrar('responder');
+        break;
+      }
+      case 'revela': {
+        const r = (d.resultados || {})[pid];
+        const q = d.q || {};
+        const b = $('rBola');
+        b.className = 'bola ' + (!r ? 'nada' : r.ok ? 'ok' : 'erro');
+        b.textContent = !r ? '…' : r.ok ? '✓' : '✗';
+        $('rTit').textContent = !r ? 'Não deu tempo!' : r.ok ? 'Acertou!' : 'Errou!';
+        $('rPts').textContent = r && r.ok ? '+' + Q.fmt(r.pts) : '+0';
+        $('rCerta').textContent = `Resposta certa: ${'ABCD'[d.certa]}) ${(q.ops || [])[d.certa] || ''}`;
+        $('rPos').textContent = `Você está em ${pos}º de ${total}, com ${Q.fmt(eu.pontos)} pontos.`;
+        if (vibrouRes !== q.id) { vibrouRes = q.id; vibrar(r && r.ok ? [40, 60, 40] : 200); Q.sfx(r && r.ok ? 'sfx_certo' : 'sfx_errado'); }
+        chaveTela = '';
+        mostrar('resultado');
+        break;
+      }
+      case 'ranking':
+        olhe('PLACAR', `Você está em ${pos}º lugar`, `${Q.fmt(eu.pontos)} pontos. A próxima pergunta já vem!`);
+        break;
+      case 'fim':
+        olhe('FIM DA 1ª FASE', pos === 1 ? 'Você ficou em 1º lugar!' : `Você ficou em ${pos}º lugar`, `${Q.fmt(eu.pontos)} pontos. A pirâmide chega na próxima etapa do jogo.`);
+        break;
+      case 'explica':
+        olhe('A CORUJA ESTÁ EXPLICANDO', 'Olhe para a TV!', 'Você responde por aqui. Quanto mais rápido acertar, mais pontos.');
+        break;
+      default:
+        meuVoto = {}; minhaResp = {}; vibrouRes = '';
+        olhe('A CORUJA ESTÁ FALANDO', 'Olhe para a TV!', 'Agora é hora de ouvir. Quando for a sua vez, o celular mostra o que fazer.');
+    }
+  }
+
+  $('portasCel').addEventListener('click', (e) => {
+    const b = e.target.closest('.pt'); if (!b || b.disabled || !rede || !ultimo) return;
+    const i = +b.dataset.i, num = (ultimo.d || {}).num;
+    meuVoto[num] = i; Q.sfx('sfx_voto'); vibrar(20);
+    rede.enviar('votar', { pid, i });
+    desenharPartida(ultimo, (ultimo.jogadores || []).find((j) => j.pid === pid));
+  });
+  $('opsCel').addEventListener('click', (e) => {
+    const b = e.target.closest('.oc'); if (!b || b.disabled || !rede || !ultimo) return;
+    const q = (ultimo.d || {}).q || {};
+    if (minhaResp[q.id] !== undefined) return;
+    minhaResp[q.id] = +b.dataset.op; Q.sfx('sfx_resposta'); vibrar(30);
+    rede.enviar('responder', { pid, qid: q.id, op: +b.dataset.op });
+    desenharPartida(ultimo, (ultimo.jogadores || []).find((j) => j.pid === pid));
   });
 
   // Volta sozinho para a sala depois de recarregar a página
