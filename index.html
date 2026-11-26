@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quem sabe sobe! · TV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<style>
+/* O palco tem 1920×1080 e é escalado para caber em qualquer TV ou monitor */
+#palco{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;
+  background:var(--parede);background-image:radial-gradient(circle,var(--ponto) 4px,transparent 5px);background-size:48px 48px}
+.chao{position:absolute;left:0;right:0;bottom:0;height:200px;background:var(--chao);border-top:8px solid #BCD5F6;
+  background-image:linear-gradient(90deg,transparent 0 120px,#FFEFB8 120px 240px,transparent 240px 360px,#D3F0C4 360px 480px,transparent 480px 600px,#FFDCC2 600px 720px);background-size:720px 200px}
+.tela{position:absolute;inset:0}
+/* Início */
+#inicio .logo{position:absolute;left:50%;top:170px;transform:translateX(-50%)}
+#inicio .sub{position:absolute;left:0;right:0;top:600px;text-align:center;font-size:34px;font-weight:800;color:var(--tinta2)}
+#inicio .acoes{position:absolute;left:0;right:0;top:690px;display:flex;justify-content:center}
+#inicio .btn{font-size:44px;padding:26px 64px;border-radius:28px;box-shadow:0 10px 0 var(--azul-esc)}
+.coruja{position:absolute;left:60px;bottom:40px;height:300px}
+.balao{position:absolute;background:#fff;border-radius:34px;padding:24px 30px;box-shadow:0 8px 0 var(--sombra-card),0 18px 30px rgba(29,42,77,.14);font-family:Fredoka,sans-serif;font-weight:700;font-size:34px;line-height:1.15}
+.balao::after{content:"";position:absolute;left:-28px;bottom:44px;border-top:18px solid transparent;border-bottom:18px solid transparent;border-right:32px solid #fff}
+#inicio .balao{left:340px;bottom:150px;width:520px}
+/* Sala de espera */
+#sala .esq{position:absolute;left:90px;top:150px;width:620px;display:flex;flex-direction:column;gap:22px}
+#sala h1{font-size:76px;line-height:1}
+#sala .qr{width:620px;padding:30px;display:flex;gap:28px;align-items:center}
+#sala .qr .codigo{display:flex;flex-direction:column;gap:6px}
+#sala .qr svg{width:260px;height:260px;flex:none}
+.rotulo{font-size:20px;font-weight:900;letter-spacing:.12em;color:var(--tinta2)}
+.senha{font-family:Fredoka,sans-serif;font-weight:700;font-size:62px;letter-spacing:3px;line-height:1}
+.link{font-size:22px;font-weight:800;color:var(--tinta2);line-height:1.35}
+.link b{color:var(--azul-esc)}
+#vagas{position:absolute;left:790px;top:150px;width:1040px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.vaga{height:330px;border-radius:28px;background:rgba(255,255,255,.55);border:4px dashed #BCD5F6;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:14px;position:relative}
+.vaga.cheia{background:#fff;border:0;box-shadow:0 8px 0 var(--sombra-card),0 18px 30px rgba(29,42,77,.1)}
+.vaga img{height:210px;margin-bottom:8px}
+.vaga .nome{font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vaga .pers{font-size:18px;font-weight:800;color:var(--tinta2)}
+.vaga .vazio{font-family:Fredoka,sans-serif;font-weight:700;font-size:90px;color:#BCD5F6;margin:auto}
+.vaga .escolhendo{margin:auto;font-size:22px;font-weight:900;color:var(--tinta2);text-align:center}
+.selo{position:absolute;top:14px;right:14px;font-size:18px;font-weight:900;border-radius:999px;padding:6px 14px;background:var(--verde);color:#fff;box-shadow:0 4px 0 var(--verde-esc)}
+.selo.off{background:#9AA6BF;box-shadow:0 4px 0 #6C7894}
+.vaga.entrou{animation:pula .5s ease-out}
+@keyframes pula{0%{transform:scale(.7)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+#sala .rodape{position:absolute;left:790px;width:1040px;top:900px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+#sala .rodape p{margin:0;font-size:28px;font-weight:800}
+#contagem{font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;background:var(--amarelo);border-radius:18px;padding:10px 22px;box-shadow:0 6px 0 var(--amarelo-esc);white-space:nowrap}
+/* Começando */
+#comecando .centro{position:absolute;left:0;right:0;top:300px;text-align:center;display:flex;flex-direction:column;gap:24px;align-items:center}
+#comecando h1{font-size:96px}
+#comecando p{font-size:34px;font-weight:800;color:var(--tinta2);margin:0;max-width:1200px}
+#fila{display:flex;gap:18px;justify-content:center;margin-top:20px}
+#fila img{height:220px}
+/* Aviso de configuração e conexão */
+#aviso{position:absolute;left:50%;top:40px;transform:translateX(-50%);z-index:9;font-size:22px;font-weight:900;border-radius:999px;padding:10px 22px;background:var(--vermelho);color:#fff}
+</style>
+</head>
+<body>
+<div id="palco">
+    <svg width="1920" height="150" viewBox="0 0 1920 150" style="position:absolute;left:0;top:0" aria-hidden="true">
+    <defs><filter id="brilho" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="9"/></filter></defs>
+    <path d="M-20 18 Q960 96 1940 18" stroke="#3E4A66" stroke-width="3.5" fill="none"/>
+    <g transform="translate(25,21) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#F2545B" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#F2545B"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(114,28) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#FFD23F" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#FFD23F"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(203,34) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#6CC24A" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#6CC24A"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(292,39) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#4F8DF7" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#4F8DF7"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(381,43) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#F2A33A" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#F2A33A"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(470,47) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#A77BF3" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#A77BF3"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(559,50) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#2EC4B6" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#2EC4B6"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(648,53) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#F6B6B8" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#F6B6B8"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(737,55) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#F2545B" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#F2545B"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(826,56) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#FFD23F" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#FFD23F"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(915,57) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#6CC24A" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#6CC24A"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1005,57) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#4F8DF7" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#4F8DF7"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1094,56) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#F2A33A" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#F2A33A"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1183,55) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#A77BF3" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#A77BF3"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1272,53) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#2EC4B6" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#2EC4B6"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1361,50) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#F6B6B8" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#F6B6B8"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1450,47) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#F2545B" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#F2545B"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1539,43) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#FFD23F" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#FFD23F"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1628,39) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#6CC24A" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#6CC24A"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1717,34) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#4F8DF7" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#4F8DF7"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1806,28) rotate(6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#F2A33A" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#F2A33A"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+    <g transform="translate(1895,21) rotate(-6)"><ellipse cx="0" cy="34" rx="26" ry="32" fill="#A77BF3" opacity=".45" filter="url(#brilho)"/><rect x="-7" y="-2" width="14" height="14" rx="3" fill="#3E4A66"/><ellipse cx="0" cy="32" rx="13" ry="20" fill="#A77BF3"/><ellipse cx="-4" cy="25" rx="4" ry="7" fill="#FFFFFF" opacity=".6"/></g>
+  </svg>
+
+  <div class="chao"></div>
+
+  <section id="inicio" class="tela" aria-label="Início">
+    <div class="logo"><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g-branco" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#F3F8FF"/><stop offset="1" stop-color="#BCD5F6"/></linearGradient><linearGradient id="g-azul" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9EC0FB"/><stop offset=".5" stop-color="#4F8DF7"/><stop offset="1" stop-color="#2F5FB8"/></linearGradient><linearGradient id="g-amarelo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE695"/><stop offset=".5" stop-color="#FFD23F"/><stop offset="1" stop-color="#F2A33A"/></linearGradient><linearGradient id="g-vermelho" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8A1A5"/><stop offset=".5" stop-color="#F2545B"/><stop offset="1" stop-color="#B83239"/></linearGradient><linearGradient id="g-verde" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#AEDD9B"/><stop offset=".5" stop-color="#6CC24A"/><stop offset="1" stop-color="#43892A"/></linearGradient><linearGradient id="g-rosa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FAD7D8"/><stop offset=".5" stop-color="#F6B6B8"/><stop offset="1" stop-color="#D78A8D"/></linearGradient><linearGradient id="g-laranja" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8CC93"/><stop offset=".5" stop-color="#F2A33A"/><stop offset="1" stop-color="#B86E14"/></linearGradient><linearGradient id="g-roxo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFB6F8"/><stop offset=".5" stop-color="#A77BF3"/><stop offset="1" stop-color="#6E46B8"/></linearGradient><linearGradient id="g-turquesa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8CDFD7"/><stop offset=".5" stop-color="#2EC4B6"/><stop offset="1" stop-color="#1A8A80"/></linearGradient><filter id="plastico" x="-5%" y="-10%" width="110%" height="130%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="h"/><feSpecularLighting in="h" surfaceScale="7" specularConstant=".75" specularExponent="24" lighting-color="#FFFFFF" result="s"><feDistantLight azimuth="235" elevation="55"/></feSpecularLighting><feDiffuseLighting in="h" surfaceScale="7" diffuseConstant="1" lighting-color="#FFFFFF" result="d"><feDistantLight azimuth="235" elevation="55"/></feDiffuseLighting><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" result="n"/><feComposite in="SourceGraphic" in2="d" operator="arithmetic" k1=".55" k2=".55" result="m"/><feComposite in="m" in2="s" operator="arithmetic" k2="1" k3=".55" result="l"/><feComposite in="l" in2="n" operator="arithmetic" k1=".12" k2=".94" result="t"/><feComposite in="t" in2="SourceAlpha" operator="in"/></filter><filter id="sombraChao" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="10"/></filter></defs></svg><svg width="860" height="390" viewBox="0 0 860 390" role="img" aria-label="Quem sabe sobe!"><ellipse cx="430" cy="372" rx="360" ry="13" fill="#1D2A4D" opacity=".18" filter="url(#sombraChao)"/><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,16)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,13)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,10)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,7)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,4)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,1)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" fill="url(#g-azul)" filter="url(#plastico)">Quem sabe</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,16)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,13)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,10)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,7)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,4)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,1)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" fill="url(#g-amarelo)" filter="url(#plastico)">sobe!</text></svg></div>
+    <p class="sub">O quiz de festa onde quem sabe a resposta sobe a pirâmide.</p>
+    <div class="acoes"><button id="criar" class="btn" type="button">Criar sala</button></div>
+    <img class="coruja" src="img/coruja.png" alt="Coruja apresentadora">
+    <div class="balao">Olá! Eu sou a Coruja. Vamos montar a sala de jogo?</div>
+  </section>
+
+  <section id="sala" class="tela oculto" aria-label="Sala de espera">
+    <div class="esq">
+      <h1>Entre na sala!</h1>
+      <div class="qr card">
+        <div id="qr" aria-label="QR code para entrar na sala"></div>
+        <div class="codigo">
+          <span class="rotulo">SENHA DA SALA</span>
+          <span id="senha" class="senha">------</span>
+          <span class="link">Aponte a câmera do celular para o QR code ou acesse <b id="endereco">quemsabesobe.com.br/c</b> e digite a senha.</span>
+        </div>
+      </div>
+    </div>
+    <div id="vagas"></div>
+    <div class="rodape">
+      <p>Para começar, todos seguram <b>Iniciar</b> no celular por 3 segundos.</p>
+      <span id="contagem">0 de 0 prontos</span>
+    </div>
+  </section>
+
+  <section id="comecando" class="tela oculto" aria-label="Começando">
+    <div class="centro">
+      <h1>Todo mundo pronto!</h1>
+      <p>A partida começa aqui. Próximo passo da construção: a Coruja explica o jogo e a primeira rodada.</p>
+      <div id="fila"></div>
+    </div>
+  </section>
+
+  <div id="aviso" class="oculto"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="js/config.js"></script>
+<script src="js/comum.js"></script>
+<script src="js/tv.js"></script>
+</body>
+</html>

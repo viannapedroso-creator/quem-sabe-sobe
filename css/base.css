@@ -1,0 +1,28 @@
+/* Quem sabe sobe! · Caixa de Brinquedos — base compartilhada por TV e celular */
+:root{
+  --tinta:#1D2A4D;--tinta2:#4A5878;
+  --parede:#EAF4FF;--ponto:#C3D9F7;--chao:#CFE2FB;
+  --azul:#4F8DF7;--azul-esc:#2F5FB8;
+  --amarelo:#FFD23F;--amarelo-esc:#C49A0C;
+  --vermelho:#F2545B;--vermelho-esc:#B83239;
+  --verde:#6CC24A;--verde-esc:#43892A;
+  --branco:#FFFFFF;--sombra-card:#D3E2F7;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--tinta);background:var(--parede);
+  background-image:radial-gradient(circle,var(--ponto) 4px,transparent 5px);background-size:48px 48px;overflow:hidden;
+  -webkit-tap-highlight-color:transparent}
+h1,h2,h3,.fredoka{font-family:Fredoka,Nunito,sans-serif;font-weight:700;margin:0}
+button{font-family:inherit;color:inherit}
+.btn{border:0;border-radius:18px;padding:14px 26px;min-height:52px;font-family:Fredoka,sans-serif;font-weight:700;font-size:22px;
+  background:var(--azul);color:#fff;box-shadow:0 6px 0 var(--azul-esc);cursor:pointer;transition:transform .08s}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 var(--azul-esc)}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.amarelo{background:var(--amarelo);color:var(--tinta);box-shadow:0 6px 0 var(--amarelo-esc)}
+.btn.ghost{background:#fff;color:var(--tinta);box-shadow:0 6px 0 var(--sombra-card)}
+.card{background:#fff;border-radius:28px;box-shadow:0 8px 0 var(--sombra-card),0 18px 30px rgba(29,42,77,.12)}
+.oculto{display:none!important}
+.luzes{position:absolute;left:0;right:0;top:0;height:110px;pointer-events:none}
+:focus-visible{outline:4px solid var(--amarelo);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#EAF4FF">
+<title>Quem sabe sobe! · Celular</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/base.css">
+<style>
+body{background-size:28px 28px;background-image:radial-gradient(circle,var(--ponto) 2.5px,transparent 3.5px)}
+.tela{position:fixed;inset:0;padding:max(14px,env(safe-area-inset-top)) max(22px,env(safe-area-inset-right)) max(14px,env(safe-area-inset-bottom)) max(22px,env(safe-area-inset-left));display:flex;align-items:center;gap:26px}
+.col{flex:1;min-width:0;display:flex;flex-direction:column;gap:12px}
+.chip{align-self:flex-start;font-size:13px;font-weight:900;letter-spacing:.12em;background:var(--amarelo);border-radius:999px;padding:5px 12px;box-shadow:0 3px 0 var(--amarelo-esc)}
+h1{font-size:clamp(28px,6vh,42px);line-height:1.05}
+p{margin:0;font-size:17px;font-weight:800;line-height:1.4;color:var(--tinta2)}
+label{font-size:13px;font-weight:900;letter-spacing:.1em;color:var(--tinta2)}
+input{width:100%;font:700 22px Fredoka,sans-serif;color:var(--tinta);border:0;border-radius:16px;padding:12px 16px;background:#fff;box-shadow:0 5px 0 var(--sombra-card);outline:0;min-height:52px}
+input:focus{box-shadow:0 5px 0 var(--azul)}
+#fCodigo{text-transform:uppercase;letter-spacing:3px}
+.campos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:12px;align-items:end}
+.campo{display:flex;flex-direction:column;gap:6px}
+.erro{color:var(--vermelho-esc);font-size:15px;font-weight:900;min-height:20px}
+.coruja{height:min(220px,60vh);flex:none}
+/* Personagens */
+#escolher{flex-direction:column;align-items:stretch;gap:10px}
+#escolher .topo{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#escolher h1{font-size:clamp(22px,5vh,30px)}
+#grade{flex:1;min-height:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:10px}
+.pc{position:relative;border:0;border-radius:18px;background:#fff;box-shadow:0 5px 0 var(--sombra-card);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:6px 4px;cursor:pointer;overflow:hidden;min-height:0}
+.pc img{flex:1;min-height:0;max-width:100%;object-fit:contain}
+.pc span{font-size:12px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.pc.meu{background:var(--amarelo);box-shadow:0 5px 0 var(--amarelo-esc)}
+.pc.tomado{opacity:.38;cursor:default}
+.pc.tomado span{font-size:11px}
+/* Segurar */
+.segurar{position:relative;width:min(230px,62vh);height:min(230px,62vh);border-radius:50%;border:0;background:#fff;box-shadow:0 8px 0 var(--sombra-card);flex:none;cursor:pointer;touch-action:none;padding:0;display:flex;align-items:center;justify-content:center;-webkit-user-select:none;user-select:none}
+.segurar svg{position:absolute;inset:0;width:100%;height:100%}
+.segurar .miolo{position:relative;width:74%;height:74%;border-radius:50%;background:var(--azul);color:#fff;box-shadow:0 6px 0 var(--azul-esc);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;line-height:1.05;pointer-events:none}
+.segurar .miolo b{font-size:28px}.segurar .miolo small{font-size:15px;font-family:Nunito,sans-serif;font-weight:900}
+.segurar.ok .miolo{background:var(--verde);color:var(--tinta);box-shadow:0 6px 0 var(--verde-esc)}
+.eu{display:flex;align-items:center;gap:12px}
+.eu img{height:min(150px,40vh)}
+.eu .nome{font-family:Fredoka,sans-serif;font-weight:700;font-size:26px}
+.linha{display:flex;gap:10px;flex-wrap:wrap}
+.btn.peq{font-size:16px;min-height:44px;padding:10px 16px}
+/* Olhe para a TV */
+.tv-ico{width:min(220px,55vh);flex:none}
+/* Gire o celular */
+#girar{position:fixed;inset:0;z-index:20;background:var(--parede);display:none;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:30px;text-align:center}
+@media (orientation:portrait){#girar{display:flex}}
+#girar svg{width:120px;animation:gira 2.2s ease-in-out infinite}
+@keyframes gira{0%,30%{transform:rotate(0)}60%,100%{transform:rotate(-90deg)}}
+#status{position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:10;font-size:13px;font-weight:900;border-radius:999px;padding:5px 12px;background:var(--vermelho);color:#fff}
+</style>
+</head>
+<body>
+
+<section id="entrar" class="tela">
+  <img class="coruja" src="../img/coruja.png" alt="Coruja apresentadora">
+  <form id="fEntrar" class="col" novalidate>
+    <span class="chip">QUEM SABE SOBE!</span>
+    <h1>Entre na sala</h1>
+    <div class="campos">
+      <div class="campo"><label for="fCodigo">SENHA DA SALA</label><input id="fCodigo" maxlength="6" autocomplete="off" autocapitalize="characters" inputmode="text" placeholder="BOLA47"></div>
+      <div class="campo"><label for="fNome">SEU NOME</label><input id="fNome" maxlength="12" autocomplete="nickname" placeholder="Como te chamam?"></div>
+    </div>
+    <div class="linha" style="align-items:center"><button class="btn" type="submit" id="bEntrar">Entrar</button><span class="erro" id="erro" role="alert"></span></div>
+  </form>
+</section>
+
+<section id="escolher" class="tela oculto">
+  <div class="topo"><h1>Escolha seu personagem</h1><p id="olaNome"></p></div>
+  <div id="grade"></div>
+</section>
+
+<section id="pronto" class="tela oculto">
+  <button id="bSegurar" class="segurar" type="button" aria-label="Segure por 3 segundos para iniciar">
+    <svg viewBox="0 0 210 210" aria-hidden="true"><circle cx="105" cy="105" r="92" fill="none" stroke="#DCEBFF" stroke-width="16"/><circle id="anel" cx="105" cy="105" r="92" fill="none" stroke="#6CC24A" stroke-width="16" stroke-linecap="round" stroke-dasharray="578" stroke-dashoffset="578" transform="rotate(-90 105 105)"/></svg>
+    <span class="miolo"><b id="r1">Segure</b><small id="r2">para iniciar</small></span>
+  </button>
+  <div class="col">
+    <div class="eu"><img id="euImg" src="" alt=""><div><div class="nome" id="euNome"></div><p id="euPers"></p></div></div>
+    <p id="msgPronto">Quando todos estiverem na sala, segurem o botão por 3 segundos.</p>
+    <div class="linha"><button class="btn ghost peq" type="button" id="bTrocar">Trocar personagem</button></div>
+  </div>
+</section>
+
+<section id="olhe" class="tela oculto">
+  <svg class="tv-ico" viewBox="0 0 250 250" aria-hidden="true"><line x1="100" y1="40" x2="78" y2="8" stroke="#2F5FB8" stroke-width="7" stroke-linecap="round"/><line x1="150" y1="40" x2="174" y2="6" stroke="#2F5FB8" stroke-width="7" stroke-linecap="round"/><circle cx="78" cy="8" r="10" fill="#F2545B"/><circle cx="174" cy="6" r="10" fill="#FFD23F"/><rect x="18" y="38" width="214" height="176" rx="34" fill="#4F8DF7"/><rect x="36" y="56" width="178" height="128" rx="18" fill="#1D2A4D"/><ellipse cx="98" cy="118" rx="22" ry="26" fill="#fff"/><ellipse cx="152" cy="118" rx="22" ry="26" fill="#fff"/><circle cx="104" cy="126" r="11" fill="#1D2A4D"/><circle cx="158" cy="126" r="11" fill="#1D2A4D"/><circle cx="70" cy="200" r="9" fill="#FFD23F"/><circle cx="98" cy="200" r="9" fill="#6CC24A"/><rect x="150" y="194" width="50" height="12" rx="6" fill="#2F5FB8"/><rect x="96" y="214" width="58" height="14" rx="5" fill="#E3AE68"/></svg>
+  <div class="col">
+    <span class="chip">A CORUJA ESTÁ FALANDO</span>
+    <h1>Olhe para a TV!</h1>
+    <p>Agora é hora de ouvir. Quando for a sua vez, o celular mostra o que fazer.</p>
+  </div>
+</section>
+
+<div id="girar"><svg viewBox="0 0 60 100" aria-hidden="true"><rect x="4" y="4" width="52" height="92" rx="10" fill="#4F8DF7"/><rect x="10" y="14" width="40" height="68" rx="4" fill="#fff"/><circle cx="30" cy="89" r="3" fill="#fff"/></svg><h1>Gire o celular</h1><p>O controle funciona com o celular deitado.</p></div>
+<div id="status" class="oculto"></div>
+
+<script>window.QSS_BASE = '../';</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="../js/config.js"></script>
+<script src="../js/comum.js"></script>
+<script src="../js/celular.js"></script>
+</body>
+</html>
