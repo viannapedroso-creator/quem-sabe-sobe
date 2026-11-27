@@ -61,29 +61,39 @@
       svg.setAttribute('viewBox', '0 0 540 362'); svg.setAttribute('preserveAspectRatio', 'none'); svg.setAttribute('aria-hidden', 'true');
       const id = 'm' + Math.random().toString(36).slice(2, 7);
       svg.innerHTML = `<defs><linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9B6BE8"/><stop offset=".6" stop-color="#7E4FD6"/><stop offset="1" stop-color="#5E34B0"/></linearGradient>
-        <mask id="${id}"><rect width="540" height="362" fill="#fff"/></mask>
+        <mask id="${id}"><rect width="540" height="362" fill="#fff"/><g class="cinza"></g><g class="preto"></g></mask>
         <filter id="${id}v" x="-5%" y="-5%" width="110%" height="120%"><feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b"/><feSpecularLighting in="b" surfaceScale="6" specularConstant=".9" specularExponent="28" lighting-color="#fff" result="s"><feDistantLight azimuth="235" elevation="50"/></feSpecularLighting><feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/><feComposite in="SourceGraphic" in2="s2" operator="arithmetic" k2="1" k3=".7"/></filter></defs>
-        <g mask="url(#${id})" filter="url(#${id}v)"><path d="${GOSMA}${forte('gosma') ? '' : ''}" fill="url(#${id}g)" opacity=".96"/>
-        ${forte('gosma') ? '<rect x="0" y="230" width="540" height="132" fill="url(#' + id + 'g)" opacity=".96"/>' : ''}
+        <g mask="url(#${id})" filter="url(#${id}v)"><path d="${GOSMA}" fill="url(#${id}g)" opacity=".96"/>
         <path d="M40 40 C120 20 220 60 300 34 S470 30 510 60" stroke="#E6D4FF" stroke-width="10" fill="none" stroke-linecap="round" opacity=".55"/>
         <path d="M70 150 C140 128 200 170 260 146" stroke="#E6D4FF" stroke-width="6" fill="none" stroke-linecap="round" opacity=".4"/>
         <circle cx="380" cy="120" r="9" fill="#E6D4FF" opacity=".6"/><circle cx="398" cy="140" r="5" fill="#E6D4FF" opacity=".5"/><circle cx="120" cy="210" r="7" fill="#E6D4FF" opacity=".5"/></g>`;
       dir.appendChild(svg);
       mascara = svg.querySelector('mask');
+      // Gosma em dobro: cada parte precisa de 2 passadas. A 1ª deixa a gosma 80% transparente, a 2ª limpa.
+      // Cada pedaço da tela (grade de 20 × 14) conta quantas passadas diferentes (toques separados) recebeu.
+      const camadas = forte('gosma') ? 2 : 1, celulas = {};
+      let passada = 0;
       const esfrega = (e) => {
+        if (e.type === 'pointerdown') passada++;
         if (e.type === 'pointermove' && e.pointerType === 'mouse' && e.buttons === 0) return;
         const r = dir.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * 540, y = (e.clientY - r.top) / r.height * 362;
-        const u = furos[furos.length - 1]; if (u && Math.hypot(u.x - x, u.y - y) < 12) return;
-        furos.push({ x, y }); if (furos.length > 500) furos.shift();
-        const c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', x.toFixed(0)); c.setAttribute('cy', y.toFixed(0)); c.setAttribute('r', 30); c.setAttribute('fill', '#000');
-        mascara.appendChild(c);
+        const ch = Math.floor(x / 27) + ',' + Math.floor(y / 26), cel = celulas[ch] || (celulas[ch] = { n: 0, ultima: -1 });
+        if (cel.ultima !== passada) { cel.ultima = passada; cel.n++; }
+        const nivel = Math.min(camadas, cel.n);
+        const u = furos[furos.length - 1]; if (u && u.nivel === nivel && Math.hypot(u.x - x, u.y - y) < 12) return;
+        furos.push({ x, y, nivel }); if (furos.length > 800) furos.shift();
+        const c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', x.toFixed(0)); c.setAttribute('cy', y.toFixed(0)); c.setAttribute('r', 30);
+        const limpa = nivel >= camadas;
+        c.setAttribute('fill', limpa ? '#000' : '#333'); // #333 na máscara = 20% visível (80% transparente)
+        mascara.querySelector(limpa ? '.preto' : '.cinza').appendChild(c);
       };
       dir.addEventListener('pointerdown', esfrega, sig); dir.addEventListener('pointermove', esfrega, sig);
     }
     const limpo = (k) => {
       if (!tem('gosma')) return true;
       const sl = slotDe(k), qx = sl % 2, qy = sl > 1 ? 1 : 0;
-      return furos.filter((f) => (f.x >= 270) === (qx === 1) && (f.y >= 181) === (qy === 1)).length >= (forte('gosma') ? 18 : 10);
+      const camadas = forte('gosma') ? 2 : 1;
+      return furos.filter((f) => f.nivel >= camadas && (f.x >= 270) === (qx === 1) && (f.y >= 181) === (qy === 1)).length >= 10;
     };
 
     // ---- Bombas ----

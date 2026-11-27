@@ -28,7 +28,7 @@ Telas 08, 09 e 10 e os efeitos no celular.
 2. **Escolha (15 s)**: cada um escolhe um poder e um alvo no celular. Cada poder pode ser usado 2 vezes na Fase 1. O Espelho é usado em si mesmo.
 3. **Lançamento**: um de cada vez, na ordem em que foram escolhidos. Se o alvo usou Espelho, o poder volta para quem jogou.
 4. **Pergunta**: os efeitos aparecem só no celular de quem foi atingido e se somam. O mesmo poder vindo de 2 ou mais jogadores fica "em dobro":
-   - Gosma: cobre a parte de baixo também (precisa esfregar mais).
+   - Gosma: duas passadas de dedo. A primeira deixa a gosma 80% transparente; a segunda limpa.
    - Gelo: 5 toques para quebrar em vez de 3.
    - Bombas: 8 em vez de 5.
    - Cupins: mais mordidas e 2 cupins.

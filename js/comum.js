@@ -116,7 +116,7 @@
   // o mesmo poder vindo de 2 ou mais jogadores fica "forte" (mais difícil de vencer).
   const USOS_PODER = 2;
   const PODERES = [
-    { id: 'gosma', nome: 'Gosma', fala: 'a Gosma', cor: '#A77BF3', sombra: '#6E46B8', desc: 'Cobre as respostas. Esfregue a tela para limpar.', dica: 'Esfregue a tela para limpar a gosma.' },
+    { id: 'gosma', nome: 'Gosma', fala: 'a Gosma', cor: '#A77BF3', sombra: '#6E46B8', desc: 'Cobre as respostas. Esfregue a tela para limpar.', dica: 'Esfregue a tela para limpar a gosma.', dicaForte: 'Gosma em dobro: passe o dedo duas vezes. A primeira passada clareia, a segunda limpa.' },
     { id: 'gelo', nome: 'Gelo', fala: 'o Gelo', cor: '#4F8DF7', sombra: '#2F5FB8', desc: 'Congela os botões. 3 toques para quebrar.', dica: 'Toque 3 vezes para quebrar o gelo. O 4º toque escolhe.', dicaForte: 'Gelo duplo: toque 5 vezes para quebrar. O 6º toque escolhe.' },
     { id: 'bombas', nome: 'Bombas', fala: 'as Bombas', cor: '#6CC24A', sombra: '#43892A', desc: 'Bombas sobre as respostas. Tocou, travou.', dica: 'Não toque nas bombas! Elas travam você por um instante.' },
     { id: 'cupins', nome: 'Cupins', fala: 'os Cupins', cor: '#F2A33A', sombra: '#B86E14', desc: 'Comem pedaços das letras.', dica: 'Os cupins comeram pedaços das letras. Leia com atenção!' },
