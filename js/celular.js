@@ -192,6 +192,8 @@
         break;
       }
       case 'pergunta': {
+        // Enquanto a Coruja lê a pergunta, o celular fica em "Olhe para a TV". As opções aparecem com o relógio.
+        if (!d.aberta && !(d.respondeu || []).includes(pid) && minhaResp[(d.q || {}).id] === undefined) { olhe(); break; }
         const q = d.q || {}, c = Q.categoria(q.cat);
         const minha = minhaResp[q.id] !== undefined ? minhaResp[q.id] : null;
         const naTv = (d.respondeu || []).includes(pid), enviada = minha !== null || naTv;

@@ -348,7 +348,8 @@
 
   // ---------- 11 · Pergunta ----------
   const N = () => estado.jogadores.length;
-  const cx0 = (i) => (N() === 1 ? 960 : 110 + 85 + i * (1700 - 170) / (N() - 1));
+  const ESPACO = (1700 - 170) / 7; // distância entre personagens com a sala cheia (8)
+  const cx0 = (i) => 960 + (i - (N() - 1) / 2) * ESPACO; // com menos jogadores, ficam centralizados
   const bc = (k) => 960 + (k - 1.5) * 420;
   let figs = []; // elementos .jc na mesma ordem de estado.jogadores
 
@@ -374,7 +375,7 @@
 
   async function pergunta(r, q, vivo) {
     respostas = {};
-    const d = { rodada: r, q: { id: q.id, cat: q.cat, texto: q.texto, ops: q.ops }, aberta: false, respondeu: [], prazo: 0 };
+    const d = { rodada: r, q: { id: q.id, cat: q.cat, texto: q.texto }, aberta: false, respondeu: [], prazo: 0 };
     mudar('pergunta', d);
     // Cena limpa
     $('camera').style.transform = ''; $('mundo').style.transform = '';
@@ -393,6 +394,7 @@
     await diz(q.texto); if (!vivo()) return;
 
     inicioPergunta = Date.now(); d.aberta = true; d.prazo = inicioPergunta + Q.TEMPO_RESPOSTA;
+    d.q.ops = q.ops; // as opções só chegam ao celular quando o relógio começa
     enviarEstado();
     let seg = 99, avisou = false;
     const relo = setInterval(() => {
