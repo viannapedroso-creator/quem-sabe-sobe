@@ -47,7 +47,21 @@
   }
 
   // Voz provisória da Coruja (voz do navegador). Devolve uma promessa que resolve quando ela termina.
-  function falar(texto) {
+  // Narração: toca o áudio gravado da fala (audio/manifest.json liga o texto ao arquivo);
+  // se a fala ainda não foi gravada, usa a voz do navegador.
+  const AUDIO_BASE = (document.currentScript && document.currentScript.src || '').replace(/js\/comum\.js.*$/, '') + 'audio/';
+  let manifesto = null, tocando = null;
+  const chave = (t) => String(t).normalize('NFC').replace(/\s+/g, ' ').trim();
+  function carregarAudios() {
+    if (manifesto) return Promise.resolve(manifesto);
+    return fetch(AUDIO_BASE + 'manifest.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}))
+      .then((m) => { manifesto = {}; for (const k in m) manifesto[chave(k)] = m[k]; return manifesto; });
+  }
+  function calar() {
+    try { if (tocando) { tocando.pause(); tocando.onended = null; tocando = null; } } catch (e) {}
+    try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
+  }
+  function falarNavegador(texto) {
     return new Promise((ok) => {
       try {
         const ss = window.speechSynthesis; if (!ss) return ok();
@@ -60,6 +74,20 @@
       } catch (e) { ok(); }
     });
   }
+  function falar(texto) {
+    const arq = manifesto && manifesto[chave(texto)];
+    if (!arq) return falarNavegador(texto);
+    return new Promise((ok) => {
+      calar();
+      const a = new Audio(AUDIO_BASE + arq); tocando = a;
+      let feito = false; const fim = () => { if (feito) return; feito = true; if (tocando === a) tocando = null; ok(); };
+      a.onended = fim;
+      a.onerror = () => { if (!feito) { feito = true; falarNavegador(texto).then(ok); } };
+      a.play().catch(() => { if (!feito) { feito = true; falarNavegador(texto).then(ok); } });
+      setTimeout(fim, 20000);
+    });
+  }
+  carregarAudios();
 
   // Efeitos sonoros provisórios: bipes com os mesmos nomes do roteiro, trocados depois pelos arquivos finais.
   let ctx = null;
@@ -176,5 +204,5 @@
   }
   function fmt(n) { return Number(n || 0).toLocaleString('pt-BR'); }
 
-  window.QSS = { USOS_PODER, PODERES, RODADAS_SEM_PODER, poder, imgPoder, PERSONAGENS, MAX_JOGADORES, TEMPO_RESPOSTA, TEMPO_VOTO, RODADAS, RODADA_ASSOCIACAO, NUMEROS, CATEGORIAS, ALTS, novoCodigo, limparCodigo, limparNome, uid, esc, img, pers, configurado, conectar, falar, sfx, pontos, categoria, iconeCat, forma, relogio, caber, fmt };
+  window.QSS = { USOS_PODER, PODERES, RODADAS_SEM_PODER, poder, imgPoder, PERSONAGENS, MAX_JOGADORES, TEMPO_RESPOSTA, TEMPO_VOTO, RODADAS, RODADA_ASSOCIACAO, NUMEROS, CATEGORIAS, ALTS, novoCodigo, limparCodigo, limparNome, uid, esc, img, pers, configurado, conectar, falar, calar, carregarAudios, sfx, pontos, categoria, iconeCat, forma, relogio, caber, fmt };
 })();

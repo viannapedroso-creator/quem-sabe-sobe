@@ -66,3 +66,10 @@ Telas 08, 09 e 10 e os efeitos no celular.
 ## Banco ampliado (27/11)
 - 159 perguntas: 99 da Fase 1 (16 a 17 por categoria), 48 da pirâmide e 12 de desempate. 15 temas de associação.
 - A TV guarda no navegador as perguntas e os temas já usados; as próximas partidas priorizam o que ainda não saiu e recomeçam quando acaba.
+
+## Narração gravada (ElevenLabs)
+- Todas as falas da Coruja estão em `js/falas.js`, cada uma com um código. Falas com personagem têm uma versão por personagem; números, categorias e perguntas também.
+- O jogo toca `audio/<grupo>/<código>.mp3` quando a fala está em `audio/manifest.json`; senão, usa a voz do navegador.
+- Para gravar: GitHub → Actions → **Gerar áudios da Coruja** → Run workflow (grupos e limite de caracteres). Precisa do secret `ELEVENLABS_API_KEY` no repositório.
+- Voz, modelo e tom de cada grupo ficam em `narracao/config.json`. `narracao/falas.csv` lista cada fala e se já foi gravada.
+- Sem gastar créditos: `node narracao/gerar.mjs --listar`.

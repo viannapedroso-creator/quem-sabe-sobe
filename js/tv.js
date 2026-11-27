@@ -64,6 +64,7 @@
     const mistura = (l) => l.sort(() => Math.random() - 0.5);
     return mistura(novas).concat(mistura(todas.filter((p) => !novas.includes(p))));
   }
+  const F = window.QSS_FALAS, T = F.t;
   const B = (j, acao, cls) => Q.boneco(j.char, j.nome, cls, acao);
   const corpo = (el) => el && el.querySelector('.rig, img');
 
@@ -81,20 +82,7 @@
   // Voz da Coruja: espera a fala terminar, mas nunca menos que o tempo de leitura (navegador sem voz)
   function diz(texto) { return Promise.all([falaVoz(texto), espera(Math.min(6000, 700 + texto.length * 45))]); }
   // Reações curtas: sorteia uma das 3 variações sem repetir a anterior
-  const REACOES = {
-    ok: ['Isso aí!', 'Mandaram bem!', 'Acertaram em cheio!'],
-    erro: ['Ih, essa foi difícil!', 'Quase!', 'Ninguém esperava essa!'],
-    todos: ['Todo mundo acertou? Essa estava fácil!', 'Turma afiada!', 'Cem por cento de acerto!'],
-    nenhum: ['Ninguém acertou! Era pegadinha.', 'Ixi, zero acertos!', 'Essa pegou todo mundo!'],
-    tempo: ['Cinco segundos!', 'Corre, corre!', 'O tempo está acabando!'],
-    virada: ['Temos um novo líder!', 'Virou o jogo!', 'Mudou tudo no ranking!'],
-    dois: ['Subiu dois de uma vez!', 'Que pulo!', 'Dois degraus, que velocidade!']
-  };
-  const ultimaReacao = {};
-  function reacao(tipo) {
-    const op = REACOES[tipo].filter((x) => x !== ultimaReacao[tipo]);
-    return (ultimaReacao[tipo] = sorteia(op));
-  }
+  const reacao = (tipo) => window.QSS_FALAS.reacao(tipo);
 
   // Espera até o tempo acabar ou a condição ficar verdadeira (checada a cada mensagem)
   let acordar = null;
@@ -146,7 +134,7 @@
         const trocou = j.char !== m.char;
         j.char = m.char; j.pronto = false; j.novo = true;
         Q.sfx('sfx_entrar');
-        if (trocou) falaVoz('Chegou… ' + Q.pers(m.char).fala + '!'); // sala_02
+        if (trocou) falaVoz(T('sala_chegou', m.char)); // sala_02
         break;
       }
       case 'pronto':
@@ -210,7 +198,7 @@
   // sala_03: quando todos já escolheram o personagem
   function avisoSala() {
     const js = estado.jogadores, todos = js.length >= 2 && js.every((x) => x.char);
-    if (todos && !avisouSala && !js.some((x) => x.pronto)) { avisouSala = true; setTimeout(() => falaVoz('Todo mundo pronto? Segurem o botão Iniciar por três segundos.'), 1800); }
+    if (todos && !avisouSala && !js.some((x) => x.pronto)) { avisouSala = true; setTimeout(() => falaVoz(T('sala_prontos')), 1800); }
     if (!todos) avisouSala = false;
   }
 
@@ -247,13 +235,7 @@
     pularExplicacoes = $('pularExp').checked;
     if (!jaExplicou && !pularExplicacoes) {
       mudar('explica'); mostrar('explica');
-      for (const f of [
-        'É assim que se joga! Prestem atenção, que eu só explico uma vez.',
-        'Eu leio a pergunta, e vocês têm quinze segundos para responder no celular.',
-        'Acertou, ganhou pontos. Quem acerta mais rápido leva um bônus.',
-        'E dá para atrapalhar os outros com poderes.',
-        'Na final, os pontos viram degraus. Quem chegar ao topo vence! Quem sabe… SOBE!'
-      ]) { await diz(f); if (!vivo()) return; }
+      for (const f of ['explica_1', 'explica_2', 'explica_3', 'explica_4', 'explica_5']) { await diz(T(f)); if (!vivo()) return; }
       window.QSS_CORUJA.reagir('rindo');
       await espera(1200);
       jaExplicou = true;
@@ -314,7 +296,7 @@
     $('vPortas').innerHTML = cats.map(htmlPorta).join('');
     desenharFila(); $('vFila').style.opacity = 1;
     relogioVoto(Q.TEMPO_VOTO);
-    await diz(`Rodada ${Q.NUMEROS[r]}! Qual vai ser a categoria? Votem no celular!`); if (!vivo()) return cats[0];
+    await diz(T('rodada', r)); if (!vivo()) return cats[0];
 
     d.prazo = Date.now() + Q.TEMPO_VOTO; enviarEstado();
     let seg = 99;
@@ -347,7 +329,7 @@
       $('vTit').textContent = 'Empate! Sorteando...';
       const nomes = empatadas.map((k) => cats[k]);
       $('vSub').textContent = max === 0 ? 'Ninguém votou. Vou sortear entre as portas.' : `${nomes.slice(0, -1).join(', ')} e ${nomes[nomes.length - 1]} tiveram ${max} ${max === 1 ? 'voto' : 'votos'} cada.`;
-      const fala = diz('Deu empate! Vou sortear entre as portas.');
+      const fala = diz(T('voto_empate'));
       venc = sorteia(empatadas);
       const passos = []; let ms = 70; while (ms < 620) { passos.push(ms); ms *= 1.16; }
       // termina exatamente na vencedora
@@ -367,7 +349,7 @@
     const c = Q.categoria(cats[venc]);
     $('vTit').innerHTML = `Deu <span style="color:${c.sombra}">${Q.esc(cats[venc])}</span>!`;
     Q.sfx('sfx_porta');
-    await diz(`A porta escolhida foi… ${cats[venc]}!`);
+    await diz(T('porta', cats[venc]));
     await espera(500);
     return cats[venc];
   }
@@ -412,10 +394,7 @@
   // ---------- 08 · A Coruja explica os poderes (só na rodada 2) ----------
   async function explicaPoderes(vivo) {
     mudar('podExplica'); mostrar('podExplica');
-    for (const f of [
-      'Agora vale atrapalhar! A cada rodada, escolham um poder e um alvo. Cada poder pode ser usado duas vezes.',
-      'Poderes diferentes no mesmo alvo se somam. E o mesmo poder, vindo de vários jogadores, fica mais forte.'
-    ]) { await diz(f); if (!vivo()) return; }
+    for (const f of ['poder_explica_1', 'poder_explica_2']) { await diz(T(f)); if (!vivo()) return; }
   }
 
   // ---------- 09 · Escolha dos poderes (15 s) ----------
@@ -437,7 +416,7 @@
     desenharFilaPoder();
     const relogio = (rest) => { $('ppRelogio').innerHTML = Q.relogio(100, Math.ceil(rest / 1000), rest / Q.TEMPO_VOTO, '#6CC24A'); };
     relogio(Q.TEMPO_VOTO);
-    await diz('Hora de atrapalhar! Escolham um poder e um alvo.'); if (!vivo()) return {};
+    await diz(T('poder_hora')); if (!vivo()) return {};
     d.aberta = true; d.prazo = Date.now() + Q.TEMPO_VOTO; enviarEstado();
     let seg = 99;
     const relo = setInterval(() => {
@@ -503,7 +482,7 @@
       $('plCont').textContent = 'Espelho';
       $('plTit').textContent = todos ? 'Todo mundo pegou Espelho!' : `${junta(nomes)} ${com.length > 1 ? 'pegaram' : 'pegou'} Espelho!`;
       $('plSub').textContent = 'Ninguém lançou poder, então ninguém foi atingido nesta rodada.';
-      await diz(todos ? 'Todo mundo pegou espelho! Ninguém lançou poder, então ninguém foi atingido.' : `${junta(falas).replace(/^./, (c) => c.toUpperCase())} ${com.length > 1 ? 'pegaram' : 'pegou'} espelho! Mas ninguém lançou poder, então ninguém foi atingido.`);
+      await diz(T(todos ? 'espelho_todos' : 'espelho_alguns'));
       com.forEach((j) => pula(j.pid, 0));
       await espera(600);
       return {};
@@ -515,7 +494,7 @@
       $('plCont').textContent = `Lançamento ${k + 1} de ${lances.length}`;
       $('plTit').textContent = `${de.nome} jogou ${pw.nome} em ${para.nome}!`;
       desenhar(l.de, l.para);
-      const falaLance = diz(`${fala(de)} manda ${pw.fala} para ${fala(para)}!`);
+      const falaLance = diz(T('manda', de.char, pw.id));
       pula(l.de, -24); await espera(400 * esc); pula(l.de, 0);
       await voo(centroX(l.de), centroX(l.para), pw, esc);
       if (!vivo()) return {};
@@ -524,7 +503,7 @@
         Q.sfx('sfx_espelho'); pula(l.para, -16);
         $('plTit').textContent = `Espelho! Voltou para ${de.nome}!`;
         await falaLance; await espera(200);
-        const falaVolta = diz(`Espelho! Voltou tudo para ${fala(de)}!`);
+        const falaVolta = diz(T('espelho_volta', de.char));
         pula(l.para, 0);
         await voo(centroX(l.para), centroX(l.de), pw, esc);
         hits[l.de].push(l.poder); acerta(l.de, l); desenhar(l.para, l.de); pula(l.de, 10);
@@ -581,8 +560,8 @@
       mudar('asExplica'); mostrar('asExplica');
       $('aeBonus').textContent = '+' + n;
       $('aeBonusTx').textContent = `para quem terminar primeiro (o 2º leva ${n - 1}, e assim por diante)`;
-      for (const f of ['Rodada especial! Sem categoria e sem poderes.', 'Vocês têm vinte segundos para ligar dez itens. Certo vale dois pontos, errado tira um.', 'E quem terminar primeiro ganha bônus!']) {
-        await diz(f); if (!vivo()) return liderAntes;
+      for (const f of ['assoc_explica_1', 'assoc_explica_2', 'assoc_explica_3']) {
+        await diz(T(f)); if (!vivo()) return liderAntes;
       }
     }
     // 15 · Em andamento
@@ -594,7 +573,7 @@
     desenharColsAssoc();
     const relogio = (rest) => { $('asRelogio').innerHTML = Q.relogio(100, Math.ceil(rest / 1000), rest / TEMPO_ASSOC, '#2EC4B6'); };
     relogio(TEMPO_ASSOC);
-    await diz('Valendo!'); if (!vivo()) return liderAntes;
+    await diz(T('assoc_valendo')); if (!vivo()) return liderAntes;
     d.aberta = true; d.prazo = Date.now() + TEMPO_ASSOC; enviarEstado();
     let seg = 99;
     const relo = setInterval(() => {
@@ -606,7 +585,7 @@
     d.aberta = false; d.prazo = 0; enviarEstado();
     if (!vivo()) return liderAntes;
     const todos = js.every((j) => d.terminou.includes(j.pid));
-    await diz(todos ? 'Todo mundo respondeu! Vamos contar os pontos.' : 'Tempo esgotado! Vamos contar os pontos.');
+    await diz(T(todos ? 'assoc_todos' : 'assoc_tempo'));
 
     // 16 · Conferindo item por item, de baixo para cima, e depois o bônus de quem terminou
     const dados = js.map((j) => {
@@ -706,8 +685,8 @@
     mostrar('pergunta');
     desenharFigs(); marcarRespondeu();
     Q.sfx('sfx_pergunta');
-    await diz(`Pergunta ${Q.NUMEROS[r]} de dez!`); if (!vivo()) return;
-    await diz(q.texto); if (!vivo()) return;
+    await diz(T('pergunta_de_dez', r)); if (!vivo()) return;
+    await diz(F.pergunta(q)); if (!vivo()) return;
 
     inicioPergunta = Date.now(); d.aberta = true; d.prazo = inicioPergunta + Q.TEMPO_RESPOSTA;
     d.q.ops = q.ops; // as opções só chegam ao celular quando o relógio começa
@@ -725,7 +704,7 @@
     if (!vivo()) return;
     const todos = estado.jogadores.every((j) => respostas[j.pid]);
     Q.sfx(todos ? 'sfx_pronto' : 'sfx_tempo');
-    await diz(todos ? 'Todo mundo respondeu!' : 'Tempo esgotado!');
+    await diz(T(todos ? 'resp_todos' : 'resp_tempo'));
   }
 
   // ---------- 12 · Revelação: respostas aparecem, corrida, a certa acende ----------
@@ -744,7 +723,7 @@
 
     // 0–0,8 s respostas aparecem · 1–2,8 s corrida · espera · a certa acende
     setTimeout(() => { if (vivo()) Q.sfx('sfx_correr'); }, 1000);
-    const vamos = espera(1000).then(() => vivo() && diz('Vamos ver quem acertou…'));
+    const vamos = espera(1000).then(() => vivo() && diz(T('rev_vamos')));
     await animar(2.9, (t) => {
       const tx = cl(t / 0.8), run = cl((t - 1) / 1.8), e = ease(run), correndo = run > 0 && run < 1;
       blocos.forEach((b) => { b.querySelector('.txt').style.opacity = tx; });
@@ -784,7 +763,7 @@
       });
       if (!parar) requestAnimationFrame(festa);
     })();
-    await diz('A resposta certa é… ' + q.falada + '!');
+    await diz(F.resposta(q));
     const n = js.filter(acertou).length;
     await diz(reacao(n === js.length ? 'todos' : n === 0 ? 'nenhum' : n >= js.length / 2 ? 'ok' : 'erro'));
     parar = true;
@@ -803,7 +782,7 @@
     const certos = res.certos || [], nC = certos.length;
     const antes = {}; js.forEach((j) => { antes[j.pid] = j.pontos || 0; });
     $('pCard').style.opacity = 0;
-    if (nC) falaVoz('Quem acertou ganha pontos, e quem respondeu mais rápido ganha bônus!');
+    if (nC) falaVoz(T('pontos_explica'));
 
     // Posições de partida: cada um embaixo do bloco que escolheu
     const x0 = (j, i) => { const rr = respostas[j.pid]; if (!rr) return cx0(i); const g = res.grupos[rr.op], k = g.indexOf(j.pid); return bc(rr.op) + (k - (g.length - 1) / 2) * 92; };
@@ -890,12 +869,12 @@
     const lider = nova[0], frente = nova.filter((j) => j.pontos === lider.pontos);
     if (frente.length > 1) {
       const fl = frente.map(fala), junta = fl.slice(0, -1).join(', ') + ' e ' + fl[fl.length - 1];
-      await diz('Olha o ranking! Empate na frente: ' + junta + '!');
+      await diz(T('ranking_empate'));
       await espera(1200);
       return liderAntes;
     }
     if (liderAntes && liderAntes !== lider.pid && lider.pontos > 0) { await diz(reacao('virada')); if (!vivo()) return lider.pid; }
-    await diz('Olha o ranking! Na frente está… ' + fala(lider) + '!');
+    await diz(T('ranking_frente', lider.char));
     await espera(1200);
     return lider.pid;
   }
@@ -1011,7 +990,7 @@
     Q.sfx('sfx_correr');
     await animar(2.2, (t) => { $('fMundo').style.transform = `translateX(${(-1920 * ease(cl(t / 2.2))).toFixed(1)}px)`; });
     $('fFala1').style.transform = 'scale(1)';
-    await diz('A primeira fase acabou! Agora começa a grande final: a Pirâmide do Conhecimento!'); if (!vivo()) return;
+    await diz(T('final_comeca')); if (!vivo()) return;
     $('fFala1').style.transform = 'scale(0)';
     // Íris fecha na Coruja e abre na pirâmide
     const iris = $('iris'); iris.style.display = 'block';
@@ -1024,10 +1003,10 @@
     Q.sfx('sfx_porta');
     await animar(1.0, (t) => abre(2400 * ease(cl(t / 1.0)), 960, 540));
     iris.style.display = 'none';
-    if (pularExplicacoes) { cartao({ texto: 'Cada um para o seu degrau!', fs: 40 }); await diz('Cada um para o seu degrau!'); }
+    if (pularExplicacoes) { cartao({ texto: 'Cada um para o seu degrau!', fs: 40 }); await diz(T('final_lugar')); }
     else {
       cartao({ texto: 'Seus pontos viraram degraus!', aviso: 'Quem fez mais pontos começa mais alto. Cada um para o seu lugar!', fs: 36 });
-      await diz('Seus pontos viraram degraus! Quem fez mais pontos começa mais alto. Cada um para o seu lugar!');
+      await diz(T('final_degraus'));
     }
     if (!vivo()) return;
     // Cada um sobe até o seu degrau inicial
@@ -1044,8 +1023,8 @@
     if (pularExplicacoes) { await espera(800); posicionar(); return; }
     const doisRap = rapidosQueSobemDois() === 2;
     cartao({ texto: 'Acertou, sobe um degrau.', aviso: (doisRap ? 'Os dois mais rápidos sobem dois.' : 'O mais rápido sobe dois.') + ' Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!', fs: 36 });
-    await diz(doisRap ? 'Acertou, sobe um degrau. Os dois mais rápidos sobem dois.' : 'Acertou, sobe um degrau. O mais rápido sobe dois.'); if (!vivo()) return;
-    await diz('Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!'); if (!vivo()) return;
+    await diz(T(doisRap ? 'regras_dois' : 'regras_um')); if (!vivo()) return;
+    await diz(T('regras_poder')); if (!vivo()) return;
     posicionar();
   }
 
@@ -1069,8 +1048,8 @@
     const nomeDesemp = (j, x) => (desemp && joga(j) ? { lado: x < 960 ? 'right' : 'left' } : {});
     posicionar((i, j) => Object.assign(fadeDesemp(i, j), nomeDesemp(j, ponto(i, j.deg)[0]), desemp && joga(j) ? { topo: `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>` } : {}));
     Q.sfx('sfx_pergunta');
-    await diz(desemp ? q.texto : `Pergunta ${Q.NUMEROS[k] || k}, ${q.cat}!`); if (!vivo()) return null;
-    if (!desemp) { await diz(q.texto); if (!vivo()) return null; }
+    await diz(desemp ? F.pergunta(q) : T('pir_pergunta', k)); if (!vivo()) return null;
+    if (!desemp) { await diz(F.pergunta(q)); if (!vivo()) return null; }
     cartao({ cab, cabCor: desemp ? '#E0412F' : '#4A5878', texto: Q.esc(q.texto) });
 
     inicioPergunta = Date.now(); d.aberta = true; d.prazo = inicioPergunta + Q.TEMPO_RESPOSTA; d.q.ops = q.ops;
@@ -1093,7 +1072,7 @@
     if (!vivo()) return null;
     const todos = js.filter(joga).every((j) => respostas[j.pid]);
     Q.sfx(todos ? 'sfx_pronto' : 'sfx_tempo');
-    await diz(todos ? 'Todo mundo respondeu!' : 'Tempo esgotado!'); if (!vivo()) return null;
+    await diz(T(todos ? 'resp_todos' : 'resp_tempo')); if (!vivo()) return null;
 
     // Revelação
     mudar('pirRevela');
@@ -1102,7 +1081,7 @@
     const extra = desemp ? (n ? (n > 1 ? `${n} acertaram · ${certos[0].nome} foi mais rápido` : `${certos[0].nome} acertou`) : 'ninguém acertou') : `${n} ${n === 1 ? 'acertou' : 'acertaram'}`;
     cartao({ cab, cabCor: desemp ? '#E0412F' : '#4A5878', texto: Q.esc(q.texto), fs: 28, rev: { k: q.certa, texto: q.ops[q.certa], extra } });
     Q.sfx(n ? 'sfx_certo' : 'sfx_errado');
-    await diz('A resposta certa é… ' + q.falada + '!'); if (!vivo()) return null;
+    await diz(F.resposta(q)); if (!vivo()) return null;
     return { certos, desemp };
   }
 
@@ -1124,7 +1103,7 @@
       });
     });
     if (!vivo()) return;
-    await diz(certos.length ? 'Quem acertou, sobe!' : 'Ninguém acertou! Todo mundo fica onde está.'); if (!vivo()) return;
+    await diz(T(certos.length ? 'pir_sobe' : 'pir_ninguem')); if (!vivo()) return;
     if (certos.length) {
       const dur = Math.max(...certos.map((j, o) => o * 0.35 + sobe[js.indexOf(j)] * PASSO)) + 0.6;
       Q.sfx('sfx_correr');
@@ -1144,7 +1123,7 @@
     // Reações: subiu dois, quase no topo
     if (js.some((j) => j.deg - antes[j.pid] >= 2)) { await diz(reacao('dois')); if (!vivo()) return; }
     const quase = js.filter((j) => j.deg >= 14 && j.deg < TOPO && antes[j.pid] < 14).sort((a, b) => b.deg - a.deg)[0];
-    if (quase) { await diz(sorteia([`${fala(quase)} está quase no topo!`, `Olha quem está chegando lá em cima: ${fala(quase)}!`, `Falta pouco para ${fala(quase)}!`])); if (!vivo()) return; }
+    if (quase) { await diz(T(sorteia(['quase_1', 'quase_2', 'quase_3']), quase.char)); if (!vivo()) return; }
     await espera(600);
   }
 
@@ -1156,9 +1135,9 @@
     Q.sfx('sfx_tempo');
     await faixa(rest === 1 ? 'Falta <span style="color:#E0412F">1</span> pergunta!' : `Faltam <span style="color:#E0412F">${rest}</span> perguntas!`, '#FFC531', '#C28F00', 6, '#1D2A4D', 92);
     cartao({ texto: 'Atenção! Ninguém consegue mais chegar ao topo.', aviso: (rest === 1 ? 'Falta só 1 pergunta.' : `Faltam só ${rest} perguntas.`) + ' No fim, vence quem estiver <span style="color:#2F5FB8">mais alto na pirâmide</span>.', fs: 40 });
-    await diz('Atenção! Ninguém consegue mais chegar ao topo.'); if (!vivo()) return;
-    await diz(rest === 1 ? 'Falta só uma pergunta!' : `Faltam só ${Q.NUMEROS[rest] || rest} perguntas!`); if (!vivo()) return;
-    await diz('No fim, vence quem estiver mais alto na pirâmide.'); if (!vivo()) return;
+    await diz(T('faltam_atencao')); if (!vivo()) return;
+    await diz(rest === 1 ? T('faltam_uma') : T('faltam', rest)); if (!vivo()) return;
+    await diz(T('faltam_fim')); if (!vivo()) return;
     await tiraFaixa();
     const lider = js.slice().sort((a, b) => b.deg - a.deg)[0], li = js.indexOf(lider);
     const [x, y, h] = ponto(li, lider.deg);
@@ -1184,9 +1163,9 @@
     const nomes = finalistas.map((j) => j.nome), lista = nomes.slice(0, -1).join(', ') + ' e ' + nomes[nomes.length - 1];
     const falaLista = finalistas.map(fala), fl = falaLista.slice(0, -1).join(', ') + ' e ' + falaLista[falaLista.length - 1];
     cartao({ texto: `Empate no degrau ${deg}!`, aviso: `${Q.esc(lista)} vão para o desempate. Só ${finalistas.length === 2 ? 'os dois' : 'os finalistas'} respondem: <span style="color:#2F5FB8">quem acertar mais rápido vence</span>.`, fs: 40 });
-    await diz(`Empate no degrau ${Q.NUMEROS[deg] || deg}!`); if (!vivo()) return null;
-    await diz(`${fl} vão para o desempate.`); if (!vivo()) return null;
-    await diz('Só os finalistas respondem, e quem acertar mais rápido vence!'); if (!vivo()) return null;
+    await diz(T('empate_degrau', deg)); if (!vivo()) return null;
+    await diz(T('desempate_vao')); if (!vivo()) return null;
+    await diz(T('desempate_regra')); if (!vivo()) return null;
     await tiraFaixa();
     for (let tent = 0; tent < 6; tent++) {
       const q = banco.shift(); if (!q) break;
@@ -1196,14 +1175,14 @@
       await espera(1200);
       if (res.certos.length) {
         const v = res.certos[0];
-        await diz('Quem chegou primeiro foi… ' + fala(v) + '!');
+        await diz(T('desempate_venceu', v.char));
         const vi = js.indexOf(v), [x, y, h] = ponto(vi, v.deg);
         brilhos([{ x, y: (y - h * 0.45).toFixed(1), s: 1.25, c: 'rgba(255,214,80,.95)' }]);
         await animar(1.4, (t) => posicionar((i, j) => (j === v ? { acao: 'comemora', lado: x < 960 ? 'right' : 'left', topo: `<div style="display:flex;align-items:center;gap:8px">${COROA}<span style="white-space:nowrap;font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;background:#FFD23F;color:#1D2A4D;border-radius:14px;padding:6px 16px;box-shadow:0 5px 0 #C49A0C">Venceu!</span></div>`, dy: -Math.abs(Math.sin(t * 7)) * 22 } : finalistas.includes(j) ? {} : { op: 0.45, fil: 'grayscale(.8)' })));
         brilhos([]);
         return v;
       }
-      await diz('Ninguém acertou! Vamos para mais uma pergunta de desempate.'); if (!vivo()) return null;
+      await diz(T('desempate_ninguem')); if (!vivo()) return null;
       luzF();
     }
     // Sem perguntas sobrando: sorteio entre os finalistas
@@ -1240,7 +1219,7 @@
   async function vitoria(venc, porLimite, vivo) {
     const js = estado.jogadores, vi = js.indexOf(venc);
     // Tudo para: corta qualquer fala da Coruja e toca a fanfarra da vitória
-    try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
+    Q.calar();
     Q.sfx('sfx_vitoria');
     mudar('pirVitoria');
     cartao(null); $('pirRelogio').innerHTML = ''; brilhos([]);
@@ -1256,7 +1235,7 @@
     const b = $('bordao'); b.classList.remove('oculto');
     const out = (u) => { const k = 1.70158; return 1 + (k + 1) * Math.pow(u - 1, 3) + k * Math.pow(u - 1, 2); };
     window.QSS_CORUJA.reagir('rindo', 3);
-    const grito = diz('Quem sabe… SOBE!');
+    const grito = diz(T('grito'));
     await animar(2.2, (t) => {
       b.style.transform = `translate(-50%,-50%) scale(${t < 0.35 ? out(cl(t / 0.35)).toFixed(2) : 1}) rotate(-3deg)`;
       posicionar((i, j) => (j === venc ? { dy: -Math.abs(Math.sin(t * 7)) * 22, acao: 'comemora' } : { op: 0.75, fil: 'grayscale(.4)' }));
@@ -1296,10 +1275,10 @@
     await espera(2200); if (!vivo()) return;
     $('pfTit').textContent = `Parabéns, ${venc.nome}! ${porLimite ? 'Você terminou mais alto!' : 'Você chegou ao topo!'}`;
     $('podFala').classList.remove('oculto');
-    await diz(porLimite ? `Parabéns! ${fala(venc)} terminou mais alto na pirâmide!` : `Parabéns! ${fala(venc)} chegou ao topo da Pirâmide do Conhecimento!`); if (!vivo()) return;
-    await diz('O seu prêmio já está no seu celular: um conhecimento inútil! Leia em voz alta para todo mundo.'); if (!vivo()) return;
+    await diz(T(porLimite ? 'vitoria_limite' : 'vitoria_topo', venc.char)); if (!vivo()) return;
+    await diz(T('premio')); if (!vivo()) return;
     desenharDeNovo(); $('deNovoBox').classList.remove('oculto');
-    await diz('Querem jogar de novo? Segurem o botão no celular.');
+    await diz(T('de_novo'));
   }
 
   async function finalPiramide(vivo) {
@@ -1342,7 +1321,7 @@
       else if (st === 'CHANNEL_ERROR' || st === 'TIMED_OUT' || st === 'CLOSED') aviso('Reconectando à sala…');
     });
     mostrar('sala'); desenharSala();
-    falaVoz('Entrem na sala! Apontem a câmera do celular para o QR code, ou digitem a senha.');
+    falaVoz(T('sala_entrem'));
     setInterval(() => {
       if (estado.fase === 'sala') {
         const antes = estado.jogadores.length;

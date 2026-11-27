@@ -1,0 +1,28 @@
+{
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "voz_nome": "Bianca - Quirky and Animated",
+  "modelo": "eleven_v4",
+  "formato": "mp3_44100_128",
+  "ajustes_voz": {},
+  "tom_por_grupo": {
+    "fixas": "[excited]",
+    "personagens": "[excited]",
+    "numeros": "[excited]",
+    "categorias": "[excited]",
+    "reacoes": "[excited]",
+    "perguntas": ""
+  },
+  "tom_por_fala": {
+    "rev_vamos": "[curious]",
+    "grito": "[shouting]",
+    "faltam_atencao": "[dramatically]",
+    "voto_empate": "[mischievously]",
+    "reacao_erro_1": "[laughs]",
+    "reacao_nenhum_1": "[laughs]",
+    "reacao_nenhum_2": "[surprised]",
+    "reacao_tempo_1": "[urgently]",
+    "reacao_tempo_2": "[urgently]",
+    "reacao_tempo_3": "[urgently]"
+  },
+  "texto_falado": {}
+}
