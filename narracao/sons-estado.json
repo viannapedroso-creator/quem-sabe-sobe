@@ -1,1 +1,106 @@
-{}
+{
+ "sfx_entrar": {
+  "assinatura": "[\"Cheerful cartoon pop with a little sparkle when a new player joins the lobby, toy box party quiz game, playful cartoon style\",1,\"efeito\"]",
+  "em": "2026-11-27T16:54:53.012Z"
+ },
+ "sfx_pronto": {
+  "assinatura": "[\"Short happy toy bell double ding, ready confirmation, toy box party quiz game, playful cartoon style\",0.7,\"efeito\"]",
+  "em": "2026-11-27T16:54:54.892Z"
+ },
+ "sfx_comecar": {
+  "assinatura": "[\"Game start sting: toy drum roll into a bright toy trumpet flourish, toy box party quiz game, playful cartoon style\",2.5,\"efeito\"]",
+  "em": "2026-11-27T16:54:56.521Z"
+ },
+ "sfx_sair": {
+  "assinatura": "[\"Soft descending cartoon whoosh, someone leaves, toy box party quiz game, playful cartoon style\",0.8,\"efeito\"]",
+  "em": "2026-11-27T16:54:57.642Z"
+ },
+ "sfx_toque": {
+  "assinatura": "[\"Very short soft plastic toy button click, clean UI tap, no reverb\",0.5,\"efeito\"]",
+  "em": "2026-11-27T16:54:58.717Z"
+ },
+ "sfx_sorteio": {
+  "assinatura": "[\"Small toy roulette wheel spinning and ticking with tiny bells, slowing down, toy box party quiz game, playful cartoon style\",2.5,\"efeito\"]",
+  "em": "2026-11-27T16:55:00.032Z"
+ },
+ "sfx_porta": {
+  "assinatura": "[\"Cartoon toy box door opening: small wooden door creak followed by a bright magical chime sparkle, playful game show style\",1.5,\"efeito\"]",
+  "em": "2026-11-27T16:55:01.163Z"
+ },
+ "sfx_pergunta": {
+  "assinatura": "[\"Question reveal sting: playful glockenspiel rising arpeggio with a soft whoosh, toy box party quiz game, playful cartoon style\",1.2,\"efeito\"]",
+  "em": "2026-11-27T16:55:02.767Z"
+ },
+ "sfx_tictac": {
+  "assinatura": "[\"Single crisp wooden toy clock tick, one tick only, dry\",0.5,\"efeito\"]",
+  "em": "2026-11-27T16:55:06.409Z"
+ },
+ "sfx_tempo": {
+  "assinatura": "[\"Toy alarm clock bell ringing briefly, time is up, comedic, toy box party quiz game, playful cartoon style\",1.2,\"efeito\"]",
+  "em": "2026-11-27T16:55:07.673Z"
+ },
+ "sfx_correr": {
+  "assinatura": "[\"Cartoon running feet scurrying quickly, comedic pitter patter, short\",1,\"efeito\"]",
+  "em": "2026-11-27T16:55:08.604Z"
+ },
+ "sfx_certo": {
+  "assinatura": "[\"Correct answer sound for a family party quiz game: cheerful rising xylophone and toy bells ding, short and happy\",1,\"efeito\"]",
+  "em": "2026-11-27T16:55:09.620Z"
+ },
+ "sfx_ponto": {
+  "assinatura": "[\"Short coin-like toy chime with sparkle, points added, toy box party quiz game, playful cartoon style\",0.6,\"efeito\"]",
+  "em": "2026-11-27T16:55:10.848Z"
+ },
+ "sfx_ranking": {
+  "assinatura": "[\"Leaderboard reveal: short toy snare drum roll ending with a cymbal tap, toy box party quiz game, playful cartoon style\",1.5,\"efeito\"]",
+  "em": "2026-11-27T16:55:12.380Z"
+ },
+ "sfx_ranking_sobe": {
+  "assinatura": "[\"Quick upward slide whistle with a sparkle, moving up, toy box party quiz game, playful cartoon style\",0.8,\"efeito\"]",
+  "em": "2026-11-27T16:55:13.746Z"
+ },
+ "sfx_lancar": {
+  "assinatura": "[\"Cartoon slingshot launch whoosh, throwing a magic power, toy box party quiz game, playful cartoon style\",0.9,\"efeito\"]",
+  "em": "2026-11-27T16:55:15.095Z"
+ },
+ "sfx_acerta_poder": {
+  "assinatura": "[\"Comedic cartoon bonk impact with a wobble, a prank hits a player, toy box party quiz game, playful cartoon style\",0.9,\"efeito\"]",
+  "em": "2026-11-27T16:55:16.339Z"
+ },
+ "sfx_espelho": {
+  "assinatura": "[\"Magical mirror shimmer and bright reflective ping, deflecting a spell back, toy box party quiz game, playful cartoon style\",1,\"efeito\"]",
+  "em": "2026-11-27T16:55:17.967Z"
+ },
+ "sfx_bum": {
+  "assinatura": "[\"Small comedic cartoon bomb pop with puff of smoke, playful, not scary\",0.8,\"efeito\"]",
+  "em": "2026-11-27T16:55:19.163Z"
+ },
+ "sfx_gelo": {
+  "assinatura": "[\"Ice crystals cracking and shattering, magical crunchy, short, cartoon\",0.8,\"efeito\"]",
+  "em": "2026-11-27T16:55:20.398Z"
+ },
+ "sfx_gosma": {
+  "assinatura": "[\"Gooey slime splat, squishy and funny, cartoon\",0.8,\"efeito\"]",
+  "em": "2026-11-27T16:55:21.455Z"
+ },
+ "sfx_vitoria": {
+  "assinatura": "[\"Victory fanfare for a toy-themed party game show: toy trumpets and glockenspiel triumphant fanfare with confetti pop and children's party cheer\",3,\"efeito\"]",
+  "em": "2026-11-27T16:55:22.769Z"
+ },
+ "musica_sala": {
+  "assinatura": "[\"Upbeat, playful instrumental loop for a family party quiz game lobby. Toy box theme: ukulele, glockenspiel, toy piano, hand claps, light percussion. Happy and welcoming, 120 bpm, no vocals.\",60,\"musica\"]",
+  "em": "2026-11-27T16:55:29.122Z"
+ },
+ "musica_jogo": {
+  "assinatura": "[\"Light, curious instrumental background for a quiz game while players think. Pizzicato strings, marimba, toy piano, soft bass, playful gentle tension, 100 bpm, steady, no vocals, not distracting.\",60,\"musica\"]",
+  "em": "2026-11-27T16:55:36.018Z"
+ },
+ "musica_piramide": {
+  "assinatura": "[\"Exciting instrumental for a game show grand final where players climb a pyramid. Building drums, bouncy toy synths, bright brass stabs, rising tension and fun, 125 bpm, no vocals.\",60,\"musica\"]",
+  "em": "2026-11-27T16:55:42.037Z"
+ },
+ "musica_podio": {
+  "assinatura": "[\"Joyful celebratory instrumental for a winner on the podium. Toy brass band, glockenspiel, claps, confetti party feel, triumphant and happy, no vocals.\",30,\"musica\"]",
+  "em": "2026-11-27T16:55:46.130Z"
+ }
+}
