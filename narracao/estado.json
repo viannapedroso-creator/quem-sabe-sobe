@@ -1126,5 +1126,3989 @@
   "modelo": "eleven_v4",
   "voz": "HReOQZPV9tH5iTEnSbGo",
   "em": "2026-11-27T14:27:47.939Z"
+ },
+ "sala_chegou_bombeiro": {
+  "texto": "Chegou… o Bombeiro!",
+  "enviado": "[excited] Chegou… o Bombeiro!",
+  "arquivo": "personagens/sala_chegou_bombeiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:44.524Z"
+ },
+ "sala_chegou_astronauta": {
+  "texto": "Chegou… o Astronauta!",
+  "enviado": "[excited] Chegou… o Astronauta!",
+  "arquivo": "personagens/sala_chegou_astronauta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:45.650Z"
+ },
+ "sala_chegou_marinheiro": {
+  "texto": "Chegou… o Marinheiro!",
+  "enviado": "[excited] Chegou… o Marinheiro!",
+  "arquivo": "personagens/sala_chegou_marinheiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:46.679Z"
+ },
+ "sala_chegou_cowboy": {
+  "texto": "Chegou… o Cowboy!",
+  "enviado": "[excited] Chegou… o Cowboy!",
+  "arquivo": "personagens/sala_chegou_cowboy.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:48.016Z"
+ },
+ "sala_chegou_vaca": {
+  "texto": "Chegou… a Vaca!",
+  "enviado": "[excited] Chegou… a Vaca!",
+  "arquivo": "personagens/sala_chegou_vaca.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:48.915Z"
+ },
+ "sala_chegou_hotdog": {
+  "texto": "Chegou… o Cachorro-Quente!",
+  "enviado": "[excited] Chegou… o Cachorro-Quente!",
+  "arquivo": "personagens/sala_chegou_hotdog.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:49.903Z"
+ },
+ "sala_chegou_cientista": {
+  "texto": "Chegou… a Cientista!",
+  "enviado": "[excited] Chegou… a Cientista!",
+  "arquivo": "personagens/sala_chegou_cientista.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:50.859Z"
+ },
+ "sala_chegou_roqueira": {
+  "texto": "Chegou… a Roqueira!",
+  "enviado": "[excited] Chegou… a Roqueira!",
+  "arquivo": "personagens/sala_chegou_roqueira.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:51.870Z"
+ },
+ "sala_chegou_dinossauro": {
+  "texto": "Chegou… o Dinossauro!",
+  "enviado": "[excited] Chegou… o Dinossauro!",
+  "arquivo": "personagens/sala_chegou_dinossauro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:52.877Z"
+ },
+ "sala_chegou_coxinha": {
+  "texto": "Chegou… a Coxinha!",
+  "enviado": "[excited] Chegou… a Coxinha!",
+  "arquivo": "personagens/sala_chegou_coxinha.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:53.948Z"
+ },
+ "sala_chegou_mergulhador": {
+  "texto": "Chegou… o Mergulhador!",
+  "enviado": "[excited] Chegou… o Mergulhador!",
+  "arquivo": "personagens/sala_chegou_mergulhador.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:54.940Z"
+ },
+ "sala_chegou_vovo": {
+  "texto": "Chegou… a Vovó!",
+  "enviado": "[excited] Chegou… a Vovó!",
+  "arquivo": "personagens/sala_chegou_vovo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:55.885Z"
+ },
+ "manda_bombeiro_gosma": {
+  "texto": "O Bombeiro manda a Gosma!",
+  "enviado": "[mischievously] O Bombeiro manda a Gosma!",
+  "arquivo": "personagens/manda_bombeiro_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:56.913Z"
+ },
+ "manda_bombeiro_gelo": {
+  "texto": "O Bombeiro manda o Gelo!",
+  "enviado": "[mischievously] O Bombeiro manda o Gelo!",
+  "arquivo": "personagens/manda_bombeiro_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:58.021Z"
+ },
+ "manda_bombeiro_bombas": {
+  "texto": "O Bombeiro manda as Bombas!",
+  "enviado": "[mischievously] O Bombeiro manda as Bombas!",
+  "arquivo": "personagens/manda_bombeiro_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:28:59.017Z"
+ },
+ "manda_bombeiro_cupins": {
+  "texto": "O Bombeiro manda os Cupins!",
+  "enviado": "[mischievously] O Bombeiro manda os Cupins!",
+  "arquivo": "personagens/manda_bombeiro_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:00.049Z"
+ },
+ "manda_bombeiro_redemoinho": {
+  "texto": "O Bombeiro manda o Redemoinho!",
+  "enviado": "[mischievously] O Bombeiro manda o Redemoinho!",
+  "arquivo": "personagens/manda_bombeiro_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:01.109Z"
+ },
+ "manda_bombeiro_encolhe": {
+  "texto": "O Bombeiro manda o Encolhe!",
+  "enviado": "[mischievously] O Bombeiro manda o Encolhe!",
+  "arquivo": "personagens/manda_bombeiro_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:02.205Z"
+ },
+ "manda_astronauta_gosma": {
+  "texto": "O Astronauta manda a Gosma!",
+  "enviado": "[mischievously] O Astronauta manda a Gosma!",
+  "arquivo": "personagens/manda_astronauta_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:03.399Z"
+ },
+ "manda_astronauta_gelo": {
+  "texto": "O Astronauta manda o Gelo!",
+  "enviado": "[mischievously] O Astronauta manda o Gelo!",
+  "arquivo": "personagens/manda_astronauta_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:04.408Z"
+ },
+ "manda_astronauta_bombas": {
+  "texto": "O Astronauta manda as Bombas!",
+  "enviado": "[mischievously] O Astronauta manda as Bombas!",
+  "arquivo": "personagens/manda_astronauta_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:05.569Z"
+ },
+ "manda_astronauta_cupins": {
+  "texto": "O Astronauta manda os Cupins!",
+  "enviado": "[mischievously] O Astronauta manda os Cupins!",
+  "arquivo": "personagens/manda_astronauta_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:06.660Z"
+ },
+ "manda_astronauta_redemoinho": {
+  "texto": "O Astronauta manda o Redemoinho!",
+  "enviado": "[mischievously] O Astronauta manda o Redemoinho!",
+  "arquivo": "personagens/manda_astronauta_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:07.945Z"
+ },
+ "manda_astronauta_encolhe": {
+  "texto": "O Astronauta manda o Encolhe!",
+  "enviado": "[mischievously] O Astronauta manda o Encolhe!",
+  "arquivo": "personagens/manda_astronauta_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:09.123Z"
+ },
+ "manda_marinheiro_gosma": {
+  "texto": "O Marinheiro manda a Gosma!",
+  "enviado": "[mischievously] O Marinheiro manda a Gosma!",
+  "arquivo": "personagens/manda_marinheiro_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:10.246Z"
+ },
+ "manda_marinheiro_gelo": {
+  "texto": "O Marinheiro manda o Gelo!",
+  "enviado": "[mischievously] O Marinheiro manda o Gelo!",
+  "arquivo": "personagens/manda_marinheiro_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:11.308Z"
+ },
+ "manda_marinheiro_bombas": {
+  "texto": "O Marinheiro manda as Bombas!",
+  "enviado": "[mischievously] O Marinheiro manda as Bombas!",
+  "arquivo": "personagens/manda_marinheiro_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:12.365Z"
+ },
+ "manda_marinheiro_cupins": {
+  "texto": "O Marinheiro manda os Cupins!",
+  "enviado": "[mischievously] O Marinheiro manda os Cupins!",
+  "arquivo": "personagens/manda_marinheiro_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:13.410Z"
+ },
+ "manda_marinheiro_redemoinho": {
+  "texto": "O Marinheiro manda o Redemoinho!",
+  "enviado": "[mischievously] O Marinheiro manda o Redemoinho!",
+  "arquivo": "personagens/manda_marinheiro_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:14.654Z"
+ },
+ "manda_marinheiro_encolhe": {
+  "texto": "O Marinheiro manda o Encolhe!",
+  "enviado": "[mischievously] O Marinheiro manda o Encolhe!",
+  "arquivo": "personagens/manda_marinheiro_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:15.729Z"
+ },
+ "manda_cowboy_gosma": {
+  "texto": "O Cowboy manda a Gosma!",
+  "enviado": "[mischievously] O Cowboy manda a Gosma!",
+  "arquivo": "personagens/manda_cowboy_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:16.795Z"
+ },
+ "manda_cowboy_gelo": {
+  "texto": "O Cowboy manda o Gelo!",
+  "enviado": "[mischievously] O Cowboy manda o Gelo!",
+  "arquivo": "personagens/manda_cowboy_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:17.934Z"
+ },
+ "manda_cowboy_bombas": {
+  "texto": "O Cowboy manda as Bombas!",
+  "enviado": "[mischievously] O Cowboy manda as Bombas!",
+  "arquivo": "personagens/manda_cowboy_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:18.950Z"
+ },
+ "manda_cowboy_cupins": {
+  "texto": "O Cowboy manda os Cupins!",
+  "enviado": "[mischievously] O Cowboy manda os Cupins!",
+  "arquivo": "personagens/manda_cowboy_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:19.948Z"
+ },
+ "manda_cowboy_redemoinho": {
+  "texto": "O Cowboy manda o Redemoinho!",
+  "enviado": "[mischievously] O Cowboy manda o Redemoinho!",
+  "arquivo": "personagens/manda_cowboy_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:21.132Z"
+ },
+ "manda_cowboy_encolhe": {
+  "texto": "O Cowboy manda o Encolhe!",
+  "enviado": "[mischievously] O Cowboy manda o Encolhe!",
+  "arquivo": "personagens/manda_cowboy_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:22.207Z"
+ },
+ "manda_vaca_gosma": {
+  "texto": "A Vaca manda a Gosma!",
+  "enviado": "[mischievously] A Vaca manda a Gosma!",
+  "arquivo": "personagens/manda_vaca_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:23.292Z"
+ },
+ "manda_vaca_gelo": {
+  "texto": "A Vaca manda o Gelo!",
+  "enviado": "[mischievously] A Vaca manda o Gelo!",
+  "arquivo": "personagens/manda_vaca_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:24.234Z"
+ },
+ "manda_vaca_bombas": {
+  "texto": "A Vaca manda as Bombas!",
+  "enviado": "[mischievously] A Vaca manda as Bombas!",
+  "arquivo": "personagens/manda_vaca_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:25.308Z"
+ },
+ "manda_vaca_cupins": {
+  "texto": "A Vaca manda os Cupins!",
+  "enviado": "[mischievously] A Vaca manda os Cupins!",
+  "arquivo": "personagens/manda_vaca_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:26.540Z"
+ },
+ "manda_vaca_redemoinho": {
+  "texto": "A Vaca manda o Redemoinho!",
+  "enviado": "[mischievously] A Vaca manda o Redemoinho!",
+  "arquivo": "personagens/manda_vaca_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:27.605Z"
+ },
+ "manda_vaca_encolhe": {
+  "texto": "A Vaca manda o Encolhe!",
+  "enviado": "[mischievously] A Vaca manda o Encolhe!",
+  "arquivo": "personagens/manda_vaca_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:28.720Z"
+ },
+ "manda_hotdog_gosma": {
+  "texto": "O Cachorro-Quente manda a Gosma!",
+  "enviado": "[mischievously] O Cachorro-Quente manda a Gosma!",
+  "arquivo": "personagens/manda_hotdog_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:29.812Z"
+ },
+ "manda_hotdog_gelo": {
+  "texto": "O Cachorro-Quente manda o Gelo!",
+  "enviado": "[mischievously] O Cachorro-Quente manda o Gelo!",
+  "arquivo": "personagens/manda_hotdog_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:30.853Z"
+ },
+ "manda_hotdog_bombas": {
+  "texto": "O Cachorro-Quente manda as Bombas!",
+  "enviado": "[mischievously] O Cachorro-Quente manda as Bombas!",
+  "arquivo": "personagens/manda_hotdog_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:32.158Z"
+ },
+ "manda_hotdog_cupins": {
+  "texto": "O Cachorro-Quente manda os Cupins!",
+  "enviado": "[mischievously] O Cachorro-Quente manda os Cupins!",
+  "arquivo": "personagens/manda_hotdog_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:33.261Z"
+ },
+ "manda_hotdog_redemoinho": {
+  "texto": "O Cachorro-Quente manda o Redemoinho!",
+  "enviado": "[mischievously] O Cachorro-Quente manda o Redemoinho!",
+  "arquivo": "personagens/manda_hotdog_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:34.539Z"
+ },
+ "manda_hotdog_encolhe": {
+  "texto": "O Cachorro-Quente manda o Encolhe!",
+  "enviado": "[mischievously] O Cachorro-Quente manda o Encolhe!",
+  "arquivo": "personagens/manda_hotdog_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:35.731Z"
+ },
+ "manda_cientista_gosma": {
+  "texto": "A Cientista manda a Gosma!",
+  "enviado": "[mischievously] A Cientista manda a Gosma!",
+  "arquivo": "personagens/manda_cientista_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:36.856Z"
+ },
+ "manda_cientista_gelo": {
+  "texto": "A Cientista manda o Gelo!",
+  "enviado": "[mischievously] A Cientista manda o Gelo!",
+  "arquivo": "personagens/manda_cientista_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:38.293Z"
+ },
+ "manda_cientista_bombas": {
+  "texto": "A Cientista manda as Bombas!",
+  "enviado": "[mischievously] A Cientista manda as Bombas!",
+  "arquivo": "personagens/manda_cientista_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:39.386Z"
+ },
+ "manda_cientista_cupins": {
+  "texto": "A Cientista manda os Cupins!",
+  "enviado": "[mischievously] A Cientista manda os Cupins!",
+  "arquivo": "personagens/manda_cientista_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:40.398Z"
+ },
+ "manda_cientista_redemoinho": {
+  "texto": "A Cientista manda o Redemoinho!",
+  "enviado": "[mischievously] A Cientista manda o Redemoinho!",
+  "arquivo": "personagens/manda_cientista_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:41.776Z"
+ },
+ "manda_cientista_encolhe": {
+  "texto": "A Cientista manda o Encolhe!",
+  "enviado": "[mischievously] A Cientista manda o Encolhe!",
+  "arquivo": "personagens/manda_cientista_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:42.989Z"
+ },
+ "manda_roqueira_gosma": {
+  "texto": "A Roqueira manda a Gosma!",
+  "enviado": "[mischievously] A Roqueira manda a Gosma!",
+  "arquivo": "personagens/manda_roqueira_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:44.132Z"
+ },
+ "manda_roqueira_gelo": {
+  "texto": "A Roqueira manda o Gelo!",
+  "enviado": "[mischievously] A Roqueira manda o Gelo!",
+  "arquivo": "personagens/manda_roqueira_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:46.259Z"
+ },
+ "manda_roqueira_bombas": {
+  "texto": "A Roqueira manda as Bombas!",
+  "enviado": "[mischievously] A Roqueira manda as Bombas!",
+  "arquivo": "personagens/manda_roqueira_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:47.529Z"
+ },
+ "manda_roqueira_cupins": {
+  "texto": "A Roqueira manda os Cupins!",
+  "enviado": "[mischievously] A Roqueira manda os Cupins!",
+  "arquivo": "personagens/manda_roqueira_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:48.657Z"
+ },
+ "manda_roqueira_redemoinho": {
+  "texto": "A Roqueira manda o Redemoinho!",
+  "enviado": "[mischievously] A Roqueira manda o Redemoinho!",
+  "arquivo": "personagens/manda_roqueira_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:50.148Z"
+ },
+ "manda_roqueira_encolhe": {
+  "texto": "A Roqueira manda o Encolhe!",
+  "enviado": "[mischievously] A Roqueira manda o Encolhe!",
+  "arquivo": "personagens/manda_roqueira_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:51.207Z"
+ },
+ "manda_dinossauro_gosma": {
+  "texto": "O Dinossauro manda a Gosma!",
+  "enviado": "[mischievously] O Dinossauro manda a Gosma!",
+  "arquivo": "personagens/manda_dinossauro_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:52.377Z"
+ },
+ "manda_dinossauro_gelo": {
+  "texto": "O Dinossauro manda o Gelo!",
+  "enviado": "[mischievously] O Dinossauro manda o Gelo!",
+  "arquivo": "personagens/manda_dinossauro_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:53.545Z"
+ },
+ "manda_dinossauro_bombas": {
+  "texto": "O Dinossauro manda as Bombas!",
+  "enviado": "[mischievously] O Dinossauro manda as Bombas!",
+  "arquivo": "personagens/manda_dinossauro_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:54.783Z"
+ },
+ "manda_dinossauro_cupins": {
+  "texto": "O Dinossauro manda os Cupins!",
+  "enviado": "[mischievously] O Dinossauro manda os Cupins!",
+  "arquivo": "personagens/manda_dinossauro_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:55.822Z"
+ },
+ "manda_dinossauro_redemoinho": {
+  "texto": "O Dinossauro manda o Redemoinho!",
+  "enviado": "[mischievously] O Dinossauro manda o Redemoinho!",
+  "arquivo": "personagens/manda_dinossauro_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:56.919Z"
+ },
+ "manda_dinossauro_encolhe": {
+  "texto": "O Dinossauro manda o Encolhe!",
+  "enviado": "[mischievously] O Dinossauro manda o Encolhe!",
+  "arquivo": "personagens/manda_dinossauro_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:58.160Z"
+ },
+ "manda_coxinha_gosma": {
+  "texto": "A Coxinha manda a Gosma!",
+  "enviado": "[mischievously] A Coxinha manda a Gosma!",
+  "arquivo": "personagens/manda_coxinha_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:29:59.439Z"
+ },
+ "manda_coxinha_gelo": {
+  "texto": "A Coxinha manda o Gelo!",
+  "enviado": "[mischievously] A Coxinha manda o Gelo!",
+  "arquivo": "personagens/manda_coxinha_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:00.548Z"
+ },
+ "manda_coxinha_bombas": {
+  "texto": "A Coxinha manda as Bombas!",
+  "enviado": "[mischievously] A Coxinha manda as Bombas!",
+  "arquivo": "personagens/manda_coxinha_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:01.581Z"
+ },
+ "manda_coxinha_cupins": {
+  "texto": "A Coxinha manda os Cupins!",
+  "enviado": "[mischievously] A Coxinha manda os Cupins!",
+  "arquivo": "personagens/manda_coxinha_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:02.664Z"
+ },
+ "manda_coxinha_redemoinho": {
+  "texto": "A Coxinha manda o Redemoinho!",
+  "enviado": "[mischievously] A Coxinha manda o Redemoinho!",
+  "arquivo": "personagens/manda_coxinha_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:03.822Z"
+ },
+ "manda_coxinha_encolhe": {
+  "texto": "A Coxinha manda o Encolhe!",
+  "enviado": "[mischievously] A Coxinha manda o Encolhe!",
+  "arquivo": "personagens/manda_coxinha_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:05.022Z"
+ },
+ "manda_mergulhador_gosma": {
+  "texto": "O Mergulhador manda a Gosma!",
+  "enviado": "[mischievously] O Mergulhador manda a Gosma!",
+  "arquivo": "personagens/manda_mergulhador_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:06.264Z"
+ },
+ "manda_mergulhador_gelo": {
+  "texto": "O Mergulhador manda o Gelo!",
+  "enviado": "[mischievously] O Mergulhador manda o Gelo!",
+  "arquivo": "personagens/manda_mergulhador_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:07.602Z"
+ },
+ "manda_mergulhador_bombas": {
+  "texto": "O Mergulhador manda as Bombas!",
+  "enviado": "[mischievously] O Mergulhador manda as Bombas!",
+  "arquivo": "personagens/manda_mergulhador_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:08.804Z"
+ },
+ "manda_mergulhador_cupins": {
+  "texto": "O Mergulhador manda os Cupins!",
+  "enviado": "[mischievously] O Mergulhador manda os Cupins!",
+  "arquivo": "personagens/manda_mergulhador_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:09.934Z"
+ },
+ "manda_mergulhador_redemoinho": {
+  "texto": "O Mergulhador manda o Redemoinho!",
+  "enviado": "[mischievously] O Mergulhador manda o Redemoinho!",
+  "arquivo": "personagens/manda_mergulhador_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:11.206Z"
+ },
+ "manda_mergulhador_encolhe": {
+  "texto": "O Mergulhador manda o Encolhe!",
+  "enviado": "[mischievously] O Mergulhador manda o Encolhe!",
+  "arquivo": "personagens/manda_mergulhador_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:12.259Z"
+ },
+ "manda_vovo_gosma": {
+  "texto": "A Vovó manda a Gosma!",
+  "enviado": "[mischievously] A Vovó manda a Gosma!",
+  "arquivo": "personagens/manda_vovo_gosma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:13.343Z"
+ },
+ "manda_vovo_gelo": {
+  "texto": "A Vovó manda o Gelo!",
+  "enviado": "[mischievously] A Vovó manda o Gelo!",
+  "arquivo": "personagens/manda_vovo_gelo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:14.392Z"
+ },
+ "manda_vovo_bombas": {
+  "texto": "A Vovó manda as Bombas!",
+  "enviado": "[mischievously] A Vovó manda as Bombas!",
+  "arquivo": "personagens/manda_vovo_bombas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:15.571Z"
+ },
+ "manda_vovo_cupins": {
+  "texto": "A Vovó manda os Cupins!",
+  "enviado": "[mischievously] A Vovó manda os Cupins!",
+  "arquivo": "personagens/manda_vovo_cupins.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:16.724Z"
+ },
+ "manda_vovo_redemoinho": {
+  "texto": "A Vovó manda o Redemoinho!",
+  "enviado": "[mischievously] A Vovó manda o Redemoinho!",
+  "arquivo": "personagens/manda_vovo_redemoinho.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:17.954Z"
+ },
+ "manda_vovo_encolhe": {
+  "texto": "A Vovó manda o Encolhe!",
+  "enviado": "[mischievously] A Vovó manda o Encolhe!",
+  "arquivo": "personagens/manda_vovo_encolhe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:19.166Z"
+ },
+ "espelho_volta_bombeiro": {
+  "texto": "Espelho! Voltou tudo para o Bombeiro!",
+  "enviado": "[surprised] Espelho! Voltou tudo para o Bombeiro!",
+  "arquivo": "personagens/espelho_volta_bombeiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:20.494Z"
+ },
+ "espelho_volta_astronauta": {
+  "texto": "Espelho! Voltou tudo para o Astronauta!",
+  "enviado": "[surprised] Espelho! Voltou tudo para o Astronauta!",
+  "arquivo": "personagens/espelho_volta_astronauta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:21.764Z"
+ },
+ "espelho_volta_marinheiro": {
+  "texto": "Espelho! Voltou tudo para o Marinheiro!",
+  "enviado": "[surprised] Espelho! Voltou tudo para o Marinheiro!",
+  "arquivo": "personagens/espelho_volta_marinheiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:22.940Z"
+ },
+ "espelho_volta_cowboy": {
+  "texto": "Espelho! Voltou tudo para o Cowboy!",
+  "enviado": "[surprised] Espelho! Voltou tudo para o Cowboy!",
+  "arquivo": "personagens/espelho_volta_cowboy.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:24.063Z"
+ },
+ "espelho_volta_vaca": {
+  "texto": "Espelho! Voltou tudo para a Vaca!",
+  "enviado": "[surprised] Espelho! Voltou tudo para a Vaca!",
+  "arquivo": "personagens/espelho_volta_vaca.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:25.420Z"
+ },
+ "espelho_volta_hotdog": {
+  "texto": "Espelho! Voltou tudo para o Cachorro-Quente!",
+  "enviado": "[surprised] Espelho! Voltou tudo para o Cachorro-Quente!",
+  "arquivo": "personagens/espelho_volta_hotdog.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:26.766Z"
+ },
+ "espelho_volta_cientista": {
+  "texto": "Espelho! Voltou tudo para a Cientista!",
+  "enviado": "[surprised] Espelho! Voltou tudo para a Cientista!",
+  "arquivo": "personagens/espelho_volta_cientista.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:27.860Z"
+ },
+ "espelho_volta_roqueira": {
+  "texto": "Espelho! Voltou tudo para a Roqueira!",
+  "enviado": "[surprised] Espelho! Voltou tudo para a Roqueira!",
+  "arquivo": "personagens/espelho_volta_roqueira.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:29.072Z"
+ },
+ "espelho_volta_dinossauro": {
+  "texto": "Espelho! Voltou tudo para o Dinossauro!",
+  "enviado": "[surprised] Espelho! Voltou tudo para o Dinossauro!",
+  "arquivo": "personagens/espelho_volta_dinossauro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:30.442Z"
+ },
+ "espelho_volta_coxinha": {
+  "texto": "Espelho! Voltou tudo para a Coxinha!",
+  "enviado": "[surprised] Espelho! Voltou tudo para a Coxinha!",
+  "arquivo": "personagens/espelho_volta_coxinha.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:31.678Z"
+ },
+ "espelho_volta_mergulhador": {
+  "texto": "Espelho! Voltou tudo para o Mergulhador!",
+  "enviado": "[surprised] Espelho! Voltou tudo para o Mergulhador!",
+  "arquivo": "personagens/espelho_volta_mergulhador.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:32.922Z"
+ },
+ "espelho_volta_vovo": {
+  "texto": "Espelho! Voltou tudo para a Vovó!",
+  "enviado": "[surprised] Espelho! Voltou tudo para a Vovó!",
+  "arquivo": "personagens/espelho_volta_vovo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:34.194Z"
+ },
+ "ranking_frente_bombeiro": {
+  "texto": "Olha o ranking! Na frente está… o Bombeiro!",
+  "enviado": "[excited] Olha o ranking! Na frente está… o Bombeiro!",
+  "arquivo": "personagens/ranking_frente_bombeiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:35.602Z"
+ },
+ "ranking_frente_astronauta": {
+  "texto": "Olha o ranking! Na frente está… o Astronauta!",
+  "enviado": "[excited] Olha o ranking! Na frente está… o Astronauta!",
+  "arquivo": "personagens/ranking_frente_astronauta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:37.066Z"
+ },
+ "ranking_frente_marinheiro": {
+  "texto": "Olha o ranking! Na frente está… o Marinheiro!",
+  "enviado": "[excited] Olha o ranking! Na frente está… o Marinheiro!",
+  "arquivo": "personagens/ranking_frente_marinheiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:38.452Z"
+ },
+ "ranking_frente_cowboy": {
+  "texto": "Olha o ranking! Na frente está… o Cowboy!",
+  "enviado": "[excited] Olha o ranking! Na frente está… o Cowboy!",
+  "arquivo": "personagens/ranking_frente_cowboy.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:39.794Z"
+ },
+ "ranking_frente_vaca": {
+  "texto": "Olha o ranking! Na frente está… a Vaca!",
+  "enviado": "[excited] Olha o ranking! Na frente está… a Vaca!",
+  "arquivo": "personagens/ranking_frente_vaca.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:41.072Z"
+ },
+ "ranking_frente_hotdog": {
+  "texto": "Olha o ranking! Na frente está… o Cachorro-Quente!",
+  "enviado": "[excited] Olha o ranking! Na frente está… o Cachorro-Quente!",
+  "arquivo": "personagens/ranking_frente_hotdog.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:42.549Z"
+ },
+ "ranking_frente_cientista": {
+  "texto": "Olha o ranking! Na frente está… a Cientista!",
+  "enviado": "[excited] Olha o ranking! Na frente está… a Cientista!",
+  "arquivo": "personagens/ranking_frente_cientista.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:43.900Z"
+ },
+ "ranking_frente_roqueira": {
+  "texto": "Olha o ranking! Na frente está… a Roqueira!",
+  "enviado": "[excited] Olha o ranking! Na frente está… a Roqueira!",
+  "arquivo": "personagens/ranking_frente_roqueira.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:45.269Z"
+ },
+ "ranking_frente_dinossauro": {
+  "texto": "Olha o ranking! Na frente está… o Dinossauro!",
+  "enviado": "[excited] Olha o ranking! Na frente está… o Dinossauro!",
+  "arquivo": "personagens/ranking_frente_dinossauro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:46.638Z"
+ },
+ "ranking_frente_coxinha": {
+  "texto": "Olha o ranking! Na frente está… a Coxinha!",
+  "enviado": "[excited] Olha o ranking! Na frente está… a Coxinha!",
+  "arquivo": "personagens/ranking_frente_coxinha.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:48.057Z"
+ },
+ "ranking_frente_mergulhador": {
+  "texto": "Olha o ranking! Na frente está… o Mergulhador!",
+  "enviado": "[excited] Olha o ranking! Na frente está… o Mergulhador!",
+  "arquivo": "personagens/ranking_frente_mergulhador.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:49.380Z"
+ },
+ "ranking_frente_vovo": {
+  "texto": "Olha o ranking! Na frente está… a Vovó!",
+  "enviado": "[excited] Olha o ranking! Na frente está… a Vovó!",
+  "arquivo": "personagens/ranking_frente_vovo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:50.667Z"
+ },
+ "quase_1_bombeiro": {
+  "texto": "O Bombeiro está quase no topo!",
+  "enviado": "[excited] O Bombeiro está quase no topo!",
+  "arquivo": "personagens/quase_1_bombeiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:51.697Z"
+ },
+ "quase_1_astronauta": {
+  "texto": "O Astronauta está quase no topo!",
+  "enviado": "[excited] O Astronauta está quase no topo!",
+  "arquivo": "personagens/quase_1_astronauta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:52.819Z"
+ },
+ "quase_1_marinheiro": {
+  "texto": "O Marinheiro está quase no topo!",
+  "enviado": "[excited] O Marinheiro está quase no topo!",
+  "arquivo": "personagens/quase_1_marinheiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:53.891Z"
+ },
+ "quase_1_cowboy": {
+  "texto": "O Cowboy está quase no topo!",
+  "enviado": "[excited] O Cowboy está quase no topo!",
+  "arquivo": "personagens/quase_1_cowboy.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:54.901Z"
+ },
+ "quase_1_vaca": {
+  "texto": "A Vaca está quase no topo!",
+  "enviado": "[excited] A Vaca está quase no topo!",
+  "arquivo": "personagens/quase_1_vaca.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:55.861Z"
+ },
+ "quase_1_hotdog": {
+  "texto": "O Cachorro-Quente está quase no topo!",
+  "enviado": "[excited] O Cachorro-Quente está quase no topo!",
+  "arquivo": "personagens/quase_1_hotdog.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:56.823Z"
+ },
+ "quase_1_cientista": {
+  "texto": "A Cientista está quase no topo!",
+  "enviado": "[excited] A Cientista está quase no topo!",
+  "arquivo": "personagens/quase_1_cientista.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:57.808Z"
+ },
+ "quase_1_roqueira": {
+  "texto": "A Roqueira está quase no topo!",
+  "enviado": "[excited] A Roqueira está quase no topo!",
+  "arquivo": "personagens/quase_1_roqueira.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:58.682Z"
+ },
+ "quase_1_dinossauro": {
+  "texto": "O Dinossauro está quase no topo!",
+  "enviado": "[excited] O Dinossauro está quase no topo!",
+  "arquivo": "personagens/quase_1_dinossauro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:30:59.642Z"
+ },
+ "quase_1_coxinha": {
+  "texto": "A Coxinha está quase no topo!",
+  "enviado": "[excited] A Coxinha está quase no topo!",
+  "arquivo": "personagens/quase_1_coxinha.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:00.744Z"
+ },
+ "quase_1_mergulhador": {
+  "texto": "O Mergulhador está quase no topo!",
+  "enviado": "[excited] O Mergulhador está quase no topo!",
+  "arquivo": "personagens/quase_1_mergulhador.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:01.814Z"
+ },
+ "quase_1_vovo": {
+  "texto": "A Vovó está quase no topo!",
+  "enviado": "[excited] A Vovó está quase no topo!",
+  "arquivo": "personagens/quase_1_vovo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:03.093Z"
+ },
+ "quase_2_bombeiro": {
+  "texto": "Olha quem está chegando lá em cima: o Bombeiro!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: o Bombeiro!",
+  "arquivo": "personagens/quase_2_bombeiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:04.277Z"
+ },
+ "quase_2_astronauta": {
+  "texto": "Olha quem está chegando lá em cima: o Astronauta!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: o Astronauta!",
+  "arquivo": "personagens/quase_2_astronauta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:05.470Z"
+ },
+ "quase_2_marinheiro": {
+  "texto": "Olha quem está chegando lá em cima: o Marinheiro!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: o Marinheiro!",
+  "arquivo": "personagens/quase_2_marinheiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:06.635Z"
+ },
+ "quase_2_cowboy": {
+  "texto": "Olha quem está chegando lá em cima: o Cowboy!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: o Cowboy!",
+  "arquivo": "personagens/quase_2_cowboy.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:07.956Z"
+ },
+ "quase_2_vaca": {
+  "texto": "Olha quem está chegando lá em cima: a Vaca!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: a Vaca!",
+  "arquivo": "personagens/quase_2_vaca.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:09.061Z"
+ },
+ "quase_2_hotdog": {
+  "texto": "Olha quem está chegando lá em cima: o Cachorro-Quente!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: o Cachorro-Quente!",
+  "arquivo": "personagens/quase_2_hotdog.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:10.759Z"
+ },
+ "quase_2_cientista": {
+  "texto": "Olha quem está chegando lá em cima: a Cientista!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: a Cientista!",
+  "arquivo": "personagens/quase_2_cientista.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:11.950Z"
+ },
+ "quase_2_roqueira": {
+  "texto": "Olha quem está chegando lá em cima: a Roqueira!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: a Roqueira!",
+  "arquivo": "personagens/quase_2_roqueira.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:13.265Z"
+ },
+ "quase_2_dinossauro": {
+  "texto": "Olha quem está chegando lá em cima: o Dinossauro!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: o Dinossauro!",
+  "arquivo": "personagens/quase_2_dinossauro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:14.567Z"
+ },
+ "quase_2_coxinha": {
+  "texto": "Olha quem está chegando lá em cima: a Coxinha!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: a Coxinha!",
+  "arquivo": "personagens/quase_2_coxinha.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:15.921Z"
+ },
+ "quase_2_mergulhador": {
+  "texto": "Olha quem está chegando lá em cima: o Mergulhador!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: o Mergulhador!",
+  "arquivo": "personagens/quase_2_mergulhador.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:17.535Z"
+ },
+ "quase_2_vovo": {
+  "texto": "Olha quem está chegando lá em cima: a Vovó!",
+  "enviado": "[excited] Olha quem está chegando lá em cima: a Vovó!",
+  "arquivo": "personagens/quase_2_vovo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:18.762Z"
+ },
+ "quase_3_bombeiro": {
+  "texto": "Falta pouco para o Bombeiro!",
+  "enviado": "[excited] Falta pouco para o Bombeiro!",
+  "arquivo": "personagens/quase_3_bombeiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:19.827Z"
+ },
+ "quase_3_astronauta": {
+  "texto": "Falta pouco para o Astronauta!",
+  "enviado": "[excited] Falta pouco para o Astronauta!",
+  "arquivo": "personagens/quase_3_astronauta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:20.825Z"
+ },
+ "quase_3_marinheiro": {
+  "texto": "Falta pouco para o Marinheiro!",
+  "enviado": "[excited] Falta pouco para o Marinheiro!",
+  "arquivo": "personagens/quase_3_marinheiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:21.785Z"
+ },
+ "quase_3_cowboy": {
+  "texto": "Falta pouco para o Cowboy!",
+  "enviado": "[excited] Falta pouco para o Cowboy!",
+  "arquivo": "personagens/quase_3_cowboy.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:22.756Z"
+ },
+ "quase_3_vaca": {
+  "texto": "Falta pouco para a Vaca!",
+  "enviado": "[excited] Falta pouco para a Vaca!",
+  "arquivo": "personagens/quase_3_vaca.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:23.795Z"
+ },
+ "quase_3_hotdog": {
+  "texto": "Falta pouco para o Cachorro-Quente!",
+  "enviado": "[excited] Falta pouco para o Cachorro-Quente!",
+  "arquivo": "personagens/quase_3_hotdog.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:24.798Z"
+ },
+ "quase_3_cientista": {
+  "texto": "Falta pouco para a Cientista!",
+  "enviado": "[excited] Falta pouco para a Cientista!",
+  "arquivo": "personagens/quase_3_cientista.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:25.901Z"
+ },
+ "quase_3_roqueira": {
+  "texto": "Falta pouco para a Roqueira!",
+  "enviado": "[excited] Falta pouco para a Roqueira!",
+  "arquivo": "personagens/quase_3_roqueira.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:26.961Z"
+ },
+ "quase_3_dinossauro": {
+  "texto": "Falta pouco para o Dinossauro!",
+  "enviado": "[excited] Falta pouco para o Dinossauro!",
+  "arquivo": "personagens/quase_3_dinossauro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:28.104Z"
+ },
+ "quase_3_coxinha": {
+  "texto": "Falta pouco para a Coxinha!",
+  "enviado": "[excited] Falta pouco para a Coxinha!",
+  "arquivo": "personagens/quase_3_coxinha.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:29.165Z"
+ },
+ "quase_3_mergulhador": {
+  "texto": "Falta pouco para o Mergulhador!",
+  "enviado": "[excited] Falta pouco para o Mergulhador!",
+  "arquivo": "personagens/quase_3_mergulhador.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:30.398Z"
+ },
+ "quase_3_vovo": {
+  "texto": "Falta pouco para a Vovó!",
+  "enviado": "[excited] Falta pouco para a Vovó!",
+  "arquivo": "personagens/quase_3_vovo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:31.261Z"
+ },
+ "desempate_venceu_bombeiro": {
+  "texto": "Quem chegou primeiro foi… o Bombeiro!",
+  "enviado": "[excited] Quem chegou primeiro foi… o Bombeiro!",
+  "arquivo": "personagens/desempate_venceu_bombeiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:32.475Z"
+ },
+ "desempate_venceu_astronauta": {
+  "texto": "Quem chegou primeiro foi… o Astronauta!",
+  "enviado": "[excited] Quem chegou primeiro foi… o Astronauta!",
+  "arquivo": "personagens/desempate_venceu_astronauta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:33.785Z"
+ },
+ "desempate_venceu_marinheiro": {
+  "texto": "Quem chegou primeiro foi… o Marinheiro!",
+  "enviado": "[excited] Quem chegou primeiro foi… o Marinheiro!",
+  "arquivo": "personagens/desempate_venceu_marinheiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:34.835Z"
+ },
+ "desempate_venceu_cowboy": {
+  "texto": "Quem chegou primeiro foi… o Cowboy!",
+  "enviado": "[excited] Quem chegou primeiro foi… o Cowboy!",
+  "arquivo": "personagens/desempate_venceu_cowboy.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:35.871Z"
+ },
+ "desempate_venceu_vaca": {
+  "texto": "Quem chegou primeiro foi… a Vaca!",
+  "enviado": "[excited] Quem chegou primeiro foi… a Vaca!",
+  "arquivo": "personagens/desempate_venceu_vaca.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:36.985Z"
+ },
+ "desempate_venceu_hotdog": {
+  "texto": "Quem chegou primeiro foi… o Cachorro-Quente!",
+  "enviado": "[excited] Quem chegou primeiro foi… o Cachorro-Quente!",
+  "arquivo": "personagens/desempate_venceu_hotdog.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:38.278Z"
+ },
+ "desempate_venceu_cientista": {
+  "texto": "Quem chegou primeiro foi… a Cientista!",
+  "enviado": "[excited] Quem chegou primeiro foi… a Cientista!",
+  "arquivo": "personagens/desempate_venceu_cientista.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:39.490Z"
+ },
+ "desempate_venceu_roqueira": {
+  "texto": "Quem chegou primeiro foi… a Roqueira!",
+  "enviado": "[excited] Quem chegou primeiro foi… a Roqueira!",
+  "arquivo": "personagens/desempate_venceu_roqueira.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:40.548Z"
+ },
+ "desempate_venceu_dinossauro": {
+  "texto": "Quem chegou primeiro foi… o Dinossauro!",
+  "enviado": "[excited] Quem chegou primeiro foi… o Dinossauro!",
+  "arquivo": "personagens/desempate_venceu_dinossauro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:41.715Z"
+ },
+ "desempate_venceu_coxinha": {
+  "texto": "Quem chegou primeiro foi… a Coxinha!",
+  "enviado": "[excited] Quem chegou primeiro foi… a Coxinha!",
+  "arquivo": "personagens/desempate_venceu_coxinha.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:42.739Z"
+ },
+ "desempate_venceu_mergulhador": {
+  "texto": "Quem chegou primeiro foi… o Mergulhador!",
+  "enviado": "[excited] Quem chegou primeiro foi… o Mergulhador!",
+  "arquivo": "personagens/desempate_venceu_mergulhador.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:43.870Z"
+ },
+ "desempate_venceu_vovo": {
+  "texto": "Quem chegou primeiro foi… a Vovó!",
+  "enviado": "[excited] Quem chegou primeiro foi… a Vovó!",
+  "arquivo": "personagens/desempate_venceu_vovo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:45.077Z"
+ },
+ "vitoria_topo_bombeiro": {
+  "texto": "Parabéns! O Bombeiro chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! O Bombeiro chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_bombeiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:46.662Z"
+ },
+ "vitoria_topo_astronauta": {
+  "texto": "Parabéns! O Astronauta chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! O Astronauta chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_astronauta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:48.375Z"
+ },
+ "vitoria_topo_marinheiro": {
+  "texto": "Parabéns! O Marinheiro chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! O Marinheiro chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_marinheiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:50.013Z"
+ },
+ "vitoria_topo_cowboy": {
+  "texto": "Parabéns! O Cowboy chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! O Cowboy chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_cowboy.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:51.666Z"
+ },
+ "vitoria_topo_vaca": {
+  "texto": "Parabéns! A Vaca chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! A Vaca chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_vaca.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:53.156Z"
+ },
+ "vitoria_topo_hotdog": {
+  "texto": "Parabéns! O Cachorro-Quente chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! O Cachorro-Quente chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_hotdog.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:54.891Z"
+ },
+ "vitoria_topo_cientista": {
+  "texto": "Parabéns! A Cientista chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! A Cientista chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_cientista.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:56.627Z"
+ },
+ "vitoria_topo_roqueira": {
+  "texto": "Parabéns! A Roqueira chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! A Roqueira chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_roqueira.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:31:58.380Z"
+ },
+ "vitoria_topo_dinossauro": {
+  "texto": "Parabéns! O Dinossauro chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! O Dinossauro chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_dinossauro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:00.231Z"
+ },
+ "vitoria_topo_coxinha": {
+  "texto": "Parabéns! A Coxinha chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! A Coxinha chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_coxinha.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:01.780Z"
+ },
+ "vitoria_topo_mergulhador": {
+  "texto": "Parabéns! O Mergulhador chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! O Mergulhador chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_mergulhador.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:03.459Z"
+ },
+ "vitoria_topo_vovo": {
+  "texto": "Parabéns! A Vovó chegou ao topo da Pirâmide do Conhecimento!",
+  "enviado": "[excited] Parabéns! A Vovó chegou ao topo da Pirâmide do Conhecimento!",
+  "arquivo": "personagens/vitoria_topo_vovo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:05.191Z"
+ },
+ "vitoria_limite_bombeiro": {
+  "texto": "Parabéns! O Bombeiro terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! O Bombeiro terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_bombeiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:06.502Z"
+ },
+ "vitoria_limite_astronauta": {
+  "texto": "Parabéns! O Astronauta terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! O Astronauta terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_astronauta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:07.745Z"
+ },
+ "vitoria_limite_marinheiro": {
+  "texto": "Parabéns! O Marinheiro terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! O Marinheiro terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_marinheiro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:08.976Z"
+ },
+ "vitoria_limite_cowboy": {
+  "texto": "Parabéns! O Cowboy terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! O Cowboy terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_cowboy.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:10.267Z"
+ },
+ "vitoria_limite_vaca": {
+  "texto": "Parabéns! A Vaca terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! A Vaca terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_vaca.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:11.587Z"
+ },
+ "vitoria_limite_hotdog": {
+  "texto": "Parabéns! O Cachorro-Quente terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! O Cachorro-Quente terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_hotdog.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:12.948Z"
+ },
+ "vitoria_limite_cientista": {
+  "texto": "Parabéns! A Cientista terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! A Cientista terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_cientista.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:14.274Z"
+ },
+ "vitoria_limite_roqueira": {
+  "texto": "Parabéns! A Roqueira terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! A Roqueira terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_roqueira.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:15.524Z"
+ },
+ "vitoria_limite_dinossauro": {
+  "texto": "Parabéns! O Dinossauro terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! O Dinossauro terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_dinossauro.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:16.813Z"
+ },
+ "vitoria_limite_coxinha": {
+  "texto": "Parabéns! A Coxinha terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! A Coxinha terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_coxinha.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:18.269Z"
+ },
+ "vitoria_limite_mergulhador": {
+  "texto": "Parabéns! O Mergulhador terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! O Mergulhador terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_mergulhador.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:19.782Z"
+ },
+ "vitoria_limite_vovo": {
+  "texto": "Parabéns! A Vovó terminou mais alto na pirâmide!",
+  "enviado": "[excited] Parabéns! A Vovó terminou mais alto na pirâmide!",
+  "arquivo": "personagens/vitoria_limite_vovo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:21.083Z"
+ },
+ "P01_pergunta": {
+  "texto": "Quantos jogadores um time de vôlei tem em quadra?",
+  "enviado": "[curious] Quantos jogadores um time de vôlei tem em quadra?",
+  "arquivo": "perguntas/P01_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:22.284Z"
+ },
+ "P01_resposta": {
+  "texto": "A resposta certa é… Seis jogadores!",
+  "enviado": "[dramatically] A resposta certa é… Seis jogadores!",
+  "arquivo": "perguntas/P01_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:23.581Z"
+ },
+ "P02_pergunta": {
+  "texto": "Qual é o planeta mais próximo do Sol?",
+  "enviado": "[curious] Qual é o planeta mais próximo do Sol?",
+  "arquivo": "perguntas/P02_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:24.637Z"
+ },
+ "P02_resposta": {
+  "texto": "A resposta certa é… Mercúrio!",
+  "enviado": "[dramatically] A resposta certa é… Mercúrio!",
+  "arquivo": "perguntas/P02_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:25.797Z"
+ },
+ "P03_pergunta": {
+  "texto": "Qual é o nome do cowboy de brinquedo do filme Toy Story?",
+  "enviado": "[curious] Qual é o nome do cowboy de brinquedo do filme Toy Story?",
+  "arquivo": "perguntas/P03_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:27.160Z"
+ },
+ "P03_resposta": {
+  "texto": "A resposta certa é… Woody!",
+  "enviado": "[dramatically] A resposta certa é… Woody!",
+  "arquivo": "perguntas/P03_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:28.228Z"
+ },
+ "P04_pergunta": {
+  "texto": "A pizza margherita é originária de qual país?",
+  "enviado": "[curious] A pizza margherita é originária de qual país?",
+  "arquivo": "perguntas/P04_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:29.488Z"
+ },
+ "P04_resposta": {
+  "texto": "A resposta certa é… Itália!",
+  "enviado": "[dramatically] A resposta certa é… Itália!",
+  "arquivo": "perguntas/P04_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:30.836Z"
+ },
+ "P05_pergunta": {
+  "texto": "Qual é o maior país da América do Sul em área?",
+  "enviado": "[curious] Qual é o maior país da América do Sul em área?",
+  "arquivo": "perguntas/P05_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:32.067Z"
+ },
+ "P05_resposta": {
+  "texto": "A resposta certa é… Brasil!",
+  "enviado": "[dramatically] A resposta certa é… Brasil!",
+  "arquivo": "perguntas/P05_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:33.183Z"
+ },
+ "P06_pergunta": {
+  "texto": "Quantas cordas tem um violão tradicional?",
+  "enviado": "[curious] Quantas cordas tem um violão tradicional?",
+  "arquivo": "perguntas/P06_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:34.240Z"
+ },
+ "P06_resposta": {
+  "texto": "A resposta certa é… Seis cordas!",
+  "enviado": "[dramatically] A resposta certa é… Seis cordas!",
+  "arquivo": "perguntas/P06_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:35.405Z"
+ },
+ "P07_pergunta": {
+  "texto": "Em qual cidade foram realizadas as Olimpíadas de 2016?",
+  "enviado": "[curious] Em qual cidade foram realizadas as Olimpíadas de 2016?",
+  "arquivo": "perguntas/P07_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:37.286Z"
+ },
+ "P07_resposta": {
+  "texto": "A resposta certa é… Rio de Janeiro!",
+  "enviado": "[dramatically] A resposta certa é… Rio de Janeiro!",
+  "arquivo": "perguntas/P07_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:38.712Z"
+ },
+ "P08_pergunta": {
+  "texto": "O guacamole é feito principalmente de qual fruta?",
+  "enviado": "[curious] O guacamole é feito principalmente de qual fruta?",
+  "arquivo": "perguntas/P08_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:40.006Z"
+ },
+ "P08_resposta": {
+  "texto": "A resposta certa é… Abacate!",
+  "enviado": "[dramatically] A resposta certa é… Abacate!",
+  "arquivo": "perguntas/P08_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:41.165Z"
+ },
+ "P09_pergunta": {
+  "texto": "Em qual cidade se passa a série Friends?",
+  "enviado": "[curious] Em qual cidade se passa a série Friends?",
+  "arquivo": "perguntas/P09_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:42.335Z"
+ },
+ "P09_resposta": {
+  "texto": "A resposta certa é… Nova York!",
+  "enviado": "[dramatically] A resposta certa é… Nova York!",
+  "arquivo": "perguntas/P09_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:43.428Z"
+ },
+ "P10_pergunta": {
+  "texto": "Qual é a capital da Austrália?",
+  "enviado": "[curious] Qual é a capital da Austrália?",
+  "arquivo": "perguntas/P10_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:44.503Z"
+ },
+ "P10_resposta": {
+  "texto": "A resposta certa é… Camberra!",
+  "enviado": "[dramatically] A resposta certa é… Camberra!",
+  "arquivo": "perguntas/P10_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:45.635Z"
+ },
+ "P11_pergunta": {
+  "texto": "Quantos estados tem o Brasil, sem contar o Distrito Federal?",
+  "enviado": "[curious] Quantos estados tem o Brasil, sem contar o Distrito Federal?",
+  "arquivo": "perguntas/P11_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:47.117Z"
+ },
+ "P11_resposta": {
+  "texto": "A resposta certa é… Vinte e seis estados!",
+  "enviado": "[dramatically] A resposta certa é… Vinte e seis estados!",
+  "arquivo": "perguntas/P11_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:48.841Z"
+ },
+ "P12_pergunta": {
+  "texto": "No basquete, quantos pontos vale um arremesso convertido de trás do arco?",
+  "enviado": "[curious] No basquete, quantos pontos vale um arremesso convertido de trás do arco?",
+  "arquivo": "perguntas/P12_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:50.618Z"
+ },
+ "P12_resposta": {
+  "texto": "A resposta certa é… Três pontos!",
+  "enviado": "[dramatically] A resposta certa é… Três pontos!",
+  "arquivo": "perguntas/P12_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:51.800Z"
+ },
+ "P13_pergunta": {
+  "texto": "Qual filme sul-coreano ganhou o Oscar de melhor filme em 2020?",
+  "enviado": "[curious] Qual filme sul-coreano ganhou o Oscar de melhor filme em 2020?",
+  "arquivo": "perguntas/P13_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:53.604Z"
+ },
+ "P13_resposta": {
+  "texto": "A resposta certa é… Parasita!",
+  "enviado": "[dramatically] A resposta certa é… Parasita!",
+  "arquivo": "perguntas/P13_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:54.658Z"
+ },
+ "P14_pergunta": {
+  "texto": "Tom Jobim é um dos criadores de qual gênero musical?",
+  "enviado": "[curious] Tom Jobim é um dos criadores de qual gênero musical?",
+  "arquivo": "perguntas/P14_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:56.101Z"
+ },
+ "P14_resposta": {
+  "texto": "A resposta certa é… Bossa nova!",
+  "enviado": "[dramatically] A resposta certa é… Bossa nova!",
+  "arquivo": "perguntas/P14_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:57.445Z"
+ },
+ "P15_pergunta": {
+  "texto": "Quantos ossos tem, em geral, o corpo humano adulto?",
+  "enviado": "[curious] Quantos ossos tem, em geral, o corpo humano adulto?",
+  "arquivo": "perguntas/P15_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:58.938Z"
+ },
+ "P15_resposta": {
+  "texto": "A resposta certa é… Duzentos e seis ossos!",
+  "enviado": "[dramatically] A resposta certa é… Duzentos e seis ossos!",
+  "arquivo": "perguntas/P15_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:00.639Z"
+ },
+ "P16_pergunta": {
+  "texto": "Qual é o símbolo químico do ouro?",
+  "enviado": "[curious] Qual é o símbolo químico do ouro?",
+  "arquivo": "perguntas/P16_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:01.770Z"
+ },
+ "P16_resposta": {
+  "texto": "A resposta certa é… A-U, do latim aurum!",
+  "enviado": "[dramatically] A resposta certa é… A-U, do latim aurum!",
+  "arquivo": "perguntas/P16_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:03.269Z"
+ },
+ "P17_pergunta": {
+  "texto": "Em que ano o ser humano pisou na Lua pela primeira vez?",
+  "enviado": "[curious] Em que ano o ser humano pisou na Lua pela primeira vez?",
+  "arquivo": "perguntas/P17_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:04.551Z"
+ },
+ "P17_resposta": {
+  "texto": "A resposta certa é… Mil novecentos e sessenta e nove!",
+  "enviado": "[dramatically] A resposta certa é… Mil novecentos e sessenta e nove!",
+  "arquivo": "perguntas/P17_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:06.595Z"
+ },
+ "P18_pergunta": {
+  "texto": "Além do queijo, qual é o ingrediente principal do pão de queijo tradicional?",
+  "enviado": "[curious] Além do queijo, qual é o ingrediente principal do pão de queijo tradicional?",
+  "arquivo": "perguntas/P18_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:08.643Z"
+ },
+ "P18_resposta": {
+  "texto": "A resposta certa é… Polvilho!",
+  "enviado": "[dramatically] A resposta certa é… Polvilho!",
+  "arquivo": "perguntas/P18_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:09.708Z"
+ },
+ "P19_pergunta": {
+  "texto": "Qual país é o maior produtor de café do mundo?",
+  "enviado": "[curious] Qual país é o maior produtor de café do mundo?",
+  "arquivo": "perguntas/P19_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:10.899Z"
+ },
+ "P19_resposta": {
+  "texto": "A resposta certa é… Brasil!",
+  "enviado": "[dramatically] A resposta certa é… Brasil!",
+  "arquivo": "perguntas/P05_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:33.183Z"
+ },
+ "P20_pergunta": {
+  "texto": "Qual é a capital do Canadá?",
+  "enviado": "[curious] Qual é a capital do Canadá?",
+  "arquivo": "perguntas/P20_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:11.859Z"
+ },
+ "P20_resposta": {
+  "texto": "A resposta certa é… Ottawa!",
+  "enviado": "[dramatically] A resposta certa é… Ottawa!",
+  "arquivo": "perguntas/P20_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:12.808Z"
+ },
+ "P21_pergunta": {
+  "texto": "Em qual cidade nasceu o piloto Ayrton Senna?",
+  "enviado": "[curious] Em qual cidade nasceu o piloto Ayrton Senna?",
+  "arquivo": "perguntas/P21_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:14.130Z"
+ },
+ "P21_resposta": {
+  "texto": "A resposta certa é… São Paulo!",
+  "enviado": "[dramatically] A resposta certa é… São Paulo!",
+  "arquivo": "perguntas/P21_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:15.233Z"
+ },
+ "P22_pergunta": {
+  "texto": "Qual é o maior planeta do Sistema Solar?",
+  "enviado": "[curious] Qual é o maior planeta do Sistema Solar?",
+  "arquivo": "perguntas/P22_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:16.342Z"
+ },
+ "P22_resposta": {
+  "texto": "A resposta certa é… Júpiter!",
+  "enviado": "[dramatically] A resposta certa é… Júpiter!",
+  "arquivo": "perguntas/P22_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:17.433Z"
+ },
+ "P23_pergunta": {
+  "texto": "Qual cantor ficou conhecido como o Rei do Rock?",
+  "enviado": "[curious] Qual cantor ficou conhecido como o Rei do Rock?",
+  "arquivo": "perguntas/P23_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:18.719Z"
+ },
+ "P23_resposta": {
+  "texto": "A resposta certa é… Elvis Presley!",
+  "enviado": "[dramatically] A resposta certa é… Elvis Presley!",
+  "arquivo": "perguntas/P23_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:20.227Z"
+ },
+ "P024_pergunta": {
+  "texto": "Quantos jogadores um time de futebol tem em campo?",
+  "enviado": "[curious] Quantos jogadores um time de futebol tem em campo?",
+  "arquivo": "perguntas/P024_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:21.411Z"
+ },
+ "P024_resposta": {
+  "texto": "A resposta certa é… Onze jogadores!",
+  "enviado": "[dramatically] A resposta certa é… Onze jogadores!",
+  "arquivo": "perguntas/P024_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:22.822Z"
+ },
+ "P025_pergunta": {
+  "texto": "Em qual país surgiu o judô?",
+  "enviado": "[curious] Em qual país surgiu o judô?",
+  "arquivo": "perguntas/P025_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:23.859Z"
+ },
+ "P025_resposta": {
+  "texto": "A resposta certa é… Japão!",
+  "enviado": "[dramatically] A resposta certa é… Japão!",
+  "arquivo": "perguntas/P025_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:24.876Z"
+ },
+ "P026_pergunta": {
+  "texto": "Quantos anéis tem o símbolo das Olimpíadas?",
+  "enviado": "[curious] Quantos anéis tem o símbolo das Olimpíadas?",
+  "arquivo": "perguntas/P026_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:25.977Z"
+ },
+ "P026_resposta": {
+  "texto": "A resposta certa é… Cinco anéis!",
+  "enviado": "[dramatically] A resposta certa é… Cinco anéis!",
+  "arquivo": "perguntas/P026_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:27.301Z"
+ },
+ "P027_pergunta": {
+  "texto": "Qual seleção ganhou mais Copas do Mundo de futebol masculino?",
+  "enviado": "[curious] Qual seleção ganhou mais Copas do Mundo de futebol masculino?",
+  "arquivo": "perguntas/P027_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:28.766Z"
+ },
+ "P027_resposta": {
+  "texto": "A resposta certa é… Brasil, com cinco títulos!",
+  "enviado": "[dramatically] A resposta certa é… Brasil, com cinco títulos!",
+  "arquivo": "perguntas/P027_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:30.222Z"
+ },
+ "P028_pergunta": {
+  "texto": "Em qual esporte se joga com raquete e peteca?",
+  "enviado": "[curious] Em qual esporte se joga com raquete e peteca?",
+  "arquivo": "perguntas/P028_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:31.322Z"
+ },
+ "P028_resposta": {
+  "texto": "A resposta certa é… Badminton!",
+  "enviado": "[dramatically] A resposta certa é… Badminton!",
+  "arquivo": "perguntas/P028_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:32.427Z"
+ },
+ "P029_pergunta": {
+  "texto": "Quantos minutos dura uma partida de futebol, sem os acréscimos?",
+  "enviado": "[curious] Quantos minutos dura uma partida de futebol, sem os acréscimos?",
+  "arquivo": "perguntas/P029_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:33.873Z"
+ },
+ "P029_resposta": {
+  "texto": "A resposta certa é… Noventa minutos!",
+  "enviado": "[dramatically] A resposta certa é… Noventa minutos!",
+  "arquivo": "perguntas/P029_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:35.251Z"
+ },
+ "P030_pergunta": {
+  "texto": "Qual é o apelido de Edson Arantes do Nascimento?",
+  "enviado": "[curious] Qual é o apelido de Edson Arantes do Nascimento?",
+  "arquivo": "perguntas/P030_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:36.489Z"
+ },
+ "P030_resposta": {
+  "texto": "A resposta certa é… Pelé!",
+  "enviado": "[dramatically] A resposta certa é… Pelé!",
+  "arquivo": "perguntas/P030_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:37.588Z"
+ },
+ "P031_pergunta": {
+  "texto": "Em qual esporte o jogador tenta derrubar 10 pinos com uma bola?",
+  "enviado": "[curious] Em qual esporte o jogador tenta derrubar 10 pinos com uma bola?",
+  "arquivo": "perguntas/P031_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:39.176Z"
+ },
+ "P031_resposta": {
+  "texto": "A resposta certa é… Boliche!",
+  "enviado": "[dramatically] A resposta certa é… Boliche!",
+  "arquivo": "perguntas/P031_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:40.196Z"
+ },
+ "P032_pergunta": {
+  "texto": "Qual país sediou a Copa do Mundo de 2014?",
+  "enviado": "[curious] Qual país sediou a Copa do Mundo de 2014?",
+  "arquivo": "perguntas/P032_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:41.618Z"
+ },
+ "P032_resposta": {
+  "texto": "A resposta certa é… Brasil!",
+  "enviado": "[dramatically] A resposta certa é… Brasil!",
+  "arquivo": "perguntas/P05_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:33.183Z"
+ },
+ "P033_pergunta": {
+  "texto": "Qual velocista jamaicano é o recordista mundial dos 100 metros rasos?",
+  "enviado": "[curious] Qual velocista jamaicano é o recordista mundial dos 100 metros rasos?",
+  "arquivo": "perguntas/P033_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:43.278Z"
+ },
+ "P033_resposta": {
+  "texto": "A resposta certa é… Usain Bolt!",
+  "enviado": "[dramatically] A resposta certa é… Usain Bolt!",
+  "arquivo": "perguntas/P033_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:44.699Z"
+ },
+ "P034_pergunta": {
+  "texto": "Em qual modalidade Rebeca Andrade ganhou medalhas olímpicas?",
+  "enviado": "[curious] Em qual modalidade Rebeca Andrade ganhou medalhas olímpicas?",
+  "arquivo": "perguntas/P034_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:46.295Z"
+ },
+ "P034_resposta": {
+  "texto": "A resposta certa é… Ginástica artística!",
+  "enviado": "[dramatically] A resposta certa é… Ginástica artística!",
+  "arquivo": "perguntas/P034_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:47.645Z"
+ },
+ "P035_pergunta": {
+  "texto": "Quantos pontos vale um touchdown no futebol americano?",
+  "enviado": "[curious] Quantos pontos vale um touchdown no futebol americano?",
+  "arquivo": "perguntas/P035_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:48.830Z"
+ },
+ "P035_resposta": {
+  "texto": "A resposta certa é… Seis pontos!",
+  "enviado": "[dramatically] A resposta certa é… Seis pontos!",
+  "arquivo": "perguntas/P035_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:50.186Z"
+ },
+ "P036_pergunta": {
+  "texto": "No xadrez, qual peça anda em formato de L?",
+  "enviado": "[curious] No xadrez, qual peça anda em formato de L?",
+  "arquivo": "perguntas/P036_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:51.465Z"
+ },
+ "P036_resposta": {
+  "texto": "A resposta certa é… O cavalo!",
+  "enviado": "[dramatically] A resposta certa é… O cavalo!",
+  "arquivo": "perguntas/P036_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:52.807Z"
+ },
+ "P037_pergunta": {
+  "texto": "Quantos jogadores de cada time ficam em quadra no basquete?",
+  "enviado": "[curious] Quantos jogadores de cada time ficam em quadra no basquete?",
+  "arquivo": "perguntas/P037_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:54.548Z"
+ },
+ "P037_resposta": {
+  "texto": "A resposta certa é… Cinco jogadores!",
+  "enviado": "[dramatically] A resposta certa é… Cinco jogadores!",
+  "arquivo": "perguntas/P037_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:55.832Z"
+ },
+ "P038_pergunta": {
+  "texto": "Em que ano o Brasil ganhou sua primeira Copa do Mundo?",
+  "enviado": "[curious] Em que ano o Brasil ganhou sua primeira Copa do Mundo?",
+  "arquivo": "perguntas/P038_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:57.339Z"
+ },
+ "P038_resposta": {
+  "texto": "A resposta certa é… Mil novecentos e cinquenta e oito!",
+  "enviado": "[dramatically] A resposta certa é… Mil novecentos e cinquenta e oito!",
+  "arquivo": "perguntas/P038_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:58.872Z"
+ },
+ "P039_pergunta": {
+  "texto": "Qual gás as plantas absorvem do ar para fazer fotossíntese?",
+  "enviado": "[curious] Qual gás as plantas absorvem do ar para fazer fotossíntese?",
+  "arquivo": "perguntas/P039_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:00.525Z"
+ },
+ "P039_resposta": {
+  "texto": "A resposta certa é… Gás carbônico!",
+  "enviado": "[dramatically] A resposta certa é… Gás carbônico!",
+  "arquivo": "perguntas/P039_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:01.769Z"
+ },
+ "P040_pergunta": {
+  "texto": "Qual é o maior órgão do corpo humano?",
+  "enviado": "[curious] Qual é o maior órgão do corpo humano?",
+  "arquivo": "perguntas/P040_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:02.858Z"
+ },
+ "P040_resposta": {
+  "texto": "A resposta certa é… A pele!",
+  "enviado": "[dramatically] A resposta certa é… A pele!",
+  "arquivo": "perguntas/P040_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:04.032Z"
+ },
+ "P041_pergunta": {
+  "texto": "A quantos graus Celsius a água ferve ao nível do mar?",
+  "enviado": "[curious] A quantos graus Celsius a água ferve ao nível do mar?",
+  "arquivo": "perguntas/P041_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:05.652Z"
+ },
+ "P041_resposta": {
+  "texto": "A resposta certa é… Cem graus!",
+  "enviado": "[dramatically] A resposta certa é… Cem graus!",
+  "arquivo": "perguntas/P041_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:06.894Z"
+ },
+ "P042_pergunta": {
+  "texto": "Quantas patas tem uma aranha?",
+  "enviado": "[curious] Quantas patas tem uma aranha?",
+  "arquivo": "perguntas/P042_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:07.924Z"
+ },
+ "P042_resposta": {
+  "texto": "A resposta certa é… Oito patas!",
+  "enviado": "[dramatically] A resposta certa é… Oito patas!",
+  "arquivo": "perguntas/P042_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:09.117Z"
+ },
+ "P043_pergunta": {
+  "texto": "Qual planeta é conhecido como Planeta Vermelho?",
+  "enviado": "[curious] Qual planeta é conhecido como Planeta Vermelho?",
+  "arquivo": "perguntas/P043_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:10.260Z"
+ },
+ "P043_resposta": {
+  "texto": "A resposta certa é… Marte!",
+  "enviado": "[dramatically] A resposta certa é… Marte!",
+  "arquivo": "perguntas/P043_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:11.364Z"
+ },
+ "P044_pergunta": {
+  "texto": "Qual é a fórmula química da água?",
+  "enviado": "[curious] Qual é a fórmula química da água?",
+  "arquivo": "perguntas/P044_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:12.612Z"
+ },
+ "P044_resposta": {
+  "texto": "A resposta certa é… H dois O!",
+  "enviado": "[dramatically] A resposta certa é… H dois O!",
+  "arquivo": "perguntas/P044_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:13.845Z"
+ },
+ "P045_pergunta": {
+  "texto": "Qual é o animal terrestre mais rápido do mundo?",
+  "enviado": "[curious] Qual é o animal terrestre mais rápido do mundo?",
+  "arquivo": "perguntas/P045_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:15.287Z"
+ },
+ "P045_resposta": {
+  "texto": "A resposta certa é… O guepardo!",
+  "enviado": "[dramatically] A resposta certa é… O guepardo!",
+  "arquivo": "perguntas/P045_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:16.603Z"
+ },
+ "P046_pergunta": {
+  "texto": "Qual cientista criou a teoria da relatividade?",
+  "enviado": "[curious] Qual cientista criou a teoria da relatividade?",
+  "arquivo": "perguntas/P046_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:17.842Z"
+ },
+ "P046_resposta": {
+  "texto": "A resposta certa é… Albert Einstein!",
+  "enviado": "[dramatically] A resposta certa é… Albert Einstein!",
+  "arquivo": "perguntas/P046_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:19.100Z"
+ },
+ "P047_pergunta": {
+  "texto": "Quantos dentes tem um adulto com a dentição completa?",
+  "enviado": "[curious] Quantos dentes tem um adulto com a dentição completa?",
+  "arquivo": "perguntas/P047_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:20.669Z"
+ },
+ "P047_resposta": {
+  "texto": "A resposta certa é… Trinta e dois dentes!",
+  "enviado": "[dramatically] A resposta certa é… Trinta e dois dentes!",
+  "arquivo": "perguntas/P047_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:22.160Z"
+ },
+ "P048_pergunta": {
+  "texto": "Em que inseto a lagarta se transforma depois do casulo?",
+  "enviado": "[curious] Em que inseto a lagarta se transforma depois do casulo?",
+  "arquivo": "perguntas/P048_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:23.759Z"
+ },
+ "P048_resposta": {
+  "texto": "A resposta certa é… Borboleta!",
+  "enviado": "[dramatically] A resposta certa é… Borboleta!",
+  "arquivo": "perguntas/P048_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:25.073Z"
+ },
+ "P049_pergunta": {
+  "texto": "Qual é o maior animal do mundo?",
+  "enviado": "[curious] Qual é o maior animal do mundo?",
+  "arquivo": "perguntas/P049_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:26.221Z"
+ },
+ "P049_resposta": {
+  "texto": "A resposta certa é… A baleia-azul!",
+  "enviado": "[dramatically] A resposta certa é… A baleia-azul!",
+  "arquivo": "perguntas/P049_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:27.592Z"
+ },
+ "P050_pergunta": {
+  "texto": "Quantos planetas tem o Sistema Solar?",
+  "enviado": "[curious] Quantos planetas tem o Sistema Solar?",
+  "arquivo": "perguntas/P050_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:28.664Z"
+ },
+ "P050_resposta": {
+  "texto": "A resposta certa é… Oito planetas!",
+  "enviado": "[dramatically] A resposta certa é… Oito planetas!",
+  "arquivo": "perguntas/P050_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:30.081Z"
+ },
+ "P051_pergunta": {
+  "texto": "Qual vitamina o corpo produz quando a pele recebe luz do sol?",
+  "enviado": "[curious] Qual vitamina o corpo produz quando a pele recebe luz do sol?",
+  "arquivo": "perguntas/P051_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:31.600Z"
+ },
+ "P051_resposta": {
+  "texto": "A resposta certa é… Vitamina D!",
+  "enviado": "[dramatically] A resposta certa é… Vitamina D!",
+  "arquivo": "perguntas/P051_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:32.980Z"
+ },
+ "P052_pergunta": {
+  "texto": "Qual parte da planta fica embaixo da terra e absorve água?",
+  "enviado": "[curious] Qual parte da planta fica embaixo da terra e absorve água?",
+  "arquivo": "perguntas/P052_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:34.732Z"
+ },
+ "P052_resposta": {
+  "texto": "A resposta certa é… A raiz!",
+  "enviado": "[dramatically] A resposta certa é… A raiz!",
+  "arquivo": "perguntas/P052_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:35.869Z"
+ },
+ "P053_pergunta": {
+  "texto": "A baleia é que tipo de animal?",
+  "enviado": "[curious] A baleia é que tipo de animal?",
+  "arquivo": "perguntas/P053_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:36.877Z"
+ },
+ "P053_resposta": {
+  "texto": "A resposta certa é… Mamífero!",
+  "enviado": "[dramatically] A resposta certa é… Mamífero!",
+  "arquivo": "perguntas/P053_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:38.275Z"
+ },
+ "P054_pergunta": {
+  "texto": "Qual é o nome do leãozinho protagonista de O Rei Leão?",
+  "enviado": "[curious] Qual é o nome do leãozinho protagonista de O Rei Leão?",
+  "arquivo": "perguntas/P054_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:39.777Z"
+ },
+ "P054_resposta": {
+  "texto": "A resposta certa é… Simba!",
+  "enviado": "[dramatically] A resposta certa é… Simba!",
+  "arquivo": "perguntas/P054_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:41.001Z"
+ },
+ "P055_pergunta": {
+  "texto": "Qual é o nome do boneco de neve de Frozen?",
+  "enviado": "[curious] Qual é o nome do boneco de neve de Frozen?",
+  "arquivo": "perguntas/P055_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:42.405Z"
+ },
+ "P055_resposta": {
+  "texto": "A resposta certa é… Olaf!",
+  "enviado": "[dramatically] A resposta certa é… Olaf!",
+  "arquivo": "perguntas/P055_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:43.599Z"
+ },
+ "P056_pergunta": {
+  "texto": "Em qual escola de magia estuda Harry Potter?",
+  "enviado": "[curious] Em qual escola de magia estuda Harry Potter?",
+  "arquivo": "perguntas/P056_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:44.709Z"
+ },
+ "P056_resposta": {
+  "texto": "A resposta certa é… Hogwarts!",
+  "enviado": "[dramatically] A resposta certa é… Hogwarts!",
+  "arquivo": "perguntas/P056_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:45.943Z"
+ },
+ "P057_pergunta": {
+  "texto": "Qual é a cor do ogro Shrek?",
+  "enviado": "[curious] Qual é a cor do ogro Shrek?",
+  "arquivo": "perguntas/P057_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:47.031Z"
+ },
+ "P057_resposta": {
+  "texto": "A resposta certa é… Verde!",
+  "enviado": "[dramatically] A resposta certa é… Verde!",
+  "arquivo": "perguntas/P057_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:48.133Z"
+ },
+ "P058_pergunta": {
+  "texto": "Quem é o melhor amigo do Bob Esponja?",
+  "enviado": "[curious] Quem é o melhor amigo do Bob Esponja?",
+  "arquivo": "perguntas/P058_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:49.439Z"
+ },
+ "P058_resposta": {
+  "texto": "A resposta certa é… Patrick!",
+  "enviado": "[dramatically] A resposta certa é… Patrick!",
+  "arquivo": "perguntas/P058_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:51.182Z"
+ },
+ "P059_pergunta": {
+  "texto": "No seriado Chaves, qual personagem vive dentro de um barril?",
+  "enviado": "[curious] No seriado Chaves, qual personagem vive dentro de um barril?",
+  "arquivo": "perguntas/P059_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:52.699Z"
+ },
+ "P059_resposta": {
+  "texto": "A resposta certa é… O Chaves!",
+  "enviado": "[dramatically] A resposta certa é… O Chaves!",
+  "arquivo": "perguntas/P059_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:53.972Z"
+ },
+ "P060_pergunta": {
+  "texto": "Qual é o nome da peixinha azul esquecida de Procurando Nemo?",
+  "enviado": "[curious] Qual é o nome da peixinha azul esquecida de Procurando Nemo?",
+  "arquivo": "perguntas/P060_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:55.627Z"
+ },
+ "P060_resposta": {
+  "texto": "A resposta certa é… Dory!",
+  "enviado": "[dramatically] A resposta certa é… Dory!",
+  "arquivo": "perguntas/P060_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:56.757Z"
+ },
+ "P061_pergunta": {
+  "texto": "Qual super-herói protege Gotham City?",
+  "enviado": "[curious] Qual super-herói protege Gotham City?",
+  "arquivo": "perguntas/P061_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:57.798Z"
+ },
+ "P061_resposta": {
+  "texto": "A resposta certa é… Batman!",
+  "enviado": "[dramatically] A resposta certa é… Batman!",
+  "arquivo": "perguntas/P061_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:58.844Z"
+ },
+ "P062_pergunta": {
+  "texto": "Em Star Wars, quem é o pai de Luke Skywalker?",
+  "enviado": "[curious] Em Star Wars, quem é o pai de Luke Skywalker?",
+  "arquivo": "perguntas/P062_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:00.067Z"
+ },
+ "P062_resposta": {
+  "texto": "A resposta certa é… Darth Vader!",
+  "enviado": "[dramatically] A resposta certa é… Darth Vader!",
+  "arquivo": "perguntas/P062_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:01.554Z"
+ },
+ "P063_pergunta": {
+  "texto": "Em qual novela brasileira apareceu a vilã Carminha?",
+  "enviado": "[curious] Em qual novela brasileira apareceu a vilã Carminha?",
+  "arquivo": "perguntas/P063_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:02.863Z"
+ },
+ "P063_resposta": {
+  "texto": "A resposta certa é… Avenida Brasil!",
+  "enviado": "[dramatically] A resposta certa é… Avenida Brasil!",
+  "arquivo": "perguntas/P063_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:04.073Z"
+ },
+ "P064_pergunta": {
+  "texto": "Qual é o nome do dinossauro roxo de um famoso programa infantil?",
+  "enviado": "[curious] Qual é o nome do dinossauro roxo de um famoso programa infantil?",
+  "arquivo": "perguntas/P064_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:05.829Z"
+ },
+ "P064_resposta": {
+  "texto": "A resposta certa é… Barney!",
+  "enviado": "[dramatically] A resposta certa é… Barney!",
+  "arquivo": "perguntas/P064_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:07.184Z"
+ },
+ "P065_pergunta": {
+  "texto": "Qual apresentador comandou o Domingão por mais de 30 anos?",
+  "enviado": "[curious] Qual apresentador comandou o Domingão por mais de 30 anos?",
+  "arquivo": "perguntas/P065_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:08.801Z"
+ },
+ "P065_resposta": {
+  "texto": "A resposta certa é… Faustão!",
+  "enviado": "[dramatically] A resposta certa é… Faustão!",
+  "arquivo": "perguntas/P065_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:09.853Z"
+ },
+ "P066_pergunta": {
+  "texto": "Qual é o nome do robozinho da Pixar que limpa uma Terra cheia de lixo?",
+  "enviado": "[curious] Qual é o nome do robozinho da Pixar que limpa uma Terra cheia de lixo?",
+  "arquivo": "perguntas/P066_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:11.593Z"
+ },
+ "P066_resposta": {
+  "texto": "A resposta certa é… WALL-E!",
+  "enviado": "[dramatically] A resposta certa é… WALL-E!",
+  "arquivo": "perguntas/P066_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:13.024Z"
+ },
+ "P067_pergunta": {
+  "texto": "Em qual saga aparece o mago Gandalf?",
+  "enviado": "[curious] Em qual saga aparece o mago Gandalf?",
+  "arquivo": "perguntas/P067_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:14.238Z"
+ },
+ "P067_resposta": {
+  "texto": "A resposta certa é… O Senhor dos Anéis!",
+  "enviado": "[dramatically] A resposta certa é… O Senhor dos Anéis!",
+  "arquivo": "perguntas/P067_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:15.674Z"
+ },
+ "P068_pergunta": {
+  "texto": "Em qual cidade vivem Os Simpsons?",
+  "enviado": "[curious] Em qual cidade vivem Os Simpsons?",
+  "arquivo": "perguntas/P068_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:16.802Z"
+ },
+ "P068_resposta": {
+  "texto": "A resposta certa é… Springfield!",
+  "enviado": "[dramatically] A resposta certa é… Springfield!",
+  "arquivo": "perguntas/P068_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:17.941Z"
+ },
+ "P069_pergunta": {
+  "texto": "Além do chocolate, qual é o ingrediente principal do brigadeiro?",
+  "enviado": "[curious] Além do chocolate, qual é o ingrediente principal do brigadeiro?",
+  "arquivo": "perguntas/P069_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:19.654Z"
+ },
+ "P069_resposta": {
+  "texto": "A resposta certa é… Leite condensado!",
+  "enviado": "[dramatically] A resposta certa é… Leite condensado!",
+  "arquivo": "perguntas/P069_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:20.878Z"
+ },
+ "P070_pergunta": {
+  "texto": "O sushi é um prato típico de qual país?",
+  "enviado": "[curious] O sushi é um prato típico de qual país?",
+  "arquivo": "perguntas/P070_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:22.024Z"
+ },
+ "P070_resposta": {
+  "texto": "A resposta certa é… Japão!",
+  "enviado": "[dramatically] A resposta certa é… Japão!",
+  "arquivo": "perguntas/P025_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:24.876Z"
+ },
+ "P071_pergunta": {
+  "texto": "A tapioca é feita a partir de qual planta?",
+  "enviado": "[curious] A tapioca é feita a partir de qual planta?",
+  "arquivo": "perguntas/P071_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:23.247Z"
+ },
+ "P071_resposta": {
+  "texto": "A resposta certa é… Mandioca!",
+  "enviado": "[dramatically] A resposta certa é… Mandioca!",
+  "arquivo": "perguntas/P071_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:24.563Z"
+ },
+ "P072_pergunta": {
+  "texto": "Qual bebida leva cachaça, limão, açúcar e gelo?",
+  "enviado": "[curious] Qual bebida leva cachaça, limão, açúcar e gelo?",
+  "arquivo": "perguntas/P072_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:26.064Z"
+ },
+ "P072_resposta": {
+  "texto": "A resposta certa é… Caipirinha!",
+  "enviado": "[dramatically] A resposta certa é… Caipirinha!",
+  "arquivo": "perguntas/P072_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:27.306Z"
+ },
+ "P073_pergunta": {
+  "texto": "O croissant é associado a qual país?",
+  "enviado": "[curious] O croissant é associado a qual país?",
+  "arquivo": "perguntas/P073_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:28.610Z"
+ },
+ "P073_resposta": {
+  "texto": "A resposta certa é… França!",
+  "enviado": "[dramatically] A resposta certa é… França!",
+  "arquivo": "perguntas/P073_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:29.668Z"
+ },
+ "P074_pergunta": {
+  "texto": "Qual prato brasileiro leva feijão preto e carnes de porco?",
+  "enviado": "[curious] Qual prato brasileiro leva feijão preto e carnes de porco?",
+  "arquivo": "perguntas/P074_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:31.319Z"
+ },
+ "P074_resposta": {
+  "texto": "A resposta certa é… Feijoada!",
+  "enviado": "[dramatically] A resposta certa é… Feijoada!",
+  "arquivo": "perguntas/P074_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:32.640Z"
+ },
+ "P075_pergunta": {
+  "texto": "O acarajé é um prato típico de qual estado?",
+  "enviado": "[curious] O acarajé é um prato típico de qual estado?",
+  "arquivo": "perguntas/P075_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:34.213Z"
+ },
+ "P075_resposta": {
+  "texto": "A resposta certa é… Bahia!",
+  "enviado": "[dramatically] A resposta certa é… Bahia!",
+  "arquivo": "perguntas/P075_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:35.204Z"
+ },
+ "P076_pergunta": {
+  "texto": "A pipoca é feita de qual grão?",
+  "enviado": "[curious] A pipoca é feita de qual grão?",
+  "arquivo": "perguntas/P076_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:36.485Z"
+ },
+ "P076_resposta": {
+  "texto": "A resposta certa é… Milho!",
+  "enviado": "[dramatically] A resposta certa é… Milho!",
+  "arquivo": "perguntas/P076_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:37.617Z"
+ },
+ "P077_pergunta": {
+  "texto": "O vinho é feito a partir de qual fruta?",
+  "enviado": "[curious] O vinho é feito a partir de qual fruta?",
+  "arquivo": "perguntas/P077_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:38.845Z"
+ },
+ "P077_resposta": {
+  "texto": "A resposta certa é… Uva!",
+  "enviado": "[dramatically] A resposta certa é… Uva!",
+  "arquivo": "perguntas/P077_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:39.949Z"
+ },
+ "P078_pergunta": {
+  "texto": "O chimarrão é preparado com qual erva?",
+  "enviado": "[curious] O chimarrão é preparado com qual erva?",
+  "arquivo": "perguntas/P078_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:41.154Z"
+ },
+ "P078_resposta": {
+  "texto": "A resposta certa é… Erva-mate!",
+  "enviado": "[dramatically] A resposta certa é… Erva-mate!",
+  "arquivo": "perguntas/P078_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:42.457Z"
+ },
+ "P079_pergunta": {
+  "texto": "O pé de moleque é feito principalmente de qual ingrediente?",
+  "enviado": "[curious] O pé de moleque é feito principalmente de qual ingrediente?",
+  "arquivo": "perguntas/P079_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:44.026Z"
+ },
+ "P079_resposta": {
+  "texto": "A resposta certa é… Amendoim!",
+  "enviado": "[dramatically] A resposta certa é… Amendoim!",
+  "arquivo": "perguntas/P079_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:45.306Z"
+ },
+ "P080_pergunta": {
+  "texto": "Qual tempero dá a cor amarela ao curry?",
+  "enviado": "[curious] Qual tempero dá a cor amarela ao curry?",
+  "arquivo": "perguntas/P080_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:46.465Z"
+ },
+ "P080_resposta": {
+  "texto": "A resposta certa é… Cúrcuma!",
+  "enviado": "[dramatically] A resposta certa é… Cúrcuma!",
+  "arquivo": "perguntas/P080_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:47.918Z"
+ },
+ "P081_pergunta": {
+  "texto": "De que cor é o wasabi servido com sushi?",
+  "enviado": "[curious] De que cor é o wasabi servido com sushi?",
+  "arquivo": "perguntas/P081_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:49.239Z"
+ },
+ "P081_resposta": {
+  "texto": "A resposta certa é… Verde!",
+  "enviado": "[dramatically] A resposta certa é… Verde!",
+  "arquivo": "perguntas/P057_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:48.133Z"
+ },
+ "P082_pergunta": {
+  "texto": "O tacacá e o pato no tucupi são pratos típicos de qual região?",
+  "enviado": "[curious] O tacacá e o pato no tucupi são pratos típicos de qual região?",
+  "arquivo": "perguntas/P082_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:51.203Z"
+ },
+ "P082_resposta": {
+  "texto": "A resposta certa é… Região Norte!",
+  "enviado": "[dramatically] A resposta certa é… Região Norte!",
+  "arquivo": "perguntas/P082_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:52.497Z"
+ },
+ "P083_pergunta": {
+  "texto": "Qual bebida é feita com grãos torrados e moídos?",
+  "enviado": "[curious] Qual bebida é feita com grãos torrados e moídos?",
+  "arquivo": "perguntas/P083_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:54.219Z"
+ },
+ "P083_resposta": {
+  "texto": "A resposta certa é… Café!",
+  "enviado": "[dramatically] A resposta certa é… Café!",
+  "arquivo": "perguntas/P083_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:55.228Z"
+ },
+ "P084_pergunta": {
+  "texto": "Qual é a capital do Brasil?",
+  "enviado": "[curious] Qual é a capital do Brasil?",
+  "arquivo": "perguntas/P084_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:56.260Z"
+ },
+ "P084_resposta": {
+  "texto": "A resposta certa é… Brasília!",
+  "enviado": "[dramatically] A resposta certa é… Brasília!",
+  "arquivo": "perguntas/P084_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:57.708Z"
+ },
+ "P085_pergunta": {
+  "texto": "Qual é o maior oceano do mundo?",
+  "enviado": "[curious] Qual é o maior oceano do mundo?",
+  "arquivo": "perguntas/P085_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:35:59.069Z"
+ },
+ "P085_resposta": {
+  "texto": "A resposta certa é… Oceano Pacífico!",
+  "enviado": "[dramatically] A resposta certa é… Oceano Pacífico!",
+  "arquivo": "perguntas/P085_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:00.615Z"
+ },
+ "P086_pergunta": {
+  "texto": "Em qual continente fica o Quênia?",
+  "enviado": "[curious] Em qual continente fica o Quênia?",
+  "arquivo": "perguntas/P086_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:01.852Z"
+ },
+ "P086_resposta": {
+  "texto": "A resposta certa é… África!",
+  "enviado": "[dramatically] A resposta certa é… África!",
+  "arquivo": "perguntas/P086_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:03.369Z"
+ },
+ "P087_pergunta": {
+  "texto": "Qual é a capital da França?",
+  "enviado": "[curious] Qual é a capital da França?",
+  "arquivo": "perguntas/P087_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:04.300Z"
+ },
+ "P087_resposta": {
+  "texto": "A resposta certa é… Paris!",
+  "enviado": "[dramatically] A resposta certa é… Paris!",
+  "arquivo": "perguntas/P087_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:05.502Z"
+ },
+ "P088_pergunta": {
+  "texto": "Qual é o rio com maior volume de água do mundo?",
+  "enviado": "[curious] Qual é o rio com maior volume de água do mundo?",
+  "arquivo": "perguntas/P088_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:06.831Z"
+ },
+ "P088_resposta": {
+  "texto": "A resposta certa é… Rio Amazonas!",
+  "enviado": "[dramatically] A resposta certa é… Rio Amazonas!",
+  "arquivo": "perguntas/P088_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:08.060Z"
+ },
+ "P089_pergunta": {
+  "texto": "Qual país tem o formato de uma bota no mapa?",
+  "enviado": "[curious] Qual país tem o formato de uma bota no mapa?",
+  "arquivo": "perguntas/P089_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:09.281Z"
+ },
+ "P089_resposta": {
+  "texto": "A resposta certa é… Itália!",
+  "enviado": "[dramatically] A resposta certa é… Itália!",
+  "arquivo": "perguntas/P04_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:30.836Z"
+ },
+ "P090_pergunta": {
+  "texto": "Em qual país ficam as pirâmides de Gizé?",
+  "enviado": "[curious] Em qual país ficam as pirâmides de Gizé?",
+  "arquivo": "perguntas/P090_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:10.623Z"
+ },
+ "P090_resposta": {
+  "texto": "A resposta certa é… Egito!",
+  "enviado": "[dramatically] A resposta certa é… Egito!",
+  "arquivo": "perguntas/P090_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:11.875Z"
+ },
+ "P091_pergunta": {
+  "texto": "Qual é o maior estado do Brasil em área?",
+  "enviado": "[curious] Qual é o maior estado do Brasil em área?",
+  "arquivo": "perguntas/P091_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:13.123Z"
+ },
+ "P091_resposta": {
+  "texto": "A resposta certa é… Amazonas!",
+  "enviado": "[dramatically] A resposta certa é… Amazonas!",
+  "arquivo": "perguntas/P091_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:14.197Z"
+ },
+ "P092_pergunta": {
+  "texto": "Qual é a capital da Argentina?",
+  "enviado": "[curious] Qual é a capital da Argentina?",
+  "arquivo": "perguntas/P092_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:15.115Z"
+ },
+ "P092_resposta": {
+  "texto": "A resposta certa é… Buenos Aires!",
+  "enviado": "[dramatically] A resposta certa é… Buenos Aires!",
+  "arquivo": "perguntas/P092_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:16.296Z"
+ },
+ "P093_pergunta": {
+  "texto": "Qual é o país mais populoso do mundo hoje?",
+  "enviado": "[curious] Qual é o país mais populoso do mundo hoje?",
+  "arquivo": "perguntas/P093_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:17.685Z"
+ },
+ "P093_resposta": {
+  "texto": "A resposta certa é… Índia!",
+  "enviado": "[dramatically] A resposta certa é… Índia!",
+  "arquivo": "perguntas/P093_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:18.802Z"
+ },
+ "P094_pergunta": {
+  "texto": "Em qual cidade fica o Cristo Redentor?",
+  "enviado": "[curious] Em qual cidade fica o Cristo Redentor?",
+  "arquivo": "perguntas/P094_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:19.885Z"
+ },
+ "P094_resposta": {
+  "texto": "A resposta certa é… Rio de Janeiro!",
+  "enviado": "[dramatically] A resposta certa é… Rio de Janeiro!",
+  "arquivo": "perguntas/P07_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:38.712Z"
+ },
+ "P095_pergunta": {
+  "texto": "Qual é o maior deserto quente do mundo?",
+  "enviado": "[curious] Qual é o maior deserto quente do mundo?",
+  "arquivo": "perguntas/P095_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:20.868Z"
+ },
+ "P095_resposta": {
+  "texto": "A resposta certa é… Saara!",
+  "enviado": "[dramatically] A resposta certa é… Saara!",
+  "arquivo": "perguntas/P095_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:22.029Z"
+ },
+ "P096_pergunta": {
+  "texto": "Qual é a capital de Portugal?",
+  "enviado": "[curious] Qual é a capital de Portugal?",
+  "arquivo": "perguntas/P096_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:23.132Z"
+ },
+ "P096_resposta": {
+  "texto": "A resposta certa é… Lisboa!",
+  "enviado": "[dramatically] A resposta certa é… Lisboa!",
+  "arquivo": "perguntas/P096_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:24.501Z"
+ },
+ "P097_pergunta": {
+  "texto": "Em qual estado ficam as Cataratas do Iguaçu, do lado brasileiro?",
+  "enviado": "[curious] Em qual estado ficam as Cataratas do Iguaçu, do lado brasileiro?",
+  "arquivo": "perguntas/P097_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:26.174Z"
+ },
+ "P097_resposta": {
+  "texto": "A resposta certa é… Paraná!",
+  "enviado": "[dramatically] A resposta certa é… Paraná!",
+  "arquivo": "perguntas/P097_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:27.357Z"
+ },
+ "P098_pergunta": {
+  "texto": "Qual é a montanha mais alta do mundo?",
+  "enviado": "[curious] Qual é a montanha mais alta do mundo?",
+  "arquivo": "perguntas/P098_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:28.516Z"
+ },
+ "P098_resposta": {
+  "texto": "A resposta certa é… Monte Everest!",
+  "enviado": "[dramatically] A resposta certa é… Monte Everest!",
+  "arquivo": "perguntas/P098_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:29.867Z"
+ },
+ "P099_pergunta": {
+  "texto": "De qual banda britânica faziam parte John Lennon e Paul McCartney?",
+  "enviado": "[curious] De qual banda britânica faziam parte John Lennon e Paul McCartney?",
+  "arquivo": "perguntas/P099_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:31.427Z"
+ },
+ "P099_resposta": {
+  "texto": "A resposta certa é… The Beatles!",
+  "enviado": "[dramatically] A resposta certa é… The Beatles!",
+  "arquivo": "perguntas/P099_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:32.445Z"
+ },
+ "P100_pergunta": {
+  "texto": "Quantas teclas tem um piano padrão?",
+  "enviado": "[curious] Quantas teclas tem um piano padrão?",
+  "arquivo": "perguntas/P100_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:33.701Z"
+ },
+ "P100_resposta": {
+  "texto": "A resposta certa é… Oitenta e oito teclas!",
+  "enviado": "[dramatically] A resposta certa é… Oitenta e oito teclas!",
+  "arquivo": "perguntas/P100_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:35.041Z"
+ },
+ "P101_pergunta": {
+  "texto": "Qual cantor é chamado de Rei no Brasil?",
+  "enviado": "[curious] Qual cantor é chamado de Rei no Brasil?",
+  "arquivo": "perguntas/P101_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:36.262Z"
+ },
+ "P101_resposta": {
+  "texto": "A resposta certa é… Roberto Carlos!",
+  "enviado": "[dramatically] A resposta certa é… Roberto Carlos!",
+  "arquivo": "perguntas/P101_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:37.551Z"
+ },
+ "P102_pergunta": {
+  "texto": "Freddie Mercury era o vocalista de qual banda?",
+  "enviado": "[curious] Freddie Mercury era o vocalista de qual banda?",
+  "arquivo": "perguntas/P102_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:38.800Z"
+ },
+ "P102_resposta": {
+  "texto": "A resposta certa é… Queen!",
+  "enviado": "[dramatically] A resposta certa é… Queen!",
+  "arquivo": "perguntas/P102_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:40.029Z"
+ },
+ "P103_pergunta": {
+  "texto": "Qual ritmo nordestino é tocado com sanfona, zabumba e triângulo?",
+  "enviado": "[curious] Qual ritmo nordestino é tocado com sanfona, zabumba e triângulo?",
+  "arquivo": "perguntas/P103_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:41.802Z"
+ },
+ "P103_resposta": {
+  "texto": "A resposta certa é… Forró!",
+  "enviado": "[dramatically] A resposta certa é… Forró!",
+  "arquivo": "perguntas/P103_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:42.915Z"
+ },
+ "P104_pergunta": {
+  "texto": "Qual cantora é conhecida como a Rainha do Pop?",
+  "enviado": "[curious] Qual cantora é conhecida como a Rainha do Pop?",
+  "arquivo": "perguntas/P104_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:44.551Z"
+ },
+ "P104_resposta": {
+  "texto": "A resposta certa é… Madonna!",
+  "enviado": "[dramatically] A resposta certa é… Madonna!",
+  "arquivo": "perguntas/P104_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:45.667Z"
+ },
+ "P105_pergunta": {
+  "texto": "Qual cantor é conhecido como o Rei do Pop?",
+  "enviado": "[curious] Qual cantor é conhecido como o Rei do Pop?",
+  "arquivo": "perguntas/P105_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:46.875Z"
+ },
+ "P105_resposta": {
+  "texto": "A resposta certa é… Michael Jackson!",
+  "enviado": "[dramatically] A resposta certa é… Michael Jackson!",
+  "arquivo": "perguntas/P105_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:48.432Z"
+ },
+ "P106_pergunta": {
+  "texto": "Quantas notas tem a escala musical tradicional: dó, ré, mi…?",
+  "enviado": "[curious] Quantas notas tem a escala musical tradicional: dó, ré, mi…?",
+  "arquivo": "perguntas/P106_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:50.264Z"
+ },
+ "P106_resposta": {
+  "texto": "A resposta certa é… Sete notas!",
+  "enviado": "[dramatically] A resposta certa é… Sete notas!",
+  "arquivo": "perguntas/P106_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:51.576Z"
+ },
+ "P107_pergunta": {
+  "texto": "Em qual cidade nasceu a cantora Anitta?",
+  "enviado": "[curious] Em qual cidade nasceu a cantora Anitta?",
+  "arquivo": "perguntas/P107_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:52.683Z"
+ },
+ "P107_resposta": {
+  "texto": "A resposta certa é… Rio de Janeiro!",
+  "enviado": "[dramatically] A resposta certa é… Rio de Janeiro!",
+  "arquivo": "perguntas/P07_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:38.712Z"
+ },
+ "P108_pergunta": {
+  "texto": "Qual instrumento de sopro leva o nome do seu inventor, Adolphe Sax?",
+  "enviado": "[curious] Qual instrumento de sopro leva o nome do seu inventor, Adolphe Sax?",
+  "arquivo": "perguntas/P108_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:54.261Z"
+ },
+ "P108_resposta": {
+  "texto": "A resposta certa é… Saxofone!",
+  "enviado": "[dramatically] A resposta certa é… Saxofone!",
+  "arquivo": "perguntas/P108_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:55.803Z"
+ },
+ "P109_pergunta": {
+  "texto": "Qual festa brasileira é famosa pelos desfiles das escolas de samba?",
+  "enviado": "[curious] Qual festa brasileira é famosa pelos desfiles das escolas de samba?",
+  "arquivo": "perguntas/P109_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:57.516Z"
+ },
+ "P109_resposta": {
+  "texto": "A resposta certa é… Carnaval!",
+  "enviado": "[dramatically] A resposta certa é… Carnaval!",
+  "arquivo": "perguntas/P109_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:58.711Z"
+ },
+ "P110_pergunta": {
+  "texto": "O frevo é um ritmo típico de qual estado?",
+  "enviado": "[curious] O frevo é um ritmo típico de qual estado?",
+  "arquivo": "perguntas/P110_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:00.137Z"
+ },
+ "P110_resposta": {
+  "texto": "A resposta certa é… Pernambuco!",
+  "enviado": "[dramatically] A resposta certa é… Pernambuco!",
+  "arquivo": "perguntas/P110_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:01.263Z"
+ },
+ "P111_pergunta": {
+  "texto": "Quantas cordas tem um cavaquinho?",
+  "enviado": "[curious] Quantas cordas tem um cavaquinho?",
+  "arquivo": "perguntas/P111_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:02.474Z"
+ },
+ "P111_resposta": {
+  "texto": "A resposta certa é… Quatro cordas!",
+  "enviado": "[dramatically] A resposta certa é… Quatro cordas!",
+  "arquivo": "perguntas/P111_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:03.752Z"
+ },
+ "P112_pergunta": {
+  "texto": "Qual cantora fez a turnê The Eras Tour?",
+  "enviado": "[curious] Qual cantora fez a turnê The Eras Tour?",
+  "arquivo": "perguntas/P112_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:05.001Z"
+ },
+ "P112_resposta": {
+  "texto": "A resposta certa é… Taylor Swift!",
+  "enviado": "[dramatically] A resposta certa é… Taylor Swift!",
+  "arquivo": "perguntas/P112_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:06.134Z"
+ },
+ "P113_pergunta": {
+  "texto": "Qual dupla sertaneja gravou o sucesso Evidências?",
+  "enviado": "[curious] Qual dupla sertaneja gravou o sucesso Evidências?",
+  "arquivo": "perguntas/P113_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:07.550Z"
+ },
+ "P113_resposta": {
+  "texto": "A resposta certa é… Chitãozinho e Xororó!",
+  "enviado": "[dramatically] A resposta certa é… Chitãozinho e Xororó!",
+  "arquivo": "perguntas/P113_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:08.997Z"
+ },
+ "P114_pergunta": {
+  "texto": "Qual é a capital da Turquia?",
+  "enviado": "[curious] Qual é a capital da Turquia?",
+  "arquivo": "perguntas/P114_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:09.923Z"
+ },
+ "P114_resposta": {
+  "texto": "A resposta certa é… Ancara!",
+  "enviado": "[dramatically] A resposta certa é… Ancara!",
+  "arquivo": "perguntas/P114_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:11.023Z"
+ },
+ "P115_pergunta": {
+  "texto": "Qual é o menor país do mundo?",
+  "enviado": "[curious] Qual é o menor país do mundo?",
+  "arquivo": "perguntas/P115_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:12.291Z"
+ },
+ "P115_resposta": {
+  "texto": "A resposta certa é… Vaticano!",
+  "enviado": "[dramatically] A resposta certa é… Vaticano!",
+  "arquivo": "perguntas/P115_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:13.520Z"
+ },
+ "P116_pergunta": {
+  "texto": "Qual é o rio mais longo da Europa?",
+  "enviado": "[curious] Qual é o rio mais longo da Europa?",
+  "arquivo": "perguntas/P116_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:14.785Z"
+ },
+ "P116_resposta": {
+  "texto": "A resposta certa é… Rio Volga!",
+  "enviado": "[dramatically] A resposta certa é… Rio Volga!",
+  "arquivo": "perguntas/P116_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:15.983Z"
+ },
+ "P117_pergunta": {
+  "texto": "Qual é a capital da Nova Zelândia?",
+  "enviado": "[curious] Qual é a capital da Nova Zelândia?",
+  "arquivo": "perguntas/P117_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:17.206Z"
+ },
+ "P117_resposta": {
+  "texto": "A resposta certa é… Wellington!",
+  "enviado": "[dramatically] A resposta certa é… Wellington!",
+  "arquivo": "perguntas/P117_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:18.508Z"
+ },
+ "P118_pergunta": {
+  "texto": "Qual é o ponto mais alto do Brasil?",
+  "enviado": "[curious] Qual é o ponto mais alto do Brasil?",
+  "arquivo": "perguntas/P118_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:19.630Z"
+ },
+ "P118_resposta": {
+  "texto": "A resposta certa é… Pico da Neblina!",
+  "enviado": "[dramatically] A resposta certa é… Pico da Neblina!",
+  "arquivo": "perguntas/P118_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:21.075Z"
+ },
+ "P119_pergunta": {
+  "texto": "Em qual país fica Machu Picchu?",
+  "enviado": "[curious] Em qual país fica Machu Picchu?",
+  "arquivo": "perguntas/P119_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:22.236Z"
+ },
+ "P119_resposta": {
+  "texto": "A resposta certa é… Peru!",
+  "enviado": "[dramatically] A resposta certa é… Peru!",
+  "arquivo": "perguntas/P119_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:23.423Z"
+ },
+ "P120_pergunta": {
+  "texto": "Qual é o elemento químico mais abundante no universo?",
+  "enviado": "[curious] Qual é o elemento químico mais abundante no universo?",
+  "arquivo": "perguntas/P120_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:24.903Z"
+ },
+ "P120_resposta": {
+  "texto": "A resposta certa é… Hidrogênio!",
+  "enviado": "[dramatically] A resposta certa é… Hidrogênio!",
+  "arquivo": "perguntas/P120_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:26.075Z"
+ },
+ "P121_pergunta": {
+  "texto": "Qual é, aproximadamente, a velocidade da luz no vácuo?",
+  "enviado": "[curious] Qual é, aproximadamente, a velocidade da luz no vácuo?",
+  "arquivo": "perguntas/P121_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:27.612Z"
+ },
+ "P121_resposta": {
+  "texto": "A resposta certa é… Trezentos mil quilômetros por segundo!",
+  "enviado": "[dramatically] A resposta certa é… Trezentos mil quilômetros por segundo!",
+  "arquivo": "perguntas/P121_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:29.338Z"
+ },
+ "P122_pergunta": {
+  "texto": "Qual é o osso mais longo do corpo humano?",
+  "enviado": "[curious] Qual é o osso mais longo do corpo humano?",
+  "arquivo": "perguntas/P122_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:30.647Z"
+ },
+ "P122_resposta": {
+  "texto": "A resposta certa é… O fêmur!",
+  "enviado": "[dramatically] A resposta certa é… O fêmur!",
+  "arquivo": "perguntas/P122_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:32.074Z"
+ },
+ "P123_pergunta": {
+  "texto": "Quantos cromossomos tem uma célula humana comum?",
+  "enviado": "[curious] Quantos cromossomos tem uma célula humana comum?",
+  "arquivo": "perguntas/P123_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:33.485Z"
+ },
+ "P123_resposta": {
+  "texto": "A resposta certa é… Quarenta e seis!",
+  "enviado": "[dramatically] A resposta certa é… Quarenta e seis!",
+  "arquivo": "perguntas/P123_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:34.977Z"
+ },
+ "P124_pergunta": {
+  "texto": "Quem descobriu a penicilina?",
+  "enviado": "[curious] Quem descobriu a penicilina?",
+  "arquivo": "perguntas/P124_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:35.872Z"
+ },
+ "P124_resposta": {
+  "texto": "A resposta certa é… Alexander Fleming!",
+  "enviado": "[dramatically] A resposta certa é… Alexander Fleming!",
+  "arquivo": "perguntas/P124_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:37.176Z"
+ },
+ "P125_pergunta": {
+  "texto": "Em qual planeta um dia dura mais que um ano?",
+  "enviado": "[curious] Em qual planeta um dia dura mais que um ano?",
+  "arquivo": "perguntas/P125_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:38.388Z"
+ },
+ "P125_resposta": {
+  "texto": "A resposta certa é… Vênus!",
+  "enviado": "[dramatically] A resposta certa é… Vênus!",
+  "arquivo": "perguntas/P125_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:39.579Z"
+ },
+ "P126_pergunta": {
+  "texto": "Quantos títulos mundiais de Fórmula 1 Ayrton Senna conquistou?",
+  "enviado": "[curious] Quantos títulos mundiais de Fórmula 1 Ayrton Senna conquistou?",
+  "arquivo": "perguntas/P126_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:41.376Z"
+ },
+ "P126_resposta": {
+  "texto": "A resposta certa é… Três títulos!",
+  "enviado": "[dramatically] A resposta certa é… Três títulos!",
+  "arquivo": "perguntas/P126_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:42.589Z"
+ },
+ "P127_pergunta": {
+  "texto": "Qual seleção venceu a Copa do Mundo de 2026?",
+  "enviado": "[curious] Qual seleção venceu a Copa do Mundo de 2026?",
+  "arquivo": "perguntas/P127_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:44.312Z"
+ },
+ "P127_resposta": {
+  "texto": "A resposta certa é… Espanha!",
+  "enviado": "[dramatically] A resposta certa é… Espanha!",
+  "arquivo": "perguntas/P127_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:45.353Z"
+ },
+ "P128_pergunta": {
+  "texto": "Qual tenista tem mais títulos de Roland Garros?",
+  "enviado": "[curious] Qual tenista tem mais títulos de Roland Garros?",
+  "arquivo": "perguntas/P128_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:46.525Z"
+ },
+ "P128_resposta": {
+  "texto": "A resposta certa é… Rafael Nadal!",
+  "enviado": "[dramatically] A resposta certa é… Rafael Nadal!",
+  "arquivo": "perguntas/P128_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:47.965Z"
+ },
+ "P129_pergunta": {
+  "texto": "Qual nadador tem mais medalhas olímpicas na história?",
+  "enviado": "[curious] Qual nadador tem mais medalhas olímpicas na história?",
+  "arquivo": "perguntas/P129_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:49.346Z"
+ },
+ "P129_resposta": {
+  "texto": "A resposta certa é… Michael Phelps!",
+  "enviado": "[dramatically] A resposta certa é… Michael Phelps!",
+  "arquivo": "perguntas/P129_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:50.429Z"
+ },
+ "P130_pergunta": {
+  "texto": "Qual é a distância oficial de uma maratona?",
+  "enviado": "[curious] Qual é a distância oficial de uma maratona?",
+  "arquivo": "perguntas/P130_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:51.445Z"
+ },
+ "P130_resposta": {
+  "texto": "A resposta certa é… Quarenta e dois quilômetros e cento e noventa e cinco metros!",
+  "enviado": "[dramatically] A resposta certa é… Quarenta e dois quilômetros e cento e noventa e cinco metros!",
+  "arquivo": "perguntas/P130_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:53.710Z"
+ },
+ "P131_pergunta": {
+  "texto": "Qual destes pilotos brasileiros NÃO foi campeão mundial de Fórmula 1?",
+  "enviado": "[curious] Qual destes pilotos brasileiros NÃO foi campeão mundial de Fórmula 1?",
+  "arquivo": "perguntas/P131_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:55.872Z"
+ },
+ "P131_resposta": {
+  "texto": "A resposta certa é… Rubens Barrichello!",
+  "enviado": "[dramatically] A resposta certa é… Rubens Barrichello!",
+  "arquivo": "perguntas/P131_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:57.264Z"
+ },
+ "P132_pergunta": {
+  "texto": "Quem dirigiu o filme Tubarão, de 1975?",
+  "enviado": "[curious] Quem dirigiu o filme Tubarão, de 1975?",
+  "arquivo": "perguntas/P132_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:58.935Z"
+ },
+ "P132_resposta": {
+  "texto": "A resposta certa é… Steven Spielberg!",
+  "enviado": "[dramatically] A resposta certa é… Steven Spielberg!",
+  "arquivo": "perguntas/P132_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:00.123Z"
+ },
+ "P133_pergunta": {
+  "texto": "Qual atriz brasileira foi indicada ao Oscar por Central do Brasil?",
+  "enviado": "[curious] Qual atriz brasileira foi indicada ao Oscar por Central do Brasil?",
+  "arquivo": "perguntas/P133_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:01.614Z"
+ },
+ "P133_resposta": {
+  "texto": "A resposta certa é… Fernanda Montenegro!",
+  "enviado": "[dramatically] A resposta certa é… Fernanda Montenegro!",
+  "arquivo": "perguntas/P133_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:02.878Z"
+ },
+ "P134_pergunta": {
+  "texto": "Qual filme brasileiro ganhou o Oscar de filme internacional em 2025?",
+  "enviado": "[curious] Qual filme brasileiro ganhou o Oscar de filme internacional em 2025?",
+  "arquivo": "perguntas/P134_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:04.726Z"
+ },
+ "P134_resposta": {
+  "texto": "A resposta certa é… Ainda Estou Aqui!",
+  "enviado": "[dramatically] A resposta certa é… Ainda Estou Aqui!",
+  "arquivo": "perguntas/P134_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:06.041Z"
+ },
+ "P135_pergunta": {
+  "texto": "Em Matrix, qual é a cor da pílula que Neo escolhe?",
+  "enviado": "[curious] Em Matrix, qual é a cor da pílula que Neo escolhe?",
+  "arquivo": "perguntas/P135_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:07.320Z"
+ },
+ "P135_resposta": {
+  "texto": "A resposta certa é… Vermelha!",
+  "enviado": "[dramatically] A resposta certa é… Vermelha!",
+  "arquivo": "perguntas/P135_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:08.634Z"
+ },
+ "P136_pergunta": {
+  "texto": "Qual é o nome verdadeiro do Homem de Ferro?",
+  "enviado": "[curious] Qual é o nome verdadeiro do Homem de Ferro?",
+  "arquivo": "perguntas/P136_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:09.788Z"
+ },
+ "P136_resposta": {
+  "texto": "A resposta certa é… Tony Stark!",
+  "enviado": "[dramatically] A resposta certa é… Tony Stark!",
+  "arquivo": "perguntas/P136_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:10.820Z"
+ },
+ "P137_pergunta": {
+  "texto": "Qual série se passa na cidade fictícia de Hawkins?",
+  "enviado": "[curious] Qual série se passa na cidade fictícia de Hawkins?",
+  "arquivo": "perguntas/P137_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:12.009Z"
+ },
+ "P137_resposta": {
+  "texto": "A resposta certa é… Stranger Things!",
+  "enviado": "[dramatically] A resposta certa é… Stranger Things!",
+  "arquivo": "perguntas/P137_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:13.418Z"
+ },
+ "P138_pergunta": {
+  "texto": "De qual país é o queijo gorgonzola?",
+  "enviado": "[curious] De qual país é o queijo gorgonzola?",
+  "arquivo": "perguntas/P138_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:14.422Z"
+ },
+ "P138_resposta": {
+  "texto": "A resposta certa é… Itália!",
+  "enviado": "[dramatically] A resposta certa é… Itália!",
+  "arquivo": "perguntas/P04_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:30.836Z"
+ },
+ "P139_pergunta": {
+  "texto": "Qual é o ingrediente principal do homus?",
+  "enviado": "[curious] Qual é o ingrediente principal do homus?",
+  "arquivo": "perguntas/P139_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:15.564Z"
+ },
+ "P139_resposta": {
+  "texto": "A resposta certa é… Grão-de-bico!",
+  "enviado": "[dramatically] A resposta certa é… Grão-de-bico!",
+  "arquivo": "perguntas/P139_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:16.989Z"
+ },
+ "P140_pergunta": {
+  "texto": "A paella é um prato típico de qual país?",
+  "enviado": "[curious] A paella é um prato típico de qual país?",
+  "arquivo": "perguntas/P140_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:18.249Z"
+ },
+ "P140_resposta": {
+  "texto": "A resposta certa é… Espanha!",
+  "enviado": "[dramatically] A resposta certa é… Espanha!",
+  "arquivo": "perguntas/P127_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:37:45.353Z"
+ },
+ "P141_pergunta": {
+  "texto": "Qual é considerada a especiaria mais cara do mundo?",
+  "enviado": "[curious] Qual é considerada a especiaria mais cara do mundo?",
+  "arquivo": "perguntas/P141_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:19.549Z"
+ },
+ "P141_resposta": {
+  "texto": "A resposta certa é… Açafrão!",
+  "enviado": "[dramatically] A resposta certa é… Açafrão!",
+  "arquivo": "perguntas/P141_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:20.762Z"
+ },
+ "P142_pergunta": {
+  "texto": "O kimchi é um prato típico de qual país?",
+  "enviado": "[curious] O kimchi é um prato típico de qual país?",
+  "arquivo": "perguntas/P142_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:22.161Z"
+ },
+ "P142_resposta": {
+  "texto": "A resposta certa é… Coreia do Sul!",
+  "enviado": "[dramatically] A resposta certa é… Coreia do Sul!",
+  "arquivo": "perguntas/P142_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:23.390Z"
+ },
+ "P143_pergunta": {
+  "texto": "Qual doce português de massa folhada e creme é famoso em Belém, Lisboa?",
+  "enviado": "[curious] Qual doce português de massa folhada e creme é famoso em Belém, Lisboa?",
+  "arquivo": "perguntas/P143_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:25.366Z"
+ },
+ "P143_resposta": {
+  "texto": "A resposta certa é… Pastel de nata!",
+  "enviado": "[dramatically] A resposta certa é… Pastel de nata!",
+  "arquivo": "perguntas/P143_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:26.868Z"
+ },
+ "P144_pergunta": {
+  "texto": "Qual compositor alemão continuou compondo mesmo depois de ficar surdo?",
+  "enviado": "[curious] Qual compositor alemão continuou compondo mesmo depois de ficar surdo?",
+  "arquivo": "perguntas/P144_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:28.496Z"
+ },
+ "P144_resposta": {
+  "texto": "A resposta certa é… Beethoven!",
+  "enviado": "[dramatically] A resposta certa é… Beethoven!",
+  "arquivo": "perguntas/P144_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:29.643Z"
+ },
+ "P145_pergunta": {
+  "texto": "Qual banda gravou o álbum The Dark Side of the Moon?",
+  "enviado": "[curious] Qual banda gravou o álbum The Dark Side of the Moon?",
+  "arquivo": "perguntas/P145_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:31.079Z"
+ },
+ "P145_resposta": {
+  "texto": "A resposta certa é… Pink Floyd!",
+  "enviado": "[dramatically] A resposta certa é… Pink Floyd!",
+  "arquivo": "perguntas/P145_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:32.255Z"
+ },
+ "P146_pergunta": {
+  "texto": "Qual cantor brasileiro ficou conhecido como Síndico?",
+  "enviado": "[curious] Qual cantor brasileiro ficou conhecido como Síndico?",
+  "arquivo": "perguntas/P146_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:33.374Z"
+ },
+ "P146_resposta": {
+  "texto": "A resposta certa é… Tim Maia!",
+  "enviado": "[dramatically] A resposta certa é… Tim Maia!",
+  "arquivo": "perguntas/P146_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:34.560Z"
+ },
+ "P147_pergunta": {
+  "texto": "Quem compôs Aquarela do Brasil?",
+  "enviado": "[curious] Quem compôs Aquarela do Brasil?",
+  "arquivo": "perguntas/P147_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:35.589Z"
+ },
+ "P147_resposta": {
+  "texto": "A resposta certa é… Ary Barroso!",
+  "enviado": "[dramatically] A resposta certa é… Ary Barroso!",
+  "arquivo": "perguntas/P147_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:36.767Z"
+ },
+ "P148_pergunta": {
+  "texto": "Em qual cidade nasceu Mozart?",
+  "enviado": "[curious] Em qual cidade nasceu Mozart?",
+  "arquivo": "perguntas/P148_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:37.739Z"
+ },
+ "P148_resposta": {
+  "texto": "A resposta certa é… Salzburgo!",
+  "enviado": "[dramatically] A resposta certa é… Salzburgo!",
+  "arquivo": "perguntas/P148_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:38.824Z"
+ },
+ "P149_pergunta": {
+  "texto": "Qual cantora brasileira tinha o apelido de Pimentinha?",
+  "enviado": "[curious] Qual cantora brasileira tinha o apelido de Pimentinha?",
+  "arquivo": "perguntas/P149_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:40.602Z"
+ },
+ "P149_resposta": {
+  "texto": "A resposta certa é… Elis Regina!",
+  "enviado": "[dramatically] A resposta certa é… Elis Regina!",
+  "arquivo": "perguntas/P149_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:41.879Z"
+ },
+ "P150_pergunta": {
+  "texto": "Quantos dias tem um ano bissexto?",
+  "enviado": "[curious] Quantos dias tem um ano bissexto?",
+  "arquivo": "perguntas/P150_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:42.930Z"
+ },
+ "P150_resposta": {
+  "texto": "A resposta certa é… Trezentos e sessenta e seis dias!",
+  "enviado": "[dramatically] A resposta certa é… Trezentos e sessenta e seis dias!",
+  "arquivo": "perguntas/P150_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:44.579Z"
+ },
+ "P151_pergunta": {
+  "texto": "Qual cor sai da mistura de azul com amarelo?",
+  "enviado": "[curious] Qual cor sai da mistura de azul com amarelo?",
+  "arquivo": "perguntas/P151_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:45.827Z"
+ },
+ "P151_resposta": {
+  "texto": "A resposta certa é… Verde!",
+  "enviado": "[dramatically] A resposta certa é… Verde!",
+  "arquivo": "perguntas/P057_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:34:48.133Z"
+ },
+ "P152_pergunta": {
+  "texto": "Quantos lados tem um hexágono?",
+  "enviado": "[curious] Quantos lados tem um hexágono?",
+  "arquivo": "perguntas/P152_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:46.858Z"
+ },
+ "P152_resposta": {
+  "texto": "A resposta certa é… Seis lados!",
+  "enviado": "[dramatically] A resposta certa é… Seis lados!",
+  "arquivo": "perguntas/P152_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:48.280Z"
+ },
+ "P153_pergunta": {
+  "texto": "Qual animal é chamado de rei da selva?",
+  "enviado": "[curious] Qual animal é chamado de rei da selva?",
+  "arquivo": "perguntas/P153_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:49.345Z"
+ },
+ "P153_resposta": {
+  "texto": "A resposta certa é… O leão!",
+  "enviado": "[dramatically] A resposta certa é… O leão!",
+  "arquivo": "perguntas/P153_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:50.469Z"
+ },
+ "P154_pergunta": {
+  "texto": "Quantas horas tem um dia?",
+  "enviado": "[curious] Quantas horas tem um dia?",
+  "arquivo": "perguntas/P154_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:51.293Z"
+ },
+ "P154_resposta": {
+  "texto": "A resposta certa é… Vinte e quatro horas!",
+  "enviado": "[dramatically] A resposta certa é… Vinte e quatro horas!",
+  "arquivo": "perguntas/P154_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:52.461Z"
+ },
+ "P155_pergunta": {
+  "texto": "Quantos minutos tem uma hora?",
+  "enviado": "[curious] Quantos minutos tem uma hora?",
+  "arquivo": "perguntas/P155_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:53.624Z"
+ },
+ "P155_resposta": {
+  "texto": "A resposta certa é… Sessenta minutos!",
+  "enviado": "[dramatically] A resposta certa é… Sessenta minutos!",
+  "arquivo": "perguntas/P155_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:54.932Z"
+ },
+ "P156_pergunta": {
+  "texto": "Qual é o maior animal terrestre?",
+  "enviado": "[curious] Qual é o maior animal terrestre?",
+  "arquivo": "perguntas/P156_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:56.234Z"
+ },
+ "P156_resposta": {
+  "texto": "A resposta certa é… O elefante-africano!",
+  "enviado": "[dramatically] A resposta certa é… O elefante-africano!",
+  "arquivo": "perguntas/P156_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:57.656Z"
+ },
+ "P157_pergunta": {
+  "texto": "Quantos meses do ano têm 31 dias?",
+  "enviado": "[curious] Quantos meses do ano têm 31 dias?",
+  "arquivo": "perguntas/P157_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:38:59.049Z"
+ },
+ "P157_resposta": {
+  "texto": "A resposta certa é… Sete meses!",
+  "enviado": "[dramatically] A resposta certa é… Sete meses!",
+  "arquivo": "perguntas/P157_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:39:00.248Z"
+ },
+ "P158_pergunta": {
+  "texto": "Qual é a capital da Itália?",
+  "enviado": "[curious] Qual é a capital da Itália?",
+  "arquivo": "perguntas/P158_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:39:01.068Z"
+ },
+ "P158_resposta": {
+  "texto": "A resposta certa é… Roma!",
+  "enviado": "[dramatically] A resposta certa é… Roma!",
+  "arquivo": "perguntas/P158_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:39:02.210Z"
+ },
+ "P159_pergunta": {
+  "texto": "Em que mês se comemora o Natal?",
+  "enviado": "[curious] Em que mês se comemora o Natal?",
+  "arquivo": "perguntas/P159_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:39:03.290Z"
+ },
+ "P159_resposta": {
+  "texto": "A resposta certa é… Dezembro!",
+  "enviado": "[dramatically] A resposta certa é… Dezembro!",
+  "arquivo": "perguntas/P159_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:39:04.438Z"
  }
 }

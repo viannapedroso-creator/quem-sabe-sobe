@@ -1,18 +1,18 @@
 codigo,grupo,texto,caracteres,gravado,arquivo
 sala_entrem,fixas,"Entrem na sala! Apontem a câmera do celular para o QR code, ou digitem a senha.",89,sim,fixas/sala_entrem.mp3
 sala_prontos,fixas,"Todo mundo pronto? Segurem o botão Iniciar por três segundos.",71,sim,fixas/sala_prontos.mp3
-sala_chegou_bombeiro,personagens,"Chegou… o Bombeiro!",29,nao,
-sala_chegou_astronauta,personagens,"Chegou… o Astronauta!",31,nao,
-sala_chegou_marinheiro,personagens,"Chegou… o Marinheiro!",31,nao,
-sala_chegou_cowboy,personagens,"Chegou… o Cowboy!",27,nao,
-sala_chegou_vaca,personagens,"Chegou… a Vaca!",25,nao,
-sala_chegou_hotdog,personagens,"Chegou… o Cachorro-Quente!",36,nao,
-sala_chegou_cientista,personagens,"Chegou… a Cientista!",30,nao,
-sala_chegou_roqueira,personagens,"Chegou… a Roqueira!",29,nao,
-sala_chegou_dinossauro,personagens,"Chegou… o Dinossauro!",31,nao,
-sala_chegou_coxinha,personagens,"Chegou… a Coxinha!",28,nao,
-sala_chegou_mergulhador,personagens,"Chegou… o Mergulhador!",32,nao,
-sala_chegou_vovo,personagens,"Chegou… a Vovó!",25,nao,
+sala_chegou_bombeiro,personagens,"Chegou… o Bombeiro!",29,sim,personagens/sala_chegou_bombeiro.mp3
+sala_chegou_astronauta,personagens,"Chegou… o Astronauta!",31,sim,personagens/sala_chegou_astronauta.mp3
+sala_chegou_marinheiro,personagens,"Chegou… o Marinheiro!",31,sim,personagens/sala_chegou_marinheiro.mp3
+sala_chegou_cowboy,personagens,"Chegou… o Cowboy!",27,sim,personagens/sala_chegou_cowboy.mp3
+sala_chegou_vaca,personagens,"Chegou… a Vaca!",25,sim,personagens/sala_chegou_vaca.mp3
+sala_chegou_hotdog,personagens,"Chegou… o Cachorro-Quente!",36,sim,personagens/sala_chegou_hotdog.mp3
+sala_chegou_cientista,personagens,"Chegou… a Cientista!",30,sim,personagens/sala_chegou_cientista.mp3
+sala_chegou_roqueira,personagens,"Chegou… a Roqueira!",29,sim,personagens/sala_chegou_roqueira.mp3
+sala_chegou_dinossauro,personagens,"Chegou… o Dinossauro!",31,sim,personagens/sala_chegou_dinossauro.mp3
+sala_chegou_coxinha,personagens,"Chegou… a Coxinha!",28,sim,personagens/sala_chegou_coxinha.mp3
+sala_chegou_mergulhador,personagens,"Chegou… o Mergulhador!",32,sim,personagens/sala_chegou_mergulhador.mp3
+sala_chegou_vovo,personagens,"Chegou… a Vovó!",25,sim,personagens/sala_chegou_vovo.mp3
 explica_1,fixas,"É assim que se joga! Prestem atenção, que eu só explico uma vez.",80,sim,fixas/explica_1.mp3
 explica_2,fixas,"Eu leio a pergunta, e vocês têm quinze segundos para responder no celular.",83,sim,fixas/explica_2.mp3
 explica_3,fixas,"Acertou, ganhou pontos. Quem acerta mais rápido leva um bônus.",70,sim,fixas/explica_3.mp3
@@ -37,90 +37,90 @@ porta_musica,categorias,"A porta escolhida foi… Música!",45,sim,categorias/po
 poder_explica_1,fixas,"Agora vale atrapalhar! A cada rodada, escolham um poder e um alvo. Cada poder pode ser usado duas vezes.",120,sim,fixas/poder_explica_1.mp3
 poder_explica_2,fixas,"Poderes diferentes no mesmo alvo se somam. E o mesmo poder, vindo de vários jogadores, fica mais forte.",119,sim,fixas/poder_explica_2.mp3
 poder_hora,fixas,"Hora de atrapalhar! Escolham um poder e um alvo.",64,sim,fixas/poder_hora.mp3
-manda_bombeiro_gosma,personagens,"O Bombeiro manda a Gosma!",41,nao,
-manda_bombeiro_gelo,personagens,"O Bombeiro manda o Gelo!",40,nao,
-manda_bombeiro_bombas,personagens,"O Bombeiro manda as Bombas!",43,nao,
-manda_bombeiro_cupins,personagens,"O Bombeiro manda os Cupins!",43,nao,
-manda_bombeiro_redemoinho,personagens,"O Bombeiro manda o Redemoinho!",46,nao,
-manda_bombeiro_encolhe,personagens,"O Bombeiro manda o Encolhe!",43,nao,
-manda_astronauta_gosma,personagens,"O Astronauta manda a Gosma!",43,nao,
-manda_astronauta_gelo,personagens,"O Astronauta manda o Gelo!",42,nao,
-manda_astronauta_bombas,personagens,"O Astronauta manda as Bombas!",45,nao,
-manda_astronauta_cupins,personagens,"O Astronauta manda os Cupins!",45,nao,
-manda_astronauta_redemoinho,personagens,"O Astronauta manda o Redemoinho!",48,nao,
-manda_astronauta_encolhe,personagens,"O Astronauta manda o Encolhe!",45,nao,
-manda_marinheiro_gosma,personagens,"O Marinheiro manda a Gosma!",43,nao,
-manda_marinheiro_gelo,personagens,"O Marinheiro manda o Gelo!",42,nao,
-manda_marinheiro_bombas,personagens,"O Marinheiro manda as Bombas!",45,nao,
-manda_marinheiro_cupins,personagens,"O Marinheiro manda os Cupins!",45,nao,
-manda_marinheiro_redemoinho,personagens,"O Marinheiro manda o Redemoinho!",48,nao,
-manda_marinheiro_encolhe,personagens,"O Marinheiro manda o Encolhe!",45,nao,
-manda_cowboy_gosma,personagens,"O Cowboy manda a Gosma!",39,nao,
-manda_cowboy_gelo,personagens,"O Cowboy manda o Gelo!",38,nao,
-manda_cowboy_bombas,personagens,"O Cowboy manda as Bombas!",41,nao,
-manda_cowboy_cupins,personagens,"O Cowboy manda os Cupins!",41,nao,
-manda_cowboy_redemoinho,personagens,"O Cowboy manda o Redemoinho!",44,nao,
-manda_cowboy_encolhe,personagens,"O Cowboy manda o Encolhe!",41,nao,
-manda_vaca_gosma,personagens,"A Vaca manda a Gosma!",37,nao,
-manda_vaca_gelo,personagens,"A Vaca manda o Gelo!",36,nao,
-manda_vaca_bombas,personagens,"A Vaca manda as Bombas!",39,nao,
-manda_vaca_cupins,personagens,"A Vaca manda os Cupins!",39,nao,
-manda_vaca_redemoinho,personagens,"A Vaca manda o Redemoinho!",42,nao,
-manda_vaca_encolhe,personagens,"A Vaca manda o Encolhe!",39,nao,
-manda_hotdog_gosma,personagens,"O Cachorro-Quente manda a Gosma!",48,nao,
-manda_hotdog_gelo,personagens,"O Cachorro-Quente manda o Gelo!",47,nao,
-manda_hotdog_bombas,personagens,"O Cachorro-Quente manda as Bombas!",50,nao,
-manda_hotdog_cupins,personagens,"O Cachorro-Quente manda os Cupins!",50,nao,
-manda_hotdog_redemoinho,personagens,"O Cachorro-Quente manda o Redemoinho!",53,nao,
-manda_hotdog_encolhe,personagens,"O Cachorro-Quente manda o Encolhe!",50,nao,
-manda_cientista_gosma,personagens,"A Cientista manda a Gosma!",42,nao,
-manda_cientista_gelo,personagens,"A Cientista manda o Gelo!",41,nao,
-manda_cientista_bombas,personagens,"A Cientista manda as Bombas!",44,nao,
-manda_cientista_cupins,personagens,"A Cientista manda os Cupins!",44,nao,
-manda_cientista_redemoinho,personagens,"A Cientista manda o Redemoinho!",47,nao,
-manda_cientista_encolhe,personagens,"A Cientista manda o Encolhe!",44,nao,
-manda_roqueira_gosma,personagens,"A Roqueira manda a Gosma!",41,nao,
-manda_roqueira_gelo,personagens,"A Roqueira manda o Gelo!",40,nao,
-manda_roqueira_bombas,personagens,"A Roqueira manda as Bombas!",43,nao,
-manda_roqueira_cupins,personagens,"A Roqueira manda os Cupins!",43,nao,
-manda_roqueira_redemoinho,personagens,"A Roqueira manda o Redemoinho!",46,nao,
-manda_roqueira_encolhe,personagens,"A Roqueira manda o Encolhe!",43,nao,
-manda_dinossauro_gosma,personagens,"O Dinossauro manda a Gosma!",43,nao,
-manda_dinossauro_gelo,personagens,"O Dinossauro manda o Gelo!",42,nao,
-manda_dinossauro_bombas,personagens,"O Dinossauro manda as Bombas!",45,nao,
-manda_dinossauro_cupins,personagens,"O Dinossauro manda os Cupins!",45,nao,
-manda_dinossauro_redemoinho,personagens,"O Dinossauro manda o Redemoinho!",48,nao,
-manda_dinossauro_encolhe,personagens,"O Dinossauro manda o Encolhe!",45,nao,
-manda_coxinha_gosma,personagens,"A Coxinha manda a Gosma!",40,nao,
-manda_coxinha_gelo,personagens,"A Coxinha manda o Gelo!",39,nao,
-manda_coxinha_bombas,personagens,"A Coxinha manda as Bombas!",42,nao,
-manda_coxinha_cupins,personagens,"A Coxinha manda os Cupins!",42,nao,
-manda_coxinha_redemoinho,personagens,"A Coxinha manda o Redemoinho!",45,nao,
-manda_coxinha_encolhe,personagens,"A Coxinha manda o Encolhe!",42,nao,
-manda_mergulhador_gosma,personagens,"O Mergulhador manda a Gosma!",44,nao,
-manda_mergulhador_gelo,personagens,"O Mergulhador manda o Gelo!",43,nao,
-manda_mergulhador_bombas,personagens,"O Mergulhador manda as Bombas!",46,nao,
-manda_mergulhador_cupins,personagens,"O Mergulhador manda os Cupins!",46,nao,
-manda_mergulhador_redemoinho,personagens,"O Mergulhador manda o Redemoinho!",49,nao,
-manda_mergulhador_encolhe,personagens,"O Mergulhador manda o Encolhe!",46,nao,
-manda_vovo_gosma,personagens,"A Vovó manda a Gosma!",37,nao,
-manda_vovo_gelo,personagens,"A Vovó manda o Gelo!",36,nao,
-manda_vovo_bombas,personagens,"A Vovó manda as Bombas!",39,nao,
-manda_vovo_cupins,personagens,"A Vovó manda os Cupins!",39,nao,
-manda_vovo_redemoinho,personagens,"A Vovó manda o Redemoinho!",42,nao,
-manda_vovo_encolhe,personagens,"A Vovó manda o Encolhe!",39,nao,
-espelho_volta_bombeiro,personagens,"Espelho! Voltou tudo para o Bombeiro!",49,nao,
-espelho_volta_astronauta,personagens,"Espelho! Voltou tudo para o Astronauta!",51,nao,
-espelho_volta_marinheiro,personagens,"Espelho! Voltou tudo para o Marinheiro!",51,nao,
-espelho_volta_cowboy,personagens,"Espelho! Voltou tudo para o Cowboy!",47,nao,
-espelho_volta_vaca,personagens,"Espelho! Voltou tudo para a Vaca!",45,nao,
-espelho_volta_hotdog,personagens,"Espelho! Voltou tudo para o Cachorro-Quente!",56,nao,
-espelho_volta_cientista,personagens,"Espelho! Voltou tudo para a Cientista!",50,nao,
-espelho_volta_roqueira,personagens,"Espelho! Voltou tudo para a Roqueira!",49,nao,
-espelho_volta_dinossauro,personagens,"Espelho! Voltou tudo para o Dinossauro!",51,nao,
-espelho_volta_coxinha,personagens,"Espelho! Voltou tudo para a Coxinha!",48,nao,
-espelho_volta_mergulhador,personagens,"Espelho! Voltou tudo para o Mergulhador!",52,nao,
-espelho_volta_vovo,personagens,"Espelho! Voltou tudo para a Vovó!",45,nao,
+manda_bombeiro_gosma,personagens,"O Bombeiro manda a Gosma!",41,sim,personagens/manda_bombeiro_gosma.mp3
+manda_bombeiro_gelo,personagens,"O Bombeiro manda o Gelo!",40,sim,personagens/manda_bombeiro_gelo.mp3
+manda_bombeiro_bombas,personagens,"O Bombeiro manda as Bombas!",43,sim,personagens/manda_bombeiro_bombas.mp3
+manda_bombeiro_cupins,personagens,"O Bombeiro manda os Cupins!",43,sim,personagens/manda_bombeiro_cupins.mp3
+manda_bombeiro_redemoinho,personagens,"O Bombeiro manda o Redemoinho!",46,sim,personagens/manda_bombeiro_redemoinho.mp3
+manda_bombeiro_encolhe,personagens,"O Bombeiro manda o Encolhe!",43,sim,personagens/manda_bombeiro_encolhe.mp3
+manda_astronauta_gosma,personagens,"O Astronauta manda a Gosma!",43,sim,personagens/manda_astronauta_gosma.mp3
+manda_astronauta_gelo,personagens,"O Astronauta manda o Gelo!",42,sim,personagens/manda_astronauta_gelo.mp3
+manda_astronauta_bombas,personagens,"O Astronauta manda as Bombas!",45,sim,personagens/manda_astronauta_bombas.mp3
+manda_astronauta_cupins,personagens,"O Astronauta manda os Cupins!",45,sim,personagens/manda_astronauta_cupins.mp3
+manda_astronauta_redemoinho,personagens,"O Astronauta manda o Redemoinho!",48,sim,personagens/manda_astronauta_redemoinho.mp3
+manda_astronauta_encolhe,personagens,"O Astronauta manda o Encolhe!",45,sim,personagens/manda_astronauta_encolhe.mp3
+manda_marinheiro_gosma,personagens,"O Marinheiro manda a Gosma!",43,sim,personagens/manda_marinheiro_gosma.mp3
+manda_marinheiro_gelo,personagens,"O Marinheiro manda o Gelo!",42,sim,personagens/manda_marinheiro_gelo.mp3
+manda_marinheiro_bombas,personagens,"O Marinheiro manda as Bombas!",45,sim,personagens/manda_marinheiro_bombas.mp3
+manda_marinheiro_cupins,personagens,"O Marinheiro manda os Cupins!",45,sim,personagens/manda_marinheiro_cupins.mp3
+manda_marinheiro_redemoinho,personagens,"O Marinheiro manda o Redemoinho!",48,sim,personagens/manda_marinheiro_redemoinho.mp3
+manda_marinheiro_encolhe,personagens,"O Marinheiro manda o Encolhe!",45,sim,personagens/manda_marinheiro_encolhe.mp3
+manda_cowboy_gosma,personagens,"O Cowboy manda a Gosma!",39,sim,personagens/manda_cowboy_gosma.mp3
+manda_cowboy_gelo,personagens,"O Cowboy manda o Gelo!",38,sim,personagens/manda_cowboy_gelo.mp3
+manda_cowboy_bombas,personagens,"O Cowboy manda as Bombas!",41,sim,personagens/manda_cowboy_bombas.mp3
+manda_cowboy_cupins,personagens,"O Cowboy manda os Cupins!",41,sim,personagens/manda_cowboy_cupins.mp3
+manda_cowboy_redemoinho,personagens,"O Cowboy manda o Redemoinho!",44,sim,personagens/manda_cowboy_redemoinho.mp3
+manda_cowboy_encolhe,personagens,"O Cowboy manda o Encolhe!",41,sim,personagens/manda_cowboy_encolhe.mp3
+manda_vaca_gosma,personagens,"A Vaca manda a Gosma!",37,sim,personagens/manda_vaca_gosma.mp3
+manda_vaca_gelo,personagens,"A Vaca manda o Gelo!",36,sim,personagens/manda_vaca_gelo.mp3
+manda_vaca_bombas,personagens,"A Vaca manda as Bombas!",39,sim,personagens/manda_vaca_bombas.mp3
+manda_vaca_cupins,personagens,"A Vaca manda os Cupins!",39,sim,personagens/manda_vaca_cupins.mp3
+manda_vaca_redemoinho,personagens,"A Vaca manda o Redemoinho!",42,sim,personagens/manda_vaca_redemoinho.mp3
+manda_vaca_encolhe,personagens,"A Vaca manda o Encolhe!",39,sim,personagens/manda_vaca_encolhe.mp3
+manda_hotdog_gosma,personagens,"O Cachorro-Quente manda a Gosma!",48,sim,personagens/manda_hotdog_gosma.mp3
+manda_hotdog_gelo,personagens,"O Cachorro-Quente manda o Gelo!",47,sim,personagens/manda_hotdog_gelo.mp3
+manda_hotdog_bombas,personagens,"O Cachorro-Quente manda as Bombas!",50,sim,personagens/manda_hotdog_bombas.mp3
+manda_hotdog_cupins,personagens,"O Cachorro-Quente manda os Cupins!",50,sim,personagens/manda_hotdog_cupins.mp3
+manda_hotdog_redemoinho,personagens,"O Cachorro-Quente manda o Redemoinho!",53,sim,personagens/manda_hotdog_redemoinho.mp3
+manda_hotdog_encolhe,personagens,"O Cachorro-Quente manda o Encolhe!",50,sim,personagens/manda_hotdog_encolhe.mp3
+manda_cientista_gosma,personagens,"A Cientista manda a Gosma!",42,sim,personagens/manda_cientista_gosma.mp3
+manda_cientista_gelo,personagens,"A Cientista manda o Gelo!",41,sim,personagens/manda_cientista_gelo.mp3
+manda_cientista_bombas,personagens,"A Cientista manda as Bombas!",44,sim,personagens/manda_cientista_bombas.mp3
+manda_cientista_cupins,personagens,"A Cientista manda os Cupins!",44,sim,personagens/manda_cientista_cupins.mp3
+manda_cientista_redemoinho,personagens,"A Cientista manda o Redemoinho!",47,sim,personagens/manda_cientista_redemoinho.mp3
+manda_cientista_encolhe,personagens,"A Cientista manda o Encolhe!",44,sim,personagens/manda_cientista_encolhe.mp3
+manda_roqueira_gosma,personagens,"A Roqueira manda a Gosma!",41,sim,personagens/manda_roqueira_gosma.mp3
+manda_roqueira_gelo,personagens,"A Roqueira manda o Gelo!",40,sim,personagens/manda_roqueira_gelo.mp3
+manda_roqueira_bombas,personagens,"A Roqueira manda as Bombas!",43,sim,personagens/manda_roqueira_bombas.mp3
+manda_roqueira_cupins,personagens,"A Roqueira manda os Cupins!",43,sim,personagens/manda_roqueira_cupins.mp3
+manda_roqueira_redemoinho,personagens,"A Roqueira manda o Redemoinho!",46,sim,personagens/manda_roqueira_redemoinho.mp3
+manda_roqueira_encolhe,personagens,"A Roqueira manda o Encolhe!",43,sim,personagens/manda_roqueira_encolhe.mp3
+manda_dinossauro_gosma,personagens,"O Dinossauro manda a Gosma!",43,sim,personagens/manda_dinossauro_gosma.mp3
+manda_dinossauro_gelo,personagens,"O Dinossauro manda o Gelo!",42,sim,personagens/manda_dinossauro_gelo.mp3
+manda_dinossauro_bombas,personagens,"O Dinossauro manda as Bombas!",45,sim,personagens/manda_dinossauro_bombas.mp3
+manda_dinossauro_cupins,personagens,"O Dinossauro manda os Cupins!",45,sim,personagens/manda_dinossauro_cupins.mp3
+manda_dinossauro_redemoinho,personagens,"O Dinossauro manda o Redemoinho!",48,sim,personagens/manda_dinossauro_redemoinho.mp3
+manda_dinossauro_encolhe,personagens,"O Dinossauro manda o Encolhe!",45,sim,personagens/manda_dinossauro_encolhe.mp3
+manda_coxinha_gosma,personagens,"A Coxinha manda a Gosma!",40,sim,personagens/manda_coxinha_gosma.mp3
+manda_coxinha_gelo,personagens,"A Coxinha manda o Gelo!",39,sim,personagens/manda_coxinha_gelo.mp3
+manda_coxinha_bombas,personagens,"A Coxinha manda as Bombas!",42,sim,personagens/manda_coxinha_bombas.mp3
+manda_coxinha_cupins,personagens,"A Coxinha manda os Cupins!",42,sim,personagens/manda_coxinha_cupins.mp3
+manda_coxinha_redemoinho,personagens,"A Coxinha manda o Redemoinho!",45,sim,personagens/manda_coxinha_redemoinho.mp3
+manda_coxinha_encolhe,personagens,"A Coxinha manda o Encolhe!",42,sim,personagens/manda_coxinha_encolhe.mp3
+manda_mergulhador_gosma,personagens,"O Mergulhador manda a Gosma!",44,sim,personagens/manda_mergulhador_gosma.mp3
+manda_mergulhador_gelo,personagens,"O Mergulhador manda o Gelo!",43,sim,personagens/manda_mergulhador_gelo.mp3
+manda_mergulhador_bombas,personagens,"O Mergulhador manda as Bombas!",46,sim,personagens/manda_mergulhador_bombas.mp3
+manda_mergulhador_cupins,personagens,"O Mergulhador manda os Cupins!",46,sim,personagens/manda_mergulhador_cupins.mp3
+manda_mergulhador_redemoinho,personagens,"O Mergulhador manda o Redemoinho!",49,sim,personagens/manda_mergulhador_redemoinho.mp3
+manda_mergulhador_encolhe,personagens,"O Mergulhador manda o Encolhe!",46,sim,personagens/manda_mergulhador_encolhe.mp3
+manda_vovo_gosma,personagens,"A Vovó manda a Gosma!",37,sim,personagens/manda_vovo_gosma.mp3
+manda_vovo_gelo,personagens,"A Vovó manda o Gelo!",36,sim,personagens/manda_vovo_gelo.mp3
+manda_vovo_bombas,personagens,"A Vovó manda as Bombas!",39,sim,personagens/manda_vovo_bombas.mp3
+manda_vovo_cupins,personagens,"A Vovó manda os Cupins!",39,sim,personagens/manda_vovo_cupins.mp3
+manda_vovo_redemoinho,personagens,"A Vovó manda o Redemoinho!",42,sim,personagens/manda_vovo_redemoinho.mp3
+manda_vovo_encolhe,personagens,"A Vovó manda o Encolhe!",39,sim,personagens/manda_vovo_encolhe.mp3
+espelho_volta_bombeiro,personagens,"Espelho! Voltou tudo para o Bombeiro!",49,sim,personagens/espelho_volta_bombeiro.mp3
+espelho_volta_astronauta,personagens,"Espelho! Voltou tudo para o Astronauta!",51,sim,personagens/espelho_volta_astronauta.mp3
+espelho_volta_marinheiro,personagens,"Espelho! Voltou tudo para o Marinheiro!",51,sim,personagens/espelho_volta_marinheiro.mp3
+espelho_volta_cowboy,personagens,"Espelho! Voltou tudo para o Cowboy!",47,sim,personagens/espelho_volta_cowboy.mp3
+espelho_volta_vaca,personagens,"Espelho! Voltou tudo para a Vaca!",45,sim,personagens/espelho_volta_vaca.mp3
+espelho_volta_hotdog,personagens,"Espelho! Voltou tudo para o Cachorro-Quente!",56,sim,personagens/espelho_volta_hotdog.mp3
+espelho_volta_cientista,personagens,"Espelho! Voltou tudo para a Cientista!",50,sim,personagens/espelho_volta_cientista.mp3
+espelho_volta_roqueira,personagens,"Espelho! Voltou tudo para a Roqueira!",49,sim,personagens/espelho_volta_roqueira.mp3
+espelho_volta_dinossauro,personagens,"Espelho! Voltou tudo para o Dinossauro!",51,sim,personagens/espelho_volta_dinossauro.mp3
+espelho_volta_coxinha,personagens,"Espelho! Voltou tudo para a Coxinha!",48,sim,personagens/espelho_volta_coxinha.mp3
+espelho_volta_mergulhador,personagens,"Espelho! Voltou tudo para o Mergulhador!",52,sim,personagens/espelho_volta_mergulhador.mp3
+espelho_volta_vovo,personagens,"Espelho! Voltou tudo para a Vovó!",45,sim,personagens/espelho_volta_vovo.mp3
 espelho_todos,fixas,"Todo mundo pegou espelho! Ninguém lançou poder, então ninguém foi atingido.",84,sim,fixas/espelho_todos.mp3
 espelho_alguns,fixas,"Teve gente que pegou espelho! Mas ninguém lançou poder, então ninguém foi atingido.",92,sim,fixas/espelho_alguns.mp3
 assoc_explica_1,fixas,"Rodada especial! Sem categoria e sem poderes.",55,sim,fixas/assoc_explica_1.mp3
@@ -142,18 +142,18 @@ resp_todos,fixas,"Todo mundo respondeu!",29,sim,fixas/resp_todos.mp3
 resp_tempo,fixas,"Tempo esgotado!",27,sim,fixas/resp_tempo.mp3
 rev_vamos,fixas,"Vamos ver quem acertou…",33,sim,fixas/rev_vamos.mp3
 pontos_explica,fixas,"Quem acertou ganha pontos, e quem respondeu mais rápido ganha bônus!",77,sim,fixas/pontos_explica.mp3
-ranking_frente_bombeiro,personagens,"Olha o ranking! Na frente está… o Bombeiro!",53,nao,
-ranking_frente_astronauta,personagens,"Olha o ranking! Na frente está… o Astronauta!",55,nao,
-ranking_frente_marinheiro,personagens,"Olha o ranking! Na frente está… o Marinheiro!",55,nao,
-ranking_frente_cowboy,personagens,"Olha o ranking! Na frente está… o Cowboy!",51,nao,
-ranking_frente_vaca,personagens,"Olha o ranking! Na frente está… a Vaca!",49,nao,
-ranking_frente_hotdog,personagens,"Olha o ranking! Na frente está… o Cachorro-Quente!",60,nao,
-ranking_frente_cientista,personagens,"Olha o ranking! Na frente está… a Cientista!",54,nao,
-ranking_frente_roqueira,personagens,"Olha o ranking! Na frente está… a Roqueira!",53,nao,
-ranking_frente_dinossauro,personagens,"Olha o ranking! Na frente está… o Dinossauro!",55,nao,
-ranking_frente_coxinha,personagens,"Olha o ranking! Na frente está… a Coxinha!",52,nao,
-ranking_frente_mergulhador,personagens,"Olha o ranking! Na frente está… o Mergulhador!",56,nao,
-ranking_frente_vovo,personagens,"Olha o ranking! Na frente está… a Vovó!",49,nao,
+ranking_frente_bombeiro,personagens,"Olha o ranking! Na frente está… o Bombeiro!",53,sim,personagens/ranking_frente_bombeiro.mp3
+ranking_frente_astronauta,personagens,"Olha o ranking! Na frente está… o Astronauta!",55,sim,personagens/ranking_frente_astronauta.mp3
+ranking_frente_marinheiro,personagens,"Olha o ranking! Na frente está… o Marinheiro!",55,sim,personagens/ranking_frente_marinheiro.mp3
+ranking_frente_cowboy,personagens,"Olha o ranking! Na frente está… o Cowboy!",51,sim,personagens/ranking_frente_cowboy.mp3
+ranking_frente_vaca,personagens,"Olha o ranking! Na frente está… a Vaca!",49,sim,personagens/ranking_frente_vaca.mp3
+ranking_frente_hotdog,personagens,"Olha o ranking! Na frente está… o Cachorro-Quente!",60,sim,personagens/ranking_frente_hotdog.mp3
+ranking_frente_cientista,personagens,"Olha o ranking! Na frente está… a Cientista!",54,sim,personagens/ranking_frente_cientista.mp3
+ranking_frente_roqueira,personagens,"Olha o ranking! Na frente está… a Roqueira!",53,sim,personagens/ranking_frente_roqueira.mp3
+ranking_frente_dinossauro,personagens,"Olha o ranking! Na frente está… o Dinossauro!",55,sim,personagens/ranking_frente_dinossauro.mp3
+ranking_frente_coxinha,personagens,"Olha o ranking! Na frente está… a Coxinha!",52,sim,personagens/ranking_frente_coxinha.mp3
+ranking_frente_mergulhador,personagens,"Olha o ranking! Na frente está… o Mergulhador!",56,sim,personagens/ranking_frente_mergulhador.mp3
+ranking_frente_vovo,personagens,"Olha o ranking! Na frente está… a Vovó!",49,sim,personagens/ranking_frente_vovo.mp3
 ranking_empate,fixas,"Olha o ranking! Empate na frente!",45,sim,fixas/ranking_empate.mp3
 reacao_ok_1,reacoes,"Isso aí!",16,sim,reacoes/reacao_ok_1.mp3
 reacao_ok_2,reacoes,"Mandaram bem!",21,sim,reacoes/reacao_ok_2.mp3
@@ -204,42 +204,42 @@ pir_pergunta_19,numeros,"Pergunta dezenove!",28,sim,numeros/pir_pergunta_19.mp3
 pir_pergunta_20,numeros,"Pergunta vinte!",25,sim,numeros/pir_pergunta_20.mp3
 pir_sobe,fixas,"Quem acertou, sobe!",29,sim,fixas/pir_sobe.mp3
 pir_ninguem,fixas,"Ninguém acertou! Todo mundo fica onde está.",52,sim,fixas/pir_ninguem.mp3
-quase_1_bombeiro,personagens,"O Bombeiro está quase no topo!",40,nao,
-quase_1_astronauta,personagens,"O Astronauta está quase no topo!",42,nao,
-quase_1_marinheiro,personagens,"O Marinheiro está quase no topo!",42,nao,
-quase_1_cowboy,personagens,"O Cowboy está quase no topo!",38,nao,
-quase_1_vaca,personagens,"A Vaca está quase no topo!",36,nao,
-quase_1_hotdog,personagens,"O Cachorro-Quente está quase no topo!",47,nao,
-quase_1_cientista,personagens,"A Cientista está quase no topo!",41,nao,
-quase_1_roqueira,personagens,"A Roqueira está quase no topo!",40,nao,
-quase_1_dinossauro,personagens,"O Dinossauro está quase no topo!",42,nao,
-quase_1_coxinha,personagens,"A Coxinha está quase no topo!",39,nao,
-quase_1_mergulhador,personagens,"O Mergulhador está quase no topo!",43,nao,
-quase_1_vovo,personagens,"A Vovó está quase no topo!",36,nao,
-quase_2_bombeiro,personagens,"Olha quem está chegando lá em cima: o Bombeiro!",57,nao,
-quase_2_astronauta,personagens,"Olha quem está chegando lá em cima: o Astronauta!",59,nao,
-quase_2_marinheiro,personagens,"Olha quem está chegando lá em cima: o Marinheiro!",59,nao,
-quase_2_cowboy,personagens,"Olha quem está chegando lá em cima: o Cowboy!",55,nao,
-quase_2_vaca,personagens,"Olha quem está chegando lá em cima: a Vaca!",53,nao,
-quase_2_hotdog,personagens,"Olha quem está chegando lá em cima: o Cachorro-Quente!",64,nao,
-quase_2_cientista,personagens,"Olha quem está chegando lá em cima: a Cientista!",58,nao,
-quase_2_roqueira,personagens,"Olha quem está chegando lá em cima: a Roqueira!",57,nao,
-quase_2_dinossauro,personagens,"Olha quem está chegando lá em cima: o Dinossauro!",59,nao,
-quase_2_coxinha,personagens,"Olha quem está chegando lá em cima: a Coxinha!",56,nao,
-quase_2_mergulhador,personagens,"Olha quem está chegando lá em cima: o Mergulhador!",60,nao,
-quase_2_vovo,personagens,"Olha quem está chegando lá em cima: a Vovó!",53,nao,
-quase_3_bombeiro,personagens,"Falta pouco para o Bombeiro!",38,nao,
-quase_3_astronauta,personagens,"Falta pouco para o Astronauta!",40,nao,
-quase_3_marinheiro,personagens,"Falta pouco para o Marinheiro!",40,nao,
-quase_3_cowboy,personagens,"Falta pouco para o Cowboy!",36,nao,
-quase_3_vaca,personagens,"Falta pouco para a Vaca!",34,nao,
-quase_3_hotdog,personagens,"Falta pouco para o Cachorro-Quente!",45,nao,
-quase_3_cientista,personagens,"Falta pouco para a Cientista!",39,nao,
-quase_3_roqueira,personagens,"Falta pouco para a Roqueira!",38,nao,
-quase_3_dinossauro,personagens,"Falta pouco para o Dinossauro!",40,nao,
-quase_3_coxinha,personagens,"Falta pouco para a Coxinha!",37,nao,
-quase_3_mergulhador,personagens,"Falta pouco para o Mergulhador!",41,nao,
-quase_3_vovo,personagens,"Falta pouco para a Vovó!",34,nao,
+quase_1_bombeiro,personagens,"O Bombeiro está quase no topo!",40,sim,personagens/quase_1_bombeiro.mp3
+quase_1_astronauta,personagens,"O Astronauta está quase no topo!",42,sim,personagens/quase_1_astronauta.mp3
+quase_1_marinheiro,personagens,"O Marinheiro está quase no topo!",42,sim,personagens/quase_1_marinheiro.mp3
+quase_1_cowboy,personagens,"O Cowboy está quase no topo!",38,sim,personagens/quase_1_cowboy.mp3
+quase_1_vaca,personagens,"A Vaca está quase no topo!",36,sim,personagens/quase_1_vaca.mp3
+quase_1_hotdog,personagens,"O Cachorro-Quente está quase no topo!",47,sim,personagens/quase_1_hotdog.mp3
+quase_1_cientista,personagens,"A Cientista está quase no topo!",41,sim,personagens/quase_1_cientista.mp3
+quase_1_roqueira,personagens,"A Roqueira está quase no topo!",40,sim,personagens/quase_1_roqueira.mp3
+quase_1_dinossauro,personagens,"O Dinossauro está quase no topo!",42,sim,personagens/quase_1_dinossauro.mp3
+quase_1_coxinha,personagens,"A Coxinha está quase no topo!",39,sim,personagens/quase_1_coxinha.mp3
+quase_1_mergulhador,personagens,"O Mergulhador está quase no topo!",43,sim,personagens/quase_1_mergulhador.mp3
+quase_1_vovo,personagens,"A Vovó está quase no topo!",36,sim,personagens/quase_1_vovo.mp3
+quase_2_bombeiro,personagens,"Olha quem está chegando lá em cima: o Bombeiro!",57,sim,personagens/quase_2_bombeiro.mp3
+quase_2_astronauta,personagens,"Olha quem está chegando lá em cima: o Astronauta!",59,sim,personagens/quase_2_astronauta.mp3
+quase_2_marinheiro,personagens,"Olha quem está chegando lá em cima: o Marinheiro!",59,sim,personagens/quase_2_marinheiro.mp3
+quase_2_cowboy,personagens,"Olha quem está chegando lá em cima: o Cowboy!",55,sim,personagens/quase_2_cowboy.mp3
+quase_2_vaca,personagens,"Olha quem está chegando lá em cima: a Vaca!",53,sim,personagens/quase_2_vaca.mp3
+quase_2_hotdog,personagens,"Olha quem está chegando lá em cima: o Cachorro-Quente!",64,sim,personagens/quase_2_hotdog.mp3
+quase_2_cientista,personagens,"Olha quem está chegando lá em cima: a Cientista!",58,sim,personagens/quase_2_cientista.mp3
+quase_2_roqueira,personagens,"Olha quem está chegando lá em cima: a Roqueira!",57,sim,personagens/quase_2_roqueira.mp3
+quase_2_dinossauro,personagens,"Olha quem está chegando lá em cima: o Dinossauro!",59,sim,personagens/quase_2_dinossauro.mp3
+quase_2_coxinha,personagens,"Olha quem está chegando lá em cima: a Coxinha!",56,sim,personagens/quase_2_coxinha.mp3
+quase_2_mergulhador,personagens,"Olha quem está chegando lá em cima: o Mergulhador!",60,sim,personagens/quase_2_mergulhador.mp3
+quase_2_vovo,personagens,"Olha quem está chegando lá em cima: a Vovó!",53,sim,personagens/quase_2_vovo.mp3
+quase_3_bombeiro,personagens,"Falta pouco para o Bombeiro!",38,sim,personagens/quase_3_bombeiro.mp3
+quase_3_astronauta,personagens,"Falta pouco para o Astronauta!",40,sim,personagens/quase_3_astronauta.mp3
+quase_3_marinheiro,personagens,"Falta pouco para o Marinheiro!",40,sim,personagens/quase_3_marinheiro.mp3
+quase_3_cowboy,personagens,"Falta pouco para o Cowboy!",36,sim,personagens/quase_3_cowboy.mp3
+quase_3_vaca,personagens,"Falta pouco para a Vaca!",34,sim,personagens/quase_3_vaca.mp3
+quase_3_hotdog,personagens,"Falta pouco para o Cachorro-Quente!",45,sim,personagens/quase_3_hotdog.mp3
+quase_3_cientista,personagens,"Falta pouco para a Cientista!",39,sim,personagens/quase_3_cientista.mp3
+quase_3_roqueira,personagens,"Falta pouco para a Roqueira!",38,sim,personagens/quase_3_roqueira.mp3
+quase_3_dinossauro,personagens,"Falta pouco para o Dinossauro!",40,sim,personagens/quase_3_dinossauro.mp3
+quase_3_coxinha,personagens,"Falta pouco para a Coxinha!",37,sim,personagens/quase_3_coxinha.mp3
+quase_3_mergulhador,personagens,"Falta pouco para o Mergulhador!",41,sim,personagens/quase_3_mergulhador.mp3
+quase_3_vovo,personagens,"Falta pouco para a Vovó!",34,sim,personagens/quase_3_vovo.mp3
 faltam_atencao,fixas,"Atenção! Ninguém consegue mais chegar ao topo.",61,sim,fixas/faltam_atencao.mp3
 faltam_uma,fixas,"Falta só uma pergunta!",37,sim,fixas/faltam_uma.mp3
 faltam_2,numeros,"Faltam só dois perguntas!",40,sim,numeros/faltam_2.mp3
@@ -280,361 +280,361 @@ empate_degrau_15,numeros,"Empate no degrau quinze!",36,sim,numeros/empate_degrau
 empate_degrau_16,numeros,"Empate no degrau dezesseis!",39,sim,numeros/empate_degrau_16.mp3
 desempate_vao,fixas,"Os empatados vão para o desempate.",49,sim,fixas/desempate_vao.mp3
 desempate_regra,fixas,"Só os finalistas respondem, e quem acertar mais rápido vence!",71,sim,fixas/desempate_regra.mp3
-desempate_venceu_bombeiro,personagens,"Quem chegou primeiro foi… o Bombeiro!",47,nao,
-desempate_venceu_astronauta,personagens,"Quem chegou primeiro foi… o Astronauta!",49,nao,
-desempate_venceu_marinheiro,personagens,"Quem chegou primeiro foi… o Marinheiro!",49,nao,
-desempate_venceu_cowboy,personagens,"Quem chegou primeiro foi… o Cowboy!",45,nao,
-desempate_venceu_vaca,personagens,"Quem chegou primeiro foi… a Vaca!",43,nao,
-desempate_venceu_hotdog,personagens,"Quem chegou primeiro foi… o Cachorro-Quente!",54,nao,
-desempate_venceu_cientista,personagens,"Quem chegou primeiro foi… a Cientista!",48,nao,
-desempate_venceu_roqueira,personagens,"Quem chegou primeiro foi… a Roqueira!",47,nao,
-desempate_venceu_dinossauro,personagens,"Quem chegou primeiro foi… o Dinossauro!",49,nao,
-desempate_venceu_coxinha,personagens,"Quem chegou primeiro foi… a Coxinha!",46,nao,
-desempate_venceu_mergulhador,personagens,"Quem chegou primeiro foi… o Mergulhador!",50,nao,
-desempate_venceu_vovo,personagens,"Quem chegou primeiro foi… a Vovó!",43,nao,
+desempate_venceu_bombeiro,personagens,"Quem chegou primeiro foi… o Bombeiro!",47,sim,personagens/desempate_venceu_bombeiro.mp3
+desempate_venceu_astronauta,personagens,"Quem chegou primeiro foi… o Astronauta!",49,sim,personagens/desempate_venceu_astronauta.mp3
+desempate_venceu_marinheiro,personagens,"Quem chegou primeiro foi… o Marinheiro!",49,sim,personagens/desempate_venceu_marinheiro.mp3
+desempate_venceu_cowboy,personagens,"Quem chegou primeiro foi… o Cowboy!",45,sim,personagens/desempate_venceu_cowboy.mp3
+desempate_venceu_vaca,personagens,"Quem chegou primeiro foi… a Vaca!",43,sim,personagens/desempate_venceu_vaca.mp3
+desempate_venceu_hotdog,personagens,"Quem chegou primeiro foi… o Cachorro-Quente!",54,sim,personagens/desempate_venceu_hotdog.mp3
+desempate_venceu_cientista,personagens,"Quem chegou primeiro foi… a Cientista!",48,sim,personagens/desempate_venceu_cientista.mp3
+desempate_venceu_roqueira,personagens,"Quem chegou primeiro foi… a Roqueira!",47,sim,personagens/desempate_venceu_roqueira.mp3
+desempate_venceu_dinossauro,personagens,"Quem chegou primeiro foi… o Dinossauro!",49,sim,personagens/desempate_venceu_dinossauro.mp3
+desempate_venceu_coxinha,personagens,"Quem chegou primeiro foi… a Coxinha!",46,sim,personagens/desempate_venceu_coxinha.mp3
+desempate_venceu_mergulhador,personagens,"Quem chegou primeiro foi… o Mergulhador!",50,sim,personagens/desempate_venceu_mergulhador.mp3
+desempate_venceu_vovo,personagens,"Quem chegou primeiro foi… a Vovó!",43,sim,personagens/desempate_venceu_vovo.mp3
 desempate_ninguem,fixas,"Ninguém acertou! Vamos para mais uma pergunta de desempate.",68,sim,fixas/desempate_ninguem.mp3
 grito,fixas,"Quem sabe… SOBE!",27,sim,fixas/grito.mp3
-vitoria_topo_bombeiro,personagens,"Parabéns! O Bombeiro chegou ao topo da Pirâmide do Conhecimento!",74,nao,
-vitoria_topo_astronauta,personagens,"Parabéns! O Astronauta chegou ao topo da Pirâmide do Conhecimento!",76,nao,
-vitoria_topo_marinheiro,personagens,"Parabéns! O Marinheiro chegou ao topo da Pirâmide do Conhecimento!",76,nao,
-vitoria_topo_cowboy,personagens,"Parabéns! O Cowboy chegou ao topo da Pirâmide do Conhecimento!",72,nao,
-vitoria_topo_vaca,personagens,"Parabéns! A Vaca chegou ao topo da Pirâmide do Conhecimento!",70,nao,
-vitoria_topo_hotdog,personagens,"Parabéns! O Cachorro-Quente chegou ao topo da Pirâmide do Conhecimento!",81,nao,
-vitoria_topo_cientista,personagens,"Parabéns! A Cientista chegou ao topo da Pirâmide do Conhecimento!",75,nao,
-vitoria_topo_roqueira,personagens,"Parabéns! A Roqueira chegou ao topo da Pirâmide do Conhecimento!",74,nao,
-vitoria_topo_dinossauro,personagens,"Parabéns! O Dinossauro chegou ao topo da Pirâmide do Conhecimento!",76,nao,
-vitoria_topo_coxinha,personagens,"Parabéns! A Coxinha chegou ao topo da Pirâmide do Conhecimento!",73,nao,
-vitoria_topo_mergulhador,personagens,"Parabéns! O Mergulhador chegou ao topo da Pirâmide do Conhecimento!",77,nao,
-vitoria_topo_vovo,personagens,"Parabéns! A Vovó chegou ao topo da Pirâmide do Conhecimento!",70,nao,
-vitoria_limite_bombeiro,personagens,"Parabéns! O Bombeiro terminou mais alto na pirâmide!",62,nao,
-vitoria_limite_astronauta,personagens,"Parabéns! O Astronauta terminou mais alto na pirâmide!",64,nao,
-vitoria_limite_marinheiro,personagens,"Parabéns! O Marinheiro terminou mais alto na pirâmide!",64,nao,
-vitoria_limite_cowboy,personagens,"Parabéns! O Cowboy terminou mais alto na pirâmide!",60,nao,
-vitoria_limite_vaca,personagens,"Parabéns! A Vaca terminou mais alto na pirâmide!",58,nao,
-vitoria_limite_hotdog,personagens,"Parabéns! O Cachorro-Quente terminou mais alto na pirâmide!",69,nao,
-vitoria_limite_cientista,personagens,"Parabéns! A Cientista terminou mais alto na pirâmide!",63,nao,
-vitoria_limite_roqueira,personagens,"Parabéns! A Roqueira terminou mais alto na pirâmide!",62,nao,
-vitoria_limite_dinossauro,personagens,"Parabéns! O Dinossauro terminou mais alto na pirâmide!",64,nao,
-vitoria_limite_coxinha,personagens,"Parabéns! A Coxinha terminou mais alto na pirâmide!",61,nao,
-vitoria_limite_mergulhador,personagens,"Parabéns! O Mergulhador terminou mais alto na pirâmide!",65,nao,
-vitoria_limite_vovo,personagens,"Parabéns! A Vovó terminou mais alto na pirâmide!",58,nao,
+vitoria_topo_bombeiro,personagens,"Parabéns! O Bombeiro chegou ao topo da Pirâmide do Conhecimento!",74,sim,personagens/vitoria_topo_bombeiro.mp3
+vitoria_topo_astronauta,personagens,"Parabéns! O Astronauta chegou ao topo da Pirâmide do Conhecimento!",76,sim,personagens/vitoria_topo_astronauta.mp3
+vitoria_topo_marinheiro,personagens,"Parabéns! O Marinheiro chegou ao topo da Pirâmide do Conhecimento!",76,sim,personagens/vitoria_topo_marinheiro.mp3
+vitoria_topo_cowboy,personagens,"Parabéns! O Cowboy chegou ao topo da Pirâmide do Conhecimento!",72,sim,personagens/vitoria_topo_cowboy.mp3
+vitoria_topo_vaca,personagens,"Parabéns! A Vaca chegou ao topo da Pirâmide do Conhecimento!",70,sim,personagens/vitoria_topo_vaca.mp3
+vitoria_topo_hotdog,personagens,"Parabéns! O Cachorro-Quente chegou ao topo da Pirâmide do Conhecimento!",81,sim,personagens/vitoria_topo_hotdog.mp3
+vitoria_topo_cientista,personagens,"Parabéns! A Cientista chegou ao topo da Pirâmide do Conhecimento!",75,sim,personagens/vitoria_topo_cientista.mp3
+vitoria_topo_roqueira,personagens,"Parabéns! A Roqueira chegou ao topo da Pirâmide do Conhecimento!",74,sim,personagens/vitoria_topo_roqueira.mp3
+vitoria_topo_dinossauro,personagens,"Parabéns! O Dinossauro chegou ao topo da Pirâmide do Conhecimento!",76,sim,personagens/vitoria_topo_dinossauro.mp3
+vitoria_topo_coxinha,personagens,"Parabéns! A Coxinha chegou ao topo da Pirâmide do Conhecimento!",73,sim,personagens/vitoria_topo_coxinha.mp3
+vitoria_topo_mergulhador,personagens,"Parabéns! O Mergulhador chegou ao topo da Pirâmide do Conhecimento!",77,sim,personagens/vitoria_topo_mergulhador.mp3
+vitoria_topo_vovo,personagens,"Parabéns! A Vovó chegou ao topo da Pirâmide do Conhecimento!",70,sim,personagens/vitoria_topo_vovo.mp3
+vitoria_limite_bombeiro,personagens,"Parabéns! O Bombeiro terminou mais alto na pirâmide!",62,sim,personagens/vitoria_limite_bombeiro.mp3
+vitoria_limite_astronauta,personagens,"Parabéns! O Astronauta terminou mais alto na pirâmide!",64,sim,personagens/vitoria_limite_astronauta.mp3
+vitoria_limite_marinheiro,personagens,"Parabéns! O Marinheiro terminou mais alto na pirâmide!",64,sim,personagens/vitoria_limite_marinheiro.mp3
+vitoria_limite_cowboy,personagens,"Parabéns! O Cowboy terminou mais alto na pirâmide!",60,sim,personagens/vitoria_limite_cowboy.mp3
+vitoria_limite_vaca,personagens,"Parabéns! A Vaca terminou mais alto na pirâmide!",58,sim,personagens/vitoria_limite_vaca.mp3
+vitoria_limite_hotdog,personagens,"Parabéns! O Cachorro-Quente terminou mais alto na pirâmide!",69,sim,personagens/vitoria_limite_hotdog.mp3
+vitoria_limite_cientista,personagens,"Parabéns! A Cientista terminou mais alto na pirâmide!",63,sim,personagens/vitoria_limite_cientista.mp3
+vitoria_limite_roqueira,personagens,"Parabéns! A Roqueira terminou mais alto na pirâmide!",62,sim,personagens/vitoria_limite_roqueira.mp3
+vitoria_limite_dinossauro,personagens,"Parabéns! O Dinossauro terminou mais alto na pirâmide!",64,sim,personagens/vitoria_limite_dinossauro.mp3
+vitoria_limite_coxinha,personagens,"Parabéns! A Coxinha terminou mais alto na pirâmide!",61,sim,personagens/vitoria_limite_coxinha.mp3
+vitoria_limite_mergulhador,personagens,"Parabéns! O Mergulhador terminou mais alto na pirâmide!",65,sim,personagens/vitoria_limite_mergulhador.mp3
+vitoria_limite_vovo,personagens,"Parabéns! A Vovó terminou mais alto na pirâmide!",58,sim,personagens/vitoria_limite_vovo.mp3
 premio,fixas,"O seu prêmio já está no seu celular: um conhecimento inútil! Leia em voz alta para todo mundo.",110,sim,fixas/premio.mp3
 de_novo,fixas,"Querem jogar de novo? Segurem o botão no celular.",58,sim,fixas/de_novo.mp3
-P01_pergunta,perguntas,"Quantos jogadores um time de vôlei tem em quadra?",59,nao,
-P01_resposta,perguntas,"A resposta certa é… Seis jogadores!",50,nao,
-P02_pergunta,perguntas,"Qual é o planeta mais próximo do Sol?",47,nao,
-P02_resposta,perguntas,"A resposta certa é… Mercúrio!",44,nao,
-P03_pergunta,perguntas,"Qual é o nome do cowboy de brinquedo do filme Toy Story?",66,nao,
-P03_resposta,perguntas,"A resposta certa é… Woody!",41,nao,
-P04_pergunta,perguntas,"A pizza margherita é originária de qual país?",55,nao,
-P04_resposta,perguntas,"A resposta certa é… Itália!",42,nao,
-P05_pergunta,perguntas,"Qual é o maior país da América do Sul em área?",56,nao,
-P05_resposta,perguntas,"A resposta certa é… Brasil!",42,nao,
-P06_pergunta,perguntas,"Quantas cordas tem um violão tradicional?",51,nao,
-P06_resposta,perguntas,"A resposta certa é… Seis cordas!",47,nao,
-P07_pergunta,perguntas,"Em qual cidade foram realizadas as Olimpíadas de 2016?",64,nao,
-P07_resposta,perguntas,"A resposta certa é… Rio de Janeiro!",50,nao,
-P08_pergunta,perguntas,"O guacamole é feito principalmente de qual fruta?",59,nao,
-P08_resposta,perguntas,"A resposta certa é… Abacate!",43,nao,
-P09_pergunta,perguntas,"Em qual cidade se passa a série Friends?",50,nao,
-P09_resposta,perguntas,"A resposta certa é… Nova York!",45,nao,
-P10_pergunta,perguntas,"Qual é a capital da Austrália?",40,nao,
-P10_resposta,perguntas,"A resposta certa é… Camberra!",44,nao,
-P11_pergunta,perguntas,"Quantos estados tem o Brasil, sem contar o Distrito Federal?",70,nao,
-P11_resposta,perguntas,"A resposta certa é… Vinte e seis estados!",56,nao,
-P12_pergunta,perguntas,"No basquete, quantos pontos vale um arremesso convertido de trás do arco?",83,nao,
-P12_resposta,perguntas,"A resposta certa é… Três pontos!",47,nao,
-P13_pergunta,perguntas,"Qual filme sul-coreano ganhou o Oscar de melhor filme em 2020?",72,nao,
-P13_resposta,perguntas,"A resposta certa é… Parasita!",44,nao,
-P14_pergunta,perguntas,"Tom Jobim é um dos criadores de qual gênero musical?",62,nao,
-P14_resposta,perguntas,"A resposta certa é… Bossa nova!",46,nao,
-P15_pergunta,perguntas,"Quantos ossos tem, em geral, o corpo humano adulto?",61,nao,
-P15_resposta,perguntas,"A resposta certa é… Duzentos e seis ossos!",57,nao,
-P16_pergunta,perguntas,"Qual é o símbolo químico do ouro?",43,nao,
-P16_resposta,perguntas,"A resposta certa é… A-U, do latim aurum!",55,nao,
-P17_pergunta,perguntas,"Em que ano o ser humano pisou na Lua pela primeira vez?",65,nao,
-P17_resposta,perguntas,"A resposta certa é… Mil novecentos e sessenta e nove!",68,nao,
-P18_pergunta,perguntas,"Além do queijo, qual é o ingrediente principal do pão de queijo tradicional?",86,nao,
-P18_resposta,perguntas,"A resposta certa é… Polvilho!",44,nao,
-P19_pergunta,perguntas,"Qual país é o maior produtor de café do mundo?",56,nao,
-P19_resposta,perguntas,"A resposta certa é… Brasil!",42,nao,
-P20_pergunta,perguntas,"Qual é a capital do Canadá?",37,nao,
-P20_resposta,perguntas,"A resposta certa é… Ottawa!",42,nao,
-P21_pergunta,perguntas,"Em qual cidade nasceu o piloto Ayrton Senna?",54,nao,
-P21_resposta,perguntas,"A resposta certa é… São Paulo!",45,nao,
-P22_pergunta,perguntas,"Qual é o maior planeta do Sistema Solar?",50,nao,
-P22_resposta,perguntas,"A resposta certa é… Júpiter!",43,nao,
-P23_pergunta,perguntas,"Qual cantor ficou conhecido como o Rei do Rock?",57,nao,
-P23_resposta,perguntas,"A resposta certa é… Elvis Presley!",49,nao,
-P024_pergunta,perguntas,"Quantos jogadores um time de futebol tem em campo?",60,nao,
-P024_resposta,perguntas,"A resposta certa é… Onze jogadores!",50,nao,
-P025_pergunta,perguntas,"Em qual país surgiu o judô?",37,nao,
-P025_resposta,perguntas,"A resposta certa é… Japão!",41,nao,
-P026_pergunta,perguntas,"Quantos anéis tem o símbolo das Olimpíadas?",53,nao,
-P026_resposta,perguntas,"A resposta certa é… Cinco anéis!",47,nao,
-P027_pergunta,perguntas,"Qual seleção ganhou mais Copas do Mundo de futebol masculino?",71,nao,
-P027_resposta,perguntas,"A resposta certa é… Brasil, com cinco títulos!",61,nao,
-P028_pergunta,perguntas,"Em qual esporte se joga com raquete e peteca?",55,nao,
-P028_resposta,perguntas,"A resposta certa é… Badminton!",45,nao,
-P029_pergunta,perguntas,"Quantos minutos dura uma partida de futebol, sem os acréscimos?",73,nao,
-P029_resposta,perguntas,"A resposta certa é… Noventa minutos!",51,nao,
-P030_pergunta,perguntas,"Qual é o apelido de Edson Arantes do Nascimento?",58,nao,
-P030_resposta,perguntas,"A resposta certa é… Pelé!",40,nao,
-P031_pergunta,perguntas,"Em qual esporte o jogador tenta derrubar 10 pinos com uma bola?",73,nao,
-P031_resposta,perguntas,"A resposta certa é… Boliche!",43,nao,
-P032_pergunta,perguntas,"Qual país sediou a Copa do Mundo de 2014?",51,nao,
-P032_resposta,perguntas,"A resposta certa é… Brasil!",42,nao,
-P033_pergunta,perguntas,"Qual velocista jamaicano é o recordista mundial dos 100 metros rasos?",79,nao,
-P033_resposta,perguntas,"A resposta certa é… Usain Bolt!",46,nao,
-P034_pergunta,perguntas,"Em qual modalidade Rebeca Andrade ganhou medalhas olímpicas?",70,nao,
-P034_resposta,perguntas,"A resposta certa é… Ginástica artística!",55,nao,
-P035_pergunta,perguntas,"Quantos pontos vale um touchdown no futebol americano?",64,nao,
-P035_resposta,perguntas,"A resposta certa é… Seis pontos!",47,nao,
-P036_pergunta,perguntas,"No xadrez, qual peça anda em formato de L?",52,nao,
-P036_resposta,perguntas,"A resposta certa é… O cavalo!",44,nao,
-P037_pergunta,perguntas,"Quantos jogadores de cada time ficam em quadra no basquete?",69,nao,
-P037_resposta,perguntas,"A resposta certa é… Cinco jogadores!",51,nao,
-P038_pergunta,perguntas,"Em que ano o Brasil ganhou sua primeira Copa do Mundo?",64,nao,
-P038_resposta,perguntas,"A resposta certa é… Mil novecentos e cinquenta e oito!",69,nao,
-P039_pergunta,perguntas,"Qual gás as plantas absorvem do ar para fazer fotossíntese?",69,nao,
-P039_resposta,perguntas,"A resposta certa é… Gás carbônico!",49,nao,
-P040_pergunta,perguntas,"Qual é o maior órgão do corpo humano?",47,nao,
-P040_resposta,perguntas,"A resposta certa é… A pele!",42,nao,
-P041_pergunta,perguntas,"A quantos graus Celsius a água ferve ao nível do mar?",63,nao,
-P041_resposta,perguntas,"A resposta certa é… Cem graus!",45,nao,
-P042_pergunta,perguntas,"Quantas patas tem uma aranha?",39,nao,
-P042_resposta,perguntas,"A resposta certa é… Oito patas!",46,nao,
-P043_pergunta,perguntas,"Qual planeta é conhecido como Planeta Vermelho?",57,nao,
-P043_resposta,perguntas,"A resposta certa é… Marte!",41,nao,
-P044_pergunta,perguntas,"Qual é a fórmula química da água?",43,nao,
-P044_resposta,perguntas,"A resposta certa é… H dois O!",44,nao,
-P045_pergunta,perguntas,"Qual é o animal terrestre mais rápido do mundo?",57,nao,
-P045_resposta,perguntas,"A resposta certa é… O guepardo!",46,nao,
-P046_pergunta,perguntas,"Qual cientista criou a teoria da relatividade?",56,nao,
-P046_resposta,perguntas,"A resposta certa é… Albert Einstein!",51,nao,
-P047_pergunta,perguntas,"Quantos dentes tem um adulto com a dentição completa?",63,nao,
-P047_resposta,perguntas,"A resposta certa é… Trinta e dois dentes!",56,nao,
-P048_pergunta,perguntas,"Em que inseto a lagarta se transforma depois do casulo?",65,nao,
-P048_resposta,perguntas,"A resposta certa é… Borboleta!",45,nao,
-P049_pergunta,perguntas,"Qual é o maior animal do mundo?",41,nao,
-P049_resposta,perguntas,"A resposta certa é… A baleia-azul!",49,nao,
-P050_pergunta,perguntas,"Quantos planetas tem o Sistema Solar?",47,nao,
-P050_resposta,perguntas,"A resposta certa é… Oito planetas!",49,nao,
-P051_pergunta,perguntas,"Qual vitamina o corpo produz quando a pele recebe luz do sol?",71,nao,
-P051_resposta,perguntas,"A resposta certa é… Vitamina D!",46,nao,
-P052_pergunta,perguntas,"Qual parte da planta fica embaixo da terra e absorve água?",68,nao,
-P052_resposta,perguntas,"A resposta certa é… A raiz!",42,nao,
-P053_pergunta,perguntas,"A baleia é que tipo de animal?",40,nao,
-P053_resposta,perguntas,"A resposta certa é… Mamífero!",44,nao,
-P054_pergunta,perguntas,"Qual é o nome do leãozinho protagonista de O Rei Leão?",64,nao,
-P054_resposta,perguntas,"A resposta certa é… Simba!",41,nao,
-P055_pergunta,perguntas,"Qual é o nome do boneco de neve de Frozen?",52,nao,
-P055_resposta,perguntas,"A resposta certa é… Olaf!",40,nao,
-P056_pergunta,perguntas,"Em qual escola de magia estuda Harry Potter?",54,nao,
-P056_resposta,perguntas,"A resposta certa é… Hogwarts!",44,nao,
-P057_pergunta,perguntas,"Qual é a cor do ogro Shrek?",37,nao,
-P057_resposta,perguntas,"A resposta certa é… Verde!",41,nao,
-P058_pergunta,perguntas,"Quem é o melhor amigo do Bob Esponja?",47,nao,
-P058_resposta,perguntas,"A resposta certa é… Patrick!",43,nao,
-P059_pergunta,perguntas,"No seriado Chaves, qual personagem vive dentro de um barril?",70,nao,
-P059_resposta,perguntas,"A resposta certa é… O Chaves!",44,nao,
-P060_pergunta,perguntas,"Qual é o nome da peixinha azul esquecida de Procurando Nemo?",70,nao,
-P060_resposta,perguntas,"A resposta certa é… Dory!",40,nao,
-P061_pergunta,perguntas,"Qual super-herói protege Gotham City?",47,nao,
-P061_resposta,perguntas,"A resposta certa é… Batman!",42,nao,
-P062_pergunta,perguntas,"Em Star Wars, quem é o pai de Luke Skywalker?",55,nao,
-P062_resposta,perguntas,"A resposta certa é… Darth Vader!",47,nao,
-P063_pergunta,perguntas,"Em qual novela brasileira apareceu a vilã Carminha?",61,nao,
-P063_resposta,perguntas,"A resposta certa é… Avenida Brasil!",50,nao,
-P064_pergunta,perguntas,"Qual é o nome do dinossauro roxo de um famoso programa infantil?",74,nao,
-P064_resposta,perguntas,"A resposta certa é… Barney!",42,nao,
-P065_pergunta,perguntas,"Qual apresentador comandou o Domingão por mais de 30 anos?",68,nao,
-P065_resposta,perguntas,"A resposta certa é… Faustão!",43,nao,
-P066_pergunta,perguntas,"Qual é o nome do robozinho da Pixar que limpa uma Terra cheia de lixo?",80,nao,
-P066_resposta,perguntas,"A resposta certa é… WALL-E!",42,nao,
-P067_pergunta,perguntas,"Em qual saga aparece o mago Gandalf?",46,nao,
-P067_resposta,perguntas,"A resposta certa é… O Senhor dos Anéis!",54,nao,
-P068_pergunta,perguntas,"Em qual cidade vivem Os Simpsons?",43,nao,
-P068_resposta,perguntas,"A resposta certa é… Springfield!",47,nao,
-P069_pergunta,perguntas,"Além do chocolate, qual é o ingrediente principal do brigadeiro?",74,nao,
-P069_resposta,perguntas,"A resposta certa é… Leite condensado!",52,nao,
-P070_pergunta,perguntas,"O sushi é um prato típico de qual país?",49,nao,
-P070_resposta,perguntas,"A resposta certa é… Japão!",41,nao,
-P071_pergunta,perguntas,"A tapioca é feita a partir de qual planta?",52,nao,
-P071_resposta,perguntas,"A resposta certa é… Mandioca!",44,nao,
-P072_pergunta,perguntas,"Qual bebida leva cachaça, limão, açúcar e gelo?",57,nao,
-P072_resposta,perguntas,"A resposta certa é… Caipirinha!",46,nao,
-P073_pergunta,perguntas,"O croissant é associado a qual país?",46,nao,
-P073_resposta,perguntas,"A resposta certa é… França!",42,nao,
-P074_pergunta,perguntas,"Qual prato brasileiro leva feijão preto e carnes de porco?",68,nao,
-P074_resposta,perguntas,"A resposta certa é… Feijoada!",44,nao,
-P075_pergunta,perguntas,"O acarajé é um prato típico de qual estado?",53,nao,
-P075_resposta,perguntas,"A resposta certa é… Bahia!",41,nao,
-P076_pergunta,perguntas,"A pipoca é feita de qual grão?",40,nao,
-P076_resposta,perguntas,"A resposta certa é… Milho!",41,nao,
-P077_pergunta,perguntas,"O vinho é feito a partir de qual fruta?",49,nao,
-P077_resposta,perguntas,"A resposta certa é… Uva!",39,nao,
-P078_pergunta,perguntas,"O chimarrão é preparado com qual erva?",48,nao,
-P078_resposta,perguntas,"A resposta certa é… Erva-mate!",45,nao,
-P079_pergunta,perguntas,"O pé de moleque é feito principalmente de qual ingrediente?",69,nao,
-P079_resposta,perguntas,"A resposta certa é… Amendoim!",44,nao,
-P080_pergunta,perguntas,"Qual tempero dá a cor amarela ao curry?",49,nao,
-P080_resposta,perguntas,"A resposta certa é… Cúrcuma!",43,nao,
-P081_pergunta,perguntas,"De que cor é o wasabi servido com sushi?",50,nao,
-P081_resposta,perguntas,"A resposta certa é… Verde!",41,nao,
-P082_pergunta,perguntas,"O tacacá e o pato no tucupi são pratos típicos de qual região?",72,nao,
-P082_resposta,perguntas,"A resposta certa é… Região Norte!",48,nao,
-P083_pergunta,perguntas,"Qual bebida é feita com grãos torrados e moídos?",58,nao,
-P083_resposta,perguntas,"A resposta certa é… Café!",40,nao,
-P084_pergunta,perguntas,"Qual é a capital do Brasil?",37,nao,
-P084_resposta,perguntas,"A resposta certa é… Brasília!",44,nao,
-P085_pergunta,perguntas,"Qual é o maior oceano do mundo?",41,nao,
-P085_resposta,perguntas,"A resposta certa é… Oceano Pacífico!",51,nao,
-P086_pergunta,perguntas,"Em qual continente fica o Quênia?",43,nao,
-P086_resposta,perguntas,"A resposta certa é… África!",42,nao,
-P087_pergunta,perguntas,"Qual é a capital da França?",37,nao,
-P087_resposta,perguntas,"A resposta certa é… Paris!",41,nao,
-P088_pergunta,perguntas,"Qual é o rio com maior volume de água do mundo?",57,nao,
-P088_resposta,perguntas,"A resposta certa é… Rio Amazonas!",48,nao,
-P089_pergunta,perguntas,"Qual país tem o formato de uma bota no mapa?",54,nao,
-P089_resposta,perguntas,"A resposta certa é… Itália!",42,nao,
-P090_pergunta,perguntas,"Em qual país ficam as pirâmides de Gizé?",50,nao,
-P090_resposta,perguntas,"A resposta certa é… Egito!",41,nao,
-P091_pergunta,perguntas,"Qual é o maior estado do Brasil em área?",50,nao,
-P091_resposta,perguntas,"A resposta certa é… Amazonas!",44,nao,
-P092_pergunta,perguntas,"Qual é a capital da Argentina?",40,nao,
-P092_resposta,perguntas,"A resposta certa é… Buenos Aires!",48,nao,
-P093_pergunta,perguntas,"Qual é o país mais populoso do mundo hoje?",52,nao,
-P093_resposta,perguntas,"A resposta certa é… Índia!",41,nao,
-P094_pergunta,perguntas,"Em qual cidade fica o Cristo Redentor?",48,nao,
-P094_resposta,perguntas,"A resposta certa é… Rio de Janeiro!",50,nao,
-P095_pergunta,perguntas,"Qual é o maior deserto quente do mundo?",49,nao,
-P095_resposta,perguntas,"A resposta certa é… Saara!",41,nao,
-P096_pergunta,perguntas,"Qual é a capital de Portugal?",39,nao,
-P096_resposta,perguntas,"A resposta certa é… Lisboa!",42,nao,
-P097_pergunta,perguntas,"Em qual estado ficam as Cataratas do Iguaçu, do lado brasileiro?",74,nao,
-P097_resposta,perguntas,"A resposta certa é… Paraná!",42,nao,
-P098_pergunta,perguntas,"Qual é a montanha mais alta do mundo?",47,nao,
-P098_resposta,perguntas,"A resposta certa é… Monte Everest!",49,nao,
-P099_pergunta,perguntas,"De qual banda britânica faziam parte John Lennon e Paul McCartney?",76,nao,
-P099_resposta,perguntas,"A resposta certa é… The Beatles!",47,nao,
-P100_pergunta,perguntas,"Quantas teclas tem um piano padrão?",45,nao,
-P100_resposta,perguntas,"A resposta certa é… Oitenta e oito teclas!",57,nao,
-P101_pergunta,perguntas,"Qual cantor é chamado de Rei no Brasil?",49,nao,
-P101_resposta,perguntas,"A resposta certa é… Roberto Carlos!",50,nao,
-P102_pergunta,perguntas,"Freddie Mercury era o vocalista de qual banda?",56,nao,
-P102_resposta,perguntas,"A resposta certa é… Queen!",41,nao,
-P103_pergunta,perguntas,"Qual ritmo nordestino é tocado com sanfona, zabumba e triângulo?",74,nao,
-P103_resposta,perguntas,"A resposta certa é… Forró!",41,nao,
-P104_pergunta,perguntas,"Qual cantora é conhecida como a Rainha do Pop?",56,nao,
-P104_resposta,perguntas,"A resposta certa é… Madonna!",43,nao,
-P105_pergunta,perguntas,"Qual cantor é conhecido como o Rei do Pop?",52,nao,
-P105_resposta,perguntas,"A resposta certa é… Michael Jackson!",51,nao,
-P106_pergunta,perguntas,"Quantas notas tem a escala musical tradicional: dó, ré, mi…?",70,nao,
-P106_resposta,perguntas,"A resposta certa é… Sete notas!",46,nao,
-P107_pergunta,perguntas,"Em qual cidade nasceu a cantora Anitta?",49,nao,
-P107_resposta,perguntas,"A resposta certa é… Rio de Janeiro!",50,nao,
-P108_pergunta,perguntas,"Qual instrumento de sopro leva o nome do seu inventor, Adolphe Sax?",77,nao,
-P108_resposta,perguntas,"A resposta certa é… Saxofone!",44,nao,
-P109_pergunta,perguntas,"Qual festa brasileira é famosa pelos desfiles das escolas de samba?",77,nao,
-P109_resposta,perguntas,"A resposta certa é… Carnaval!",44,nao,
-P110_pergunta,perguntas,"O frevo é um ritmo típico de qual estado?",51,nao,
-P110_resposta,perguntas,"A resposta certa é… Pernambuco!",46,nao,
-P111_pergunta,perguntas,"Quantas cordas tem um cavaquinho?",43,nao,
-P111_resposta,perguntas,"A resposta certa é… Quatro cordas!",49,nao,
-P112_pergunta,perguntas,"Qual cantora fez a turnê The Eras Tour?",49,nao,
-P112_resposta,perguntas,"A resposta certa é… Taylor Swift!",48,nao,
-P113_pergunta,perguntas,"Qual dupla sertaneja gravou o sucesso Evidências?",59,nao,
-P113_resposta,perguntas,"A resposta certa é… Chitãozinho e Xororó!",56,nao,
-P114_pergunta,perguntas,"Qual é a capital da Turquia?",38,nao,
-P114_resposta,perguntas,"A resposta certa é… Ancara!",42,nao,
-P115_pergunta,perguntas,"Qual é o menor país do mundo?",39,nao,
-P115_resposta,perguntas,"A resposta certa é… Vaticano!",44,nao,
-P116_pergunta,perguntas,"Qual é o rio mais longo da Europa?",44,nao,
-P116_resposta,perguntas,"A resposta certa é… Rio Volga!",45,nao,
-P117_pergunta,perguntas,"Qual é a capital da Nova Zelândia?",44,nao,
-P117_resposta,perguntas,"A resposta certa é… Wellington!",46,nao,
-P118_pergunta,perguntas,"Qual é o ponto mais alto do Brasil?",45,nao,
-P118_resposta,perguntas,"A resposta certa é… Pico da Neblina!",51,nao,
-P119_pergunta,perguntas,"Em qual país fica Machu Picchu?",41,nao,
-P119_resposta,perguntas,"A resposta certa é… Peru!",40,nao,
-P120_pergunta,perguntas,"Qual é o elemento químico mais abundante no universo?",63,nao,
-P120_resposta,perguntas,"A resposta certa é… Hidrogênio!",46,nao,
-P121_pergunta,perguntas,"Qual é, aproximadamente, a velocidade da luz no vácuo?",64,nao,
-P121_resposta,perguntas,"A resposta certa é… Trezentos mil quilômetros por segundo!",73,nao,
-P122_pergunta,perguntas,"Qual é o osso mais longo do corpo humano?",51,nao,
-P122_resposta,perguntas,"A resposta certa é… O fêmur!",43,nao,
-P123_pergunta,perguntas,"Quantos cromossomos tem uma célula humana comum?",58,nao,
-P123_resposta,perguntas,"A resposta certa é… Quarenta e seis!",51,nao,
-P124_pergunta,perguntas,"Quem descobriu a penicilina?",38,nao,
-P124_resposta,perguntas,"A resposta certa é… Alexander Fleming!",53,nao,
-P125_pergunta,perguntas,"Em qual planeta um dia dura mais que um ano?",54,nao,
-P125_resposta,perguntas,"A resposta certa é… Vênus!",41,nao,
-P126_pergunta,perguntas,"Quantos títulos mundiais de Fórmula 1 Ayrton Senna conquistou?",72,nao,
-P126_resposta,perguntas,"A resposta certa é… Três títulos!",48,nao,
-P127_pergunta,perguntas,"Qual seleção venceu a Copa do Mundo de 2026?",54,nao,
-P127_resposta,perguntas,"A resposta certa é… Espanha!",43,nao,
-P128_pergunta,perguntas,"Qual tenista tem mais títulos de Roland Garros?",57,nao,
-P128_resposta,perguntas,"A resposta certa é… Rafael Nadal!",48,nao,
-P129_pergunta,perguntas,"Qual nadador tem mais medalhas olímpicas na história?",63,nao,
-P129_resposta,perguntas,"A resposta certa é… Michael Phelps!",50,nao,
-P130_pergunta,perguntas,"Qual é a distância oficial de uma maratona?",53,nao,
-P130_resposta,perguntas,"A resposta certa é… Quarenta e dois quilômetros e cento e noventa e cinco metros!",96,nao,
-P131_pergunta,perguntas,"Qual destes pilotos brasileiros NÃO foi campeão mundial de Fórmula 1?",79,nao,
-P131_resposta,perguntas,"A resposta certa é… Rubens Barrichello!",54,nao,
-P132_pergunta,perguntas,"Quem dirigiu o filme Tubarão, de 1975?",48,nao,
-P132_resposta,perguntas,"A resposta certa é… Steven Spielberg!",52,nao,
-P133_pergunta,perguntas,"Qual atriz brasileira foi indicada ao Oscar por Central do Brasil?",76,nao,
-P133_resposta,perguntas,"A resposta certa é… Fernanda Montenegro!",55,nao,
-P134_pergunta,perguntas,"Qual filme brasileiro ganhou o Oscar de filme internacional em 2025?",78,nao,
-P134_resposta,perguntas,"A resposta certa é… Ainda Estou Aqui!",52,nao,
-P135_pergunta,perguntas,"Em Matrix, qual é a cor da pílula que Neo escolhe?",60,nao,
-P135_resposta,perguntas,"A resposta certa é… Vermelha!",44,nao,
-P136_pergunta,perguntas,"Qual é o nome verdadeiro do Homem de Ferro?",53,nao,
-P136_resposta,perguntas,"A resposta certa é… Tony Stark!",46,nao,
-P137_pergunta,perguntas,"Qual série se passa na cidade fictícia de Hawkins?",60,nao,
-P137_resposta,perguntas,"A resposta certa é… Stranger Things!",51,nao,
-P138_pergunta,perguntas,"De qual país é o queijo gorgonzola?",45,nao,
-P138_resposta,perguntas,"A resposta certa é… Itália!",42,nao,
-P139_pergunta,perguntas,"Qual é o ingrediente principal do homus?",50,nao,
-P139_resposta,perguntas,"A resposta certa é… Grão-de-bico!",48,nao,
-P140_pergunta,perguntas,"A paella é um prato típico de qual país?",50,nao,
-P140_resposta,perguntas,"A resposta certa é… Espanha!",43,nao,
-P141_pergunta,perguntas,"Qual é considerada a especiaria mais cara do mundo?",61,nao,
-P141_resposta,perguntas,"A resposta certa é… Açafrão!",43,nao,
-P142_pergunta,perguntas,"O kimchi é um prato típico de qual país?",50,nao,
-P142_resposta,perguntas,"A resposta certa é… Coreia do Sul!",49,nao,
-P143_pergunta,perguntas,"Qual doce português de massa folhada e creme é famoso em Belém, Lisboa?",81,nao,
-P143_resposta,perguntas,"A resposta certa é… Pastel de nata!",50,nao,
-P144_pergunta,perguntas,"Qual compositor alemão continuou compondo mesmo depois de ficar surdo?",80,nao,
-P144_resposta,perguntas,"A resposta certa é… Beethoven!",45,nao,
-P145_pergunta,perguntas,"Qual banda gravou o álbum The Dark Side of the Moon?",62,nao,
-P145_resposta,perguntas,"A resposta certa é… Pink Floyd!",46,nao,
-P146_pergunta,perguntas,"Qual cantor brasileiro ficou conhecido como Síndico?",62,nao,
-P146_resposta,perguntas,"A resposta certa é… Tim Maia!",44,nao,
-P147_pergunta,perguntas,"Quem compôs Aquarela do Brasil?",41,nao,
-P147_resposta,perguntas,"A resposta certa é… Ary Barroso!",47,nao,
-P148_pergunta,perguntas,"Em qual cidade nasceu Mozart?",39,nao,
-P148_resposta,perguntas,"A resposta certa é… Salzburgo!",45,nao,
-P149_pergunta,perguntas,"Qual cantora brasileira tinha o apelido de Pimentinha?",64,nao,
-P149_resposta,perguntas,"A resposta certa é… Elis Regina!",47,nao,
-P150_pergunta,perguntas,"Quantos dias tem um ano bissexto?",43,nao,
-P150_resposta,perguntas,"A resposta certa é… Trezentos e sessenta e seis dias!",68,nao,
-P151_pergunta,perguntas,"Qual cor sai da mistura de azul com amarelo?",54,nao,
-P151_resposta,perguntas,"A resposta certa é… Verde!",41,nao,
-P152_pergunta,perguntas,"Quantos lados tem um hexágono?",40,nao,
-P152_resposta,perguntas,"A resposta certa é… Seis lados!",46,nao,
-P153_pergunta,perguntas,"Qual animal é chamado de rei da selva?",48,nao,
-P153_resposta,perguntas,"A resposta certa é… O leão!",42,nao,
-P154_pergunta,perguntas,"Quantas horas tem um dia?",35,nao,
-P154_resposta,perguntas,"A resposta certa é… Vinte e quatro horas!",56,nao,
-P155_pergunta,perguntas,"Quantos minutos tem uma hora?",39,nao,
-P155_resposta,perguntas,"A resposta certa é… Sessenta minutos!",52,nao,
-P156_pergunta,perguntas,"Qual é o maior animal terrestre?",42,nao,
-P156_resposta,perguntas,"A resposta certa é… O elefante-africano!",55,nao,
-P157_pergunta,perguntas,"Quantos meses do ano têm 31 dias?",43,nao,
-P157_resposta,perguntas,"A resposta certa é… Sete meses!",46,nao,
-P158_pergunta,perguntas,"Qual é a capital da Itália?",37,nao,
-P158_resposta,perguntas,"A resposta certa é… Roma!",40,nao,
-P159_pergunta,perguntas,"Em que mês se comemora o Natal?",41,nao,
-P159_resposta,perguntas,"A resposta certa é… Dezembro!",44,nao,
+P01_pergunta,perguntas,"Quantos jogadores um time de vôlei tem em quadra?",59,sim,perguntas/P01_pergunta.mp3
+P01_resposta,perguntas,"A resposta certa é… Seis jogadores!",50,sim,perguntas/P01_resposta.mp3
+P02_pergunta,perguntas,"Qual é o planeta mais próximo do Sol?",47,sim,perguntas/P02_pergunta.mp3
+P02_resposta,perguntas,"A resposta certa é… Mercúrio!",44,sim,perguntas/P02_resposta.mp3
+P03_pergunta,perguntas,"Qual é o nome do cowboy de brinquedo do filme Toy Story?",66,sim,perguntas/P03_pergunta.mp3
+P03_resposta,perguntas,"A resposta certa é… Woody!",41,sim,perguntas/P03_resposta.mp3
+P04_pergunta,perguntas,"A pizza margherita é originária de qual país?",55,sim,perguntas/P04_pergunta.mp3
+P04_resposta,perguntas,"A resposta certa é… Itália!",42,sim,perguntas/P04_resposta.mp3
+P05_pergunta,perguntas,"Qual é o maior país da América do Sul em área?",56,sim,perguntas/P05_pergunta.mp3
+P05_resposta,perguntas,"A resposta certa é… Brasil!",42,sim,perguntas/P05_resposta.mp3
+P06_pergunta,perguntas,"Quantas cordas tem um violão tradicional?",51,sim,perguntas/P06_pergunta.mp3
+P06_resposta,perguntas,"A resposta certa é… Seis cordas!",47,sim,perguntas/P06_resposta.mp3
+P07_pergunta,perguntas,"Em qual cidade foram realizadas as Olimpíadas de 2016?",64,sim,perguntas/P07_pergunta.mp3
+P07_resposta,perguntas,"A resposta certa é… Rio de Janeiro!",50,sim,perguntas/P07_resposta.mp3
+P08_pergunta,perguntas,"O guacamole é feito principalmente de qual fruta?",59,sim,perguntas/P08_pergunta.mp3
+P08_resposta,perguntas,"A resposta certa é… Abacate!",43,sim,perguntas/P08_resposta.mp3
+P09_pergunta,perguntas,"Em qual cidade se passa a série Friends?",50,sim,perguntas/P09_pergunta.mp3
+P09_resposta,perguntas,"A resposta certa é… Nova York!",45,sim,perguntas/P09_resposta.mp3
+P10_pergunta,perguntas,"Qual é a capital da Austrália?",40,sim,perguntas/P10_pergunta.mp3
+P10_resposta,perguntas,"A resposta certa é… Camberra!",44,sim,perguntas/P10_resposta.mp3
+P11_pergunta,perguntas,"Quantos estados tem o Brasil, sem contar o Distrito Federal?",70,sim,perguntas/P11_pergunta.mp3
+P11_resposta,perguntas,"A resposta certa é… Vinte e seis estados!",56,sim,perguntas/P11_resposta.mp3
+P12_pergunta,perguntas,"No basquete, quantos pontos vale um arremesso convertido de trás do arco?",83,sim,perguntas/P12_pergunta.mp3
+P12_resposta,perguntas,"A resposta certa é… Três pontos!",47,sim,perguntas/P12_resposta.mp3
+P13_pergunta,perguntas,"Qual filme sul-coreano ganhou o Oscar de melhor filme em 2020?",72,sim,perguntas/P13_pergunta.mp3
+P13_resposta,perguntas,"A resposta certa é… Parasita!",44,sim,perguntas/P13_resposta.mp3
+P14_pergunta,perguntas,"Tom Jobim é um dos criadores de qual gênero musical?",62,sim,perguntas/P14_pergunta.mp3
+P14_resposta,perguntas,"A resposta certa é… Bossa nova!",46,sim,perguntas/P14_resposta.mp3
+P15_pergunta,perguntas,"Quantos ossos tem, em geral, o corpo humano adulto?",61,sim,perguntas/P15_pergunta.mp3
+P15_resposta,perguntas,"A resposta certa é… Duzentos e seis ossos!",57,sim,perguntas/P15_resposta.mp3
+P16_pergunta,perguntas,"Qual é o símbolo químico do ouro?",43,sim,perguntas/P16_pergunta.mp3
+P16_resposta,perguntas,"A resposta certa é… A-U, do latim aurum!",55,sim,perguntas/P16_resposta.mp3
+P17_pergunta,perguntas,"Em que ano o ser humano pisou na Lua pela primeira vez?",65,sim,perguntas/P17_pergunta.mp3
+P17_resposta,perguntas,"A resposta certa é… Mil novecentos e sessenta e nove!",68,sim,perguntas/P17_resposta.mp3
+P18_pergunta,perguntas,"Além do queijo, qual é o ingrediente principal do pão de queijo tradicional?",86,sim,perguntas/P18_pergunta.mp3
+P18_resposta,perguntas,"A resposta certa é… Polvilho!",44,sim,perguntas/P18_resposta.mp3
+P19_pergunta,perguntas,"Qual país é o maior produtor de café do mundo?",56,sim,perguntas/P19_pergunta.mp3
+P19_resposta,perguntas,"A resposta certa é… Brasil!",42,sim,perguntas/P05_resposta.mp3
+P20_pergunta,perguntas,"Qual é a capital do Canadá?",37,sim,perguntas/P20_pergunta.mp3
+P20_resposta,perguntas,"A resposta certa é… Ottawa!",42,sim,perguntas/P20_resposta.mp3
+P21_pergunta,perguntas,"Em qual cidade nasceu o piloto Ayrton Senna?",54,sim,perguntas/P21_pergunta.mp3
+P21_resposta,perguntas,"A resposta certa é… São Paulo!",45,sim,perguntas/P21_resposta.mp3
+P22_pergunta,perguntas,"Qual é o maior planeta do Sistema Solar?",50,sim,perguntas/P22_pergunta.mp3
+P22_resposta,perguntas,"A resposta certa é… Júpiter!",43,sim,perguntas/P22_resposta.mp3
+P23_pergunta,perguntas,"Qual cantor ficou conhecido como o Rei do Rock?",57,sim,perguntas/P23_pergunta.mp3
+P23_resposta,perguntas,"A resposta certa é… Elvis Presley!",49,sim,perguntas/P23_resposta.mp3
+P024_pergunta,perguntas,"Quantos jogadores um time de futebol tem em campo?",60,sim,perguntas/P024_pergunta.mp3
+P024_resposta,perguntas,"A resposta certa é… Onze jogadores!",50,sim,perguntas/P024_resposta.mp3
+P025_pergunta,perguntas,"Em qual país surgiu o judô?",37,sim,perguntas/P025_pergunta.mp3
+P025_resposta,perguntas,"A resposta certa é… Japão!",41,sim,perguntas/P025_resposta.mp3
+P026_pergunta,perguntas,"Quantos anéis tem o símbolo das Olimpíadas?",53,sim,perguntas/P026_pergunta.mp3
+P026_resposta,perguntas,"A resposta certa é… Cinco anéis!",47,sim,perguntas/P026_resposta.mp3
+P027_pergunta,perguntas,"Qual seleção ganhou mais Copas do Mundo de futebol masculino?",71,sim,perguntas/P027_pergunta.mp3
+P027_resposta,perguntas,"A resposta certa é… Brasil, com cinco títulos!",61,sim,perguntas/P027_resposta.mp3
+P028_pergunta,perguntas,"Em qual esporte se joga com raquete e peteca?",55,sim,perguntas/P028_pergunta.mp3
+P028_resposta,perguntas,"A resposta certa é… Badminton!",45,sim,perguntas/P028_resposta.mp3
+P029_pergunta,perguntas,"Quantos minutos dura uma partida de futebol, sem os acréscimos?",73,sim,perguntas/P029_pergunta.mp3
+P029_resposta,perguntas,"A resposta certa é… Noventa minutos!",51,sim,perguntas/P029_resposta.mp3
+P030_pergunta,perguntas,"Qual é o apelido de Edson Arantes do Nascimento?",58,sim,perguntas/P030_pergunta.mp3
+P030_resposta,perguntas,"A resposta certa é… Pelé!",40,sim,perguntas/P030_resposta.mp3
+P031_pergunta,perguntas,"Em qual esporte o jogador tenta derrubar 10 pinos com uma bola?",73,sim,perguntas/P031_pergunta.mp3
+P031_resposta,perguntas,"A resposta certa é… Boliche!",43,sim,perguntas/P031_resposta.mp3
+P032_pergunta,perguntas,"Qual país sediou a Copa do Mundo de 2014?",51,sim,perguntas/P032_pergunta.mp3
+P032_resposta,perguntas,"A resposta certa é… Brasil!",42,sim,perguntas/P05_resposta.mp3
+P033_pergunta,perguntas,"Qual velocista jamaicano é o recordista mundial dos 100 metros rasos?",79,sim,perguntas/P033_pergunta.mp3
+P033_resposta,perguntas,"A resposta certa é… Usain Bolt!",46,sim,perguntas/P033_resposta.mp3
+P034_pergunta,perguntas,"Em qual modalidade Rebeca Andrade ganhou medalhas olímpicas?",70,sim,perguntas/P034_pergunta.mp3
+P034_resposta,perguntas,"A resposta certa é… Ginástica artística!",55,sim,perguntas/P034_resposta.mp3
+P035_pergunta,perguntas,"Quantos pontos vale um touchdown no futebol americano?",64,sim,perguntas/P035_pergunta.mp3
+P035_resposta,perguntas,"A resposta certa é… Seis pontos!",47,sim,perguntas/P035_resposta.mp3
+P036_pergunta,perguntas,"No xadrez, qual peça anda em formato de L?",52,sim,perguntas/P036_pergunta.mp3
+P036_resposta,perguntas,"A resposta certa é… O cavalo!",44,sim,perguntas/P036_resposta.mp3
+P037_pergunta,perguntas,"Quantos jogadores de cada time ficam em quadra no basquete?",69,sim,perguntas/P037_pergunta.mp3
+P037_resposta,perguntas,"A resposta certa é… Cinco jogadores!",51,sim,perguntas/P037_resposta.mp3
+P038_pergunta,perguntas,"Em que ano o Brasil ganhou sua primeira Copa do Mundo?",64,sim,perguntas/P038_pergunta.mp3
+P038_resposta,perguntas,"A resposta certa é… Mil novecentos e cinquenta e oito!",69,sim,perguntas/P038_resposta.mp3
+P039_pergunta,perguntas,"Qual gás as plantas absorvem do ar para fazer fotossíntese?",69,sim,perguntas/P039_pergunta.mp3
+P039_resposta,perguntas,"A resposta certa é… Gás carbônico!",49,sim,perguntas/P039_resposta.mp3
+P040_pergunta,perguntas,"Qual é o maior órgão do corpo humano?",47,sim,perguntas/P040_pergunta.mp3
+P040_resposta,perguntas,"A resposta certa é… A pele!",42,sim,perguntas/P040_resposta.mp3
+P041_pergunta,perguntas,"A quantos graus Celsius a água ferve ao nível do mar?",63,sim,perguntas/P041_pergunta.mp3
+P041_resposta,perguntas,"A resposta certa é… Cem graus!",45,sim,perguntas/P041_resposta.mp3
+P042_pergunta,perguntas,"Quantas patas tem uma aranha?",39,sim,perguntas/P042_pergunta.mp3
+P042_resposta,perguntas,"A resposta certa é… Oito patas!",46,sim,perguntas/P042_resposta.mp3
+P043_pergunta,perguntas,"Qual planeta é conhecido como Planeta Vermelho?",57,sim,perguntas/P043_pergunta.mp3
+P043_resposta,perguntas,"A resposta certa é… Marte!",41,sim,perguntas/P043_resposta.mp3
+P044_pergunta,perguntas,"Qual é a fórmula química da água?",43,sim,perguntas/P044_pergunta.mp3
+P044_resposta,perguntas,"A resposta certa é… H dois O!",44,sim,perguntas/P044_resposta.mp3
+P045_pergunta,perguntas,"Qual é o animal terrestre mais rápido do mundo?",57,sim,perguntas/P045_pergunta.mp3
+P045_resposta,perguntas,"A resposta certa é… O guepardo!",46,sim,perguntas/P045_resposta.mp3
+P046_pergunta,perguntas,"Qual cientista criou a teoria da relatividade?",56,sim,perguntas/P046_pergunta.mp3
+P046_resposta,perguntas,"A resposta certa é… Albert Einstein!",51,sim,perguntas/P046_resposta.mp3
+P047_pergunta,perguntas,"Quantos dentes tem um adulto com a dentição completa?",63,sim,perguntas/P047_pergunta.mp3
+P047_resposta,perguntas,"A resposta certa é… Trinta e dois dentes!",56,sim,perguntas/P047_resposta.mp3
+P048_pergunta,perguntas,"Em que inseto a lagarta se transforma depois do casulo?",65,sim,perguntas/P048_pergunta.mp3
+P048_resposta,perguntas,"A resposta certa é… Borboleta!",45,sim,perguntas/P048_resposta.mp3
+P049_pergunta,perguntas,"Qual é o maior animal do mundo?",41,sim,perguntas/P049_pergunta.mp3
+P049_resposta,perguntas,"A resposta certa é… A baleia-azul!",49,sim,perguntas/P049_resposta.mp3
+P050_pergunta,perguntas,"Quantos planetas tem o Sistema Solar?",47,sim,perguntas/P050_pergunta.mp3
+P050_resposta,perguntas,"A resposta certa é… Oito planetas!",49,sim,perguntas/P050_resposta.mp3
+P051_pergunta,perguntas,"Qual vitamina o corpo produz quando a pele recebe luz do sol?",71,sim,perguntas/P051_pergunta.mp3
+P051_resposta,perguntas,"A resposta certa é… Vitamina D!",46,sim,perguntas/P051_resposta.mp3
+P052_pergunta,perguntas,"Qual parte da planta fica embaixo da terra e absorve água?",68,sim,perguntas/P052_pergunta.mp3
+P052_resposta,perguntas,"A resposta certa é… A raiz!",42,sim,perguntas/P052_resposta.mp3
+P053_pergunta,perguntas,"A baleia é que tipo de animal?",40,sim,perguntas/P053_pergunta.mp3
+P053_resposta,perguntas,"A resposta certa é… Mamífero!",44,sim,perguntas/P053_resposta.mp3
+P054_pergunta,perguntas,"Qual é o nome do leãozinho protagonista de O Rei Leão?",64,sim,perguntas/P054_pergunta.mp3
+P054_resposta,perguntas,"A resposta certa é… Simba!",41,sim,perguntas/P054_resposta.mp3
+P055_pergunta,perguntas,"Qual é o nome do boneco de neve de Frozen?",52,sim,perguntas/P055_pergunta.mp3
+P055_resposta,perguntas,"A resposta certa é… Olaf!",40,sim,perguntas/P055_resposta.mp3
+P056_pergunta,perguntas,"Em qual escola de magia estuda Harry Potter?",54,sim,perguntas/P056_pergunta.mp3
+P056_resposta,perguntas,"A resposta certa é… Hogwarts!",44,sim,perguntas/P056_resposta.mp3
+P057_pergunta,perguntas,"Qual é a cor do ogro Shrek?",37,sim,perguntas/P057_pergunta.mp3
+P057_resposta,perguntas,"A resposta certa é… Verde!",41,sim,perguntas/P057_resposta.mp3
+P058_pergunta,perguntas,"Quem é o melhor amigo do Bob Esponja?",47,sim,perguntas/P058_pergunta.mp3
+P058_resposta,perguntas,"A resposta certa é… Patrick!",43,sim,perguntas/P058_resposta.mp3
+P059_pergunta,perguntas,"No seriado Chaves, qual personagem vive dentro de um barril?",70,sim,perguntas/P059_pergunta.mp3
+P059_resposta,perguntas,"A resposta certa é… O Chaves!",44,sim,perguntas/P059_resposta.mp3
+P060_pergunta,perguntas,"Qual é o nome da peixinha azul esquecida de Procurando Nemo?",70,sim,perguntas/P060_pergunta.mp3
+P060_resposta,perguntas,"A resposta certa é… Dory!",40,sim,perguntas/P060_resposta.mp3
+P061_pergunta,perguntas,"Qual super-herói protege Gotham City?",47,sim,perguntas/P061_pergunta.mp3
+P061_resposta,perguntas,"A resposta certa é… Batman!",42,sim,perguntas/P061_resposta.mp3
+P062_pergunta,perguntas,"Em Star Wars, quem é o pai de Luke Skywalker?",55,sim,perguntas/P062_pergunta.mp3
+P062_resposta,perguntas,"A resposta certa é… Darth Vader!",47,sim,perguntas/P062_resposta.mp3
+P063_pergunta,perguntas,"Em qual novela brasileira apareceu a vilã Carminha?",61,sim,perguntas/P063_pergunta.mp3
+P063_resposta,perguntas,"A resposta certa é… Avenida Brasil!",50,sim,perguntas/P063_resposta.mp3
+P064_pergunta,perguntas,"Qual é o nome do dinossauro roxo de um famoso programa infantil?",74,sim,perguntas/P064_pergunta.mp3
+P064_resposta,perguntas,"A resposta certa é… Barney!",42,sim,perguntas/P064_resposta.mp3
+P065_pergunta,perguntas,"Qual apresentador comandou o Domingão por mais de 30 anos?",68,sim,perguntas/P065_pergunta.mp3
+P065_resposta,perguntas,"A resposta certa é… Faustão!",43,sim,perguntas/P065_resposta.mp3
+P066_pergunta,perguntas,"Qual é o nome do robozinho da Pixar que limpa uma Terra cheia de lixo?",80,sim,perguntas/P066_pergunta.mp3
+P066_resposta,perguntas,"A resposta certa é… WALL-E!",42,sim,perguntas/P066_resposta.mp3
+P067_pergunta,perguntas,"Em qual saga aparece o mago Gandalf?",46,sim,perguntas/P067_pergunta.mp3
+P067_resposta,perguntas,"A resposta certa é… O Senhor dos Anéis!",54,sim,perguntas/P067_resposta.mp3
+P068_pergunta,perguntas,"Em qual cidade vivem Os Simpsons?",43,sim,perguntas/P068_pergunta.mp3
+P068_resposta,perguntas,"A resposta certa é… Springfield!",47,sim,perguntas/P068_resposta.mp3
+P069_pergunta,perguntas,"Além do chocolate, qual é o ingrediente principal do brigadeiro?",74,sim,perguntas/P069_pergunta.mp3
+P069_resposta,perguntas,"A resposta certa é… Leite condensado!",52,sim,perguntas/P069_resposta.mp3
+P070_pergunta,perguntas,"O sushi é um prato típico de qual país?",49,sim,perguntas/P070_pergunta.mp3
+P070_resposta,perguntas,"A resposta certa é… Japão!",41,sim,perguntas/P025_resposta.mp3
+P071_pergunta,perguntas,"A tapioca é feita a partir de qual planta?",52,sim,perguntas/P071_pergunta.mp3
+P071_resposta,perguntas,"A resposta certa é… Mandioca!",44,sim,perguntas/P071_resposta.mp3
+P072_pergunta,perguntas,"Qual bebida leva cachaça, limão, açúcar e gelo?",57,sim,perguntas/P072_pergunta.mp3
+P072_resposta,perguntas,"A resposta certa é… Caipirinha!",46,sim,perguntas/P072_resposta.mp3
+P073_pergunta,perguntas,"O croissant é associado a qual país?",46,sim,perguntas/P073_pergunta.mp3
+P073_resposta,perguntas,"A resposta certa é… França!",42,sim,perguntas/P073_resposta.mp3
+P074_pergunta,perguntas,"Qual prato brasileiro leva feijão preto e carnes de porco?",68,sim,perguntas/P074_pergunta.mp3
+P074_resposta,perguntas,"A resposta certa é… Feijoada!",44,sim,perguntas/P074_resposta.mp3
+P075_pergunta,perguntas,"O acarajé é um prato típico de qual estado?",53,sim,perguntas/P075_pergunta.mp3
+P075_resposta,perguntas,"A resposta certa é… Bahia!",41,sim,perguntas/P075_resposta.mp3
+P076_pergunta,perguntas,"A pipoca é feita de qual grão?",40,sim,perguntas/P076_pergunta.mp3
+P076_resposta,perguntas,"A resposta certa é… Milho!",41,sim,perguntas/P076_resposta.mp3
+P077_pergunta,perguntas,"O vinho é feito a partir de qual fruta?",49,sim,perguntas/P077_pergunta.mp3
+P077_resposta,perguntas,"A resposta certa é… Uva!",39,sim,perguntas/P077_resposta.mp3
+P078_pergunta,perguntas,"O chimarrão é preparado com qual erva?",48,sim,perguntas/P078_pergunta.mp3
+P078_resposta,perguntas,"A resposta certa é… Erva-mate!",45,sim,perguntas/P078_resposta.mp3
+P079_pergunta,perguntas,"O pé de moleque é feito principalmente de qual ingrediente?",69,sim,perguntas/P079_pergunta.mp3
+P079_resposta,perguntas,"A resposta certa é… Amendoim!",44,sim,perguntas/P079_resposta.mp3
+P080_pergunta,perguntas,"Qual tempero dá a cor amarela ao curry?",49,sim,perguntas/P080_pergunta.mp3
+P080_resposta,perguntas,"A resposta certa é… Cúrcuma!",43,sim,perguntas/P080_resposta.mp3
+P081_pergunta,perguntas,"De que cor é o wasabi servido com sushi?",50,sim,perguntas/P081_pergunta.mp3
+P081_resposta,perguntas,"A resposta certa é… Verde!",41,sim,perguntas/P057_resposta.mp3
+P082_pergunta,perguntas,"O tacacá e o pato no tucupi são pratos típicos de qual região?",72,sim,perguntas/P082_pergunta.mp3
+P082_resposta,perguntas,"A resposta certa é… Região Norte!",48,sim,perguntas/P082_resposta.mp3
+P083_pergunta,perguntas,"Qual bebida é feita com grãos torrados e moídos?",58,sim,perguntas/P083_pergunta.mp3
+P083_resposta,perguntas,"A resposta certa é… Café!",40,sim,perguntas/P083_resposta.mp3
+P084_pergunta,perguntas,"Qual é a capital do Brasil?",37,sim,perguntas/P084_pergunta.mp3
+P084_resposta,perguntas,"A resposta certa é… Brasília!",44,sim,perguntas/P084_resposta.mp3
+P085_pergunta,perguntas,"Qual é o maior oceano do mundo?",41,sim,perguntas/P085_pergunta.mp3
+P085_resposta,perguntas,"A resposta certa é… Oceano Pacífico!",51,sim,perguntas/P085_resposta.mp3
+P086_pergunta,perguntas,"Em qual continente fica o Quênia?",43,sim,perguntas/P086_pergunta.mp3
+P086_resposta,perguntas,"A resposta certa é… África!",42,sim,perguntas/P086_resposta.mp3
+P087_pergunta,perguntas,"Qual é a capital da França?",37,sim,perguntas/P087_pergunta.mp3
+P087_resposta,perguntas,"A resposta certa é… Paris!",41,sim,perguntas/P087_resposta.mp3
+P088_pergunta,perguntas,"Qual é o rio com maior volume de água do mundo?",57,sim,perguntas/P088_pergunta.mp3
+P088_resposta,perguntas,"A resposta certa é… Rio Amazonas!",48,sim,perguntas/P088_resposta.mp3
+P089_pergunta,perguntas,"Qual país tem o formato de uma bota no mapa?",54,sim,perguntas/P089_pergunta.mp3
+P089_resposta,perguntas,"A resposta certa é… Itália!",42,sim,perguntas/P04_resposta.mp3
+P090_pergunta,perguntas,"Em qual país ficam as pirâmides de Gizé?",50,sim,perguntas/P090_pergunta.mp3
+P090_resposta,perguntas,"A resposta certa é… Egito!",41,sim,perguntas/P090_resposta.mp3
+P091_pergunta,perguntas,"Qual é o maior estado do Brasil em área?",50,sim,perguntas/P091_pergunta.mp3
+P091_resposta,perguntas,"A resposta certa é… Amazonas!",44,sim,perguntas/P091_resposta.mp3
+P092_pergunta,perguntas,"Qual é a capital da Argentina?",40,sim,perguntas/P092_pergunta.mp3
+P092_resposta,perguntas,"A resposta certa é… Buenos Aires!",48,sim,perguntas/P092_resposta.mp3
+P093_pergunta,perguntas,"Qual é o país mais populoso do mundo hoje?",52,sim,perguntas/P093_pergunta.mp3
+P093_resposta,perguntas,"A resposta certa é… Índia!",41,sim,perguntas/P093_resposta.mp3
+P094_pergunta,perguntas,"Em qual cidade fica o Cristo Redentor?",48,sim,perguntas/P094_pergunta.mp3
+P094_resposta,perguntas,"A resposta certa é… Rio de Janeiro!",50,sim,perguntas/P07_resposta.mp3
+P095_pergunta,perguntas,"Qual é o maior deserto quente do mundo?",49,sim,perguntas/P095_pergunta.mp3
+P095_resposta,perguntas,"A resposta certa é… Saara!",41,sim,perguntas/P095_resposta.mp3
+P096_pergunta,perguntas,"Qual é a capital de Portugal?",39,sim,perguntas/P096_pergunta.mp3
+P096_resposta,perguntas,"A resposta certa é… Lisboa!",42,sim,perguntas/P096_resposta.mp3
+P097_pergunta,perguntas,"Em qual estado ficam as Cataratas do Iguaçu, do lado brasileiro?",74,sim,perguntas/P097_pergunta.mp3
+P097_resposta,perguntas,"A resposta certa é… Paraná!",42,sim,perguntas/P097_resposta.mp3
+P098_pergunta,perguntas,"Qual é a montanha mais alta do mundo?",47,sim,perguntas/P098_pergunta.mp3
+P098_resposta,perguntas,"A resposta certa é… Monte Everest!",49,sim,perguntas/P098_resposta.mp3
+P099_pergunta,perguntas,"De qual banda britânica faziam parte John Lennon e Paul McCartney?",76,sim,perguntas/P099_pergunta.mp3
+P099_resposta,perguntas,"A resposta certa é… The Beatles!",47,sim,perguntas/P099_resposta.mp3
+P100_pergunta,perguntas,"Quantas teclas tem um piano padrão?",45,sim,perguntas/P100_pergunta.mp3
+P100_resposta,perguntas,"A resposta certa é… Oitenta e oito teclas!",57,sim,perguntas/P100_resposta.mp3
+P101_pergunta,perguntas,"Qual cantor é chamado de Rei no Brasil?",49,sim,perguntas/P101_pergunta.mp3
+P101_resposta,perguntas,"A resposta certa é… Roberto Carlos!",50,sim,perguntas/P101_resposta.mp3
+P102_pergunta,perguntas,"Freddie Mercury era o vocalista de qual banda?",56,sim,perguntas/P102_pergunta.mp3
+P102_resposta,perguntas,"A resposta certa é… Queen!",41,sim,perguntas/P102_resposta.mp3
+P103_pergunta,perguntas,"Qual ritmo nordestino é tocado com sanfona, zabumba e triângulo?",74,sim,perguntas/P103_pergunta.mp3
+P103_resposta,perguntas,"A resposta certa é… Forró!",41,sim,perguntas/P103_resposta.mp3
+P104_pergunta,perguntas,"Qual cantora é conhecida como a Rainha do Pop?",56,sim,perguntas/P104_pergunta.mp3
+P104_resposta,perguntas,"A resposta certa é… Madonna!",43,sim,perguntas/P104_resposta.mp3
+P105_pergunta,perguntas,"Qual cantor é conhecido como o Rei do Pop?",52,sim,perguntas/P105_pergunta.mp3
+P105_resposta,perguntas,"A resposta certa é… Michael Jackson!",51,sim,perguntas/P105_resposta.mp3
+P106_pergunta,perguntas,"Quantas notas tem a escala musical tradicional: dó, ré, mi…?",70,sim,perguntas/P106_pergunta.mp3
+P106_resposta,perguntas,"A resposta certa é… Sete notas!",46,sim,perguntas/P106_resposta.mp3
+P107_pergunta,perguntas,"Em qual cidade nasceu a cantora Anitta?",49,sim,perguntas/P107_pergunta.mp3
+P107_resposta,perguntas,"A resposta certa é… Rio de Janeiro!",50,sim,perguntas/P07_resposta.mp3
+P108_pergunta,perguntas,"Qual instrumento de sopro leva o nome do seu inventor, Adolphe Sax?",77,sim,perguntas/P108_pergunta.mp3
+P108_resposta,perguntas,"A resposta certa é… Saxofone!",44,sim,perguntas/P108_resposta.mp3
+P109_pergunta,perguntas,"Qual festa brasileira é famosa pelos desfiles das escolas de samba?",77,sim,perguntas/P109_pergunta.mp3
+P109_resposta,perguntas,"A resposta certa é… Carnaval!",44,sim,perguntas/P109_resposta.mp3
+P110_pergunta,perguntas,"O frevo é um ritmo típico de qual estado?",51,sim,perguntas/P110_pergunta.mp3
+P110_resposta,perguntas,"A resposta certa é… Pernambuco!",46,sim,perguntas/P110_resposta.mp3
+P111_pergunta,perguntas,"Quantas cordas tem um cavaquinho?",43,sim,perguntas/P111_pergunta.mp3
+P111_resposta,perguntas,"A resposta certa é… Quatro cordas!",49,sim,perguntas/P111_resposta.mp3
+P112_pergunta,perguntas,"Qual cantora fez a turnê The Eras Tour?",49,sim,perguntas/P112_pergunta.mp3
+P112_resposta,perguntas,"A resposta certa é… Taylor Swift!",48,sim,perguntas/P112_resposta.mp3
+P113_pergunta,perguntas,"Qual dupla sertaneja gravou o sucesso Evidências?",59,sim,perguntas/P113_pergunta.mp3
+P113_resposta,perguntas,"A resposta certa é… Chitãozinho e Xororó!",56,sim,perguntas/P113_resposta.mp3
+P114_pergunta,perguntas,"Qual é a capital da Turquia?",38,sim,perguntas/P114_pergunta.mp3
+P114_resposta,perguntas,"A resposta certa é… Ancara!",42,sim,perguntas/P114_resposta.mp3
+P115_pergunta,perguntas,"Qual é o menor país do mundo?",39,sim,perguntas/P115_pergunta.mp3
+P115_resposta,perguntas,"A resposta certa é… Vaticano!",44,sim,perguntas/P115_resposta.mp3
+P116_pergunta,perguntas,"Qual é o rio mais longo da Europa?",44,sim,perguntas/P116_pergunta.mp3
+P116_resposta,perguntas,"A resposta certa é… Rio Volga!",45,sim,perguntas/P116_resposta.mp3
+P117_pergunta,perguntas,"Qual é a capital da Nova Zelândia?",44,sim,perguntas/P117_pergunta.mp3
+P117_resposta,perguntas,"A resposta certa é… Wellington!",46,sim,perguntas/P117_resposta.mp3
+P118_pergunta,perguntas,"Qual é o ponto mais alto do Brasil?",45,sim,perguntas/P118_pergunta.mp3
+P118_resposta,perguntas,"A resposta certa é… Pico da Neblina!",51,sim,perguntas/P118_resposta.mp3
+P119_pergunta,perguntas,"Em qual país fica Machu Picchu?",41,sim,perguntas/P119_pergunta.mp3
+P119_resposta,perguntas,"A resposta certa é… Peru!",40,sim,perguntas/P119_resposta.mp3
+P120_pergunta,perguntas,"Qual é o elemento químico mais abundante no universo?",63,sim,perguntas/P120_pergunta.mp3
+P120_resposta,perguntas,"A resposta certa é… Hidrogênio!",46,sim,perguntas/P120_resposta.mp3
+P121_pergunta,perguntas,"Qual é, aproximadamente, a velocidade da luz no vácuo?",64,sim,perguntas/P121_pergunta.mp3
+P121_resposta,perguntas,"A resposta certa é… Trezentos mil quilômetros por segundo!",73,sim,perguntas/P121_resposta.mp3
+P122_pergunta,perguntas,"Qual é o osso mais longo do corpo humano?",51,sim,perguntas/P122_pergunta.mp3
+P122_resposta,perguntas,"A resposta certa é… O fêmur!",43,sim,perguntas/P122_resposta.mp3
+P123_pergunta,perguntas,"Quantos cromossomos tem uma célula humana comum?",58,sim,perguntas/P123_pergunta.mp3
+P123_resposta,perguntas,"A resposta certa é… Quarenta e seis!",51,sim,perguntas/P123_resposta.mp3
+P124_pergunta,perguntas,"Quem descobriu a penicilina?",38,sim,perguntas/P124_pergunta.mp3
+P124_resposta,perguntas,"A resposta certa é… Alexander Fleming!",53,sim,perguntas/P124_resposta.mp3
+P125_pergunta,perguntas,"Em qual planeta um dia dura mais que um ano?",54,sim,perguntas/P125_pergunta.mp3
+P125_resposta,perguntas,"A resposta certa é… Vênus!",41,sim,perguntas/P125_resposta.mp3
+P126_pergunta,perguntas,"Quantos títulos mundiais de Fórmula 1 Ayrton Senna conquistou?",72,sim,perguntas/P126_pergunta.mp3
+P126_resposta,perguntas,"A resposta certa é… Três títulos!",48,sim,perguntas/P126_resposta.mp3
+P127_pergunta,perguntas,"Qual seleção venceu a Copa do Mundo de 2026?",54,sim,perguntas/P127_pergunta.mp3
+P127_resposta,perguntas,"A resposta certa é… Espanha!",43,sim,perguntas/P127_resposta.mp3
+P128_pergunta,perguntas,"Qual tenista tem mais títulos de Roland Garros?",57,sim,perguntas/P128_pergunta.mp3
+P128_resposta,perguntas,"A resposta certa é… Rafael Nadal!",48,sim,perguntas/P128_resposta.mp3
+P129_pergunta,perguntas,"Qual nadador tem mais medalhas olímpicas na história?",63,sim,perguntas/P129_pergunta.mp3
+P129_resposta,perguntas,"A resposta certa é… Michael Phelps!",50,sim,perguntas/P129_resposta.mp3
+P130_pergunta,perguntas,"Qual é a distância oficial de uma maratona?",53,sim,perguntas/P130_pergunta.mp3
+P130_resposta,perguntas,"A resposta certa é… Quarenta e dois quilômetros e cento e noventa e cinco metros!",96,sim,perguntas/P130_resposta.mp3
+P131_pergunta,perguntas,"Qual destes pilotos brasileiros NÃO foi campeão mundial de Fórmula 1?",79,sim,perguntas/P131_pergunta.mp3
+P131_resposta,perguntas,"A resposta certa é… Rubens Barrichello!",54,sim,perguntas/P131_resposta.mp3
+P132_pergunta,perguntas,"Quem dirigiu o filme Tubarão, de 1975?",48,sim,perguntas/P132_pergunta.mp3
+P132_resposta,perguntas,"A resposta certa é… Steven Spielberg!",52,sim,perguntas/P132_resposta.mp3
+P133_pergunta,perguntas,"Qual atriz brasileira foi indicada ao Oscar por Central do Brasil?",76,sim,perguntas/P133_pergunta.mp3
+P133_resposta,perguntas,"A resposta certa é… Fernanda Montenegro!",55,sim,perguntas/P133_resposta.mp3
+P134_pergunta,perguntas,"Qual filme brasileiro ganhou o Oscar de filme internacional em 2025?",78,sim,perguntas/P134_pergunta.mp3
+P134_resposta,perguntas,"A resposta certa é… Ainda Estou Aqui!",52,sim,perguntas/P134_resposta.mp3
+P135_pergunta,perguntas,"Em Matrix, qual é a cor da pílula que Neo escolhe?",60,sim,perguntas/P135_pergunta.mp3
+P135_resposta,perguntas,"A resposta certa é… Vermelha!",44,sim,perguntas/P135_resposta.mp3
+P136_pergunta,perguntas,"Qual é o nome verdadeiro do Homem de Ferro?",53,sim,perguntas/P136_pergunta.mp3
+P136_resposta,perguntas,"A resposta certa é… Tony Stark!",46,sim,perguntas/P136_resposta.mp3
+P137_pergunta,perguntas,"Qual série se passa na cidade fictícia de Hawkins?",60,sim,perguntas/P137_pergunta.mp3
+P137_resposta,perguntas,"A resposta certa é… Stranger Things!",51,sim,perguntas/P137_resposta.mp3
+P138_pergunta,perguntas,"De qual país é o queijo gorgonzola?",45,sim,perguntas/P138_pergunta.mp3
+P138_resposta,perguntas,"A resposta certa é… Itália!",42,sim,perguntas/P04_resposta.mp3
+P139_pergunta,perguntas,"Qual é o ingrediente principal do homus?",50,sim,perguntas/P139_pergunta.mp3
+P139_resposta,perguntas,"A resposta certa é… Grão-de-bico!",48,sim,perguntas/P139_resposta.mp3
+P140_pergunta,perguntas,"A paella é um prato típico de qual país?",50,sim,perguntas/P140_pergunta.mp3
+P140_resposta,perguntas,"A resposta certa é… Espanha!",43,sim,perguntas/P127_resposta.mp3
+P141_pergunta,perguntas,"Qual é considerada a especiaria mais cara do mundo?",61,sim,perguntas/P141_pergunta.mp3
+P141_resposta,perguntas,"A resposta certa é… Açafrão!",43,sim,perguntas/P141_resposta.mp3
+P142_pergunta,perguntas,"O kimchi é um prato típico de qual país?",50,sim,perguntas/P142_pergunta.mp3
+P142_resposta,perguntas,"A resposta certa é… Coreia do Sul!",49,sim,perguntas/P142_resposta.mp3
+P143_pergunta,perguntas,"Qual doce português de massa folhada e creme é famoso em Belém, Lisboa?",81,sim,perguntas/P143_pergunta.mp3
+P143_resposta,perguntas,"A resposta certa é… Pastel de nata!",50,sim,perguntas/P143_resposta.mp3
+P144_pergunta,perguntas,"Qual compositor alemão continuou compondo mesmo depois de ficar surdo?",80,sim,perguntas/P144_pergunta.mp3
+P144_resposta,perguntas,"A resposta certa é… Beethoven!",45,sim,perguntas/P144_resposta.mp3
+P145_pergunta,perguntas,"Qual banda gravou o álbum The Dark Side of the Moon?",62,sim,perguntas/P145_pergunta.mp3
+P145_resposta,perguntas,"A resposta certa é… Pink Floyd!",46,sim,perguntas/P145_resposta.mp3
+P146_pergunta,perguntas,"Qual cantor brasileiro ficou conhecido como Síndico?",62,sim,perguntas/P146_pergunta.mp3
+P146_resposta,perguntas,"A resposta certa é… Tim Maia!",44,sim,perguntas/P146_resposta.mp3
+P147_pergunta,perguntas,"Quem compôs Aquarela do Brasil?",41,sim,perguntas/P147_pergunta.mp3
+P147_resposta,perguntas,"A resposta certa é… Ary Barroso!",47,sim,perguntas/P147_resposta.mp3
+P148_pergunta,perguntas,"Em qual cidade nasceu Mozart?",39,sim,perguntas/P148_pergunta.mp3
+P148_resposta,perguntas,"A resposta certa é… Salzburgo!",45,sim,perguntas/P148_resposta.mp3
+P149_pergunta,perguntas,"Qual cantora brasileira tinha o apelido de Pimentinha?",64,sim,perguntas/P149_pergunta.mp3
+P149_resposta,perguntas,"A resposta certa é… Elis Regina!",47,sim,perguntas/P149_resposta.mp3
+P150_pergunta,perguntas,"Quantos dias tem um ano bissexto?",43,sim,perguntas/P150_pergunta.mp3
+P150_resposta,perguntas,"A resposta certa é… Trezentos e sessenta e seis dias!",68,sim,perguntas/P150_resposta.mp3
+P151_pergunta,perguntas,"Qual cor sai da mistura de azul com amarelo?",54,sim,perguntas/P151_pergunta.mp3
+P151_resposta,perguntas,"A resposta certa é… Verde!",41,sim,perguntas/P057_resposta.mp3
+P152_pergunta,perguntas,"Quantos lados tem um hexágono?",40,sim,perguntas/P152_pergunta.mp3
+P152_resposta,perguntas,"A resposta certa é… Seis lados!",46,sim,perguntas/P152_resposta.mp3
+P153_pergunta,perguntas,"Qual animal é chamado de rei da selva?",48,sim,perguntas/P153_pergunta.mp3
+P153_resposta,perguntas,"A resposta certa é… O leão!",42,sim,perguntas/P153_resposta.mp3
+P154_pergunta,perguntas,"Quantas horas tem um dia?",35,sim,perguntas/P154_pergunta.mp3
+P154_resposta,perguntas,"A resposta certa é… Vinte e quatro horas!",56,sim,perguntas/P154_resposta.mp3
+P155_pergunta,perguntas,"Quantos minutos tem uma hora?",39,sim,perguntas/P155_pergunta.mp3
+P155_resposta,perguntas,"A resposta certa é… Sessenta minutos!",52,sim,perguntas/P155_resposta.mp3
+P156_pergunta,perguntas,"Qual é o maior animal terrestre?",42,sim,perguntas/P156_pergunta.mp3
+P156_resposta,perguntas,"A resposta certa é… O elefante-africano!",55,sim,perguntas/P156_resposta.mp3
+P157_pergunta,perguntas,"Quantos meses do ano têm 31 dias?",43,sim,perguntas/P157_pergunta.mp3
+P157_resposta,perguntas,"A resposta certa é… Sete meses!",46,sim,perguntas/P157_resposta.mp3
+P158_pergunta,perguntas,"Qual é a capital da Itália?",37,sim,perguntas/P158_pergunta.mp3
+P158_resposta,perguntas,"A resposta certa é… Roma!",40,sim,perguntas/P158_resposta.mp3
+P159_pergunta,perguntas,"Em que mês se comemora o Natal?",41,sim,perguntas/P159_pergunta.mp3
+P159_resposta,perguntas,"A resposta certa é… Dezembro!",44,sim,perguntas/P159_resposta.mp3
