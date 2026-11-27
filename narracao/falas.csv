@@ -187,8 +187,8 @@ reacao_dois_3,reacoes,"Dois degraus, que velocidade!",39,sim,reacoes/reacao_dois
 final_comeca,fixas,"A primeira fase acabou! Agora começa a grande final: a Pirâmide do Conhecimento!",95,sim,fixas/final_comeca.mp3
 final_lugar,fixas,"Cada um para o seu degrau!",36,sim,fixas/final_lugar.mp3
 final_degraus,fixas,"Seus pontos viraram degraus! Quem fez mais pontos começa mais alto. Cada um para o seu lugar!",102,sim,fixas/final_degraus.mp3
-regras_dois,fixas,"Acertou, sobe um degrau. Os dois mais rápidos sobem dois.",66,sim,fixas/regras_dois.mp3
-regras_um,fixas,"Acertou, sobe um degrau. O mais rápido sobe dois.",58,sim,fixas/regras_um.mp3
+regras_dois,fixas,"Quem acertar, sobe um degrau. Os dois mais rápidos sobem dois.",71,nao,
+regras_um,fixas,"Quem acertar, sobe um degrau. O mais rápido sobe dois.",63,nao,
 regras_poder,fixas,"Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!",95,sim,fixas/regras_poder.mp3
 pir_pergunta_1,numeros,"Pergunta um!",22,sim,numeros/pir_pergunta_1.mp3
 pir_pergunta_2,numeros,"Pergunta dois!",24,sim,numeros/pir_pergunta_2.mp3
@@ -459,7 +459,7 @@ P064_resposta,perguntas,"A resposta certa é… Barney!",42,sim,perguntas/P064_r
 P065_pergunta,perguntas,"Qual apresentador comandou o Domingão por mais de 30 anos?",68,sim,perguntas/P065_pergunta.mp3
 P065_resposta,perguntas,"A resposta certa é… Faustão!",43,sim,perguntas/P065_resposta.mp3
 P066_pergunta,perguntas,"Qual é o nome do robozinho da Pixar que limpa uma Terra cheia de lixo?",80,sim,perguntas/P066_pergunta.mp3
-P066_resposta,perguntas,"A resposta certa é… WALL-E!",42,sim,perguntas/P066_resposta.mp3
+P066_resposta,perguntas,"A resposta certa é… WALL-E!",44,sim,perguntas/P066_resposta.mp3
 P067_pergunta,perguntas,"Em qual saga aparece o mago Gandalf?",46,sim,perguntas/P067_pergunta.mp3
 P067_resposta,perguntas,"A resposta certa é… O Senhor dos Anéis!",54,sim,perguntas/P067_resposta.mp3
 P068_pergunta,perguntas,"Em qual cidade vivem Os Simpsons?",43,sim,perguntas/P068_pergunta.mp3
@@ -716,7 +716,7 @@ P193_pergunta,perguntas,"Como se chama o macho da abelha?",42,sim,perguntas/P193
 P193_resposta,perguntas,"A resposta certa é… Zangão!",42,sim,perguntas/P193_resposta.mp3
 P194_pergunta,perguntas,"Qual é o maior peixe do mundo?",40,sim,perguntas/P194_pergunta.mp3
 P194_resposta,perguntas,"A resposta certa é… O tubarão-baleia!",52,sim,perguntas/P194_resposta.mp3
-P195_pergunta,perguntas,"Qual animal é o símbolo da ONG WWF?",45,sim,perguntas/P195_pergunta.mp3
+P195_pergunta,perguntas,"Qual animal é o símbolo da ONG WWF?",49,sim,perguntas/P195_pergunta.mp3
 P195_resposta,perguntas,"A resposta certa é… O panda!",43,sim,perguntas/P195_resposta.mp3
 P196_pergunta,perguntas,"Qual é o nome do encanador mais famoso dos videogames?",64,sim,perguntas/P196_pergunta.mp3
 P196_resposta,perguntas,"A resposta certa é… Mario!",41,sim,perguntas/P196_resposta.mp3
