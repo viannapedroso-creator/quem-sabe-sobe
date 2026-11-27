@@ -75,6 +75,10 @@
     });
   }
   function falar(texto) {
+    abaixarMusica(true);
+    return falarSo(texto).then((r) => { abaixarMusica(false); return r; });
+  }
+  function falarSo(texto) {
     const arq = manifesto && manifesto[chave(texto)];
     if (!arq) return falarNavegador(texto);
     return new Promise((ok) => {
@@ -103,8 +107,54 @@
       o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + dur + 0.05);
     });
   }
+  // Efeitos e músicas gravados (audio/sons/*.mp3, lista em audio/sons.json). Sem o arquivo, toca o bipe provisório.
+  const buffers = {}; let listaSons = null;
+  function carregarSons() {
+    if (listaSons) return listaSons;
+    listaSons = fetch(AUDIO_BASE + 'sons.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : [])).catch(() => []).then((ids) => {
+      try { ctx = ctx || new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return ids; }
+      ids.filter((id) => id.startsWith('sfx_')).forEach((id) => {
+        fetch(AUDIO_BASE + 'sons/' + id + '.mp3').then((r) => r.arrayBuffer()).then((b) => ctx.decodeAudioData(b)).then((buf) => { buffers[id] = buf; }).catch(() => {});
+      });
+      return ids;
+    });
+    return listaSons;
+  }
+  function tocarGravado(nome) {
+    const buf = buffers[nome]; if (!buf || !ctx) return false;
+    if (ctx.state === 'suspended') ctx.resume();
+    const src = ctx.createBufferSource(), g = ctx.createGain();
+    src.buffer = buf; g.gain.value = nome === 'sfx_toque' || nome === 'sfx_tictac' ? 0.55 : 0.9;
+    src.connect(g).connect(ctx.destination); src.start();
+    return true;
+  }
+  // Música de fundo: uma de cada vez, em loop, com troca suave e volume baixo quando a Coruja fala
+  const VOL_MUSICA = 0.32, VOL_FALANDO = 0.1;
+  let musicaAtual = null, musicaId = null, falando = false;
+  function fade(a, ate, ms, fim) {
+    const ini = a.volume, t0 = performance.now();
+    const passo = () => { const k = Math.min(1, (performance.now() - t0) / ms); a.volume = Math.max(0, Math.min(1, ini + (ate - ini) * k)); if (k < 1) requestAnimationFrame(passo); else if (fim) fim(); };
+    requestAnimationFrame(passo);
+  }
+  function musica(id) {
+    if (id === musicaId) return;
+    const velha = musicaAtual; musicaId = id; musicaAtual = null;
+    if (velha) fade(velha, 0, 900, () => velha.pause());
+    if (!id) return;
+    carregarSons().then((ids) => {
+      if (musicaId !== id || !ids.includes(id)) return;
+      const a = new Audio(AUDIO_BASE + 'sons/' + id + '.mp3'); a.loop = true; a.volume = 0;
+      musicaAtual = a; a.play().then(() => fade(a, falando ? VOL_FALANDO : VOL_MUSICA, 1200)).catch(() => {});
+    });
+  }
+  function abaixarMusica(sim) {
+    falando = sim;
+    if (musicaAtual) fade(musicaAtual, sim ? VOL_FALANDO : VOL_MUSICA, sim ? 250 : 700);
+  }
   function sfx(nome) {
     try {
+      carregarSons();
+      if (tocarGravado(nome)) return;
       ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
       if (nome === 'sfx_vitoria') { fanfarra(); return; }
       const tons = {
@@ -220,5 +270,6 @@
   }
   function fmt(n) { return Number(n || 0).toLocaleString('pt-BR'); }
 
-  window.QSS = { USOS_PODER, PODERES, RODADAS_SEM_PODER, poder, imgPoder, PERSONAGENS, MAX_JOGADORES, TEMPO_RESPOSTA, TEMPO_VOTO, RODADAS, RODADA_ASSOCIACAO, NUMEROS, CATEGORIAS, ALTS, novoCodigo, limparCodigo, limparNome, uid, esc, img, pers, configurado, conectar, falar, calar, carregarAudios, sfx, pontos, categoria, iconeCat, forma, relogio, caber, fmt };
+  carregarSons();
+  window.QSS = { USOS_PODER, PODERES, RODADAS_SEM_PODER, poder, imgPoder, PERSONAGENS, MAX_JOGADORES, TEMPO_RESPOSTA, TEMPO_VOTO, RODADAS, RODADA_ASSOCIACAO, NUMEROS, CATEGORIAS, ALTS, novoCodigo, limparCodigo, limparNome, uid, esc, img, pers, configurado, conectar, falar, calar, carregarAudios, sfx, musica, pontos, categoria, iconeCat, forma, relogio, caber, fmt };
 })();

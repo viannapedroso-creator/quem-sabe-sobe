@@ -226,6 +226,7 @@
   const ORDEM_FASE1 = (a, b) => (b.pontos || 0) - (a.pontos || 0);
 
   async function iniciarPartida() {
+    Q.musica('musica_jogo');
     const id = ++partida, vivo = () => id === partida;
     confete(false); $('bordao').classList.add('oculto'); $('flash').style.opacity = 0;
     estado.jogadores.forEach((j) => { j.pontos = 0; j.pronto = false; j.deg = 0; j.usos = {}; Q.PODERES.forEach((pw) => { j.usos[pw.id] = Q.USOS_PODER; }); });
@@ -1219,7 +1220,7 @@
   async function vitoria(venc, porLimite, vivo) {
     const js = estado.jogadores, vi = js.indexOf(venc);
     // Tudo para: corta qualquer fala da Coruja e toca a fanfarra da vitória
-    Q.calar();
+    Q.calar(); Q.musica(null);
     Q.sfx('sfx_vitoria');
     mudar('pirVitoria');
     cartao(null); $('pirRelogio').innerHTML = ''; brilhos([]);
@@ -1242,6 +1243,7 @@
     });
     await grito; if (!vivo()) return;
     // Clarão e corte para o pódio
+    Q.musica('musica_podio');
     const fl = $('flash');
     await animar(0.3, (t) => { fl.style.opacity = cl(t / 0.3); });
     b.classList.add('oculto');
@@ -1287,6 +1289,7 @@
   }
 
   async function finalPiramide(vivo) {
+    Q.musica('musica_piramide');
     const js = estado.jogadores;
     await transicao(vivo); if (!vivo()) return;
     const banco = bancoFresco('piramide', 20);
@@ -1325,7 +1328,7 @@
       if (st === 'SUBSCRIBED') { aviso(''); enviarEstado(); }
       else if (st === 'CHANNEL_ERROR' || st === 'TIMED_OUT' || st === 'CLOSED') aviso('Reconectando à sala…');
     });
-    mostrar('sala'); desenharSala();
+    mostrar('sala'); desenharSala(); Q.musica('musica_sala');
     falaVoz(T('sala_entrem'));
     setInterval(() => {
       if (estado.fase === 'sala') {
