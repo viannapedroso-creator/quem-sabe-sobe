@@ -5110,5 +5110,2333 @@
   "modelo": "eleven_v4",
   "voz": "HReOQZPV9tH5iTEnSbGo",
   "em": "2026-11-27T14:39:04.438Z"
+ },
+ "porta_historia": {
+  "texto": "A porta escolhida foi… História!",
+  "enviado": "[dramatically] A porta escolhida foi… História!",
+  "arquivo": "categorias/porta_historia.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:25.532Z"
+ },
+ "porta_animais": {
+  "texto": "A porta escolhida foi… Animais!",
+  "enviado": "[dramatically] A porta escolhida foi… Animais!",
+  "arquivo": "categorias/porta_animais.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:26.733Z"
+ },
+ "porta_tecnologia-e-games": {
+  "texto": "A porta escolhida foi… Tecnologia e games!",
+  "enviado": "[dramatically] A porta escolhida foi… Tecnologia e games!",
+  "arquivo": "categorias/porta_tecnologia-e-games.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:28.152Z"
+ },
+ "porta_brasil": {
+  "texto": "A porta escolhida foi… Brasil!",
+  "enviado": "[dramatically] A porta escolhida foi… Brasil!",
+  "arquivo": "categorias/porta_brasil.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:29.269Z"
+ },
+ "porta_desenhos-e-infancia": {
+  "texto": "A porta escolhida foi… Desenhos e infância!",
+  "enviado": "[dramatically] A porta escolhida foi… Desenhos e infância!",
+  "arquivo": "categorias/porta_desenhos-e-infancia.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:30.777Z"
+ },
+ "porta_famosos-e-novelas": {
+  "texto": "A porta escolhida foi… Famosos e novelas!",
+  "enviado": "[dramatically] A porta escolhida foi… Famosos e novelas!",
+  "arquivo": "categorias/porta_famosos-e-novelas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:31.951Z"
+ },
+ "porta_arte-e-literatura": {
+  "texto": "A porta escolhida foi… Arte e literatura!",
+  "enviado": "[dramatically] A porta escolhida foi… Arte e literatura!",
+  "arquivo": "categorias/porta_arte-e-literatura.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:33.315Z"
+ },
+ "porta_corpo-humano": {
+  "texto": "A porta escolhida foi… Corpo humano!",
+  "enviado": "[dramatically] A porta escolhida foi… Corpo humano!",
+  "arquivo": "categorias/porta_corpo-humano.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:34.551Z"
+ },
+ "P160_pergunta": {
+  "texto": "Em que ano os portugueses chegaram ao Brasil?",
+  "enviado": "[curious] Em que ano os portugueses chegaram ao Brasil?",
+  "arquivo": "perguntas/P160_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:35.634Z"
+ },
+ "P160_resposta": {
+  "texto": "A resposta certa é… Mil e quinhentos!",
+  "enviado": "[dramatically] A resposta certa é… Mil e quinhentos!",
+  "arquivo": "perguntas/P160_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:36.864Z"
+ },
+ "P161_pergunta": {
+  "texto": "Quem proclamou a independência do Brasil?",
+  "enviado": "[curious] Quem proclamou a independência do Brasil?",
+  "arquivo": "perguntas/P161_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:37.945Z"
+ },
+ "P161_resposta": {
+  "texto": "A resposta certa é… Dom Pedro primeiro!",
+  "enviado": "[dramatically] A resposta certa é… Dom Pedro primeiro!",
+  "arquivo": "perguntas/P161_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:39.093Z"
+ },
+ "P162_pergunta": {
+  "texto": "Em que ano o Brasil se tornou independente de Portugal?",
+  "enviado": "[curious] Em que ano o Brasil se tornou independente de Portugal?",
+  "arquivo": "perguntas/P162_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:40.297Z"
+ },
+ "P162_resposta": {
+  "texto": "A resposta certa é… Mil oitocentos e vinte e dois!",
+  "enviado": "[dramatically] A resposta certa é… Mil oitocentos e vinte e dois!",
+  "arquivo": "perguntas/P162_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:41.798Z"
+ },
+ "P163_pergunta": {
+  "texto": "Qual princesa assinou a Lei Áurea?",
+  "enviado": "[curious] Qual princesa assinou a Lei Áurea?",
+  "arquivo": "perguntas/P163_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:42.770Z"
+ },
+ "P163_resposta": {
+  "texto": "A resposta certa é… Princesa Isabel!",
+  "enviado": "[dramatically] A resposta certa é… Princesa Isabel!",
+  "arquivo": "perguntas/P163_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:43.967Z"
+ },
+ "P164_pergunta": {
+  "texto": "Quem foi o primeiro presidente do Brasil?",
+  "enviado": "[curious] Quem foi o primeiro presidente do Brasil?",
+  "arquivo": "perguntas/P164_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:44.902Z"
+ },
+ "P164_resposta": {
+  "texto": "A resposta certa é… Marechal Deodoro da Fonseca!",
+  "enviado": "[dramatically] A resposta certa é… Marechal Deodoro da Fonseca!",
+  "arquivo": "perguntas/P164_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:46.430Z"
+ },
+ "P165_pergunta": {
+  "texto": "Qual navegador chegou à América em 1492?",
+  "enviado": "[curious] Qual navegador chegou à América em 1492?",
+  "arquivo": "perguntas/P165_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:48.044Z"
+ },
+ "P165_resposta": {
+  "texto": "A resposta certa é… Cristóvão Colombo!",
+  "enviado": "[dramatically] A resposta certa é… Cristóvão Colombo!",
+  "arquivo": "perguntas/P165_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:49.205Z"
+ },
+ "P166_pergunta": {
+  "texto": "Qual povo construiu as pirâmides de Gizé?",
+  "enviado": "[curious] Qual povo construiu as pirâmides de Gizé?",
+  "arquivo": "perguntas/P166_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:50.260Z"
+ },
+ "P166_resposta": {
+  "texto": "A resposta certa é… Os egípcios!",
+  "enviado": "[dramatically] A resposta certa é… Os egípcios!",
+  "arquivo": "perguntas/P166_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:51.431Z"
+ },
+ "P167_pergunta": {
+  "texto": "Qual muro famoso caiu em 1989?",
+  "enviado": "[curious] Qual muro famoso caiu em 1989?",
+  "arquivo": "perguntas/P167_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:52.912Z"
+ },
+ "P167_resposta": {
+  "texto": "A resposta certa é… O Muro de Berlim!",
+  "enviado": "[dramatically] A resposta certa é… O Muro de Berlim!",
+  "arquivo": "perguntas/P167_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:54.146Z"
+ },
+ "P168_pergunta": {
+  "texto": "Qual imperador francês foi derrotado na Batalha de Waterloo?",
+  "enviado": "[curious] Qual imperador francês foi derrotado na Batalha de Waterloo?",
+  "arquivo": "perguntas/P168_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:55.687Z"
+ },
+ "P168_resposta": {
+  "texto": "A resposta certa é… Napoleão Bonaparte!",
+  "enviado": "[dramatically] A resposta certa é… Napoleão Bonaparte!",
+  "arquivo": "perguntas/P168_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:56.939Z"
+ },
+ "P169_pergunta": {
+  "texto": "Qual cidade era a capital do Brasil antes de Brasília?",
+  "enviado": "[curious] Qual cidade era a capital do Brasil antes de Brasília?",
+  "arquivo": "perguntas/P169_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:58.440Z"
+ },
+ "P169_resposta": {
+  "texto": "A resposta certa é… Rio de Janeiro!",
+  "enviado": "[dramatically] A resposta certa é… Rio de Janeiro!",
+  "arquivo": "perguntas/P07_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:32:38.712Z"
+ },
+ "P170_pergunta": {
+  "texto": "Em que ano Brasília foi inaugurada?",
+  "enviado": "[curious] Em que ano Brasília foi inaugurada?",
+  "arquivo": "perguntas/P170_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:57:59.532Z"
+ },
+ "P170_resposta": {
+  "texto": "A resposta certa é… Mil novecentos e sessenta!",
+  "enviado": "[dramatically] A resposta certa é… Mil novecentos e sessenta!",
+  "arquivo": "perguntas/P170_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:00.830Z"
+ },
+ "P171_pergunta": {
+  "texto": "Tiradentes é o herói de qual movimento?",
+  "enviado": "[curious] Tiradentes é o herói de qual movimento?",
+  "arquivo": "perguntas/P171_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:02.080Z"
+ },
+ "P171_resposta": {
+  "texto": "A resposta certa é… Inconfidência Mineira!",
+  "enviado": "[dramatically] A resposta certa é… Inconfidência Mineira!",
+  "arquivo": "perguntas/P171_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:03.217Z"
+ },
+ "P172_pergunta": {
+  "texto": "Em que ano terminou a Segunda Guerra Mundial?",
+  "enviado": "[curious] Em que ano terminou a Segunda Guerra Mundial?",
+  "arquivo": "perguntas/P172_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:04.223Z"
+ },
+ "P172_resposta": {
+  "texto": "A resposta certa é… Mil novecentos e quarenta e cinco!",
+  "enviado": "[dramatically] A resposta certa é… Mil novecentos e quarenta e cinco!",
+  "arquivo": "perguntas/P172_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:05.610Z"
+ },
+ "P173_pergunta": {
+  "texto": "Qual rainha governou o Reino Unido por mais de 70 anos?",
+  "enviado": "[curious] Qual rainha governou o Reino Unido por mais de 70 anos?",
+  "arquivo": "perguntas/P173_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:06.980Z"
+ },
+ "P173_resposta": {
+  "texto": "A resposta certa é… Elizabeth segunda!",
+  "enviado": "[dramatically] A resposta certa é… Elizabeth segunda!",
+  "arquivo": "perguntas/P173_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:08.335Z"
+ },
+ "P174_pergunta": {
+  "texto": "Em que ano a escravidão foi abolida no Brasil?",
+  "enviado": "[curious] Em que ano a escravidão foi abolida no Brasil?",
+  "arquivo": "perguntas/P174_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:09.315Z"
+ },
+ "P174_resposta": {
+  "texto": "A resposta certa é… Mil oitocentos e oitenta e oito!",
+  "enviado": "[dramatically] A resposta certa é… Mil oitocentos e oitenta e oito!",
+  "arquivo": "perguntas/P174_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:10.933Z"
+ },
+ "P175_pergunta": {
+  "texto": "Qual povo construiu Machu Picchu?",
+  "enviado": "[curious] Qual povo construiu Machu Picchu?",
+  "arquivo": "perguntas/P175_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:11.856Z"
+ },
+ "P175_resposta": {
+  "texto": "A resposta certa é… Os incas!",
+  "enviado": "[dramatically] A resposta certa é… Os incas!",
+  "arquivo": "perguntas/P175_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:12.807Z"
+ },
+ "P176_pergunta": {
+  "texto": "Quem foi o primeiro homem a pisar na Lua?",
+  "enviado": "[curious] Quem foi o primeiro homem a pisar na Lua?",
+  "arquivo": "perguntas/P176_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:13.917Z"
+ },
+ "P176_resposta": {
+  "texto": "A resposta certa é… Neil Armstrong!",
+  "enviado": "[dramatically] A resposta certa é… Neil Armstrong!",
+  "arquivo": "perguntas/P176_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:15.196Z"
+ },
+ "P177_pergunta": {
+  "texto": "Qual presidente mandou construir Brasília?",
+  "enviado": "[curious] Qual presidente mandou construir Brasília?",
+  "arquivo": "perguntas/P177_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:16.244Z"
+ },
+ "P177_resposta": {
+  "texto": "A resposta certa é… Juscelino Kubitschek!",
+  "enviado": "[dramatically] A resposta certa é… Juscelino Kubitschek!",
+  "arquivo": "perguntas/P177_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:17.665Z"
+ },
+ "P178_pergunta": {
+  "texto": "Qual é o maior felino do mundo?",
+  "enviado": "[curious] Qual é o maior felino do mundo?",
+  "arquivo": "perguntas/P178_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:18.662Z"
+ },
+ "P178_resposta": {
+  "texto": "A resposta certa é… O tigre!",
+  "enviado": "[dramatically] A resposta certa é… O tigre!",
+  "arquivo": "perguntas/P178_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:19.651Z"
+ },
+ "P179_pergunta": {
+  "texto": "Quantas patas tem um inseto?",
+  "enviado": "[curious] Quantas patas tem um inseto?",
+  "arquivo": "perguntas/P179_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:20.573Z"
+ },
+ "P179_resposta": {
+  "texto": "A resposta certa é… Seis patas!",
+  "enviado": "[dramatically] A resposta certa é… Seis patas!",
+  "arquivo": "perguntas/P179_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:21.696Z"
+ },
+ "P180_pergunta": {
+  "texto": "Qual animal australiano anda aos saltos e carrega o filhote numa bolsa?",
+  "enviado": "[curious] Qual animal australiano anda aos saltos e carrega o filhote numa bolsa?",
+  "arquivo": "perguntas/P180_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:23.196Z"
+ },
+ "P180_resposta": {
+  "texto": "A resposta certa é… O canguru!",
+  "enviado": "[dramatically] A resposta certa é… O canguru!",
+  "arquivo": "perguntas/P180_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:24.405Z"
+ },
+ "P181_pergunta": {
+  "texto": "Qual é a maior ave do mundo?",
+  "enviado": "[curious] Qual é a maior ave do mundo?",
+  "arquivo": "perguntas/P181_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:25.340Z"
+ },
+ "P181_resposta": {
+  "texto": "A resposta certa é… O avestruz!",
+  "enviado": "[dramatically] A resposta certa é… O avestruz!",
+  "arquivo": "perguntas/P181_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:26.266Z"
+ },
+ "P182_pergunta": {
+  "texto": "Qual réptil muda de cor para se camuflar?",
+  "enviado": "[curious] Qual réptil muda de cor para se camuflar?",
+  "arquivo": "perguntas/P182_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:27.466Z"
+ },
+ "P182_resposta": {
+  "texto": "A resposta certa é… O camaleão!",
+  "enviado": "[dramatically] A resposta certa é… O camaleão!",
+  "arquivo": "perguntas/P182_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:28.650Z"
+ },
+ "P183_pergunta": {
+  "texto": "O que o panda-gigante come principalmente?",
+  "enviado": "[curious] O que o panda-gigante come principalmente?",
+  "arquivo": "perguntas/P183_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:29.632Z"
+ },
+ "P183_resposta": {
+  "texto": "A resposta certa é… Bambu!",
+  "enviado": "[dramatically] A resposta certa é… Bambu!",
+  "arquivo": "perguntas/P183_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:30.612Z"
+ },
+ "P184_pergunta": {
+  "texto": "Quantos corações tem um polvo?",
+  "enviado": "[curious] Quantos corações tem um polvo?",
+  "arquivo": "perguntas/P184_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:31.477Z"
+ },
+ "P184_resposta": {
+  "texto": "A resposta certa é… Três corações!",
+  "enviado": "[dramatically] A resposta certa é… Três corações!",
+  "arquivo": "perguntas/P184_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:32.635Z"
+ },
+ "P185_pergunta": {
+  "texto": "Qual destes animais é um anfíbio?",
+  "enviado": "[curious] Qual destes animais é um anfíbio?",
+  "arquivo": "perguntas/P185_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:33.963Z"
+ },
+ "P185_resposta": {
+  "texto": "A resposta certa é… O sapo!",
+  "enviado": "[dramatically] A resposta certa é… O sapo!",
+  "arquivo": "perguntas/P185_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:34.976Z"
+ },
+ "P186_pergunta": {
+  "texto": "Como se chama o filhote do cavalo?",
+  "enviado": "[curious] Como se chama o filhote do cavalo?",
+  "arquivo": "perguntas/P186_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:36.008Z"
+ },
+ "P186_resposta": {
+  "texto": "A resposta certa é… Potro!",
+  "enviado": "[dramatically] A resposta certa é… Potro!",
+  "arquivo": "perguntas/P186_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:36.982Z"
+ },
+ "P187_pergunta": {
+  "texto": "Qual animal dorme de cabeça para baixo?",
+  "enviado": "[curious] Qual animal dorme de cabeça para baixo?",
+  "arquivo": "perguntas/P187_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:38.065Z"
+ },
+ "P187_resposta": {
+  "texto": "A resposta certa é… O morcego!",
+  "enviado": "[dramatically] A resposta certa é… O morcego!",
+  "arquivo": "perguntas/P187_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:39.134Z"
+ },
+ "P188_pergunta": {
+  "texto": "Qual mamífero brasileiro é famoso por ser muito lento?",
+  "enviado": "[curious] Qual mamífero brasileiro é famoso por ser muito lento?",
+  "arquivo": "perguntas/P188_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:40.418Z"
+ },
+ "P188_resposta": {
+  "texto": "A resposta certa é… O bicho-preguiça!",
+  "enviado": "[dramatically] A resposta certa é… O bicho-preguiça!",
+  "arquivo": "perguntas/P188_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:41.566Z"
+ },
+ "P189_pergunta": {
+  "texto": "Qual é o maior roedor do mundo?",
+  "enviado": "[curious] Qual é o maior roedor do mundo?",
+  "arquivo": "perguntas/P189_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:42.475Z"
+ },
+ "P189_resposta": {
+  "texto": "A resposta certa é… A capivara!",
+  "enviado": "[dramatically] A resposta certa é… A capivara!",
+  "arquivo": "perguntas/P189_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:43.638Z"
+ },
+ "P190_pergunta": {
+  "texto": "Em quantas partes se divide o estômago de uma vaca?",
+  "enviado": "[curious] Em quantas partes se divide o estômago de uma vaca?",
+  "arquivo": "perguntas/P190_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:45.018Z"
+ },
+ "P190_resposta": {
+  "texto": "A resposta certa é… Quatro partes!",
+  "enviado": "[dramatically] A resposta certa é… Quatro partes!",
+  "arquivo": "perguntas/P190_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:46.176Z"
+ },
+ "P191_pergunta": {
+  "texto": "Qual animal terrestre tem a gestação mais longa?",
+  "enviado": "[curious] Qual animal terrestre tem a gestação mais longa?",
+  "arquivo": "perguntas/P191_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:47.320Z"
+ },
+ "P191_resposta": {
+  "texto": "A resposta certa é… O elefante!",
+  "enviado": "[dramatically] A resposta certa é… O elefante!",
+  "arquivo": "perguntas/P191_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:48.543Z"
+ },
+ "P192_pergunta": {
+  "texto": "Qual ave consegue voar para trás?",
+  "enviado": "[curious] Qual ave consegue voar para trás?",
+  "arquivo": "perguntas/P192_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:49.495Z"
+ },
+ "P192_resposta": {
+  "texto": "A resposta certa é… O beija-flor!",
+  "enviado": "[dramatically] A resposta certa é… O beija-flor!",
+  "arquivo": "perguntas/P192_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:50.772Z"
+ },
+ "P193_pergunta": {
+  "texto": "Como se chama o macho da abelha?",
+  "enviado": "[curious] Como se chama o macho da abelha?",
+  "arquivo": "perguntas/P193_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:51.670Z"
+ },
+ "P193_resposta": {
+  "texto": "A resposta certa é… Zangão!",
+  "enviado": "[dramatically] A resposta certa é… Zangão!",
+  "arquivo": "perguntas/P193_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:52.804Z"
+ },
+ "P194_pergunta": {
+  "texto": "Qual é o maior peixe do mundo?",
+  "enviado": "[curious] Qual é o maior peixe do mundo?",
+  "arquivo": "perguntas/P194_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:54.020Z"
+ },
+ "P194_resposta": {
+  "texto": "A resposta certa é… O tubarão-baleia!",
+  "enviado": "[dramatically] A resposta certa é… O tubarão-baleia!",
+  "arquivo": "perguntas/P194_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:55.264Z"
+ },
+ "P195_pergunta": {
+  "texto": "Qual animal é o símbolo da ONG WWF?",
+  "enviado": "[curious] Qual animal é o símbolo da ONG WWF?",
+  "arquivo": "perguntas/P195_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:56.615Z"
+ },
+ "P195_resposta": {
+  "texto": "A resposta certa é… O panda!",
+  "enviado": "[dramatically] A resposta certa é… O panda!",
+  "arquivo": "perguntas/P195_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:57.703Z"
+ },
+ "P196_pergunta": {
+  "texto": "Qual é o nome do encanador mais famoso dos videogames?",
+  "enviado": "[curious] Qual é o nome do encanador mais famoso dos videogames?",
+  "arquivo": "perguntas/P196_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:58.973Z"
+ },
+ "P196_resposta": {
+  "texto": "A resposta certa é… Mario!",
+  "enviado": "[dramatically] A resposta certa é… Mario!",
+  "arquivo": "perguntas/P196_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:58:59.971Z"
+ },
+ "P197_pergunta": {
+  "texto": "Quem fundou a Microsoft junto com Paul Allen?",
+  "enviado": "[curious] Quem fundou a Microsoft junto com Paul Allen?",
+  "arquivo": "perguntas/P197_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:01.101Z"
+ },
+ "P197_resposta": {
+  "texto": "A resposta certa é… Bill Gates!",
+  "enviado": "[dramatically] A resposta certa é… Bill Gates!",
+  "arquivo": "perguntas/P197_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:02.141Z"
+ },
+ "P198_pergunta": {
+  "texto": "Qual empresa fabrica o iPhone?",
+  "enviado": "[curious] Qual empresa fabrica o iPhone?",
+  "arquivo": "perguntas/P198_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:02.935Z"
+ },
+ "P198_resposta": {
+  "texto": "A resposta certa é… Apple!",
+  "enviado": "[dramatically] A resposta certa é… Apple!",
+  "arquivo": "perguntas/P198_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:03.957Z"
+ },
+ "P199_pergunta": {
+  "texto": "Qual empresa criou o PlayStation?",
+  "enviado": "[curious] Qual empresa criou o PlayStation?",
+  "arquivo": "perguntas/P199_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:04.970Z"
+ },
+ "P199_resposta": {
+  "texto": "A resposta certa é… Sony!",
+  "enviado": "[dramatically] A resposta certa é… Sony!",
+  "arquivo": "perguntas/P199_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:05.928Z"
+ },
+ "P200_pergunta": {
+  "texto": "Qual é o nome do ouriço azul dos videogames da Sega?",
+  "enviado": "[curious] Qual é o nome do ouriço azul dos videogames da Sega?",
+  "arquivo": "perguntas/P200_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:07.052Z"
+ },
+ "P200_resposta": {
+  "texto": "A resposta certa é… Sonic!",
+  "enviado": "[dramatically] A resposta certa é… Sonic!",
+  "arquivo": "perguntas/P200_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:08.135Z"
+ },
+ "P201_pergunta": {
+  "texto": "Em qual jogo você constrói com blocos e foge dos creepers?",
+  "enviado": "[curious] Em qual jogo você constrói com blocos e foge dos creepers?",
+  "arquivo": "perguntas/P201_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:09.440Z"
+ },
+ "P201_resposta": {
+  "texto": "A resposta certa é… Minecraft!",
+  "enviado": "[dramatically] A resposta certa é… Minecraft!",
+  "arquivo": "perguntas/P201_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:10.450Z"
+ },
+ "P202_pergunta": {
+  "texto": "O que significa a sigla www da internet?",
+  "enviado": "[curious] O que significa a sigla www da internet?",
+  "arquivo": "perguntas/P202_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:11.728Z"
+ },
+ "P202_resposta": {
+  "texto": "A resposta certa é… World Wide Web!",
+  "enviado": "[dramatically] A resposta certa é… World Wide Web!",
+  "arquivo": "perguntas/P202_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:12.846Z"
+ },
+ "P203_pergunta": {
+  "texto": "Quem criou o Facebook?",
+  "enviado": "[curious] Quem criou o Facebook?",
+  "arquivo": "perguntas/P203_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:13.654Z"
+ },
+ "P203_resposta": {
+  "texto": "A resposta certa é… Mark Zuckerberg!",
+  "enviado": "[dramatically] A resposta certa é… Mark Zuckerberg!",
+  "arquivo": "perguntas/P203_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:14.836Z"
+ },
+ "P204_pergunta": {
+  "texto": "Quantos bits tem um byte?",
+  "enviado": "[curious] Quantos bits tem um byte?",
+  "arquivo": "perguntas/P204_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:15.600Z"
+ },
+ "P204_resposta": {
+  "texto": "A resposta certa é… Oito bits!",
+  "enviado": "[dramatically] A resposta certa é… Oito bits!",
+  "arquivo": "perguntas/P204_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:16.639Z"
+ },
+ "P205_pergunta": {
+  "texto": "Qual console da Nintendo, lançado em 2017, funciona na TV e também como portátil?",
+  "enviado": "[curious] Qual console da Nintendo, lançado em 2017, funciona na TV e também como portátil?",
+  "arquivo": "perguntas/P205_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:18.908Z"
+ },
+ "P205_resposta": {
+  "texto": "A resposta certa é… Nintendo Switch!",
+  "enviado": "[dramatically] A resposta certa é… Nintendo Switch!",
+  "arquivo": "perguntas/P205_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:20.082Z"
+ },
+ "P206_pergunta": {
+  "texto": "Qual é o nome da assistente de voz da Apple?",
+  "enviado": "[curious] Qual é o nome da assistente de voz da Apple?",
+  "arquivo": "perguntas/P206_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:20.927Z"
+ },
+ "P206_resposta": {
+  "texto": "A resposta certa é… Siri!",
+  "enviado": "[dramatically] A resposta certa é… Siri!",
+  "arquivo": "perguntas/P206_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:21.955Z"
+ },
+ "P207_pergunta": {
+  "texto": "Em qual jogo os tripulantes tentam descobrir quem é o impostor?",
+  "enviado": "[curious] Em qual jogo os tripulantes tentam descobrir quem é o impostor?",
+  "arquivo": "perguntas/P207_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:23.161Z"
+ },
+ "P207_resposta": {
+  "texto": "A resposta certa é… Among Us!",
+  "enviado": "[dramatically] A resposta certa é… Among Us!",
+  "arquivo": "perguntas/P207_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:24.226Z"
+ },
+ "P208_pergunta": {
+  "texto": "Quem fundou a Apple ao lado de Steve Wozniak?",
+  "enviado": "[curious] Quem fundou a Apple ao lado de Steve Wozniak?",
+  "arquivo": "perguntas/P208_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:25.330Z"
+ },
+ "P208_resposta": {
+  "texto": "A resposta certa é… Steve Jobs!",
+  "enviado": "[dramatically] A resposta certa é… Steve Jobs!",
+  "arquivo": "perguntas/P208_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:26.339Z"
+ },
+ "P209_pergunta": {
+  "texto": "Em que ano foi lançado o primeiro iPhone?",
+  "enviado": "[curious] Em que ano foi lançado o primeiro iPhone?",
+  "arquivo": "perguntas/P209_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:27.260Z"
+ },
+ "P209_resposta": {
+  "texto": "A resposta certa é… Dois mil e sete!",
+  "enviado": "[dramatically] A resposta certa é… Dois mil e sete!",
+  "arquivo": "perguntas/P209_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:28.398Z"
+ },
+ "P210_pergunta": {
+  "texto": "Qual jogo de peças que caem foi criado na União Soviética?",
+  "enviado": "[curious] Qual jogo de peças que caem foi criado na União Soviética?",
+  "arquivo": "perguntas/P210_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:29.887Z"
+ },
+ "P210_resposta": {
+  "texto": "A resposta certa é… Tetris!",
+  "enviado": "[dramatically] A resposta certa é… Tetris!",
+  "arquivo": "perguntas/P210_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:30.916Z"
+ },
+ "P211_pergunta": {
+  "texto": "Qual personagem amarelo come pastilhas num labirinto fugindo de fantasmas?",
+  "enviado": "[curious] Qual personagem amarelo come pastilhas num labirinto fugindo de fantasmas?",
+  "arquivo": "perguntas/P211_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:32.870Z"
+ },
+ "P211_resposta": {
+  "texto": "A resposta certa é… Pac-Man!",
+  "enviado": "[dramatically] A resposta certa é… Pac-Man!",
+  "arquivo": "perguntas/P211_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:33.979Z"
+ },
+ "P212_pergunta": {
+  "texto": "Qual empresa é dona do sistema Android?",
+  "enviado": "[curious] Qual empresa é dona do sistema Android?",
+  "arquivo": "perguntas/P212_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:34.987Z"
+ },
+ "P212_resposta": {
+  "texto": "A resposta certa é… Google!",
+  "enviado": "[dramatically] A resposta certa é… Google!",
+  "arquivo": "perguntas/P212_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:36.086Z"
+ },
+ "P213_pergunta": {
+  "texto": "O que significa a sigla PC?",
+  "enviado": "[curious] O que significa a sigla PC?",
+  "arquivo": "perguntas/P213_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:37.194Z"
+ },
+ "P213_resposta": {
+  "texto": "A resposta certa é… Personal Computer, computador pessoal!",
+  "enviado": "[dramatically] A resposta certa é… Personal Computer, computador pessoal!",
+  "arquivo": "perguntas/P213_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:38.610Z"
+ },
+ "P214_pergunta": {
+  "texto": "Qual frase está escrita na bandeira do Brasil?",
+  "enviado": "[curious] Qual frase está escrita na bandeira do Brasil?",
+  "arquivo": "perguntas/P214_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:39.810Z"
+ },
+ "P214_resposta": {
+  "texto": "A resposta certa é… Ordem e Progresso!",
+  "enviado": "[dramatically] A resposta certa é… Ordem e Progresso!",
+  "arquivo": "perguntas/P214_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:41.149Z"
+ },
+ "P215_pergunta": {
+  "texto": "Qual é a moeda do Brasil?",
+  "enviado": "[curious] Qual é a moeda do Brasil?",
+  "arquivo": "perguntas/P215_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:42.080Z"
+ },
+ "P215_resposta": {
+  "texto": "A resposta certa é… O real!",
+  "enviado": "[dramatically] A resposta certa é… O real!",
+  "arquivo": "perguntas/P215_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:43.147Z"
+ },
+ "P216_pergunta": {
+  "texto": "Quantas estrelas tem a bandeira do Brasil?",
+  "enviado": "[curious] Quantas estrelas tem a bandeira do Brasil?",
+  "arquivo": "perguntas/P216_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:44.222Z"
+ },
+ "P216_resposta": {
+  "texto": "A resposta certa é… Vinte e sete estrelas!",
+  "enviado": "[dramatically] A resposta certa é… Vinte e sete estrelas!",
+  "arquivo": "perguntas/P216_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:45.605Z"
+ },
+ "P217_pergunta": {
+  "texto": "Qual é o maior bioma do Brasil?",
+  "enviado": "[curious] Qual é o maior bioma do Brasil?",
+  "arquivo": "perguntas/P217_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:46.452Z"
+ },
+ "P217_resposta": {
+  "texto": "A resposta certa é… A Amazônia!",
+  "enviado": "[dramatically] A resposta certa é… A Amazônia!",
+  "arquivo": "perguntas/P217_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:47.738Z"
+ },
+ "P218_pergunta": {
+  "texto": "Qual é a cidade mais populosa do Brasil?",
+  "enviado": "[curious] Qual é a cidade mais populosa do Brasil?",
+  "arquivo": "perguntas/P218_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:48.734Z"
+ },
+ "P218_resposta": {
+  "texto": "A resposta certa é… São Paulo!",
+  "enviado": "[dramatically] A resposta certa é… São Paulo!",
+  "arquivo": "perguntas/P21_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:33:15.233Z"
+ },
+ "P219_pergunta": {
+  "texto": "Em que dia se comemora a Independência do Brasil?",
+  "enviado": "[curious] Em que dia se comemora a Independência do Brasil?",
+  "arquivo": "perguntas/P219_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:49.944Z"
+ },
+ "P219_resposta": {
+  "texto": "A resposta certa é… Sete de setembro!",
+  "enviado": "[dramatically] A resposta certa é… Sete de setembro!",
+  "arquivo": "perguntas/P219_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:51.306Z"
+ },
+ "P220_pergunta": {
+  "texto": "Qual estado é famoso pelo chimarrão e pelo churrasco gaúcho?",
+  "enviado": "[curious] Qual estado é famoso pelo chimarrão e pelo churrasco gaúcho?",
+  "arquivo": "perguntas/P220_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:52.684Z"
+ },
+ "P220_resposta": {
+  "texto": "A resposta certa é… Rio Grande do Sul!",
+  "enviado": "[dramatically] A resposta certa é… Rio Grande do Sul!",
+  "arquivo": "perguntas/P220_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:54.072Z"
+ },
+ "P221_pergunta": {
+  "texto": "O que se comemora no feriado de 15 de novembro?",
+  "enviado": "[curious] O que se comemora no feriado de 15 de novembro?",
+  "arquivo": "perguntas/P221_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:55.228Z"
+ },
+ "P221_resposta": {
+  "texto": "A resposta certa é… A Proclamação da República!",
+  "enviado": "[dramatically] A resposta certa é… A Proclamação da República!",
+  "arquivo": "perguntas/P221_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:56.720Z"
+ },
+ "P222_pergunta": {
+  "texto": "Qual árvore deu nome ao Brasil?",
+  "enviado": "[curious] Qual árvore deu nome ao Brasil?",
+  "arquivo": "perguntas/P222_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:57.875Z"
+ },
+ "P222_resposta": {
+  "texto": "A resposta certa é… O pau-brasil!",
+  "enviado": "[dramatically] A resposta certa é… O pau-brasil!",
+  "arquivo": "perguntas/P222_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:59:58.972Z"
+ },
+ "P223_pergunta": {
+  "texto": "O Festival de Parintins, dos bois Garantido e Caprichoso, acontece em qual estado?",
+  "enviado": "[curious] O Festival de Parintins, dos bois Garantido e Caprichoso, acontece em qual estado?",
+  "arquivo": "perguntas/P223_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:00.977Z"
+ },
+ "P223_resposta": {
+  "texto": "A resposta certa é… Amazonas!",
+  "enviado": "[dramatically] A resposta certa é… Amazonas!",
+  "arquivo": "perguntas/P091_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:36:14.197Z"
+ },
+ "P224_pergunta": {
+  "texto": "Qual personagem do folclore tem os pés virados para trás?",
+  "enviado": "[curious] Qual personagem do folclore tem os pés virados para trás?",
+  "arquivo": "perguntas/P224_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:02.158Z"
+ },
+ "P224_resposta": {
+  "texto": "A resposta certa é… O Curupira!",
+  "enviado": "[dramatically] A resposta certa é… O Curupira!",
+  "arquivo": "perguntas/P224_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:03.345Z"
+ },
+ "P225_pergunta": {
+  "texto": "Qual personagem do folclore tem uma perna só e usa gorro vermelho?",
+  "enviado": "[curious] Qual personagem do folclore tem uma perna só e usa gorro vermelho?",
+  "arquivo": "perguntas/P225_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:04.876Z"
+ },
+ "P225_resposta": {
+  "texto": "A resposta certa é… O Saci-Pererê!",
+  "enviado": "[dramatically] A resposta certa é… O Saci-Pererê!",
+  "arquivo": "perguntas/P225_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:06.003Z"
+ },
+ "P226_pergunta": {
+  "texto": "Qual rio brasileiro é chamado de Velho Chico?",
+  "enviado": "[curious] Qual rio brasileiro é chamado de Velho Chico?",
+  "arquivo": "perguntas/P226_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:07.258Z"
+ },
+ "P226_resposta": {
+  "texto": "A resposta certa é… O rio São Francisco!",
+  "enviado": "[dramatically] A resposta certa é… O rio São Francisco!",
+  "arquivo": "perguntas/P226_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:08.668Z"
+ },
+ "P227_pergunta": {
+  "texto": "Quantos estados tem a região Nordeste?",
+  "enviado": "[curious] Quantos estados tem a região Nordeste?",
+  "arquivo": "perguntas/P227_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:09.802Z"
+ },
+ "P227_resposta": {
+  "texto": "A resposta certa é… Nove estados!",
+  "enviado": "[dramatically] A resposta certa é… Nove estados!",
+  "arquivo": "perguntas/P227_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:11.003Z"
+ },
+ "P228_pergunta": {
+  "texto": "Qual é a capital do Tocantins?",
+  "enviado": "[curious] Qual é a capital do Tocantins?",
+  "arquivo": "perguntas/P228_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:11.953Z"
+ },
+ "P228_resposta": {
+  "texto": "A resposta certa é… Palmas!",
+  "enviado": "[dramatically] A resposta certa é… Palmas!",
+  "arquivo": "perguntas/P228_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:12.959Z"
+ },
+ "P229_pergunta": {
+  "texto": "Qual é o nome oficial do Brasil?",
+  "enviado": "[curious] Qual é o nome oficial do Brasil?",
+  "arquivo": "perguntas/P229_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:13.701Z"
+ },
+ "P229_resposta": {
+  "texto": "A resposta certa é… República Federativa do Brasil!",
+  "enviado": "[dramatically] A resposta certa é… República Federativa do Brasil!",
+  "arquivo": "perguntas/P229_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:15.043Z"
+ },
+ "P230_pergunta": {
+  "texto": "Em que ano o Brasil sediou sua primeira Copa do Mundo?",
+  "enviado": "[curious] Em que ano o Brasil sediou sua primeira Copa do Mundo?",
+  "arquivo": "perguntas/P230_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:16.238Z"
+ },
+ "P230_resposta": {
+  "texto": "A resposta certa é… Mil novecentos e cinquenta!",
+  "enviado": "[dramatically] A resposta certa é… Mil novecentos e cinquenta!",
+  "arquivo": "perguntas/P230_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:17.688Z"
+ },
+ "P231_pergunta": {
+  "texto": "O ponto mais a leste do Brasil, a Ponta do Seixas, fica em qual estado?",
+  "enviado": "[curious] O ponto mais a leste do Brasil, a Ponta do Seixas, fica em qual estado?",
+  "arquivo": "perguntas/P231_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:19.578Z"
+ },
+ "P231_resposta": {
+  "texto": "A resposta certa é… Paraíba!",
+  "enviado": "[dramatically] A resposta certa é… Paraíba!",
+  "arquivo": "perguntas/P231_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:20.764Z"
+ },
+ "P232_pergunta": {
+  "texto": "Qual é o nome do ratinho mais famoso da Disney?",
+  "enviado": "[curious] Qual é o nome do ratinho mais famoso da Disney?",
+  "arquivo": "perguntas/P232_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:21.920Z"
+ },
+ "P232_resposta": {
+  "texto": "A resposta certa é… Mickey!",
+  "enviado": "[dramatically] A resposta certa é… Mickey!",
+  "arquivo": "perguntas/P232_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:23.031Z"
+ },
+ "P233_pergunta": {
+  "texto": "De que cor são os Smurfs?",
+  "enviado": "[curious] De que cor são os Smurfs?",
+  "arquivo": "perguntas/P233_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:23.905Z"
+ },
+ "P233_resposta": {
+  "texto": "A resposta certa é… Azuis!",
+  "enviado": "[dramatically] A resposta certa é… Azuis!",
+  "arquivo": "perguntas/P233_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:24.965Z"
+ },
+ "P234_pergunta": {
+  "texto": "Qual é o nome do coelhinho de pelúcia da Mônica?",
+  "enviado": "[curious] Qual é o nome do coelhinho de pelúcia da Mônica?",
+  "arquivo": "perguntas/P234_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:26.220Z"
+ },
+ "P234_resposta": {
+  "texto": "A resposta certa é… Sansão!",
+  "enviado": "[dramatically] A resposta certa é… Sansão!",
+  "arquivo": "perguntas/P234_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:27.428Z"
+ },
+ "P235_pergunta": {
+  "texto": "Qual personagem da Turma da Mônica troca o R pelo L?",
+  "enviado": "[curious] Qual personagem da Turma da Mônica troca o R pelo L?",
+  "arquivo": "perguntas/P235_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:28.846Z"
+ },
+ "P235_resposta": {
+  "texto": "A resposta certa é… Cebolinha!",
+  "enviado": "[dramatically] A resposta certa é… Cebolinha!",
+  "arquivo": "perguntas/P235_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:29.890Z"
+ },
+ "P236_pergunta": {
+  "texto": "Qual personagem da Turma da Mônica tem medo de água?",
+  "enviado": "[curious] Qual personagem da Turma da Mônica tem medo de água?",
+  "arquivo": "perguntas/P236_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:31.445Z"
+ },
+ "P236_resposta": {
+  "texto": "A resposta certa é… Cascão!",
+  "enviado": "[dramatically] A resposta certa é… Cascão!",
+  "arquivo": "perguntas/P236_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:32.633Z"
+ },
+ "P237_pergunta": {
+  "texto": "Em Scooby-Doo, qual é o nome do dono medroso do Scooby?",
+  "enviado": "[curious] Em Scooby-Doo, qual é o nome do dono medroso do Scooby?",
+  "arquivo": "perguntas/P237_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:33.848Z"
+ },
+ "P237_resposta": {
+  "texto": "A resposta certa é… Salsicha!",
+  "enviado": "[dramatically] A resposta certa é… Salsicha!",
+  "arquivo": "perguntas/P237_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:35.167Z"
+ },
+ "P238_pergunta": {
+  "texto": "Em qual desenho um gato e um rato vivem brigando?",
+  "enviado": "[curious] Em qual desenho um gato e um rato vivem brigando?",
+  "arquivo": "perguntas/P238_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:36.500Z"
+ },
+ "P238_resposta": {
+  "texto": "A resposta certa é… Tom e Jerry!",
+  "enviado": "[dramatically] A resposta certa é… Tom e Jerry!",
+  "arquivo": "perguntas/P238_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:37.665Z"
+ },
+ "P239_pergunta": {
+  "texto": "Qual é o bordão do Pernalonga?",
+  "enviado": "[curious] Qual é o bordão do Pernalonga?",
+  "arquivo": "perguntas/P239_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:38.654Z"
+ },
+ "P239_resposta": {
+  "texto": "A resposta certa é… O que é que há, velhinho?!",
+  "enviado": "[dramatically] A resposta certa é… O que é que há, velhinho?!",
+  "arquivo": "perguntas/P239_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:39.912Z"
+ },
+ "P240_pergunta": {
+  "texto": "Qual Pokémon amarelo é o parceiro do Ash?",
+  "enviado": "[curious] Qual Pokémon amarelo é o parceiro do Ash?",
+  "arquivo": "perguntas/P240_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:40.916Z"
+ },
+ "P240_resposta": {
+  "texto": "A resposta certa é… Pikachu!",
+  "enviado": "[dramatically] A resposta certa é… Pikachu!",
+  "arquivo": "perguntas/P240_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:41.922Z"
+ },
+ "P241_pergunta": {
+  "texto": "Quantas são as Tartarugas Ninja?",
+  "enviado": "[curious] Quantas são as Tartarugas Ninja?",
+  "arquivo": "perguntas/P241_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:42.832Z"
+ },
+ "P241_resposta": {
+  "texto": "A resposta certa é… Quatro!",
+  "enviado": "[dramatically] A resposta certa é… Quatro!",
+  "arquivo": "perguntas/P241_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:43.794Z"
+ },
+ "P242_pergunta": {
+  "texto": "Qual é o nome da porquinha cor-de-rosa de um desenho para crianças pequenas?",
+  "enviado": "[curious] Qual é o nome da porquinha cor-de-rosa de um desenho para crianças pequenas?",
+  "arquivo": "perguntas/P242_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:45.306Z"
+ },
+ "P242_resposta": {
+  "texto": "A resposta certa é… Peppa!",
+  "enviado": "[dramatically] A resposta certa é… Peppa!",
+  "arquivo": "perguntas/P242_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:46.409Z"
+ },
+ "P243_pergunta": {
+  "texto": "Qual brinquedo tem seis faces coloridas que se organizam girando?",
+  "enviado": "[curious] Qual brinquedo tem seis faces coloridas que se organizam girando?",
+  "arquivo": "perguntas/P243_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:47.748Z"
+ },
+ "P243_resposta": {
+  "texto": "A resposta certa é… O cubo mágico!",
+  "enviado": "[dramatically] A resposta certa é… O cubo mágico!",
+  "arquivo": "perguntas/P243_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:49.018Z"
+ },
+ "P244_pergunta": {
+  "texto": "Quem criou a Turma da Mônica?",
+  "enviado": "[curious] Quem criou a Turma da Mônica?",
+  "arquivo": "perguntas/P244_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:49.881Z"
+ },
+ "P244_resposta": {
+  "texto": "A resposta certa é… Mauricio de Sousa!",
+  "enviado": "[dramatically] A resposta certa é… Mauricio de Sousa!",
+  "arquivo": "perguntas/P244_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:51.152Z"
+ },
+ "P245_pergunta": {
+  "texto": "Qual escritor criou o Sítio do Picapau Amarelo?",
+  "enviado": "[curious] Qual escritor criou o Sítio do Picapau Amarelo?",
+  "arquivo": "perguntas/P245_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:52.674Z"
+ },
+ "P245_resposta": {
+  "texto": "A resposta certa é… Monteiro Lobato!",
+  "enviado": "[dramatically] A resposta certa é… Monteiro Lobato!",
+  "arquivo": "perguntas/P245_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:53.723Z"
+ },
+ "P246_pergunta": {
+  "texto": "Qual personagem de Ziraldo é um menino com uma panela na cabeça?",
+  "enviado": "[curious] Qual personagem de Ziraldo é um menino com uma panela na cabeça?",
+  "arquivo": "perguntas/P246_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:55.096Z"
+ },
+ "P246_resposta": {
+  "texto": "A resposta certa é… O Menino Maluquinho!",
+  "enviado": "[dramatically] A resposta certa é… O Menino Maluquinho!",
+  "arquivo": "perguntas/P246_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:56.440Z"
+ },
+ "P247_pergunta": {
+  "texto": "Qual é o nome da boneca de pano do Sítio do Picapau Amarelo?",
+  "enviado": "[curious] Qual é o nome da boneca de pano do Sítio do Picapau Amarelo?",
+  "arquivo": "perguntas/P247_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:57.936Z"
+ },
+ "P247_resposta": {
+  "texto": "A resposta certa é… Emília!",
+  "enviado": "[dramatically] A resposta certa é… Emília!",
+  "arquivo": "perguntas/P247_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:00:58.903Z"
+ },
+ "P248_pergunta": {
+  "texto": "Em Os Flintstones, qual é o nome da esposa do Fred?",
+  "enviado": "[curious] Em Os Flintstones, qual é o nome da esposa do Fred?",
+  "arquivo": "perguntas/P248_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:00.148Z"
+ },
+ "P248_resposta": {
+  "texto": "A resposta certa é… Wilma!",
+  "enviado": "[dramatically] A resposta certa é… Wilma!",
+  "arquivo": "perguntas/P248_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:01.496Z"
+ },
+ "P249_pergunta": {
+  "texto": "Em que ano foi lançado o primeiro filme de Toy Story?",
+  "enviado": "[curious] Em que ano foi lançado o primeiro filme de Toy Story?",
+  "arquivo": "perguntas/P249_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:02.803Z"
+ },
+ "P249_resposta": {
+  "texto": "A resposta certa é… Mil novecentos e noventa e cinco!",
+  "enviado": "[dramatically] A resposta certa é… Mil novecentos e noventa e cinco!",
+  "arquivo": "perguntas/P249_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:04.282Z"
+ },
+ "P250_pergunta": {
+  "texto": "Qual apresentador fundou o SBT?",
+  "enviado": "[curious] Qual apresentador fundou o SBT?",
+  "arquivo": "perguntas/P250_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:05.421Z"
+ },
+ "P250_resposta": {
+  "texto": "A resposta certa é… Silvio Santos!",
+  "enviado": "[dramatically] A resposta certa é… Silvio Santos!",
+  "arquivo": "perguntas/P250_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:06.586Z"
+ },
+ "P251_pergunta": {
+  "texto": "Em qual reality show os participantes vão para o paredão?",
+  "enviado": "[curious] Em qual reality show os participantes vão para o paredão?",
+  "arquivo": "perguntas/P251_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:07.838Z"
+ },
+ "P251_resposta": {
+  "texto": "A resposta certa é… Big Brother Brasil!",
+  "enviado": "[dramatically] A resposta certa é… Big Brother Brasil!",
+  "arquivo": "perguntas/P251_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:09.008Z"
+ },
+ "P252_pergunta": {
+  "texto": "Qual jogador brasileiro ficou conhecido como Fenômeno?",
+  "enviado": "[curious] Qual jogador brasileiro ficou conhecido como Fenômeno?",
+  "arquivo": "perguntas/P252_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:10.554Z"
+ },
+ "P252_resposta": {
+  "texto": "A resposta certa é… Ronaldo!",
+  "enviado": "[dramatically] A resposta certa é… Ronaldo!",
+  "arquivo": "perguntas/P252_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:11.733Z"
+ },
+ "P253_pergunta": {
+  "texto": "Qual apresentadora é conhecida como a Rainha dos Baixinhos?",
+  "enviado": "[curious] Qual apresentadora é conhecida como a Rainha dos Baixinhos?",
+  "arquivo": "perguntas/P253_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:13.163Z"
+ },
+ "P253_resposta": {
+  "texto": "A resposta certa é… Xuxa!",
+  "enviado": "[dramatically] A resposta certa é… Xuxa!",
+  "arquivo": "perguntas/P253_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:14.280Z"
+ },
+ "P254_pergunta": {
+  "texto": "Em qual novela a vilã Nazaré Tedesco virou meme?",
+  "enviado": "[curious] Em qual novela a vilã Nazaré Tedesco virou meme?",
+  "arquivo": "perguntas/P254_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:16.024Z"
+ },
+ "P254_resposta": {
+  "texto": "A resposta certa é… Senhora do Destino!",
+  "enviado": "[dramatically] A resposta certa é… Senhora do Destino!",
+  "arquivo": "perguntas/P254_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:17.426Z"
+ },
+ "P255_pergunta": {
+  "texto": "Quem assumiu o Domingão no lugar do Faustão em 2021?",
+  "enviado": "[curious] Quem assumiu o Domingão no lugar do Faustão em 2021?",
+  "arquivo": "perguntas/P255_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:18.886Z"
+ },
+ "P255_resposta": {
+  "texto": "A resposta certa é… Luciano Huck!",
+  "enviado": "[dramatically] A resposta certa é… Luciano Huck!",
+  "arquivo": "perguntas/P255_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:20.077Z"
+ },
+ "P256_pergunta": {
+  "texto": "Qual cantora ficou conhecida como a Rainha da Sofrência?",
+  "enviado": "[curious] Qual cantora ficou conhecida como a Rainha da Sofrência?",
+  "arquivo": "perguntas/P256_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:21.456Z"
+ },
+ "P256_resposta": {
+  "texto": "A resposta certa é… Marília Mendonça!",
+  "enviado": "[dramatically] A resposta certa é… Marília Mendonça!",
+  "arquivo": "perguntas/P256_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:22.573Z"
+ },
+ "P257_pergunta": {
+  "texto": "Qual jogador português comemora os gols com o grito Siuuu?",
+  "enviado": "[curious] Qual jogador português comemora os gols com o grito Siuuu?",
+  "arquivo": "perguntas/P257_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:23.962Z"
+ },
+ "P257_resposta": {
+  "texto": "A resposta certa é… Cristiano Ronaldo!",
+  "enviado": "[dramatically] A resposta certa é… Cristiano Ronaldo!",
+  "arquivo": "perguntas/P257_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:25.449Z"
+ },
+ "P258_pergunta": {
+  "texto": "Qual cantora brasileira lançou o sucesso Envolver?",
+  "enviado": "[curious] Qual cantora brasileira lançou o sucesso Envolver?",
+  "arquivo": "perguntas/P258_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:26.766Z"
+ },
+ "P258_resposta": {
+  "texto": "A resposta certa é… Anitta!",
+  "enviado": "[dramatically] A resposta certa é… Anitta!",
+  "arquivo": "perguntas/P258_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:28.051Z"
+ },
+ "P259_pergunta": {
+  "texto": "Em qual novela estavam os personagens Félix e Niko?",
+  "enviado": "[curious] Em qual novela estavam os personagens Félix e Niko?",
+  "arquivo": "perguntas/P259_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:29.657Z"
+ },
+ "P259_resposta": {
+  "texto": "A resposta certa é… Amor à Vida!",
+  "enviado": "[dramatically] A resposta certa é… Amor à Vida!",
+  "arquivo": "perguntas/P259_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:31.103Z"
+ },
+ "P260_pergunta": {
+  "texto": "No seriado Chaves, qual personagem usa roupa de marinheiro?",
+  "enviado": "[curious] No seriado Chaves, qual personagem usa roupa de marinheiro?",
+  "arquivo": "perguntas/P260_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:32.748Z"
+ },
+ "P260_resposta": {
+  "texto": "A resposta certa é… Quico!",
+  "enviado": "[dramatically] A resposta certa é… Quico!",
+  "arquivo": "perguntas/P260_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:33.893Z"
+ },
+ "P261_pergunta": {
+  "texto": "Qual apresentadora comanda o Mais Você há mais de 20 anos?",
+  "enviado": "[curious] Qual apresentadora comanda o Mais Você há mais de 20 anos?",
+  "arquivo": "perguntas/P261_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:35.456Z"
+ },
+ "P261_resposta": {
+  "texto": "A resposta certa é… Ana Maria Braga!",
+  "enviado": "[dramatically] A resposta certa é… Ana Maria Braga!",
+  "arquivo": "perguntas/P261_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:36.672Z"
+ },
+ "P262_pergunta": {
+  "texto": "Qual atriz interpretou a vilã Nazaré Tedesco?",
+  "enviado": "[curious] Qual atriz interpretou a vilã Nazaré Tedesco?",
+  "arquivo": "perguntas/P262_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:38.313Z"
+ },
+ "P262_resposta": {
+  "texto": "A resposta certa é… Renata Sorrah!",
+  "enviado": "[dramatically] A resposta certa é… Renata Sorrah!",
+  "arquivo": "perguntas/P262_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:39.613Z"
+ },
+ "P263_pergunta": {
+  "texto": "Qual atriz interpretou a vilã Carminha em Avenida Brasil?",
+  "enviado": "[curious] Qual atriz interpretou a vilã Carminha em Avenida Brasil?",
+  "arquivo": "perguntas/P263_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:41.057Z"
+ },
+ "P263_resposta": {
+  "texto": "A resposta certa é… Adriana Esteves!",
+  "enviado": "[dramatically] A resposta certa é… Adriana Esteves!",
+  "arquivo": "perguntas/P263_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:42.276Z"
+ },
+ "P264_pergunta": {
+  "texto": "Em qual novela aparece a vilã Odete Roitman?",
+  "enviado": "[curious] Em qual novela aparece a vilã Odete Roitman?",
+  "arquivo": "perguntas/P264_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:43.701Z"
+ },
+ "P264_resposta": {
+  "texto": "A resposta certa é… Vale Tudo!",
+  "enviado": "[dramatically] A resposta certa é… Vale Tudo!",
+  "arquivo": "perguntas/P264_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:44.990Z"
+ },
+ "P265_pergunta": {
+  "texto": "Em que ano estreou o Big Brother Brasil?",
+  "enviado": "[curious] Em que ano estreou o Big Brother Brasil?",
+  "arquivo": "perguntas/P265_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:46.068Z"
+ },
+ "P265_resposta": {
+  "texto": "A resposta certa é… Dois mil e dois!",
+  "enviado": "[dramatically] A resposta certa é… Dois mil e dois!",
+  "arquivo": "perguntas/P265_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:47.297Z"
+ },
+ "P266_pergunta": {
+  "texto": "Qual humorista criou o personagem Didi Mocó?",
+  "enviado": "[curious] Qual humorista criou o personagem Didi Mocó?",
+  "arquivo": "perguntas/P266_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:48.426Z"
+ },
+ "P266_resposta": {
+  "texto": "A resposta certa é… Renato Aragão!",
+  "enviado": "[dramatically] A resposta certa é… Renato Aragão!",
+  "arquivo": "perguntas/P266_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:49.655Z"
+ },
+ "P267_pergunta": {
+  "texto": "Qual era o nome artístico de Antônio Carlos Bernardes Gomes, dos Trapalhões?",
+  "enviado": "[curious] Qual era o nome artístico de Antônio Carlos Bernardes Gomes, dos Trapalhões?",
+  "arquivo": "perguntas/P267_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:51.415Z"
+ },
+ "P267_resposta": {
+  "texto": "A resposta certa é… Mussum!",
+  "enviado": "[dramatically] A resposta certa é… Mussum!",
+  "arquivo": "perguntas/P267_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:52.471Z"
+ },
+ "P268_pergunta": {
+  "texto": "Quem pintou a Mona Lisa?",
+  "enviado": "[curious] Quem pintou a Mona Lisa?",
+  "arquivo": "perguntas/P268_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:53.314Z"
+ },
+ "P268_resposta": {
+  "texto": "A resposta certa é… Leonardo da Vinci!",
+  "enviado": "[dramatically] A resposta certa é… Leonardo da Vinci!",
+  "arquivo": "perguntas/P268_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:54.670Z"
+ },
+ "P269_pergunta": {
+  "texto": "Quem escreveu Dom Casmurro?",
+  "enviado": "[curious] Quem escreveu Dom Casmurro?",
+  "arquivo": "perguntas/P269_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:55.578Z"
+ },
+ "P269_resposta": {
+  "texto": "A resposta certa é… Machado de Assis!",
+  "enviado": "[dramatically] A resposta certa é… Machado de Assis!",
+  "arquivo": "perguntas/P269_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:56.811Z"
+ },
+ "P270_pergunta": {
+  "texto": "Quem escreveu Romeu e Julieta?",
+  "enviado": "[curious] Quem escreveu Romeu e Julieta?",
+  "arquivo": "perguntas/P270_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:57.938Z"
+ },
+ "P270_resposta": {
+  "texto": "A resposta certa é… William Shakespeare!",
+  "enviado": "[dramatically] A resposta certa é… William Shakespeare!",
+  "arquivo": "perguntas/P270_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:01:59.072Z"
+ },
+ "P271_pergunta": {
+  "texto": "Qual pintor holandês cortou parte da própria orelha?",
+  "enviado": "[curious] Qual pintor holandês cortou parte da própria orelha?",
+  "arquivo": "perguntas/P271_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:00.391Z"
+ },
+ "P271_resposta": {
+  "texto": "A resposta certa é… Vincent van Gogh!",
+  "enviado": "[dramatically] A resposta certa é… Vincent van Gogh!",
+  "arquivo": "perguntas/P271_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:01.604Z"
+ },
+ "P272_pergunta": {
+  "texto": "Quem escreveu O Pequeno Príncipe?",
+  "enviado": "[curious] Quem escreveu O Pequeno Príncipe?",
+  "arquivo": "perguntas/P272_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:02.739Z"
+ },
+ "P272_resposta": {
+  "texto": "A resposta certa é… Antoine de Saint-Exupéry!",
+  "enviado": "[dramatically] A resposta certa é… Antoine de Saint-Exupéry!",
+  "arquivo": "perguntas/P272_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:04.010Z"
+ },
+ "P273_pergunta": {
+  "texto": "Em qual museu de Paris fica a Mona Lisa?",
+  "enviado": "[curious] Em qual museu de Paris fica a Mona Lisa?",
+  "arquivo": "perguntas/P273_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:05.198Z"
+ },
+ "P273_resposta": {
+  "texto": "A resposta certa é… Museu do Louvre!",
+  "enviado": "[dramatically] A resposta certa é… Museu do Louvre!",
+  "arquivo": "perguntas/P273_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:06.381Z"
+ },
+ "P274_pergunta": {
+  "texto": "Quem escreveu a série Harry Potter?",
+  "enviado": "[curious] Quem escreveu a série Harry Potter?",
+  "arquivo": "perguntas/P274_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:07.352Z"
+ },
+ "P274_resposta": {
+  "texto": "A resposta certa é… J. K. Rowling!",
+  "enviado": "[dramatically] A resposta certa é… J. K. Rowling!",
+  "arquivo": "perguntas/P274_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:08.913Z"
+ },
+ "P275_pergunta": {
+  "texto": "Qual artista pintou o teto da Capela Sistina?",
+  "enviado": "[curious] Qual artista pintou o teto da Capela Sistina?",
+  "arquivo": "perguntas/P275_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:09.964Z"
+ },
+ "P275_resposta": {
+  "texto": "A resposta certa é… Michelangelo!",
+  "enviado": "[dramatically] A resposta certa é… Michelangelo!",
+  "arquivo": "perguntas/P275_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:11.527Z"
+ },
+ "P276_pergunta": {
+  "texto": "Quem pintou o quadro Abaporu?",
+  "enviado": "[curious] Quem pintou o quadro Abaporu?",
+  "arquivo": "perguntas/P276_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:12.492Z"
+ },
+ "P276_resposta": {
+  "texto": "A resposta certa é… Tarsila do Amaral!",
+  "enviado": "[dramatically] A resposta certa é… Tarsila do Amaral!",
+  "arquivo": "perguntas/P276_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:14.006Z"
+ },
+ "P277_pergunta": {
+  "texto": "Quem escreveu Dom Quixote?",
+  "enviado": "[curious] Quem escreveu Dom Quixote?",
+  "arquivo": "perguntas/P277_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:14.885Z"
+ },
+ "P277_resposta": {
+  "texto": "A resposta certa é… Miguel de Cervantes!",
+  "enviado": "[dramatically] A resposta certa é… Miguel de Cervantes!",
+  "arquivo": "perguntas/P277_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:16.238Z"
+ },
+ "P278_pergunta": {
+  "texto": "Qual escritor brasileiro escreveu O Alquimista?",
+  "enviado": "[curious] Qual escritor brasileiro escreveu O Alquimista?",
+  "arquivo": "perguntas/P278_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:17.374Z"
+ },
+ "P278_resposta": {
+  "texto": "A resposta certa é… Paulo Coelho!",
+  "enviado": "[dramatically] A resposta certa é… Paulo Coelho!",
+  "arquivo": "perguntas/P278_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:18.544Z"
+ },
+ "P279_pergunta": {
+  "texto": "Quem escreveu Os Lusíadas?",
+  "enviado": "[curious] Quem escreveu Os Lusíadas?",
+  "arquivo": "perguntas/P279_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:19.497Z"
+ },
+ "P279_resposta": {
+  "texto": "A resposta certa é… Luís de Camões!",
+  "enviado": "[dramatically] A resposta certa é… Luís de Camões!",
+  "arquivo": "perguntas/P279_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:20.712Z"
+ },
+ "P280_pergunta": {
+  "texto": "Qual pintor espanhol pintou Guernica?",
+  "enviado": "[curious] Qual pintor espanhol pintou Guernica?",
+  "arquivo": "perguntas/P280_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:21.714Z"
+ },
+ "P280_resposta": {
+  "texto": "A resposta certa é… Pablo Picasso!",
+  "enviado": "[dramatically] A resposta certa é… Pablo Picasso!",
+  "arquivo": "perguntas/P280_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:22.889Z"
+ },
+ "P281_pergunta": {
+  "texto": "Quem escreveu Grande Sertão: Veredas?",
+  "enviado": "[curious] Quem escreveu Grande Sertão: Veredas?",
+  "arquivo": "perguntas/P281_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:24.036Z"
+ },
+ "P281_resposta": {
+  "texto": "A resposta certa é… Guimarães Rosa!",
+  "enviado": "[dramatically] A resposta certa é… Guimarães Rosa!",
+  "arquivo": "perguntas/P281_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:25.381Z"
+ },
+ "P282_pergunta": {
+  "texto": "Quem escreveu A Hora da Estrela?",
+  "enviado": "[curious] Quem escreveu A Hora da Estrela?",
+  "arquivo": "perguntas/P282_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:26.300Z"
+ },
+ "P282_resposta": {
+  "texto": "A resposta certa é… Clarice Lispector!",
+  "enviado": "[dramatically] A resposta certa é… Clarice Lispector!",
+  "arquivo": "perguntas/P282_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:27.510Z"
+ },
+ "P283_pergunta": {
+  "texto": "A Semana de Arte Moderna de 1922 marcou o início de qual movimento no Brasil?",
+  "enviado": "[curious] A Semana de Arte Moderna de 1922 marcou o início de qual movimento no Brasil?",
+  "arquivo": "perguntas/P283_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:29.801Z"
+ },
+ "P283_resposta": {
+  "texto": "A resposta certa é… Modernismo!",
+  "enviado": "[dramatically] A resposta certa é… Modernismo!",
+  "arquivo": "perguntas/P283_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:30.789Z"
+ },
+ "P284_pergunta": {
+  "texto": "Quem pintou O Grito?",
+  "enviado": "[curious] Quem pintou O Grito?",
+  "arquivo": "perguntas/P284_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:31.549Z"
+ },
+ "P284_resposta": {
+  "texto": "A resposta certa é… Edvard Munch!",
+  "enviado": "[dramatically] A resposta certa é… Edvard Munch!",
+  "arquivo": "perguntas/P284_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:32.871Z"
+ },
+ "P285_pergunta": {
+  "texto": "Quem escreveu Vidas Secas?",
+  "enviado": "[curious] Quem escreveu Vidas Secas?",
+  "arquivo": "perguntas/P285_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:34.018Z"
+ },
+ "P285_resposta": {
+  "texto": "A resposta certa é… Graciliano Ramos!",
+  "enviado": "[dramatically] A resposta certa é… Graciliano Ramos!",
+  "arquivo": "perguntas/P285_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:35.238Z"
+ },
+ "P286_pergunta": {
+  "texto": "Qual órgão bombeia o sangue pelo corpo?",
+  "enviado": "[curious] Qual órgão bombeia o sangue pelo corpo?",
+  "arquivo": "perguntas/P286_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:36.329Z"
+ },
+ "P286_resposta": {
+  "texto": "A resposta certa é… O coração!",
+  "enviado": "[dramatically] A resposta certa é… O coração!",
+  "arquivo": "perguntas/P286_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:37.479Z"
+ },
+ "P287_pergunta": {
+  "texto": "Quantos pulmões tem o corpo humano?",
+  "enviado": "[curious] Quantos pulmões tem o corpo humano?",
+  "arquivo": "perguntas/P287_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:38.458Z"
+ },
+ "P287_resposta": {
+  "texto": "A resposta certa é… Dois pulmões!",
+  "enviado": "[dramatically] A resposta certa é… Dois pulmões!",
+  "arquivo": "perguntas/P287_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:39.588Z"
+ },
+ "P288_pergunta": {
+  "texto": "Qual órgão filtra o sangue e produz a urina?",
+  "enviado": "[curious] Qual órgão filtra o sangue e produz a urina?",
+  "arquivo": "perguntas/P288_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:40.912Z"
+ },
+ "P288_resposta": {
+  "texto": "A resposta certa é… O rim!",
+  "enviado": "[dramatically] A resposta certa é… O rim!",
+  "arquivo": "perguntas/P288_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:42.131Z"
+ },
+ "P289_pergunta": {
+  "texto": "Qual sentido usamos com a língua?",
+  "enviado": "[curious] Qual sentido usamos com a língua?",
+  "arquivo": "perguntas/P289_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:43.189Z"
+ },
+ "P289_resposta": {
+  "texto": "A resposta certa é… O paladar!",
+  "enviado": "[dramatically] A resposta certa é… O paladar!",
+  "arquivo": "perguntas/P289_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:44.567Z"
+ },
+ "P290_pergunta": {
+  "texto": "Qual osso protege o cérebro?",
+  "enviado": "[curious] Qual osso protege o cérebro?",
+  "arquivo": "perguntas/P290_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:45.448Z"
+ },
+ "P290_resposta": {
+  "texto": "A resposta certa é… O crânio!",
+  "enviado": "[dramatically] A resposta certa é… O crânio!",
+  "arquivo": "perguntas/P290_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:46.607Z"
+ },
+ "P291_pergunta": {
+  "texto": "Quantos são os sentidos básicos do ser humano?",
+  "enviado": "[curious] Quantos são os sentidos básicos do ser humano?",
+  "arquivo": "perguntas/P291_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:47.767Z"
+ },
+ "P291_resposta": {
+  "texto": "A resposta certa é… Cinco sentidos!",
+  "enviado": "[dramatically] A resposta certa é… Cinco sentidos!",
+  "arquivo": "perguntas/P291_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:49.070Z"
+ },
+ "P292_pergunta": {
+  "texto": "De que cor é o sangue humano?",
+  "enviado": "[curious] De que cor é o sangue humano?",
+  "arquivo": "perguntas/P292_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:50.081Z"
+ },
+ "P292_resposta": {
+  "texto": "A resposta certa é… Vermelho!",
+  "enviado": "[dramatically] A resposta certa é… Vermelho!",
+  "arquivo": "perguntas/P292_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:51.402Z"
+ },
+ "P293_pergunta": {
+  "texto": "Qual parte do olho dá cor aos olhos?",
+  "enviado": "[curious] Qual parte do olho dá cor aos olhos?",
+  "arquivo": "perguntas/P293_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:52.538Z"
+ },
+ "P293_resposta": {
+  "texto": "A resposta certa é… A íris!",
+  "enviado": "[dramatically] A resposta certa é… A íris!",
+  "arquivo": "perguntas/P293_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:53.751Z"
+ },
+ "P294_pergunta": {
+  "texto": "Qual é o menor osso do corpo humano?",
+  "enviado": "[curious] Qual é o menor osso do corpo humano?",
+  "arquivo": "perguntas/P294_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:54.932Z"
+ },
+ "P294_resposta": {
+  "texto": "A resposta certa é… O estribo, que fica no ouvido!",
+  "enviado": "[dramatically] A resposta certa é… O estribo, que fica no ouvido!",
+  "arquivo": "perguntas/P294_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:56.486Z"
+ },
+ "P295_pergunta": {
+  "texto": "Qual órgão produz a bile?",
+  "enviado": "[curious] Qual órgão produz a bile?",
+  "arquivo": "perguntas/P295_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:57.395Z"
+ },
+ "P295_resposta": {
+  "texto": "A resposta certa é… O fígado!",
+  "enviado": "[dramatically] A resposta certa é… O fígado!",
+  "arquivo": "perguntas/P295_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:58.387Z"
+ },
+ "P296_pergunta": {
+  "texto": "Quantos litros de sangue tem, em média, um adulto?",
+  "enviado": "[curious] Quantos litros de sangue tem, em média, um adulto?",
+  "arquivo": "perguntas/P296_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:02:59.798Z"
+ },
+ "P296_resposta": {
+  "texto": "A resposta certa é… Cerca de cinco litros!",
+  "enviado": "[dramatically] A resposta certa é… Cerca de cinco litros!",
+  "arquivo": "perguntas/P296_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:03:01.039Z"
+ },
+ "P297_pergunta": {
+  "texto": "Onde são produzidos os glóbulos vermelhos?",
+  "enviado": "[curious] Onde são produzidos os glóbulos vermelhos?",
+  "arquivo": "perguntas/P297_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:03:02.143Z"
+ },
+ "P297_resposta": {
+  "texto": "A resposta certa é… Na medula óssea!",
+  "enviado": "[dramatically] A resposta certa é… Na medula óssea!",
+  "arquivo": "perguntas/P297_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:03:03.239Z"
+ },
+ "P298_pergunta": {
+  "texto": "Qual glândula produz a insulina?",
+  "enviado": "[curious] Qual glândula produz a insulina?",
+  "arquivo": "perguntas/P298_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:03:04.231Z"
+ },
+ "P298_resposta": {
+  "texto": "A resposta certa é… O pâncreas!",
+  "enviado": "[dramatically] A resposta certa é… O pâncreas!",
+  "arquivo": "perguntas/P298_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:03:05.174Z"
+ },
+ "P299_pergunta": {
+  "texto": "Qual tipo de sangue é chamado de doador universal?",
+  "enviado": "[curious] Qual tipo de sangue é chamado de doador universal?",
+  "arquivo": "perguntas/P299_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:03:06.352Z"
+ },
+ "P299_resposta": {
+  "texto": "A resposta certa é… O negativo!",
+  "enviado": "[dramatically] A resposta certa é… O negativo!",
+  "arquivo": "perguntas/P299_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:03:07.396Z"
+ },
+ "P300_pergunta": {
+  "texto": "Quantos dentes de leite tem uma criança?",
+  "enviado": "[curious] Quantos dentes de leite tem uma criança?",
+  "arquivo": "perguntas/P300_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:03:08.338Z"
+ },
+ "P300_resposta": {
+  "texto": "A resposta certa é… Vinte dentes!",
+  "enviado": "[dramatically] A resposta certa é… Vinte dentes!",
+  "arquivo": "perguntas/P300_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:03:09.624Z"
+ },
+ "P301_pergunta": {
+  "texto": "Qual músculo separa o tórax do abdômen e ajuda na respiração?",
+  "enviado": "[curious] Qual músculo separa o tórax do abdômen e ajuda na respiração?",
+  "arquivo": "perguntas/P301_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:03:10.844Z"
  }
 }
