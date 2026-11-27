@@ -135,7 +135,15 @@
     bola: '<circle cx="12" cy="12" r="9"/><path d="M12 7.5l3.4 2.5-1.3 4h-4.2l-1.3-4z"/><path d="M12 3v4.5M15.4 10l4.4-1.6M14.1 14l2.7 3.8M9.9 14l-2.7 3.8M8.6 10L4.2 8.4"/>',
     claquete: '<rect x="3" y="9" width="18" height="12" rx="2"/><path d="M3 9l1.6-4.6 15.2 0L21 9"/><path d="M9 4.4L7.4 9M14.4 4.4L12.8 9M19.8 4.4L18.2 9"/>',
     talheres: '<path d="M7 3v18M4.5 3v5a2.5 2.5 0 0 0 5 0V3"/><path d="M17.5 21V3c-2.2 1.2-3.5 4-3.5 7.5h3.5"/>',
-    nota: '<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>'
+    nota: '<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
+    ampulheta: '<path d="M6 3h12M6 21h12M7 3c0 5 10 7 10 18M17 3c0 5-10 7-10 18"/>',
+    pata: '<circle cx="6.5" cy="9.5" r="1.8"/><circle cx="10" cy="5.5" r="1.8"/><circle cx="14" cy="5.5" r="1.8"/><circle cx="17.5" cy="9.5" r="1.8"/><path d="M12 11c-3 0-5.5 3.2-5.5 6a2 2 0 0 0 2 2c1.4 0 2.2-.8 3.5-.8s2.1.8 3.5.8a2 2 0 0 0 2-2c0-2.8-2.5-6-5.5-6z"/>',
+    controle: '<rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 10.5v4M5 12.5h4"/><circle cx="15.5" cy="11.5" r=".9"/><circle cx="18" cy="13.8" r=".9"/>',
+    losango: '<path d="M12 4l9 8-9 8-9-8z"/><circle cx="12" cy="12" r="3.5"/>',
+    balao: '<path d="M12 3a6 6 0 0 1 6 6c0 4-3 7-6 7s-6-3-6-7a6 6 0 0 1 6-6z"/><path d="M11 16l1 1.6 1-1.6M12 17.6c0 1.6 1.2 2.4 0 3.9"/>',
+    estrela: '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
+    livro: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8.5 7.5h6"/>',
+    coracao: '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>'
   };
   const CATEGORIAS = {
     'Geografia': { cor: '#F2A33A', sombra: '#B86E14', icone: 'globo' },
@@ -143,7 +151,15 @@
     'Esportes': { cor: '#4F8DF7', sombra: '#2F5FB8', icone: 'bola' },
     'Cinema e TV': { cor: '#A77BF3', sombra: '#7650C2', icone: 'claquete' },
     'Comidas e bebidas': { cor: '#F2545B', sombra: '#B83239', icone: 'talheres' },
-    'Música': { cor: '#2EC4B6', sombra: '#1E8F85', icone: 'nota' }
+    'Música': { cor: '#2EC4B6', sombra: '#1E8F85', icone: 'nota' },
+    'História': { cor: '#B07A4F', sombra: '#7A4F2C', icone: 'ampulheta' },
+    'Animais': { cor: '#A3C93A', sombra: '#6E8A1E', icone: 'pata' },
+    'Tecnologia e games': { cor: '#5468D4', sombra: '#3446A0', icone: 'controle' },
+    'Brasil': { cor: '#F7C531', sombra: '#BF950C', icone: 'losango' },
+    'Desenhos e infância': { cor: '#FF8A5B', sombra: '#C95C2E', icone: 'balao' },
+    'Famosos e novelas': { cor: '#D63A8A', sombra: '#9E2363', icone: 'estrela' },
+    'Arte e literatura': { cor: '#3FA7D6', sombra: '#23769C', icone: 'livro' },
+    'Corpo humano': { cor: '#F49AC1', sombra: '#C0628B', icone: 'coracao' }
   };
   function categoria(nome) { return CATEGORIAS[nome] || { cor: '#4F8DF7', sombra: '#2F5FB8', icone: 'globo' }; }
   function iconeCat(nome, tam, cor) {

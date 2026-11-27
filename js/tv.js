@@ -920,7 +920,7 @@
       p.x = x; p.y = y; p.h = h;
     });
   }
-  function lousa(a, b, c) { $('lousa').innerHTML = `<span class="a">${a}</span><span class="b">${b}</span>${c ? `<span class="c">${c}</span>` : ''}`; }
+  function lousa(a, b, c) { $('lousa').innerHTML = `<span class="a">${a}</span><span class="b">${b}</span>${c ? `<span class="c${String(c).length > 13 ? ' longo' : ''}">${c}</span>` : ''}`; }
   function relogioPir(frac, seg) {
     const CX = 1664, CY = 295, R = 114, RR = Math.round(R * 0.79);
     let marcas = '';
