@@ -45,7 +45,7 @@
   // ---------- Estado ----------
   // jogadores: {pid, nome, char, pronto, visto, pontos}
   const estado = { fase: 'sala', jogadores: [], d: null };
-  let rede = null, codigo = '', partida = 0, jaExplicou = false, avisouSala = false, explicouPoderes = false;
+  let rede = null, codigo = '', partida = 0, jaExplicou = false, pularExplicacoes = false, avisouSala = false, explicouPoderes = false;
   const online = (j) => Date.now() - j.visto < 12000;
   const fala = (j) => (Q.pers(j.char) || {}).fala || j.nome;
 
@@ -226,7 +226,8 @@
     Q.sfx('sfx_comecar');
 
     // 06 · A Coruja explica (só na primeira partida da sala: "eu só explico uma vez")
-    if (!jaExplicou) {
+    pularExplicacoes = $('pularExp').checked;
+    if (!jaExplicou && !pularExplicacoes) {
       mudar('explica'); mostrar('explica');
       for (const f of [
         'É assim que se joga! Prestem atenção, que eu só explico uma vez.',
@@ -250,7 +251,7 @@
       let efeitos = {};
       if (!Q.RODADAS_SEM_PODER.includes(r)) {
         // Rodada 2 em diante: (só na primeira vez) a Coruja explica os poderes, escolha e lançamento
-        if (!explicouPoderes) { await explicaPoderes(vivo); if (!vivo()) return; explicouPoderes = true; }
+        if (!explicouPoderes && !pularExplicacoes) { await explicaPoderes(vivo); if (!vivo()) return; explicouPoderes = true; }
         const escolhas = await escolhaPoderes(r, cat, vivo); if (!vivo()) return;
         efeitos = await lancamento(escolhas, vivo); if (!vivo()) return;
       }
@@ -445,7 +446,7 @@
       .map(([pid, e]) => ({ de: pid, para: e.alvo, poder: e.poder, volta: espelhos.has(e.alvo) }));
     const efeitos = {};
     const acerta = (pid, l) => { (efeitos[pid] = efeitos[pid] || []).push({ poder: l.poder, de: porPid(l.de).nome }); };
-    if (!lances.length) return {};
+    if (!lances.length && !espelhos.size) return {};
 
     mudar('podLanca'); mostrar('podLanca');
     $('plSub').textContent = 'Um lançamento de cada vez, para todo mundo ver.';
@@ -472,6 +473,23 @@
       });
       bola.style.display = 'none'; arco.setAttribute('d', '');
     };
+
+    // Só teve espelho: ninguém lançou nada, mas a Coruja conta quem se protegeu
+    if (!lances.length) {
+      const com = js.filter((j) => espelhos.has(j.pid)), todos = com.length === js.length;
+      const nomes = com.map((j) => j.nome), falas = com.map(fala);
+      const junta = (l) => l.length > 1 ? l.slice(0, -1).join(', ') + ' e ' + l[l.length - 1] : l[0];
+      desenhar(null, null);
+      com.forEach((j) => pula(j.pid, -16));
+      Q.sfx('sfx_espelho');
+      $('plCont').textContent = 'Espelho';
+      $('plTit').textContent = todos ? 'Todo mundo pegou Espelho!' : `${junta(nomes)} ${com.length > 1 ? 'pegaram' : 'pegou'} Espelho!`;
+      $('plSub').textContent = 'Ninguém lançou poder, então ninguém foi atingido nesta rodada.';
+      await diz(todos ? 'Todo mundo pegou espelho! Ninguém lançou poder, então ninguém foi atingido.' : `${junta(falas).replace(/^./, (c) => c.toUpperCase())} ${com.length > 1 ? 'pegaram' : 'pegou'} espelho! Mas ninguém lançou poder, então ninguém foi atingido.`);
+      com.forEach((j) => pula(j.pid, 0));
+      await espera(600);
+      return {};
+    }
 
     for (let k = 0; k < lances.length; k++) {
       const l = lances[k], pw = Q.poder(l.poder), de = porPid(l.de), para = porPid(l.para);
@@ -535,12 +553,14 @@
   async function associacao(r, liderAntes, vivo) {
     const js = estado.jogadores, n = js.length;
     const set = sorteia(window.QSS_ASSOC), itens = set.itens.slice().sort(() => Math.random() - 0.5);
-    // 14 · Explicação
-    mudar('asExplica'); mostrar('asExplica');
-    $('aeBonus').textContent = '+' + n;
-    $('aeBonusTx').textContent = `para quem terminar primeiro (o 2º leva ${n - 1}, e assim por diante)`;
-    for (const f of ['Rodada especial! Sem categoria e sem poderes.', 'Vocês têm vinte segundos para ligar dez itens. Certo vale dois pontos, errado tira um.', 'E quem terminar primeiro ganha bônus!']) {
-      await diz(f); if (!vivo()) return liderAntes;
+    // 14 · Explicação (some com "Pular explicações")
+    if (!pularExplicacoes) {
+      mudar('asExplica'); mostrar('asExplica');
+      $('aeBonus').textContent = '+' + n;
+      $('aeBonusTx').textContent = `para quem terminar primeiro (o 2º leva ${n - 1}, e assim por diante)`;
+      for (const f of ['Rodada especial! Sem categoria e sem poderes.', 'Vocês têm vinte segundos para ligar dez itens. Certo vale dois pontos, errado tira um.', 'E quem terminar primeiro ganha bônus!']) {
+        await diz(f); if (!vivo()) return liderAntes;
+      }
     }
     // 15 · Em andamento
     assocResp = {};
@@ -619,7 +639,7 @@
   function desenharBlocos() {
     $('blocos').innerHTML = Q.ALTS.map((a, k) => `<div class="bloco" data-k="${k}" style="background:${a.cor};box-shadow:0 10px 0 ${a.sh}">
       <div class="ameias" aria-hidden="true"><span style="background:${a.cor}"></span><span style="background:${a.cor}"></span><span style="background:${a.cor}"></span></div>
-      <span class="forma">${Q.forma(k, 44)}</span><span class="txt oculta">?</span></div>`).join('');
+      <span class="txt oculta">?</span></div>`).join(''); // sem forma: cada celular tem a sua ordem de cores e formas
   }
   function desenharFigs() {
     $('jogLayer').innerHTML = estado.jogadores.map((j) => `<div class="jc"><img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}"><span class="bolha"></span><span class="nometag">${Q.esc(j.nome)}</span></div>`).join('');
@@ -803,8 +823,11 @@
     const nova = js.slice().sort((a, b) => b.pontos - a.pontos || desempate(a) - desempate(b) || velha.indexOf(a) - velha.indexOf(b));
     $('rSub').textContent = rotulo;
     const chip = (g) => !g ? '' : g > 0 ? `<span class="gn">+${g}</span>` : `<span class="gn" style="background:#F2545B;box-shadow:0 4px 0 #B83239;color:#fff">−${-g}</span>`;
+    // Empate em pontos = mesma posição (1, 1, 3...)
+    const posAntes = (j) => 1 + js.filter((x) => antes[x.pid] > antes[j.pid]).length;
+    const posNova = (j) => 1 + js.filter((x) => x.pontos > j.pontos).length;
     $('rLinhas').innerHTML = velha.map((j, i) => `<div class="rl" data-pid="${j.pid}" style="top:${i * 94}px;opacity:0;transform:translateX(-500px)">
-      <span class="pos">${i + 1}</span><span class="av"><img src="${Q.img(j.char)}" alt=""></span>
+      <span class="pos">${posAntes(j)}</span><span class="av"><img src="${Q.img(j.char)}" alt=""></span>
       <span class="nm">${Q.esc(j.nome)}</span>${chip(ganho[j.pid])}<span class="seta"></span>
       <span class="pt">${antes[j.pid]}</span></div>`).join('');
     $('ranking').style.visibility = 'visible';
@@ -822,14 +845,21 @@
     velha.forEach((j, i) => {
       const l = linhas[i], k = nova.indexOf(j), mov = i - k;
       l.style.top = k * 94 + 'px';
-      l.querySelector('.pos').textContent = k + 1;
-      l.classList.toggle('lider', k === 0);
+      l.querySelector('.pos').textContent = posNova(j);
+      l.classList.toggle('lider', posNova(j) === 1);
       const s = l.querySelector('.seta');
-      if (mov) { s.textContent = (mov > 0 ? '▲' : '▼') + Math.abs(mov); s.style.color = mov > 0 ? '#43892A' : '#B83239'; }
+      const mv = posAntes(j) - posNova(j);
+      if (mv) { s.textContent = (mov > 0 ? '▲' : '▼') + Math.abs(mov); s.style.color = mov > 0 ? '#43892A' : '#B83239'; }
     });
     if (nova.some((j, k) => velha[k] !== j)) Q.sfx('sfx_ranking_sobe');
     await espera(1000); if (!vivo()) return liderAntes;
-    const lider = nova[0];
+    const lider = nova[0], frente = nova.filter((j) => j.pontos === lider.pontos);
+    if (frente.length > 1) {
+      const fl = frente.map(fala), junta = fl.slice(0, -1).join(', ') + ' e ' + fl[fl.length - 1];
+      await diz('Olha o ranking! Empate na frente: ' + junta + '!');
+      await espera(1200);
+      return liderAntes;
+    }
     if (liderAntes && liderAntes !== lider.pid && lider.pontos > 0) { await diz(reacao('virada')); if (!vivo()) return lider.pid; }
     await diz('Olha o ranking! Na frente está… ' + fala(lider) + '!');
     await espera(1200);
@@ -901,9 +931,9 @@
     $('pcAviso').style.cssText = o.aviso ? 'margin:0;font-size:28px;font-weight:800;line-height:1.35;color:#4A5878' : '';
     $('pcRev').classList.toggle('oculto', !o.rev);
     if (o.rev) {
-      const a = Q.ALTS[o.rev.k];
-      $('pcRev').querySelector('.f').style.cssText = `background:${a.cor};box-shadow:0 5px 0 ${a.sh}`;
-      $('pcRev').querySelector('.f').innerHTML = Q.forma(o.rev.k, 26);
+      // As cores e formas mudam de celular para celular (opções embaralhadas): aqui vai só um ✓
+      $('pcRev').querySelector('.f').style.cssText = 'background:#52B947;box-shadow:0 5px 0 #2F7A2A';
+      $('pcRev').querySelector('.f').innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
       $('pcRev').querySelector('b').textContent = 'Resposta certa: ' + o.rev.texto;
       $('pcRev').lastElementChild.textContent = o.rev.extra || '';
     }
@@ -941,7 +971,8 @@
     js.forEach((j) => { j.inicio = lider <= 0 ? 8 : Math.max(0, Math.min(8, Math.round(Math.max(0, j.pontos || 0) / lider * 8))); j.deg = 0; });
     mudar('final'); mostrar('final');
     $('fMundo').style.transform = ''; $('fFala1').style.transform = 'scale(0)';
-    $('fLinhas').innerHTML = lista.map((j, i) => `<div class="rl${i === 0 ? ' lider' : ''}"><span class="pos">${i + 1}</span><span class="av"><img src="${Q.img(j.char)}" alt=""></span><span class="nm">${Q.esc(j.nome)}</span><span class="pt">${j.pontos || 0}</span></div>`).join('');
+    const posF = (j) => 1 + js.filter((x) => (x.pontos || 0) > (j.pontos || 0)).length;
+    $('fLinhas').innerHTML = lista.map((j) => `<div class="rl${posF(j) === 1 ? ' lider' : ''}"><span class="pos">${posF(j)}</span><span class="av"><img src="${Q.img(j.char)}" alt=""></span><span class="nm">${Q.esc(j.nome)}</span><span class="pt">${j.pontos || 0}</span></div>`).join('');
     await espera(1400); if (!vivo()) return;
     Q.sfx('sfx_correr');
     await animar(2.2, (t) => { $('fMundo').style.transform = `translateX(${(-1920 * ease(cl(t / 2.2))).toFixed(1)}px)`; });
@@ -959,8 +990,12 @@
     Q.sfx('sfx_porta');
     await animar(1.0, (t) => abre(2400 * ease(cl(t / 1.0)), 960, 540));
     iris.style.display = 'none';
-    cartao({ texto: 'Seus pontos viraram degraus!', aviso: 'Quem fez mais pontos começa mais alto. Cada um para o seu lugar!', fs: 36 });
-    await diz('Seus pontos viraram degraus! Quem fez mais pontos começa mais alto. Cada um para o seu lugar!'); if (!vivo()) return;
+    if (pularExplicacoes) { cartao({ texto: 'Cada um para o seu degrau!', fs: 40 }); await diz('Cada um para o seu degrau!'); }
+    else {
+      cartao({ texto: 'Seus pontos viraram degraus!', aviso: 'Quem fez mais pontos começa mais alto. Cada um para o seu lugar!', fs: 36 });
+      await diz('Seus pontos viraram degraus! Quem fez mais pontos começa mais alto. Cada um para o seu lugar!');
+    }
+    if (!vivo()) return;
     // Cada um sobe até o seu degrau inicial
     const PASSO = 0.3, max = Math.max(...js.map((j) => j.inicio));
     Q.sfx('sfx_correr');
@@ -972,6 +1007,7 @@
       });
     });
     js.forEach((j) => { j.deg = j.inicio; });
+    if (pularExplicacoes) { await espera(800); posicionar(); return; }
     const doisRap = rapidosQueSobemDois() === 2;
     cartao({ texto: 'Acertou, sobe um degrau.', aviso: (doisRap ? 'Os dois mais rápidos sobem dois.' : 'O mais rápido sobe dois.') + ' Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!', fs: 36 });
     await diz(doisRap ? 'Acertou, sobe um degrau. Os dois mais rápidos sobem dois.' : 'Acertou, sobe um degrau. O mais rápido sobe dois.'); if (!vivo()) return;

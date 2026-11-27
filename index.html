@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/base.css?v=202611270012">
+<link rel="stylesheet" href="css/base.css?v=202611270038">
 <style>
 /* O palco tem 1920×1080 e é escalado para caber em qualquer TV ou monitor */
 #palco{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;
@@ -17,13 +17,22 @@
 .tela{position:absolute;inset:0}
 /* Início */
 #inicio .logo{position:absolute;left:50%;top:170px;transform:translateX(-50%)}
-#inicio .sub{position:absolute;left:0;right:0;top:600px;text-align:center;font-size:34px;font-weight:800;color:var(--tinta2)}
-#inicio .acoes{position:absolute;left:0;right:0;top:690px;display:flex;justify-content:center}
+#inicio .sub{position:absolute;left:0;right:0;top:572px;text-align:center;font-size:34px;font-weight:800;color:var(--tinta2)}
+#inicio .acoes{position:absolute;left:0;right:0;top:668px;display:flex;align-items:center;justify-content:center;gap:34px}
+.chave{display:flex;align-items:center;gap:18px;cursor:pointer;background:#FFFFFF;border-radius:22px;padding:14px 26px 14px 18px;box-shadow:0 6px 0 #D3E2F7;user-select:none}
+.chave input{position:absolute;opacity:0;width:1px;height:1px}
+.chave .trilho{position:relative;width:86px;height:48px;border-radius:24px;background:#C9D6EA;transition:background .2s;flex:none}
+.chave .bola{position:absolute;left:5px;top:5px;width:38px;height:38px;border-radius:50%;background:#FFFFFF;box-shadow:0 3px 0 rgba(29,42,77,.18);transition:transform .2s}
+.chave input:checked + .trilho{background:#6CC24A}
+.chave input:checked + .trilho .bola{transform:translateX(38px)}
+.chave input:focus-visible + .trilho{outline:4px solid #2F5FB8;outline-offset:3px}
+.chave .rot{display:flex;flex-direction:column;font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;line-height:1.1;color:#1D2A4D}
+.chave .rot small{font-family:Nunito,sans-serif;font-weight:800;font-size:20px;color:#4A5878}
 #inicio .btn{font-size:44px;padding:26px 64px;border-radius:28px;box-shadow:0 10px 0 var(--azul-esc)}
 .coruja{position:absolute;left:60px;bottom:40px}
 .balao{position:absolute;background:#fff;border-radius:34px;padding:24px 30px;box-shadow:0 8px 0 var(--sombra-card),0 18px 30px rgba(29,42,77,.14);font-family:Fredoka,sans-serif;font-weight:700;font-size:34px;line-height:1.15}
 .balao::after{content:"";position:absolute;left:-28px;bottom:44px;border-top:18px solid transparent;border-bottom:18px solid transparent;border-right:32px solid #fff}
-#inicio .balao{left:340px;bottom:150px;width:520px}
+#inicio .balao{left:340px;bottom:104px;width:520px}
 /* Sala de espera */
 #sala .esq{position:absolute;left:90px;top:150px;width:620px;display:flex;flex-direction:column;gap:22px}
 #sala h1{font-size:76px;line-height:1}
@@ -94,7 +103,7 @@
 .bloco .ameias{position:absolute;top:-16px;left:40px;right:40px;display:flex;justify-content:space-between}
 .bloco .ameias span{width:56px;height:20px;border-radius:10px 10px 0 0}
 .bloco .forma{width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;flex:none}
-.bloco .txt{font-family:Fredoka,sans-serif;font-weight:700;font-size:96px;line-height:1;color:#1D2A4D;width:200px;height:150px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.bloco .txt{font-family:Fredoka,sans-serif;font-weight:700;font-size:96px;line-height:1;color:#1D2A4D;width:320px;height:150px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
 .bloco .txt.oculta{color:rgba(29,42,77,.25);width:auto}
 #pCard{position:absolute;left:120px;right:420px;top:120px;background:#FFFFFF;border-radius:36px;box-shadow:0 10px 0 #D3E2F7,0 20px 34px rgba(29,42,77,.12);padding:26px 40px;display:flex;flex-direction:column;gap:12px;transition:opacity .5s}
 #pCard .cab{display:flex;gap:14px;align-items:center}
@@ -269,7 +278,8 @@
   <section id="inicio" class="tela" aria-label="Início">
     <div class="logo"><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g-branco" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#F3F8FF"/><stop offset="1" stop-color="#BCD5F6"/></linearGradient><linearGradient id="g-azul" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9EC0FB"/><stop offset=".5" stop-color="#4F8DF7"/><stop offset="1" stop-color="#2F5FB8"/></linearGradient><linearGradient id="g-amarelo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE695"/><stop offset=".5" stop-color="#FFD23F"/><stop offset="1" stop-color="#F2A33A"/></linearGradient><linearGradient id="g-vermelho" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8A1A5"/><stop offset=".5" stop-color="#F2545B"/><stop offset="1" stop-color="#B83239"/></linearGradient><linearGradient id="g-verde" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#AEDD9B"/><stop offset=".5" stop-color="#6CC24A"/><stop offset="1" stop-color="#43892A"/></linearGradient><linearGradient id="g-rosa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FAD7D8"/><stop offset=".5" stop-color="#F6B6B8"/><stop offset="1" stop-color="#D78A8D"/></linearGradient><linearGradient id="g-laranja" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8CC93"/><stop offset=".5" stop-color="#F2A33A"/><stop offset="1" stop-color="#B86E14"/></linearGradient><linearGradient id="g-roxo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFB6F8"/><stop offset=".5" stop-color="#A77BF3"/><stop offset="1" stop-color="#6E46B8"/></linearGradient><linearGradient id="g-turquesa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8CDFD7"/><stop offset=".5" stop-color="#2EC4B6"/><stop offset="1" stop-color="#1A8A80"/></linearGradient><filter id="plastico" x="-5%" y="-10%" width="110%" height="130%" color-interpolation-filters="sRGB"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="h"/><feSpecularLighting in="h" surfaceScale="7" specularConstant=".75" specularExponent="24" lighting-color="#FFFFFF" result="s"><feDistantLight azimuth="235" elevation="55"/></feSpecularLighting><feDiffuseLighting in="h" surfaceScale="7" diffuseConstant="1" lighting-color="#FFFFFF" result="d"><feDistantLight azimuth="235" elevation="55"/></feDiffuseLighting><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" result="n"/><feComposite in="SourceGraphic" in2="d" operator="arithmetic" k1=".55" k2=".55" result="m"/><feComposite in="m" in2="s" operator="arithmetic" k2="1" k3=".55" result="l"/><feComposite in="l" in2="n" operator="arithmetic" k1=".12" k2=".94" result="t"/><feComposite in="t" in2="SourceAlpha" operator="in"/></filter><filter id="sombraChao" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="10"/></filter></defs></svg><svg width="860" height="390" viewBox="0 0 860 390" role="img" aria-label="Quem sabe sobe!"><ellipse cx="430" cy="372" rx="360" ry="13" fill="#1D2A4D" opacity=".18" filter="url(#sombraChao)"/><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,16)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,13)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,10)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,7)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,4)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,1)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">Quem sabe</text><text x="430" y="150" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="128" textLength="740" lengthAdjust="spacingAndGlyphs" fill="url(#g-azul)" filter="url(#plastico)">Quem sabe</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,16)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,13)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,10)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,7)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,4)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" transform="translate(0,1)" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" fill="#1D2A4D" stroke="#1D2A4D" stroke-width="20" stroke-linejoin="round">sobe!</text><text x="430" y="338" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="216" textLength="740" lengthAdjust="spacingAndGlyphs" fill="url(#g-amarelo)" filter="url(#plastico)">sobe!</text></svg></div>
     <p class="sub">O quiz de festa onde quem sabe a resposta sobe a pirâmide.</p>
-    <div class="acoes"><button id="criar" class="btn" type="button">Criar sala</button></div>
+    <div class="acoes"><button id="criar" class="btn" type="button">Criar sala</button>
+      <label class="chave" for="pularExp"><input id="pularExp" type="checkbox" role="switch"><span class="trilho" aria-hidden="true"><span class="bola"></span></span><span class="rot">Pular explicações<small>Para quem já sabe jogar</small></span></label></div>
     <div class="coruja-viva coruja" role="img" aria-label="Coruja apresentadora" style="height:300px;width:239px"></div>
     <div class="balao">Olá! Eu sou a Coruja. Vamos montar a sala de jogo?</div>
   </section>
@@ -506,13 +516,13 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
-<script src="js/config.js?v=202611270012"></script>
-<script src="js/comum.js?v=202611270012"></script>
-<script src="js/perguntas.js?v=202611270012"></script>
-<script src="js/associacao.js?v=202611270012"></script>
-<script src="js/piramide-pos.js?v=202611270012"></script>
-<script src="js/inuteis.js?v=202611270012"></script>
-<script src="js/coruja.js?v=202611270012"></script>
-<script src="js/tv.js?v=202611270012"></script>
+<script src="js/config.js?v=202611270038"></script>
+<script src="js/comum.js?v=202611270038"></script>
+<script src="js/perguntas.js?v=202611270038"></script>
+<script src="js/associacao.js?v=202611270038"></script>
+<script src="js/piramide-pos.js?v=202611270038"></script>
+<script src="js/inuteis.js?v=202611270038"></script>
+<script src="js/coruja.js?v=202611270038"></script>
+<script src="js/tv.js?v=202611270038"></script>
 </body>
 </html>

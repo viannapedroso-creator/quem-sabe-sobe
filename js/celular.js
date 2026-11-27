@@ -8,6 +8,15 @@
   let pid = ler('pid'); if (!pid) { pid = Q.uid(); guardar('pid', pid); }
   let rede = null, codigo = '', ultimo = null, pulso = null, esperaTimer = null;
 
+  // Embaralhamento estável por celular e pergunta (o mesmo se a tela redesenhar ou o celular recarregar)
+  function embaralhar(chave, n) {
+    let h = 2166136261;
+    for (let i = 0; i < chave.length; i++) { h ^= chave.charCodeAt(i); h = Math.imul(h, 16777619); }
+    const rnd = () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return (h >>> 0) / 4294967296; };
+    const a = [...Array(n).keys()];
+    for (let i = n - 1; i > 0; i--) { const k = Math.floor(rnd() * (i + 1)); [a[i], a[k]] = [a[k], a[i]]; }
+    return a;
+  }
   function mostrar(id) { document.querySelectorAll('.tela').forEach((t) => t.classList.toggle('oculto', t.id !== id)); }
   function status(txt) { const s = $('status'); s.textContent = txt || ''; s.classList.toggle('oculto', !txt); }
   function erro(txt) { $('erro').textContent = txt || ''; }
@@ -213,16 +222,19 @@
           $('qDica').innerHTML = window.QSS_EFEITOS.dica(meus);
           $('qDica').classList.toggle('oculto', !meus.length);
           mostrar('pergunta');
+          // Cada celular vê as opções numa ordem própria (e com cores/formas pela posição), para ninguém copiar do vizinho
+          const perm = embaralhar(pid + '|' + q.id, (q.ops || []).length);
           respostaUI = window.QSS_EFEITOS.criar({
-            dir: $('qDir'), ops: q.ops || [], efeitos: enviada ? [] : meus,
+            dir: $('qDir'), ops: perm.map((i) => q.ops[i]), efeitos: enviada ? [] : meus,
             sacudir: (px) => { $('pergunta').style.transform = px ? `translate(${px}px,0)` : ''; },
             aoEscolher: (k) => {
               if (minhaResp[q.id] !== undefined || !rede) return;
-              minhaResp[q.id] = k; Q.sfx('sfx_toque'); vibrar(30);
-              rede.enviar('responder', { pid, qid: q.id, op: k });
+              const op = perm[k];
+              minhaResp[q.id] = op; Q.sfx('sfx_toque'); vibrar(30);
+              rede.enviar('responder', { pid, qid: q.id, op });
             }
           });
-          if (minha !== null) respostaUI.escolhido(minha);
+          if (minha !== null) respostaUI.escolhido(perm.indexOf(minha));
         }
         relogio($('qRel'), 34, '#FFD23F', Q.TEMPO_RESPOSTA, d.aberta ? d : null);
         if (d.aberta) chamar('q' + q.id);

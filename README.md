@@ -50,3 +50,9 @@ Telas 08, 09 e 10 e os efeitos no celular.
 - Perguntas: `js/perguntas.js`, gerado da planilha "Banco de perguntas do MVP". O celular nunca recebe a resposta certa antes da revelação.
 - Teste rápido: `?rodadas=2` joga só até a rodada 2; `?inicio=6` começa direto na rodada 6 (dá para juntar: `?inicio=6&rodadas=7`).
 - A voz da Coruja ainda é a do navegador; os áudios da ElevenLabs entram depois.
+
+## Ajustes de 27/11
+- **Pular explicações**: chave ao lado de "Criar sala" (desligada por padrão). Ligada, pula a explicação inicial, a dos poderes, a da associação e as regras da pirâmide.
+- **Só espelho na rodada**: se ninguém lançou poder mas alguém pegou Espelho, a tela de lançamento mostra "Todo mundo pegou Espelho!" (ou quem pegou) e a Coruja explica que ninguém foi atingido.
+- **Opções embaralhadas**: cada celular mostra as 4 opções numa ordem própria; cores e formas seguem a posição. Na TV, os blocos mostram só o texto e a resposta certa vem com um ✓.
+- **Empate no ranking**: pontos iguais ficam na mesma posição (1, 1, 3…); empate na liderança é anunciado.
