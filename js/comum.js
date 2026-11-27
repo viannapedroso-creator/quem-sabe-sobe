@@ -124,7 +124,7 @@
     const buf = buffers[nome]; if (!buf || !ctx) return false;
     if (ctx.state === 'suspended') ctx.resume();
     const src = ctx.createBufferSource(), g = ctx.createGain();
-    src.buffer = buf; g.gain.value = nome === 'sfx_toque' || nome === 'sfx_tictac' ? 0.55 : 0.9;
+    src.buffer = buf; g.gain.value = ({ sfx_toque: 0.6, sfx_tictac: 0.7, sfx_sorteio: 1.8, sfx_entrar: 1.3, sfx_porta: 1.3, sfx_gelo: 1.3, sfx_gosma: 1.3, sfx_sair: 1.2 })[nome] || 0.9;
     src.connect(g).connect(ctx.destination); src.start();
     return true;
   }
