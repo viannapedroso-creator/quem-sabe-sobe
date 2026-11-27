@@ -330,18 +330,22 @@
       $('vTit').textContent = 'Empate! Sorteando...';
       const nomes = empatadas.map((k) => cats[k]);
       $('vSub').textContent = max === 0 ? 'Ninguém votou. Vou sortear entre as portas.' : `${nomes.slice(0, -1).join(', ')} e ${nomes[nomes.length - 1]} tiveram ${max} ${max === 1 ? 'voto' : 'votos'} cada.`;
-      const fala = diz(T('voto_empate'));
+      // Primeiro a Coruja avisa; só depois a roleta gira, no tempo exato do som do sorteio (2,5 s)
+      await diz(T('voto_empate')); if (!vivo()) return cats[0];
       venc = sorteia(empatadas);
       const passos = []; let ms = 70; while (ms < 620) { passos.push(ms); ms *= 1.16; }
+      const DURACAO = 2400, soma = passos.reduce((a, b) => a + b, 0);
+      for (let n = 0; n < passos.length; n++) passos[n] = passos[n] * DURACAO / soma;
       // termina exatamente na vencedora
       const ordem = []; for (let n = passos.length; n >= 0; n--) ordem.unshift(empatadas[((empatadas.indexOf(venc) - n) % empatadas.length + empatadas.length) % empatadas.length]);
+      Q.sfx('sfx_sorteio');
+      const t0 = performance.now(); let acum = 0;
       for (let n = 0; n < ordem.length; n++) {
         portas.forEach((pw, k) => pw.classList.toggle('acesa', k === ordem[n]));
-        Q.sfx('sfx_sorteio');
-        if (n < passos.length) await espera(passos[n]);
+        if (n < passos.length) { acum += passos[n]; await espera(Math.max(0, t0 + acum - performance.now())); }
       }
+      await espera(250);
       portas.forEach((pw) => pw.classList.remove('acesa'));
-      await fala; if (!vivo()) return cats[0];
       $('vSub').textContent = 'O sorteio escolheu entre as portas empatadas.';
     } else {
       $('vSub').textContent = 'Cada um correu para a porta que escolheu.';
@@ -903,6 +907,7 @@
   function montarChars() {
     $('pirChars').innerHTML = estado.jogadores.map((j) => `<div class="pj"><div class="in"><div class="topo"></div>${B(j, 'parado', 'p')}</div></div>`).join('');
     pjs = [...$('pirChars').children].map((el) => ({ el, img: el.querySelector('.p'), topo: el.querySelector('.topo'), html: '' }));
+    camChave = ''; camera(true);
   }
   // Coloca cada personagem; extra(i) pode devolver {deg, u, dy, dx, fil, op, topo, lado}
   function posicionar(extra) {
@@ -920,6 +925,20 @@
       else { p.topo.style.top = ''; p.topo.style.left = ''; p.topo.style.right = ''; p.topo.style.bottom = ''; p.topo.style.alignItems = ''; }
       p.x = x; p.y = y; p.h = h;
     });
+    camera();
+  }
+  // Câmera da pirâmide: sempre deixa espaço acima do topo e, quando ninguém está nos degraus de baixo,
+  // aproxima para os personagens ficarem maiores na tela
+  let camChave = '';
+  function camera(reset) {
+    const js = estado.jogadores, Y0 = -60;
+    let maxY = 0;
+    if (!reset) js.forEach((j, i) => { maxY = Math.max(maxY, ponto(i, j.deg || 0)[1]); });
+    const s = reset ? 1 : Math.min(1.35, Math.max(1, 1040 / (maxY + 70 - Y0)));
+    const ty = -Y0 * s, tx = 960 * (1 - s);
+    const k = s.toFixed(3) + '|' + ty.toFixed(0);
+    if (k === camChave) return; camChave = k;
+    $('pirMundo').style.transform = `translate(${tx.toFixed(1)}px,${ty.toFixed(1)}px) scale(${s.toFixed(3)})`;
   }
   function lousa(a, b, c) { $('lousa').innerHTML = `<span class="a">${a}</span><span class="b">${b}</span>${c ? `<span class="c${String(c).length > 13 ? ' longo' : ''}">${c}</span>` : ''}`; }
   function relogioPir(frac, seg) {
@@ -1023,7 +1042,7 @@
     js.forEach((j) => { j.deg = j.inicio; });
     if (pularExplicacoes) { await espera(800); posicionar(); return; }
     const doisRap = rapidosQueSobemDois() === 2;
-    cartao({ texto: 'Acertou, sobe um degrau.', aviso: (doisRap ? 'Os dois mais rápidos sobem dois.' : 'O mais rápido sobe dois.') + ' Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!', fs: 36 });
+    cartao({ texto: 'Quem acertar, sobe um degrau.', aviso: (doisRap ? 'Os dois mais rápidos sobem dois.' : 'O mais rápido sobe dois.') + ' Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!', fs: 36 });
     await diz(T(doisRap ? 'regras_dois' : 'regras_um')); if (!vivo()) return;
     await diz(T('regras_poder')); if (!vivo()) return;
     posicionar();
