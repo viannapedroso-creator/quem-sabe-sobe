@@ -199,6 +199,8 @@
         const q = d.q || {}, c = Q.categoria(q.cat);
         const minha = minhaResp[q.id] !== undefined ? minhaResp[q.id] : null;
         const naTv = (d.respondeu || []).includes(pid), enviada = minha !== null || naTv;
+        // Desempate: só os finalistas respondem
+        if (d.participantes && !d.participantes.includes(pid)) { olhe(); break; }
         // Enquanto a Coruja lê a pergunta, o celular fica em "Olhe para a TV". As opções aparecem com o relógio.
         if (!d.aberta && !enviada) { olhe(); break; }
         if (minha !== null && d.aberta && !naTv && rede) rede.enviar('responder', { pid, qid: q.id, op: minha });
@@ -261,8 +263,9 @@
         break;
       }
       case 'fim':
-        // Jogar de novo: todos seguram o botão, na mesma sala
+        // 21 · Fim de jogo: prêmio do vencedor ou colocação, e jogar de novo segurando o botão
         meuVoto = {}; minhaResp = {}; chaveTela = '';
+        desenharFim(m, eu);
         desenharPronto(m, eu, true); mostrar('pronto');
         break;
       default:
@@ -363,6 +366,34 @@
     else { const c = $('aCarta'); c.style.transition = 'transform .25s ease'; c.style.transform = ''; $('aEsq').style.transform = ''; $('aDir').style.transform = ''; }
   };
   $('aMeio').addEventListener('pointerup', soltarArr); $('aMeio').addEventListener('pointercancel', soltarArr);
+
+
+  // ---------- 21 · Celular do vencedor e dos outros ----------
+  const TROFEU = '<svg width="130" height="156" viewBox="0 0 200 240" aria-hidden="true"><path d="M52 40 C10 40 10 104 62 108" fill="none" stroke="#E0A800" stroke-width="16" stroke-linecap="round"/><path d="M148 40 C190 40 190 104 138 108" fill="none" stroke="#E0A800" stroke-width="16" stroke-linecap="round"/><path d="M44 22 H156 V70 C156 112 132 136 100 136 C68 136 44 112 44 70Z" fill="#FFD23F" stroke="#C49A0C" stroke-width="6"/><path d="M60 34 H80 V72 C80 96 88 110 98 118 C74 114 60 96 60 72Z" fill="#FFFFFF" opacity=".45"/><rect x="86" y="134" width="28" height="34" fill="#E0A800"/><rect x="58" y="166" width="84" height="24" rx="8" fill="#FFC531" stroke="#C49A0C" stroke-width="5"/><rect x="44" y="188" width="112" height="40" rx="10" fill="#4F8DF7" stroke="#2F5FB8" stroke-width="5"/><path d="M100 52 l8 16 18 3 -13 12 3 18 -16 -9 -16 9 3 -18 -13 -12 18 -3z" fill="#FFFFFF" opacity=".9"/></svg>';
+  const PRESENTE = '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="12" y="40" width="76" height="52" rx="8" fill="#FFD23F"/><rect x="6" y="28" width="88" height="18" rx="6" fill="#FFC531"/><rect x="44" y="28" width="12" height="64" fill="#F2545B"/><path d="M50 28 C36 8 18 16 30 28 Z M50 28 C64 8 82 16 70 28 Z" fill="#F2545B"/></svg>';
+  let fimChave = '', presenteAberto = false;
+  function desenharFim(m, eu) {
+    const d = m.d || {}, fi = $('fimInfo');
+    const tem = !!d.vencedor;
+    $('pronto').classList.toggle('modoFim', tem); fi.classList.toggle('oculto', !tem);
+    if (!tem) return;
+    const venc = (m.jogadores || []).find((j) => j.pid === d.vencedor) || {};
+    const chave = d.vencedor + '|' + (d.ordem || []).join(',');
+    if (chave !== fimChave) { fimChave = chave; presenteAberto = false; }
+    if (d.vencedor === pid) {
+      fi.innerHTML = `<div class="lado">${TROFEU}<b>Você venceu,<br>${Q.esc(eu.nome)}!</b></div>
+        <div class="txt"><span class="chip">SEU PRÊMIO</span>${presenteAberto
+          ? `<div id="inutil"><small>CONHECIMENTO INÚTIL</small><p>${Q.esc(d.inutil || '')}</p><span style="font-size:16px;font-weight:800;color:var(--tinta2)">Leia em voz alta para a sala!</span></div>`
+          : `<button type="button" id="presente">${PRESENTE}<span><b>Um conhecimento inútil</b><small>Toque para abrir</small></span></button>`}</div>`;
+      const b = $('presente'); if (b) b.addEventListener('click', () => { presenteAberto = true; Q.sfx('sfx_certo'); vibrar([30, 40, 80]); desenharFim(ultimo, eu); });
+    } else {
+      const pos = (d.ordem || []).indexOf(pid) + 1, deg = (d.degraus || {})[pid];
+      const cor = pos === 1 ? '#FFC531' : pos === 2 ? '#4F8DF7' : pos === 3 ? '#F2545B' : '#9AA6BF';
+      fi.innerHTML = `<div class="degrau-fim"><span style="background:${cor}">${pos}º</span><img src="${Q.img(eu.char)}" alt="${Q.esc(eu.nome)}"></div>
+        <div class="txt"><span class="chip">FIM DE JOGO</span><h1>${Q.esc(venc.nome || '')} venceu!</h1>
+        <p>Você ficou em <span style="color:var(--tinta)">${pos}º lugar</span>${deg !== undefined ? `, no degrau ${deg}` : ''}. ${Q.esc(venc.nome || 'O vencedor')} vai ler o prêmio, um conhecimento inútil. Preste atenção!</p></div>`;
+    }
+  }
 
   // Volta sozinho para a sala depois de recarregar a página
   if (daUrl && ler('nome') && ler('sala') === daUrl && Q.configurado()) entrar(daUrl, ler('nome'));

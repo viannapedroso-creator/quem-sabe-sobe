@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/base.css?v=202611262331">
 <style>
 /* O palco tem 1920×1080 e é escalado para caber em qualquer TV ou monitor */
 #palco{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;
@@ -161,6 +161,76 @@
 .cj .total.final{background:#FFD23F;box-shadow:0 5px 0 #C49A0C}
 .cj .bonus{position:absolute;right:-34px;width:70px;height:70px;border-radius:50%;background:#FFD23F;border:5px solid #FFFFFF;box-shadow:0 5px 10px rgba(29,42,77,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;line-height:1;z-index:3;box-sizing:border-box}
 .cj .bonus b{font-size:26px}.cj .bonus small{font-size:13px;text-align:center}
+/* Final (17 a 21) */
+#fMundo{position:absolute;left:0;top:0;width:3840px;height:1080px}
+#fMundo .pontos{position:absolute;inset:0;background-image:radial-gradient(circle,#C3D9F7 4px,transparent 5px);background-size:48px 48px}
+#fRank{position:absolute;left:340px;top:150px;width:1240px;display:flex;flex-direction:column;gap:12px}
+#fRank .cab{display:flex;align-items:baseline;justify-content:space-between}
+#fRank h1{margin:0;font-family:Fredoka,sans-serif;font-weight:700;font-size:64px;line-height:1}
+#fRank .cab span{font-family:Fredoka,sans-serif;font-weight:700;font-size:28px;color:#4A5878}
+#fRank .rl{position:relative}
+.balao-tv{position:absolute;background:#FFFFFF;border-radius:34px;box-shadow:0 10px 0 #D3E2F7,0 20px 34px rgba(29,42,77,.14);box-sizing:border-box;transform-origin:0 100%;transition:transform .25s}
+.balao-tv h2{margin:0;font-family:Fredoka,sans-serif;font-weight:700;line-height:1.1}
+.balao-tv p{margin:10px 0 0;font-weight:800;line-height:1.35;color:#4A5878}
+.balao-tv .pontinha{position:absolute;width:0;height:0}
+#iris{position:absolute;border-radius:50%;box-shadow:0 0 0 4000px #000000;pointer-events:none;z-index:3000;display:none}
+#piramide{background:#EAF4FF}
+#pirFundo{position:absolute;inset:0;width:1920px;height:1080px}
+#lousa{position:absolute;left:86px;top:132px;width:306px;height:306px;border-radius:14px;background:#2F5A4C;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center}
+#lousa .a{font-family:Fredoka,sans-serif;font-weight:600;font-size:30px;letter-spacing:4px;color:#FFFFFF;opacity:.85}
+#lousa .b{font-family:Fredoka,sans-serif;font-weight:700;font-size:96px;line-height:1;color:#FFFFFF}
+#lousa .b small{font-size:44px;opacity:.7}
+#lousa .c{font-size:22px;font-weight:900;letter-spacing:2px;background:#FFC531;border-radius:999px;padding:6px 18px;text-transform:uppercase}
+#pirRelogio{position:absolute;inset:0;pointer-events:none}
+#pirChars .pj{position:absolute;transform:translate(-50%,-100%)}
+#pirChars .pj .in{position:relative;display:flex;flex-direction:column;align-items:center}
+#pirChars .pj img.p{display:block}
+#pirChars .topo{position:absolute;bottom:calc(100% + 4px);display:flex;flex-direction:column;align-items:center;gap:4px}
+.chip-pir{white-space:nowrap;font-family:Fredoka,sans-serif;font-weight:700;font-size:22px;background:#1D2A4D;color:#FFFFFF;border-radius:12px;padding:3px 10px}
+.exclama{width:44px;height:44px;border-radius:50%;background:#FFFFFF;box-shadow:0 4px 0 #D3E2F7;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:28px;color:#2F5FB8}
+.selo-pir{min-width:52px;height:52px;border-radius:26px;display:flex;align-items:center;justify-content:center;gap:4px;padding:0 12px;box-sizing:border-box;font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;color:#FFFFFF;white-space:nowrap}
+.luz-pir{position:absolute;width:260px;height:260px;margin:-130px 0 0 -130px;border-radius:50%;background:radial-gradient(circle,rgba(255,226,120,.85) 0,rgba(255,226,120,.35) 55%,rgba(255,226,120,0) 72%);z-index:1;pointer-events:none}
+#pirCorujaBox{position:absolute;left:20px;bottom:10px;height:270px;width:215px;z-index:2000}
+#pirCard{position:absolute;left:270px;bottom:34px;width:1120px;z-index:2001;padding:22px 36px;display:flex;flex-direction:column;gap:10px}
+#pirCard .pontinha{left:-28px;bottom:60px;border-top:18px solid transparent;border-bottom:18px solid transparent;border-right:32px solid #FFFFFF}
+#pirCard .cab{display:flex;align-items:center;gap:12px}
+#pirCard .cab span:first-child{font-size:20px;font-weight:900;letter-spacing:2px;color:#4A5878}
+#pcLendo{font-size:18px;font-weight:900;color:#2F5FB8;background:#DCEBFF;border-radius:999px;padding:4px 14px}
+#pcTexto{margin:0;font-family:Fredoka,sans-serif;font-weight:700;font-size:42px;line-height:1.12}
+#pcRev{display:flex;align-items:center;gap:16px;background:#E3F6D9;border-radius:20px;padding:10px 18px;transform-origin:0 50%}
+#pcRev .f{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex:none}
+#pcRev b{font-family:Fredoka,sans-serif;font-weight:700;font-size:38px}
+#pcRev span:last-child{margin-left:auto;font-size:22px;font-weight:900;color:#43892A;white-space:nowrap}
+.faixa{position:absolute;left:960px;z-index:1800;display:flex;flex-direction:column;align-items:center}
+.faixa .studs{display:flex;gap:46px}
+.faixa .studs span{width:70px;height:26px;border-radius:12px 12px 0 0;box-shadow:inset 0 -6px 0 rgba(0,0,0,.08)}
+.faixa .corpo{border-radius:26px;padding:26px 60px;white-space:nowrap;font-family:Fredoka,sans-serif;font-weight:700;font-size:92px;line-height:1}
+#bordao{position:absolute;left:960px;top:470px;z-index:1800;display:flex;flex-direction:column;align-items:center;font-family:Fredoka,sans-serif;font-weight:700;line-height:.95;text-align:center}
+#bordao span:first-child{font-size:120px;color:#4F8DF7;-webkit-text-stroke:10px #1D2A4D;paint-order:stroke fill;text-shadow:0 12px 0 #1D2A4D}
+#bordao span:last-child{font-size:190px;color:#FFD23F;-webkit-text-stroke:12px #1D2A4D;paint-order:stroke fill;text-shadow:0 14px 0 #1D2A4D}
+#confete{position:absolute;inset:0;pointer-events:none;z-index:2500;overflow:hidden}
+#confete span{position:absolute;border-radius:3px}
+#flash{position:absolute;inset:0;background:#FFFFFF;opacity:0;z-index:2900;pointer-events:none}
+#podio .raios{position:absolute;left:960px;top:330px;width:900px;height:900px;margin:-450px 0 0 -450px;border-radius:50%;background:repeating-conic-gradient(rgba(255,214,80,.28) 0 10deg,rgba(255,214,80,0) 10deg 20deg)}
+#podio .chaoP{position:absolute;left:0;right:0;top:860px;bottom:0;background:#CFE2FB;background-image:linear-gradient(90deg,transparent 0 120px,#FFEFB8 120px 240px,transparent 240px 360px,#D3F0C4 360px 480px,transparent 480px 600px,#FFDCC2 600px 720px);background-size:720px 220px;border-top:8px solid #BCD5F6}
+#podTit{position:absolute;left:0;right:0;top:96px;margin:0;text-align:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:110px;line-height:1;color:#FFD23F;-webkit-text-stroke:10px #1D2A4D;paint-order:stroke fill;text-shadow:0 10px 0 #1D2A4D}
+.degP{position:absolute;display:flex;flex-direction:column;align-items:center}
+.degP .studs{display:flex;gap:22px}.degP .studs span{width:44px;height:18px;border-radius:9px 9px 0 0}
+.degP .corpo{border-radius:18px 18px 6px 6px;box-shadow:inset 0 -16px 0 rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:110px;color:#FFFFFF}
+#podChars .pc{position:absolute;transform:translate(-50%,-100%)}
+#podChars .pc img{display:block}
+#trofeu{position:absolute;left:1055px;z-index:900;transform-origin:50% 100%}
+#podCorujaBox{position:absolute;left:20px;bottom:10px;height:270px;width:215px;z-index:2000}
+#podFala{left:270px;bottom:34px;width:1100px;z-index:2001;padding:20px 34px}
+#podFala .pontinha{left:-28px;bottom:56px;border-top:18px solid transparent;border-bottom:18px solid transparent;border-right:32px solid #FFFFFF}
+#deNovoBox{position:absolute;right:30px;bottom:34px;width:500px;z-index:2001;background:#1D2A4D;color:#FFFFFF;border-radius:28px;padding:18px 24px;box-sizing:border-box;display:flex;flex-direction:column;gap:10px}
+#deNovoBox b{font-family:Fredoka,sans-serif;font-size:28px}
+#deNovoBox small{font-size:19px;font-weight:800;opacity:.85}
+#dnAv{display:flex;gap:8px;align-items:center}
+#dnAv i{width:44px;height:44px;border-radius:50%;overflow:hidden;display:flex;justify-content:center;border:3px solid #4A5878;background:#2E3B60;box-sizing:border-box}
+#dnAv i.ok{background:#6CC24A;border-color:#FFFFFF}
+#dnAv i img{height:90px;margin-top:2px;opacity:.45}#dnAv i.ok img{opacity:1}
+#dnN{margin-left:auto;font-family:Fredoka,sans-serif;font-weight:700;font-size:24px;color:#FFD23F}
 /* Aviso de configuração e conexão */
 #aviso{position:absolute;left:50%;top:40px;transform:translateX(-50%);z-index:9;font-size:22px;font-weight:900;border-radius:999px;padding:10px 22px;background:var(--vermelho);color:#fff}
 </style>
@@ -382,15 +452,67 @@
     <div id="pRelogio"></div>
   </section>
 
+  <section id="final" class="tela oculto" aria-label="Fim da Fase 1" style="background:#EAF4FF;overflow:hidden">
+    <div id="fMundo">
+      <div class="pontos"></div>
+      <div class="piso p210"></div>
+      <div id="fRank"><div class="cab"><h1>Ranking</h1><span>fim da Fase 1 · 10 de 10</span></div><div id="fLinhas" style="display:flex;flex-direction:column;gap:12px"></div></div>
+      <div style="position:absolute;left:2380px;bottom:90px;width:600px;height:880px">
+        <div style="position:absolute;left:40px;bottom:0;width:440px;height:150px;background:#FFC531;border-radius:28px;box-shadow:0 12px 0 #C28F00"></div>
+        <div style="position:absolute;left:72px;bottom:136px;display:flex;gap:30px" aria-hidden="true"><span style="width:62px;height:28px;border-radius:12px 12px 0 0;background:#FFC531"></span><span style="width:62px;height:28px;border-radius:12px 12px 0 0;background:#FFC531"></span><span style="width:62px;height:28px;border-radius:12px 12px 0 0;background:#FFC531"></span><span style="width:62px;height:28px;border-radius:12px 12px 0 0;background:#FFC531"></span></div>
+        <div class="coruja-viva" role="img" aria-label="Coruja apresentadora" style="position:absolute;left:60px;bottom:150px;height:520px;width:414px"></div>
+      </div>
+    </div>
+    <div id="fFala1" class="balao-tv" style="left:1000px;top:210px;width:640px;padding:34px 40px;transform:scale(0)">
+      <h2 style="font-size:50px">A primeira fase acabou!</h2>
+      <p style="font-size:32px">Agora começa a grande final: a <span style="color:#2F5FB8">Pirâmide do Conhecimento</span>!</p>
+      <span class="pontinha" style="left:20px;bottom:-34px;border-left:24px solid transparent;border-right:24px solid transparent;border-top:40px solid #FFFFFF;transform:rotate(30deg)"></span>
+    </div>
+  </section>
+
+  <section id="piramide" class="tela oculto" aria-label="Pirâmide do Conhecimento" style="overflow:hidden">
+    <img id="pirFundo" src="img/piramide.jpg" alt="Pirâmide de blocos vista de quina">
+    <div id="lousa"></div>
+    <svg id="pirRelogio" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Relógio"></svg>
+    <div id="pirLuzes"></div>
+    <div id="pirChars"></div>
+    <div id="pirFaixa" class="faixa oculto"><div class="studs"></div><div class="corpo"></div></div>
+    <div id="bordao" class="oculto"><span>Quem sabe...</span><span>SOBE!</span></div>
+    <div id="pirCorujaBox" class="coruja-viva"></div>
+    <div id="pirCard" class="balao-tv oculto"><span class="pontinha"></span>
+      <div class="cab"><span id="pcCab"></span><span id="pcLendo" class="oculto">A Coruja está lendo…</span></div>
+      <p id="pcTexto"></p>
+      <div id="pcRev" class="oculto"><span class="f"></span><b></b><span></span></div>
+      <div id="pcAviso" class="oculto"></div>
+    </div>
+  </section>
+
+  <section id="podio" class="tela oculto" aria-label="Vitória" style="background:#EAF4FF;background-image:radial-gradient(circle,#C3D9F7 4px,transparent 5px);background-size:48px 48px;overflow:hidden">
+    <div class="chaoP"></div>
+    <div class="raios"></div>
+    <h1 id="podTit"></h1>
+    <div id="podChars"></div>
+    <div class="degP" style="left:810px;top:582px;width:300px"><div class="studs"><span style="background:#FFC531"></span><span style="background:#FFC531"></span><span style="background:#FFC531"></span><span style="background:#FFC531"></span></div><div class="corpo" style="width:300px;height:260px;background:#FFC531;box-shadow:inset 0 -16px 0 rgba(0,0,0,.1),0 10px 0 #C28F00;text-shadow:0 6px 0 #C28F00">1</div></div><div class="degP" style="left:450px;top:662px;width:300px"><div class="studs"><span style="background:#4F8DF7"></span><span style="background:#4F8DF7"></span><span style="background:#4F8DF7"></span><span style="background:#4F8DF7"></span></div><div class="corpo" style="width:300px;height:180px;background:#4F8DF7;box-shadow:inset 0 -16px 0 rgba(0,0,0,.1),0 10px 0 #2F5FB8;text-shadow:0 6px 0 #2F5FB8">2</div></div><div class="degP" style="left:1170px;top:722px;width:300px"><div class="studs"><span style="background:#F2545B"></span><span style="background:#F2545B"></span><span style="background:#F2545B"></span><span style="background:#F2545B"></span></div><div class="corpo" style="width:300px;height:120px;background:#F2545B;box-shadow:inset 0 -16px 0 rgba(0,0,0,.1),0 10px 0 #B83239;text-shadow:0 6px 0 #B83239">3</div></div>
+    <div id="trofeu"><svg width="200" height="240" viewBox="0 0 200 240" aria-hidden="true"><path d="M52 40 C10 40 10 104 62 108" fill="none" stroke="#E0A800" stroke-width="16" stroke-linecap="round"/><path d="M148 40 C190 40 190 104 138 108" fill="none" stroke="#E0A800" stroke-width="16" stroke-linecap="round"/><path d="M44 22 H156 V70 C156 112 132 136 100 136 C68 136 44 112 44 70Z" fill="#FFD23F" stroke="#C49A0C" stroke-width="6"/><path d="M60 34 H80 V72 C80 96 88 110 98 118 C74 114 60 96 60 72Z" fill="#FFFFFF" opacity=".45"/><rect x="86" y="134" width="28" height="34" fill="#E0A800"/><rect x="58" y="166" width="84" height="24" rx="8" fill="#FFC531" stroke="#C49A0C" stroke-width="5"/><rect x="44" y="188" width="112" height="40" rx="10" fill="#4F8DF7" stroke="#2F5FB8" stroke-width="5"/><path d="M100 52 l8 16 18 3 -13 12 3 18 -16 -9 -16 9 3 -18 -13 -12 18 -3z" fill="#FFFFFF" opacity=".9"/></svg></div>
+    <div id="podCorujaBox" class="coruja-viva"></div>
+    <div id="podFala" class="balao-tv oculto"><span class="pontinha"></span><h2 id="pfTit" style="font-size:38px"></h2><p style="font-size:26px;margin-top:8px">O seu prêmio já está no seu celular: <span style="color:#2F5FB8">um conhecimento inútil</span>. Leia em voz alta para todo mundo!</p></div>
+    <div id="deNovoBox" class="oculto"><b>Jogar de novo?</b><small>Segurem o botão no celular. Mesma sala, mesmos personagens.</small><div id="dnAv"></div></div>
+  </section>
+
+  <div id="iris"></div>
+  <div id="confete"></div>
+  <div id="flash"></div>
   <div id="aviso" class="oculto"></div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
-<script src="js/config.js"></script>
-<script src="js/comum.js"></script>
-<script src="js/perguntas.js"></script>
-<script src="js/associacao.js"></script>
-<script src="js/coruja.js"></script>
-<script src="js/tv.js"></script>
+<script src="js/config.js?v=202611262331"></script>
+<script src="js/comum.js?v=202611262331"></script>
+<script src="js/perguntas.js?v=202611262331"></script>
+<script src="js/associacao.js?v=202611262331"></script>
+<script src="js/piramide-pos.js?v=202611262331"></script>
+<script src="js/inuteis.js?v=202611262331"></script>
+<script src="js/coruja.js?v=202611262331"></script>
+<script src="js/tv.js?v=202611262331"></script>
 </body>
 </html>

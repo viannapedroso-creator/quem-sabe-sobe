@@ -12,7 +12,7 @@
   // Para testar mais rápido: ?rodadas=2 joga só as duas primeiras rodadas
   const ULTIMA = Math.max(1, Math.min(Q.RODADAS, parseInt(params.get('rodadas'), 10) || Q.RODADAS));
   // Para testar uma rodada específica: ?inicio=6 começa direto na rodada 6
-  const PRIMEIRA = Math.max(1, Math.min(Q.RODADAS, parseInt(params.get('inicio'), 10) || 1));
+  const PRIMEIRA = Math.max(1, Math.min(Q.RODADAS + 1, parseInt(params.get('inicio'), 10) || 1)); // 11 = direto para a final
   const CHECK = '<svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" stroke="#1D2A4D" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   // ---------- Palco 1920×1080 ----------
@@ -32,6 +32,7 @@
   }
   document.querySelectorAll('.cena').forEach((sec) => luzes(sec, sec.querySelector('.piso').nextSibling));
   luzes($('mundo'), $('mundo').querySelector('.piso')); luzes($('mundo'), $('mundo').querySelector('.piso'), 1920);
+  luzes($('fMundo'), $('fMundo').querySelector('.piso')); luzes($('fMundo'), $('fMundo').querySelector('.piso'), 1920);
 
   // Coruja animada: todas as Corujas das telas mexem a boca enquanto a voz fala
   document.querySelectorAll('.coruja-viva').forEach((el) => window.QSS_CORUJA.montar(el));
@@ -68,7 +69,8 @@
     todos: ['Todo mundo acertou? Essa estava fácil!', 'Turma afiada!', 'Cem por cento de acerto!'],
     nenhum: ['Ninguém acertou! Era pegadinha.', 'Ixi, zero acertos!', 'Essa pegou todo mundo!'],
     tempo: ['Cinco segundos!', 'Corre, corre!', 'O tempo está acabando!'],
-    virada: ['Temos um novo líder!', 'Virou o jogo!', 'Mudou tudo no ranking!']
+    virada: ['Temos um novo líder!', 'Virou o jogo!', 'Mudou tudo no ranking!'],
+    dois: ['Subiu dois de uma vez!', 'Que pulo!', 'Dois degraus, que velocidade!']
   };
   const ultimaReacao = {};
   function reacao(tipo) {
@@ -133,6 +135,7 @@
         if (!j || !j.char || (estado.fase !== 'sala' && estado.fase !== 'fim')) break;
         j.pronto = !!m.on;
         if (j.pronto) Q.sfx('sfx_pronto');
+        if (estado.fase === 'fim') desenharDeNovo();
         verificarInicio();
         break;
       case 'sair':
@@ -170,6 +173,7 @@
       }
       case 'responder':
         if (!j || estado.fase !== 'pergunta' || !d || !d.aberta || m.qid !== d.q.id) break;
+        if (d.participantes && !d.participantes.includes(j.pid)) break; // desempate: só os finalistas
         if (respostas[j.pid] || !(m.op >= 0 && m.op <= 3)) break;
         respostas[j.pid] = { op: m.op, ms: agora - inicioPergunta };
         d.respondeu.push(j.pid); Q.sfx('sfx_toque');
@@ -213,10 +217,12 @@
 
   // ---------- Partida (Fase 1) ----------
   let respostas = {}, inicioPergunta = 0;
+  const ORDEM_FASE1 = (a, b) => (b.pontos || 0) - (a.pontos || 0);
 
   async function iniciarPartida() {
     const id = ++partida, vivo = () => id === partida;
-    estado.jogadores.forEach((j) => { j.pontos = 0; j.pronto = false; j.usos = {}; Q.PODERES.forEach((pw) => { j.usos[pw.id] = Q.USOS_PODER; }); });
+    confete(false); $('bordao').classList.add('oculto'); $('flash').style.opacity = 0;
+    estado.jogadores.forEach((j) => { j.pontos = 0; j.pronto = false; j.deg = 0; j.usos = {}; Q.PODERES.forEach((pw) => { j.usos[pw.id] = Q.USOS_PODER; }); });
     Q.sfx('sfx_comecar');
 
     // 06 · A Coruja explica (só na primeira partida da sala: "eu só explico uma vez")
@@ -252,12 +258,8 @@
       const res = await revelacao(q, vivo); if (!vivo()) return;
       lider = await pontuacao(r, q, res, lider, vivo); if (!vivo()) return;
     }
-    // Fim da Fase 1: o ranking fica na tela. A pirâmide (telas 17 a 21) é a próxima etapa.
-    $('rSub').textContent = 'final da primeira fase';
-    await diz('A primeira fase acabou!'); if (!vivo()) return;
-    estado.jogadores.forEach((j) => { j.pronto = false; });
-    mudar('fim');
-    await diz('Querem jogar de novo? Segurem o botão no celular.');
+    // Fase 2: a Pirâmide do Conhecimento (telas 17 a 21)
+    await finalPiramide(vivo);
   }
 
   // ---------- 07 · Votação de categoria ----------
@@ -832,6 +834,420 @@
     await diz('Olha o ranking! Na frente está… ' + fala(lider) + '!');
     await espera(1200);
     return lider.pid;
+  }
+
+
+  // =====================================================================
+  // Fase 2 · Pirâmide do Conhecimento (telas 17 a 21)
+  // =====================================================================
+  const TOPO = 16;
+  // Poder de cada degrau (nota da tela 18)
+  function poderDoDegrau(d) {
+    if (d >= 14) return 'gosma'; if (d >= 12) return 'gelo'; if (d >= 10) return 'redemoinho';
+    if (d >= 8) return 'bombas'; if (d >= 6) return 'encolhe'; if (d >= 4) return 'cupins'; return null;
+  }
+  // Pistas: com menos de 8 jogadores, usamos as do meio da pirâmide
+  const pista = (i) => Math.floor((8 - N()) / 2) + i;
+  function ponto(i, deg, u) {
+    const P = window.QSS_PIRAMIDE[pista(i)], a = P[Math.max(0, Math.min(TOPO, deg))], b = P[Math.min(TOPO, deg + 1)];
+    u = u || 0;
+    return [a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u - Math.sin(u * Math.PI) * 34, a[2] + (b[2] - a[2]) * u];
+  }
+  let pjs = [];
+  function montarChars() {
+    $('pirChars').innerHTML = estado.jogadores.map((j) => `<div class="pj"><div class="in"><div class="topo"></div><img class="p" src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}"></div></div>`).join('');
+    pjs = [...$('pirChars').children].map((el) => ({ el, img: el.querySelector('img'), topo: el.querySelector('.topo'), html: '' }));
+  }
+  // Coloca cada personagem; extra(i) pode devolver {deg, u, dy, dx, fil, op, topo, lado}
+  function posicionar(extra) {
+    estado.jogadores.forEach((j, i) => {
+      const o = (extra && extra(i, j)) || {}, deg = o.deg !== undefined ? o.deg : j.deg;
+      const [x, y, h] = ponto(i, deg, o.u);
+      const p = pjs[i]; if (!p) return;
+      p.el.style.left = x.toFixed(1) + 'px'; p.el.style.top = (y + (o.dy || 0)).toFixed(1) + 'px'; p.el.style.zIndex = Math.round(y) + (o.z || 0);
+      p.el.style.opacity = o.op === undefined ? 1 : o.op;
+      p.img.style.height = h.toFixed(1) + 'px'; p.img.style.filter = o.fil || 'none'; p.img.style.transform = o.dx ? `translateX(${o.dx}px)` : '';
+      const html = o.topo || '';
+      if (html !== p.html) { p.html = html; p.topo.innerHTML = html; }
+      p.topo.style.transform = o.tsc && o.tsc !== 1 ? `scale(${o.tsc})` : '';
+      if (o.lado) { p.topo.style.bottom = 'auto'; p.topo.style.top = '0'; p.topo.style[o.lado] = 'calc(100% + 12px)'; p.topo.style.alignItems = o.lado === 'right' ? 'flex-end' : 'flex-start'; }
+      else { p.topo.style.top = ''; p.topo.style.left = ''; p.topo.style.right = ''; p.topo.style.bottom = ''; p.topo.style.alignItems = ''; }
+      p.x = x; p.y = y; p.h = h;
+    });
+  }
+  function lousa(a, b, c) { $('lousa').innerHTML = `<span class="a">${a}</span><span class="b">${b}</span>${c ? `<span class="c">${c}</span>` : ''}`; }
+  function relogioPir(frac, seg) {
+    const CX = 1664, CY = 295, R = 114, RR = Math.round(R * 0.79);
+    let marcas = '';
+    for (let k = 0; k < 12; k++) marcas += `<line x1="${(CX + Math.sin(k / 12 * 6.283) * R * 0.82).toFixed(1)}" y1="${(CY - Math.cos(k / 12 * 6.283) * R * 0.82).toFixed(1)}" x2="${(CX + Math.sin(k / 12 * 6.283) * R * 0.93).toFixed(1)}" y2="${(CY - Math.cos(k / 12 * 6.283) * R * 0.93).toFixed(1)}" stroke="#1D2A4D" stroke-width="${k % 3 ? 4 : 7}" stroke-linecap="round"/>`;
+    let cunha = '';
+    if (frac > 0.001) {
+      const a = -Math.PI / 2 + frac * 2 * Math.PI, big = frac > 0.5 ? 1 : 0;
+      cunha = frac >= 0.999 ? `M${CX} ${CY - RR}A${RR} ${RR} 0 1 1 ${CX - 0.01} ${CY - RR}Z` : `M${CX} ${CY}L${CX} ${CY - RR}A${RR} ${RR} 0 ${big} 1 ${(CX + Math.cos(a) * RR).toFixed(1)} ${(CY + Math.sin(a) * RR).toFixed(1)}Z`;
+    }
+    $('pirRelogio').innerHTML = `<circle cx="${CX}" cy="${CY}" r="${R}" fill="#FFFDF5"/><path d="${cunha}" fill="${seg <= 5 ? '#F2545B' : '#7FB3FF'}"/>${marcas}<circle cx="${CX}" cy="${CY}" r="${Math.round(R * 0.5)}" fill="#FFFFFF"/><text x="${CX}" y="${CY + 24}" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="700" font-size="72" fill="#1D2A4D">${seg}</text>`;
+  }
+  // Balão grande ao lado da Coruja
+  function cartao(o) {
+    const c = $('pirCard');
+    if (!o) { c.classList.add('oculto'); return; }
+    c.classList.remove('oculto');
+    $('pcCab').textContent = o.cab || ''; $('pcCab').style.color = o.cabCor || '#4A5878';
+    $('pcLendo').classList.toggle('oculto', !o.lendo);
+    $('pcTexto').innerHTML = o.texto || ''; $('pcTexto').style.fontSize = (o.fs || 42) + 'px';
+    $('pcAviso').innerHTML = o.aviso || ''; $('pcAviso').classList.toggle('oculto', !o.aviso);
+    $('pcAviso').style.cssText = o.aviso ? 'margin:0;font-size:28px;font-weight:800;line-height:1.35;color:#4A5878' : '';
+    $('pcRev').classList.toggle('oculto', !o.rev);
+    if (o.rev) {
+      const a = Q.ALTS[o.rev.k];
+      $('pcRev').querySelector('.f').style.cssText = `background:${a.cor};box-shadow:0 5px 0 ${a.sh}`;
+      $('pcRev').querySelector('.f').innerHTML = Q.forma(o.rev.k, 26);
+      $('pcRev').querySelector('b').textContent = 'Resposta certa: ' + o.rev.texto;
+      $('pcRev').lastElementChild.textContent = o.rev.extra || '';
+    }
+  }
+  // Faixa de blocos que cai do alto ("Faltam 3 perguntas!", "Desempate!")
+  async function faixa(html, cor, sombra, studs, tx, fs) {
+    const f = $('pirFaixa');
+    f.querySelector('.studs').innerHTML = Array.from({ length: studs }, () => `<span style="background:${cor}"></span>`).join('');
+    const c = f.querySelector('.corpo');
+    c.innerHTML = html; c.style.cssText = `background:${cor};color:${tx};font-size:${fs}px;box-shadow:inset 0 -14px 0 rgba(0,0,0,.08),0 16px 0 ${sombra},0 30px 40px rgba(29,42,77,.25)`;
+    f.classList.remove('oculto');
+    const out = (u) => { const k = 1.70158; return 1 + (k + 1) * Math.pow(u - 1, 3) + k * Math.pow(u - 1, 2); };
+    await animar(1.5, (t) => {
+      const u = cl(t / 0.7);
+      f.style.top = (-260 + 400 * out(u)).toFixed(1) + 'px';
+      f.style.transform = `translateX(-50%) rotate(${(Math.sin(t * 9) * 2 * (1 - cl((t - 0.7) / 0.8))).toFixed(2)}deg)`;
+    });
+  }
+  async function tiraFaixa() {
+    const f = $('pirFaixa'), y0 = parseFloat(f.style.top) || 140;
+    await animar(0.5, (t) => { f.style.top = (y0 - 300 * cl(t / 0.5)) + 'px'; f.style.opacity = 1 - cl(t / 0.5); });
+    f.classList.add('oculto'); f.style.opacity = 1;
+  }
+  function brilhos(lista) {
+    $('pirLuzes').innerHTML = lista.map((l) => `<div class="luz-pir" style="left:${l.x}px;top:${l.y}px;transform:scale(${l.s || 1})${l.c ? `;background:radial-gradient(circle,${l.c} 0,rgba(255,226,120,.3) 55%,rgba(255,226,120,0) 72%)` : ''}"></div>`).join('');
+  }
+  const COROA = '<svg width="56" height="40" viewBox="0 0 56 40" aria-hidden="true"><path d="M4 36 L8 10 L19 22 L28 4 L37 22 L48 10 L52 36Z" fill="#FFD23F" stroke="#C49A0C" stroke-width="4" stroke-linejoin="round"/></svg>';
+
+  // ---------- 17 · Transição para a final ----------
+  async function transicao(vivo) {
+    const js = estado.jogadores;
+    const lista = js.slice().sort(ORDEM_FASE1);
+    const lider = Math.max(0, lista[0].pontos || 0);
+    // Pontos viram degraus: o líder começa no 8; os outros, proporcional aos pontos
+    js.forEach((j) => { j.inicio = lider <= 0 ? 8 : Math.max(0, Math.min(8, Math.round(Math.max(0, j.pontos || 0) / lider * 8))); j.deg = 0; });
+    mudar('final'); mostrar('final');
+    $('fMundo').style.transform = ''; $('fFala1').style.transform = 'scale(0)';
+    $('fLinhas').innerHTML = lista.map((j, i) => `<div class="rl${i === 0 ? ' lider' : ''}"><span class="pos">${i + 1}</span><span class="av"><img src="${Q.img(j.char)}" alt=""></span><span class="nm">${Q.esc(j.nome)}</span><span class="pt">${j.pontos || 0}</span></div>`).join('');
+    await espera(1400); if (!vivo()) return;
+    Q.sfx('sfx_correr');
+    await animar(2.2, (t) => { $('fMundo').style.transform = `translateX(${(-1920 * ease(cl(t / 2.2))).toFixed(1)}px)`; });
+    $('fFala1').style.transform = 'scale(1)';
+    await diz('A primeira fase acabou! Agora começa a grande final: a Pirâmide do Conhecimento!'); if (!vivo()) return;
+    $('fFala1').style.transform = 'scale(0)';
+    // Íris fecha na Coruja e abre na pirâmide
+    const iris = $('iris'); iris.style.display = 'block';
+    const abre = (r, cx, cy) => { iris.style.left = (cx - r) + 'px'; iris.style.top = (cy - r) + 'px'; iris.style.width = iris.style.height = (2 * r) + 'px'; };
+    Q.sfx('sfx_tempo');
+    await animar(1.0, (t) => abre(2400 * (1 - ease(cl(t / 1.0))), 760, 600));
+    mudar('final'); mostrar('piramide');
+    montarChars(); posicionar(); lousa('GRANDE', 'FINAL', '16 DEGRAUS'); $('pirRelogio').innerHTML = ''; brilhos([]); cartao(null);
+    await espera(250);
+    Q.sfx('sfx_porta');
+    await animar(1.0, (t) => abre(2400 * ease(cl(t / 1.0)), 960, 540));
+    iris.style.display = 'none';
+    cartao({ texto: 'Seus pontos viraram degraus!', aviso: 'Quem fez mais pontos começa mais alto. Cada um para o seu lugar!', fs: 36 });
+    await diz('Seus pontos viraram degraus! Quem fez mais pontos começa mais alto. Cada um para o seu lugar!'); if (!vivo()) return;
+    // Cada um sobe até o seu degrau inicial
+    const PASSO = 0.3, max = Math.max(...js.map((j) => j.inicio));
+    Q.sfx('sfx_correr');
+    await animar(max * PASSO + js.length * 0.18 + 0.6, (t) => {
+      posicionar((i, j) => {
+        const e = t - i * 0.18, feito = Math.max(0, e / PASSO), nivel = Math.min(j.inicio, Math.floor(feito));
+        const u = e > 0 && nivel < j.inicio ? feito - Math.floor(feito) : 0, chegou = e > 0 && nivel >= j.inicio, ce = e - j.inicio * PASSO;
+        return { deg: nivel, u, topo: chegou ? `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${j.inicio}</span>` : '', tsc: chegou && ce < 0.2 ? (ce / 0.2 * 1.15).toFixed(2) : 1 };
+      });
+    });
+    js.forEach((j) => { j.deg = j.inicio; });
+    cartao({ texto: 'Acertou, sobe um degrau.', aviso: 'Os dois mais rápidos sobem dois. Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!', fs: 36 });
+    await diz('Acertou, sobe um degrau. Os dois mais rápidos sobem dois.'); if (!vivo()) return;
+    await diz('Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!'); if (!vivo()) return;
+    posicionar();
+  }
+
+  // ---------- 18 · Pergunta na pirâmide ----------
+  async function perguntaPir(k, total, q, vivo, finalistas) {
+    const js = estado.jogadores, desemp = !!finalistas;
+    const joga = (j) => !desemp || finalistas.includes(j);
+    respostas = {};
+    // poder do degrau entra sozinho no celular (no desempate, sem poder)
+    const efeitos = {};
+    if (!desemp) js.forEach((j) => { const pw = poderDoDegrau(j.deg); if (pw) efeitos[j.pid] = [{ poder: pw, de: [], degrau: j.deg, forte: false }]; });
+    const d = { rodada: 'p' + k, pir: true, q: { id: q.id, cat: q.cat, texto: q.texto }, aberta: false, respondeu: [], prazo: 0, efeitos,
+      participantes: desemp ? finalistas.map((j) => j.pid) : null };
+    mudar('pergunta', d);
+    const cab = desemp ? 'DESEMPATE · ' + finalistas.map((j) => j.nome.toUpperCase()).join(' × ') : 'PIRÂMIDE · ' + q.cat.toUpperCase();
+    if (!desemp) lousa('PERGUNTA', `${k}<small>/${total}</small>`, q.cat);
+    cartao({ cab, cabCor: desemp ? '#E0412F' : '#4A5878', lendo: true, texto: Q.esc(q.texto) });
+    relogioPir(1, 15);
+    const fadeDesemp = (i, j) => (desemp && !joga(j) ? { op: 0.45, fil: 'grayscale(.8)' } : {});
+    const nomeDesemp = (j, x) => (desemp && joga(j) ? { lado: x < 960 ? 'right' : 'left' } : {});
+    posicionar((i, j) => Object.assign(fadeDesemp(i, j), nomeDesemp(j, ponto(i, j.deg)[0]), desemp && joga(j) ? { topo: `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>` } : {}));
+    Q.sfx('sfx_pergunta');
+    await diz(desemp ? q.texto : `Pergunta ${Q.NUMEROS[k] || k}, ${q.cat}!`); if (!vivo()) return null;
+    if (!desemp) { await diz(q.texto); if (!vivo()) return null; }
+    cartao({ cab, cabCor: desemp ? '#E0412F' : '#4A5878', texto: Q.esc(q.texto) });
+
+    inicioPergunta = Date.now(); d.aberta = true; d.prazo = inicioPergunta + Q.TEMPO_RESPOSTA; d.q.ops = q.ops;
+    enviarEstado();
+    let seg = 99, avisou = false;
+    const marca = () => posicionar((i, j) => Object.assign(fadeDesemp(i, j), nomeDesemp(j, ponto(i, j.deg)[0]), {
+      topo: (desemp && joga(j) ? `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>` : '') + (respostas[j.pid] ? '<span class="exclama" aria-label="respondeu">!</span>' : '') }));
+    marca();
+    const relo = setInterval(() => {
+      const rest = Math.max(0, d.prazo - Date.now()), sg = Math.ceil(rest / 1000);
+      relogioPir(rest / Q.TEMPO_RESPOSTA, sg);
+      if (sg !== seg && sg > 0) { seg = sg; Q.sfx('sfx_tictac'); }
+      if (!avisou && rest <= 5000 && rest > 0) { avisou = true; falaVoz(reacao('tempo')); }
+      marca();
+    }, 100);
+    await aguardar(Q.TEMPO_RESPOSTA, () => { const on = js.filter((j) => online(j) && joga(j)); return on.length > 0 && on.every((j) => respostas[j.pid]); });
+    clearInterval(relo);
+    d.aberta = false; d.prazo = 0; enviarEstado();
+    if (!vivo()) return null;
+    const todos = js.filter(joga).every((j) => respostas[j.pid]);
+    Q.sfx(todos ? 'sfx_pronto' : 'sfx_tempo');
+    await diz(todos ? 'Todo mundo respondeu!' : 'Tempo esgotado!'); if (!vivo()) return null;
+
+    // Revelação
+    mudar('pirRevela');
+    const certos = js.filter((j) => joga(j) && respostas[j.pid] && respostas[j.pid].op === q.certa).sort((a, b) => respostas[a.pid].ms - respostas[b.pid].ms);
+    const n = certos.length;
+    const extra = desemp ? (n ? (n > 1 ? `${n} acertaram · ${certos[0].nome} foi mais rápido` : `${certos[0].nome} acertou`) : 'ninguém acertou') : `${n} ${n === 1 ? 'acertou' : 'acertaram'}`;
+    cartao({ cab, cabCor: desemp ? '#E0412F' : '#4A5878', texto: Q.esc(q.texto), fs: 28, rev: { k: q.certa, texto: q.ops[q.certa], extra } });
+    Q.sfx(n ? 'sfx_certo' : 'sfx_errado');
+    await diz('A resposta certa é… ' + q.falada + '!'); if (!vivo()) return null;
+    return { certos, desemp };
+  }
+
+  // Selos ✓ ✗ e subida (2 mais rápidos sobem 2)
+  async function subida(res, vivo) {
+    const js = estado.jogadores, certos = res.certos, PASSO = 0.3;
+    const ganho = (j) => { const o = certos.indexOf(j); return o < 0 ? 0 : o < 2 ? 2 : 1; };
+    const antes = {}; js.forEach((j) => { antes[j.pid] = j.deg; });
+    const sobe = js.map((j) => Math.min(ganho(j), TOPO - j.deg));
+    // selos
+    await animar(1.6, (t) => {
+      posicionar((i, j) => {
+        const ts = t - i * 0.06, ok = ganho(j) > 0, resp = !!respostas[j.pid];
+        if (ts <= 0) return {};
+        const selo = ok ? `<span class="selo-pir" style="background:#52B947;box-shadow:0 5px 0 #2F7A2A">✓ +${ganho(j)}</span>` : resp ? '<span class="selo-pir" style="background:#F2545B;box-shadow:0 5px 0 #B83239">✗</span>' : '<span class="selo-pir" style="background:#9AA6BF;box-shadow:0 5px 0 #6C7894">—</span>';
+        return { topo: selo, tsc: ts < 0.2 ? (ts / 0.2 * 1.2).toFixed(2) : 1, dy: ok ? -Math.abs(Math.sin(ts * 7)) * 18 : 0,
+          fil: ok ? 'none' : 'grayscale(.65) brightness(.92)', dx: !ok && ts < 0.7 ? Math.sin(ts * 40) * 7 : 0 };
+      });
+    });
+    if (!vivo()) return;
+    await diz(certos.length ? 'Quem acertou, sobe!' : 'Ninguém acertou! Todo mundo fica onde está.'); if (!vivo()) return;
+    if (certos.length) {
+      const dur = Math.max(...certos.map((j, o) => o * 0.35 + sobe[js.indexOf(j)] * PASSO)) + 0.6;
+      Q.sfx('sfx_correr');
+      await animar(dur, (t) => {
+        posicionar((i, j) => {
+          const g = sobe[i]; if (!g && ganho(j) === 0) return { fil: 'grayscale(.65) brightness(.92)' };
+          const o = certos.indexOf(j), e = t - o * 0.35, feito = Math.max(0, e / PASSO), sub = Math.min(g, Math.floor(feito));
+          const u = e > 0 && sub < g ? feito - Math.floor(feito) : 0, fim = e > g * PASSO + 0.1;
+          return { deg: antes[j.pid] + sub, u, topo: fim ? `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${antes[j.pid] + g}</span>` : `<span class="selo-pir" style="background:#52B947;box-shadow:0 5px 0 #2F7A2A">✓ +${ganho(j)}</span>` };
+        });
+      });
+      js.forEach((j, i) => { j.deg = antes[j.pid] + sobe[i]; });
+    }
+    posicionar((i, j) => (j.deg !== antes[j.pid] ? { topo: `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${j.deg}</span>` } : {}));
+    if (!vivo()) return;
+    // Reações: subiu dois, quase no topo, degrau com poder novo
+    if (js.some((j) => j.deg - antes[j.pid] >= 2)) { await diz(reacao('dois')); if (!vivo()) return; }
+    const quase = js.filter((j) => j.deg >= 14 && j.deg < TOPO && antes[j.pid] < 14).sort((a, b) => b.deg - a.deg)[0];
+    if (quase) { await diz(sorteia([`${fala(quase)} está quase no topo!`, `Olha quem está chegando lá em cima: ${fala(quase)}!`, `Falta pouco para ${fala(quase)}!`])); if (!vivo()) return; }
+    const novo = js.filter((j) => j.deg < TOPO && poderDoDegrau(j.deg) && poderDoDegrau(j.deg) !== poderDoDegrau(antes[j.pid])).sort((a, b) => b.deg - a.deg)[0];
+    if (novo) { await diz(`Cuidado! Esse degrau tem ${Q.poder(poderDoDegrau(novo.deg)).fala}!`); if (!vivo()) return; }
+    await espera(600);
+  }
+
+  // ---------- 19 · Aviso "Faltam X perguntas" ----------
+  async function faltam(rest, vivo) {
+    const js = estado.jogadores;
+    mudar('pirFaltam');
+    cartao(null); $('pirRelogio').innerHTML = '';
+    Q.sfx('sfx_tempo');
+    await faixa(rest === 1 ? 'Falta <span style="color:#E0412F">1</span> pergunta!' : `Faltam <span style="color:#E0412F">${rest}</span> perguntas!`, '#FFC531', '#C28F00', 6, '#1D2A4D', 92);
+    cartao({ texto: 'Atenção! Ninguém consegue mais chegar ao topo.', aviso: (rest === 1 ? 'Falta só 1 pergunta.' : `Faltam só ${rest} perguntas.`) + ' No fim, vence quem estiver <span style="color:#2F5FB8">mais alto na pirâmide</span>.', fs: 40 });
+    await diz('Atenção! Ninguém consegue mais chegar ao topo.'); if (!vivo()) return;
+    await diz(rest === 1 ? 'Falta só uma pergunta!' : `Faltam só ${Q.NUMEROS[rest] || rest} perguntas!`); if (!vivo()) return;
+    await diz('No fim, vence quem estiver mais alto na pirâmide.'); if (!vivo()) return;
+    await tiraFaixa();
+    const lider = js.slice().sort((a, b) => b.deg - a.deg)[0], li = js.indexOf(lider);
+    const [x, y, h] = ponto(li, lider.deg);
+    brilhos([{ x, y: (y - h * 0.45).toFixed(1) }]);
+    lousa('FALTAM', `<span style="color:#FFD23F;font-size:120px">${rest}</span>`, rest === 1 ? 'PERGUNTA' : 'PERGUNTAS');
+    await animar(1.4, (t) => posicionar((i, j) => (j === lider ? { topo: `<span class="chip-pir" style="font-size:24px;padding:4px 12px">${Q.esc(j.nome)} · mais alto agora</span>${COROA}`, tsc: t < 0.25 ? (t / 0.25 * 1.15).toFixed(2) : 1, dy: t < 1.2 ? -Math.abs(Math.sin(t * 8)) * 16 : 0 } : {})));
+    cartao(null);
+    await espera(800);
+    brilhos([]);
+  }
+
+  // ---------- 20 · Desempate entre as finalistas ----------
+  async function desempate(finalistas, banco, vivo) {
+    const js = estado.jogadores, deg = finalistas[0].deg;
+    mudar('pirDesempate');
+    $('pirRelogio').innerHTML = '';
+    lousa('RODADA DE', '<span style="color:#FFD23F;font-size:48px">DESEMPATE</span>', 'DEGRAU ' + deg);
+    const luzF = () => brilhos(finalistas.map((j) => { const i = js.indexOf(j), [x, y, h] = ponto(i, j.deg); return { x, y: (y - h * 0.45).toFixed(1) }; }));
+    luzF();
+    posicionar((i, j) => (finalistas.includes(j) ? { topo: `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>`, lado: ponto(i, j.deg)[0] < 960 ? 'right' : 'left' } : { op: 0.45, fil: 'grayscale(.8)' }));
+    Q.sfx('sfx_tempo');
+    await faixa('Desempate!', '#FF7A59', '#C4502F', 5, '#FFFFFF', 100);
+    const nomes = finalistas.map((j) => j.nome), lista = nomes.slice(0, -1).join(', ') + ' e ' + nomes[nomes.length - 1];
+    const falaLista = finalistas.map(fala), fl = falaLista.slice(0, -1).join(', ') + ' e ' + falaLista[falaLista.length - 1];
+    cartao({ texto: `Empate no degrau ${deg}!`, aviso: `${Q.esc(lista)} vão para o desempate. Só ${finalistas.length === 2 ? 'os dois' : 'os finalistas'} respondem: <span style="color:#2F5FB8">quem acertar mais rápido vence</span>.`, fs: 40 });
+    await diz(`Empate no degrau ${Q.NUMEROS[deg] || deg}!`); if (!vivo()) return null;
+    await diz(`${fl} vão para o desempate.`); if (!vivo()) return null;
+    await diz('Só os finalistas respondem, e quem acertar mais rápido vence!'); if (!vivo()) return null;
+    await tiraFaixa();
+    for (let tent = 0; tent < 6; tent++) {
+      const q = banco.shift(); if (!q) break;
+      const res = await perguntaPir(0, 0, q, vivo, finalistas); if (!vivo() || !res) return null;
+      // tempos de quem acertou
+      posicionar((i, j) => (finalistas.includes(j) ? { lado: ponto(i, j.deg)[0] < 960 ? 'right' : 'left', topo: `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>` + (res.certos.includes(j) ? `<span class="selo-pir" style="background:#52B947;box-shadow:0 5px 0 #2F7A2A;font-size:28px">✓ ${(respostas[j.pid].ms / 1000).toFixed(1).replace('.', ',')} s</span>` : respostas[j.pid] ? '<span class="selo-pir" style="background:#F2545B;box-shadow:0 5px 0 #B83239">✗</span>' : '') } : { op: 0.45, fil: 'grayscale(.8)' }));
+      await espera(1200);
+      if (res.certos.length) {
+        const v = res.certos[0];
+        await diz('Quem chegou primeiro foi… ' + fala(v) + '!');
+        const vi = js.indexOf(v), [x, y, h] = ponto(vi, v.deg);
+        brilhos([{ x, y: (y - h * 0.45).toFixed(1), s: 1.25, c: 'rgba(255,214,80,.95)' }]);
+        await animar(1.4, (t) => posicionar((i, j) => (j === v ? { lado: x < 960 ? 'right' : 'left', topo: `<div style="display:flex;align-items:center;gap:8px">${COROA}<span style="white-space:nowrap;font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;background:#FFD23F;color:#1D2A4D;border-radius:14px;padding:6px 16px;box-shadow:0 5px 0 #C49A0C">Venceu!</span></div>`, dy: -Math.abs(Math.sin(t * 7)) * 22 } : finalistas.includes(j) ? {} : { op: 0.45, fil: 'grayscale(.8)' })));
+        brilhos([]);
+        return v;
+      }
+      await diz('Ninguém acertou! Vamos para mais uma pergunta de desempate.'); if (!vivo()) return null;
+      luzF();
+    }
+    // Sem perguntas sobrando: sorteio entre os finalistas
+    return sorteia(finalistas);
+  }
+
+  // ---------- 21 · Vitória, pódio e troféu ----------
+  let confAtivo = false;
+  function confete(on) {
+    confAtivo = on; const box = $('confete');
+    if (!on) { box.innerHTML = ''; return; }
+    const cores = ['#F2545B', '#FFD23F', '#4F8DF7', '#6CC24A', '#FF7A59', '#B98CF2'], t0 = performance.now();
+    box.innerHTML = Array.from({ length: 70 }, () => '<span></span>').join('');
+    const sp = [...box.children];
+    (function anda() {
+      if (!confAtivo) return;
+      const t = (performance.now() - t0) / 1000;
+      sp.forEach((el, i) => {
+        const s = Math.sin(i * 12.9898) * 43758.5453, r1 = s - Math.floor(s), s2 = Math.sin(i * 78.233) * 12345.678, r2 = s2 - Math.floor(s2);
+        const vel = 180 + r2 * 160, per = 1300 / vel, a = (t + r1 * per) % per, y = -40 + a * vel;
+        el.style.cssText = `left:${(r1 * 1920 + Math.sin(a * 2 + i) * 30).toFixed(0)}px;top:${y.toFixed(0)}px;width:${14 + r2 * 10}px;height:${8 + r1 * 8}px;background:${cores[i % 6]};transform:rotate(${((t * (60 + r2 * 200) + i * 40) % 360).toFixed(0)}deg) scaleX(${Math.cos(t * 5 + i).toFixed(2)})`;
+      });
+      requestAnimationFrame(anda);
+    })();
+  }
+  function classificacao(venc) {
+    return estado.jogadores.slice().sort((a, b) => (b === venc) - (a === venc) || b.deg - a.deg || (b.pontos || 0) - (a.pontos || 0));
+  }
+  function desenharDeNovo() {
+    const js = estado.jogadores, cl_ = (estado.d && estado.d.ordem) || js.map((j) => j.pid);
+    const n = js.filter((j) => j.pronto).length;
+    $('dnAv').innerHTML = cl_.map((pid) => { const j = js.find((x) => x.pid === pid); return j ? `<i class="${j.pronto ? 'ok' : ''}"><img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}"></i>` : ''; }).join('') + `<span id="dnN">${n}/${js.length}</span>`;
+  }
+  async function vitoria(venc, porLimite, vivo) {
+    const js = estado.jogadores, vi = js.indexOf(venc);
+    mudar('pirVitoria');
+    cartao(null); $('pirRelogio').innerHTML = ''; brilhos([]);
+    lousa('DEGRAU', '<span style="color:#FFD23F;font-size:110px">16</span>', 'TOPO!');
+    const de = venc.deg, passos = Math.max(1, TOPO - de);
+    Q.sfx('sfx_correr');
+    await animar(passos * 0.3 + 0.2, (t) => {
+      const feito = cl(t / (passos * 0.3)) * passos, nivel = Math.min(TOPO, de + Math.floor(feito)), u = nivel < TOPO ? feito - Math.floor(feito) : 0;
+      posicionar((i, j) => (j === venc ? { deg: nivel, u } : {}));
+    });
+    venc.deg = TOPO;
+    confete(true);
+    const b = $('bordao'); b.classList.remove('oculto');
+    const out = (u) => { const k = 1.70158; return 1 + (k + 1) * Math.pow(u - 1, 3) + k * Math.pow(u - 1, 2); };
+    Q.sfx('sfx_fim'); window.QSS_CORUJA.reagir('rindo', 3);
+    const grito = diz('Quem sabe… SOBE!');
+    await animar(2.2, (t) => {
+      b.style.transform = `translate(-50%,-50%) scale(${t < 0.35 ? out(cl(t / 0.35)).toFixed(2) : 1}) rotate(-3deg)`;
+      posicionar((i, j) => (j === venc ? { dy: -Math.abs(Math.sin(t * 7)) * 22 } : { op: 0.75, fil: 'grayscale(.4)' }));
+    });
+    await grito; if (!vivo()) return;
+    // Clarão e corte para o pódio
+    const fl = $('flash');
+    await animar(0.3, (t) => { fl.style.opacity = cl(t / 0.3); });
+    b.classList.add('oculto');
+    const ordem = classificacao(venc);
+    const inutil = sorteia(window.QSS_INUTEIS);
+    mudar('fim', { vencedor: venc.pid, inutil, ordem: ordem.map((j) => j.pid), degraus: Object.fromEntries(js.map((j) => [j.pid, j.deg])) });
+    js.forEach((j) => { j.pronto = false; });
+    mostrar('podio');
+    $('podTit').textContent = venc.nome + ' venceu!';
+    const LUG = [[960, 600, 360], [600, 680, 290], [1320, 740, 280]], CHAO = [[270], [1530], [375], [1650], [1770]];
+    const resto = ordem.slice(3);
+    const pos = ordem.map((j, k) => (k < 3 ? LUG[k] : [[270, 1530, 375, 1650, 1770][k - 3] || 1770, 860, 210]));
+    $('podChars').innerHTML = ordem.map((j, k) => `<div class="pc" style="left:${pos[k][0]}px;top:${pos[k][1]}px;z-index:${500 + pos[k][1] + (k === 0 ? 50 : 0)}"><img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}" style="height:${pos[k][2]}px"></div>`).join('');
+    $('podFala').classList.add('oculto'); $('deNovoBox').classList.add('oculto');
+    $('trofeu').style.transform = 'scale(0)';
+    const imgs = [...$('podChars').querySelectorAll('img')];
+    let vivoPod = true;
+    const t0 = performance.now();
+    (function festa() {
+      if (!vivoPod || estado.fase !== 'fim') return;
+      const t = (performance.now() - t0) / 1000;
+      document.querySelector('#podio .raios').style.transform = `rotate(${(t * 12).toFixed(1)}deg) scale(${cl(t / 0.6).toFixed(2)})`;
+      $('podTit').style.transform = `scale(${t < 0.5 ? out(cl((t - 0.1) / 0.4)).toFixed(2) : 1})`;
+      imgs.forEach((im, k) => { const f = k === 0 ? Math.abs(Math.sin(t * 6)) * 24 : k < 3 ? Math.abs(Math.sin(t * 5 + k)) * 12 : Math.abs(Math.sin(t * 8 + k * 1.3)) * 8; im.style.transform = `translateY(${-f}px)`; });
+      const tt = t - 0.6;
+      $('trofeu').style.top = (600 - 240 - 10 - (tt > 0 ? Math.sin(tt * 2.2) * 8 : 0)).toFixed(1) + 'px';
+      $('trofeu').style.transform = `scale(${tt < 0 ? 0 : (tt < 0.5 ? out(cl(tt / 0.5)) : 1).toFixed(2)}) rotate(${tt > 0 ? (Math.sin(tt * 2) * 4).toFixed(1) : 0}deg)`;
+      requestAnimationFrame(festa);
+    })();
+    await animar(0.5, (t) => { fl.style.opacity = 1 - cl(t / 0.5); });
+    await espera(2200); if (!vivo()) return;
+    $('pfTit').textContent = `Parabéns, ${venc.nome}! ${porLimite ? 'Você terminou mais alto!' : 'Você chegou ao topo!'}`;
+    $('podFala').classList.remove('oculto');
+    await diz(porLimite ? `Parabéns! ${fala(venc)} terminou mais alto na pirâmide!` : `Parabéns! ${fala(venc)} chegou ao topo da Pirâmide do Conhecimento!`); if (!vivo()) return;
+    await diz('O seu prêmio já está no seu celular: um conhecimento inútil! Leia em voz alta para todo mundo.'); if (!vivo()) return;
+    desenharDeNovo(); $('deNovoBox').classList.remove('oculto');
+    await diz('Querem jogar de novo? Segurem o botão no celular.');
+  }
+
+  async function finalPiramide(vivo) {
+    const js = estado.jogadores;
+    await transicao(vivo); if (!vivo()) return;
+    const banco = window.QSS_PERGUNTAS.filter((p) => p.fase === 'piramide').sort(() => Math.random() - 0.5);
+    const extra = window.QSS_PERGUNTAS.filter((p) => p.fase === 'desempate').sort(() => Math.random() - 0.5);
+    const total = Math.min(20, banco.length, parseInt(params.get('pir'), 10) || 20); // ?pir=3 limita as perguntas (teste)
+    let avisouFaltam = false, venc = null;
+    for (let k = 1; k <= total; k++) {
+      const q = banco.shift();
+      const res = await perguntaPir(k, total, q, vivo); if (!vivo() || !res) return;
+      await subida(res, vivo); if (!vivo()) return;
+      const noTopo = js.filter((j) => j.deg >= TOPO);
+      if (noTopo.length) { venc = noTopo.sort((a, b) => res.certos.indexOf(a) - res.certos.indexOf(b))[0]; break; }
+      const rest = total - k, max = Math.max(...js.map((j) => j.deg));
+      if (!avisouFaltam && rest > 0 && max + 2 * rest < TOPO) { avisouFaltam = true; await faltam(rest, vivo); if (!vivo()) return; }
+    }
+    let porLimite = false;
+    if (!venc) {
+      porLimite = true;
+      const max = Math.max(...js.map((j) => j.deg)), emp = js.filter((j) => j.deg === max);
+      venc = emp.length > 1 ? await desempate(emp, extra.concat(banco), vivo) : emp[0];
+      if (!vivo() || !venc) return;
+    }
+    await vitoria(venc, porLimite, vivo);
   }
 
   // ---------- Criar sala ----------

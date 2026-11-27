@@ -210,6 +210,7 @@
     if (!efeitos || !efeitos.length) return '';
     const ics = efeitos.map((e) => `<img src="${Q.imgPoder(e.poder)}" alt="">`).join('');
     const quem = efeitos.map((e) => {
+      if (e.degrau) return `<b>Degrau ${e.degrau}: ${Q.poder(e.poder).nome}!</b>`;
       const pw = Q.poder(e.poder), nomes = e.de.length > 1 ? e.de.slice(0, -1).join(', ') + ' e ' + e.de[e.de.length - 1] : e.de[0];
       return `<b>${Q.esc(nomes)} ${e.de.length > 1 ? 'te jogaram' : 'te jogou'} ${pw.nome}${e.forte ? ' (em dobro)' : ''}!</b>`;
     }).join('<br>');

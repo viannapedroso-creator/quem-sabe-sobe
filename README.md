@@ -20,7 +20,16 @@ Segue o quadro "Quem sabe sobe! · Telas do jogo" (telas 06 a 13) e o roteiro de
 5. **13 · Pontuação**: acertou = 10 + bônus de rapidez (o mais rápido entre os que acertaram ganha N de bônus, N = número de jogadores; o segundo, N−1…). Errou = 0. A câmera aproxima, os pontos aparecem um por um, o cenário corre e o ranking reordena com setas. Celular: "Olhe para a TV".
 6. Fim da Fase 1: ranking final. Para jogar de novo, todos seguram o botão no celular.
 
-- 10 rodadas ("Pergunta X de dez"). Ainda não entra: a pirâmide (telas 17 a 21).
+- 10 rodadas ("Pergunta X de dez").
+
+## Final: Pirâmide do Conhecimento (telas 17 a 21)
+1. **Transição**: ranking final da Fase 1, o cenário corre até a Coruja, íris fecha e abre na pirâmide. Os pontos viram degraus: o líder começa no 8; os outros, proporcional aos pontos.
+2. **Pergunta**: acertou sobe 1; os 2 mais rápidos que acertaram sobem 2; errou fica parado. O poder do degrau entra sozinho no celular (4–5 Cupins, 6–7 Encolhe, 8–9 Bombas, 10–11 Redemoinho, 12–13 Gelo, 14–15 Gosma).
+3. **Faltam**: aparece uma vez, quando ninguém mais consegue chegar ao topo (degrau mais alto + 2 × perguntas que restam < 16).
+4. **Desempate**: se o limite de perguntas acaba com empate no degrau mais alto, só os finalistas respondem, sem poder; vence quem acertar mais rápido. Se todos erram, vem outra pergunta.
+5. **Vitória**: quem chega ao degrau 16 vence na hora. "Quem sabe… SOBE!", clarão, pódio, troféu e o prêmio (um conhecimento inútil) abre só no celular do vencedor. Jogar de novo: todos seguram o botão.
+- Limite de perguntas: 20 ou o que houver no banco (hoje 12 da Pirâmide). Testes: `?inicio=11` vai direto para a final; `?pir=3` limita a 3 perguntas.
+- Depois de mudar JS ou CSS, rode `python3 versao.py` antes de publicar: ele atualiza o `?v=` dos arquivos para o navegador não usar código velho do cache.
 
 ## Rodada 6 · Associação (telas 14, 15 e 16)
 Sem categoria e sem poderes. A Coruja explica, e cada um tem 20 s para ligar 10 itens no celular (tocar no lado ou arrastar o item). A TV mostra uma pilha de blocos por jogador, sem dizer se acertou. Depois confere item por item: certa +2, errada −1, sem resposta 0, e bônus para quem terminou primeiro (N para o 1º, N−1 para o 2º…, N = número de jogadores). Em seguida, o ranking. Os itens vêm de `js/associacao.js` (aba "Associação" da planilha).
