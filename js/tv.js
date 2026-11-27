@@ -48,6 +48,9 @@
   let rede = null, codigo = '', partida = 0, jaExplicou = false, pularExplicacoes = false, avisouSala = false, explicouPoderes = false;
   const online = (j) => Date.now() - j.visto < 12000;
   const fala = (j) => (Q.pers(j.char) || {}).fala || j.nome;
+  // Boneco animado (rig) no lugar da imagem parada; a ação muda pelo data-acao
+  const B = (j, acao, cls) => Q.boneco(j.char, j.nome, cls, acao);
+  const corpo = (el) => el && el.querySelector('.rig, img');
 
   function enviarEstado() {
     if (!rede) return;
@@ -205,12 +208,12 @@
       const p = j.char ? Q.pers(j.char) : null;
       vagas.push(`<div class="vaga cheia${j.novo ? ' entrou' : ''}">
         ${j.pronto ? '<span class="selo">Pronto!</span>' : online(j) ? '' : '<span class="selo off">Sem sinal</span>'}
-        ${p ? `<img src="${Q.img(p.id)}" alt="">` : '<span class="escolhendo">escolhendo<br>personagem…</span>'}
+        ${p ? Q.boneco(p.id, p.nome, '', j.pronto ? 'contente' : 'parado') : '<span class="escolhendo">escolhendo<br>personagem…</span>'}
         <span class="nome">${Q.esc(j.nome)}</span>
         <span class="pers">${p ? Q.esc(p.nome) : '&nbsp;'}</span></div>`);
       j.novo = false;
     }
-    $('vagas').innerHTML = vagas.join('');
+    Q.trocarHTML($('vagas'), vagas.join(''));
     const n = estado.jogadores.length, prontos = estado.jogadores.filter((x) => x.pronto).length;
     $('contagem').textContent = n < 2 ? `${n} na sala · mínimo 2` : `${prontos} de ${n} prontos`;
   }
@@ -275,12 +278,12 @@
   }
   function desenharFila() {
     const d = estado.d || {};
-    $('vFila').innerHTML = estado.jogadores.map((j) => {
+    Q.trocarHTML($('vFila'), estado.jogadores.map((j) => {
       const votou = d.votos && d.votos[j.pid] !== undefined;
-      return `<div class="fj" data-pid="${j.pid}"><img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}">
+      return `<div class="fj" data-pid="${j.pid}">${B(j, votou ? 'contente' : 'pensando')}
         ${votou ? `<span class="ok-bolha">${CHECK}</span>` : '<span class="esp-bolha">...</span>'}
         <span class="nometag">${Q.esc(j.nome)}</span></div>`;
-    }).join('');
+    }).join(''));
   }
   function relogioVoto(restante) {
     $('vRelogio').innerHTML = Q.relogio(100, Math.ceil(restante / 1000), restante / Q.TEMPO_VOTO, '#6CC24A');
@@ -360,22 +363,21 @@
     const grupos = [...document.querySelectorAll('#vPortas .pw .grupo')];
     estado.jogadores.forEach((j) => {
       const k = d.votos[j.pid]; if (k === undefined) return;
-      const alvo = document.createElement('img'); alvo.src = Q.img(j.char); alvo.alt = j.nome; alvo.style.opacity = 0;
-      grupos[k].appendChild(alvo);
+      grupos[k].insertAdjacentHTML('beforeend', B(j, 'contente'));
+      const alvo = grupos[k].lastElementChild; alvo.style.opacity = 0;
       voos.push({ j, alvo });
     });
     if (!voos.length) return;
     Q.sfx('sfx_correr');
     const camada = $('votacao');
     voos.forEach((v) => {
-      const orig = camada.querySelector(`.fj[data-pid="${v.j.pid}"] img`);
+      const orig = corpo(camada.querySelector(`.fj[data-pid="${v.j.pid}"]`));
       const a = orig.getBoundingClientRect(), b = v.alvo.getBoundingClientRect();
       v.de = { x: (a.left - base.left) / s, y: (a.top - base.top) / s, h: a.height / s };
       v.para = { x: (b.left - base.left) / s, y: (b.top - base.top) / s, h: b.height / s };
       v.dir = v.para.x > v.de.x ? 1 : -1;
-      v.voa = document.createElement('img'); v.voa.src = orig.src;
-      v.voa.style.cssText = `position:absolute;left:0;top:0;height:${v.de.h}px;z-index:5;transform-origin:50% 100%`;
-      camada.appendChild(v.voa);
+      camada.insertAdjacentHTML('beforeend', B(v.j, 'correr')); v.voa = camada.lastElementChild;
+      v.voa.style.cssText += `;position:absolute;left:0;top:0;height:${v.de.h}px;z-index:5;transform-origin:50% 100%`;
       orig.parentElement.style.visibility = 'hidden';
     });
     await animar(1.1, (t) => {
@@ -403,12 +405,12 @@
   // ---------- 09 · Escolha dos poderes (15 s) ----------
   function desenharFilaPoder() {
     const d = estado.d || {};
-    $('ppFila').innerHTML = estado.jogadores.map((j) => {
+    Q.trocarHTML($('ppFila'), estado.jogadores.map((j) => {
       const ok = d.escolhas && d.escolhas[j.pid];
-      return `<div class="fj"><img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}">
+      return `<div class="fj">${B(j, ok ? 'contente' : 'pensando')}
         ${ok ? `<span class="ok-bolha">${CHECK}</span>` : '<span class="esp-bolha">...</span>'}
         <span class="nometag">${Q.esc(j.nome)}</span></div>`;
-    }).join('');
+    }).join(''));
   }
   async function escolhaPoderes(r, cat, vivo) {
     const d = { rodada: r, cat, escolhas: {}, aberta: false, prazo: 0 };
@@ -452,12 +454,12 @@
     $('plSub').textContent = 'Um lançamento de cada vez, para todo mundo ver.';
     const hits = {}; js.forEach((j) => { hits[j.pid] = espelhos.has(j.pid) ? ['espelho'] : []; });
     const desenhar = (de, para) => {
-      $('plFila').innerHTML = js.map((j) => {
+      Q.trocarHTML($('plFila'), js.map((j) => {
         const op = !de || j.pid === de || j.pid === para ? 1 : 0.35;
         const bg = j.pid === de ? '#2F5FB8' : j.pid === para ? '#F2545B' : '#FFFFFF', tx = j.pid === de || j.pid === para ? '#FFFFFF' : '#1D2A4D';
         return `<div class="fj" data-pid="${j.pid}" style="opacity:${op}"><div class="hits">${hits[j.pid].map((h) => { const pw = Q.poder(h); return `<span style="background:${pw.cor}"><img src="${Q.imgPoder(h)}" alt="${pw.nome}"></span>`; }).join('')}</div>
-          <img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}"><span class="nometag" style="background:${bg};color:${tx}">${Q.esc(j.nome)}</span></div>`;
-      }).join('');
+          ${B(j, j.pid === de ? 'feliz' : j.pid === para ? 'assustado' : hits[j.pid].includes('espelho') ? 'contente' : hits[j.pid].length ? 'perdido' : 'parado')}<span class="nometag" style="background:${bg};color:${tx}">${Q.esc(j.nome)}</span></div>`;
+      }).join(''));
     };
     const centroX = (pid) => { const el = $('plFila').querySelector(`[data-pid="${pid}"]`), r = el.getBoundingClientRect(), b = $('palco').getBoundingClientRect(), s = escala(); return (r.left + r.width / 2 - b.left) / s; };
     const pula = (pid, dy) => { const el = $('plFila').querySelector(`[data-pid="${pid}"]`); if (el) el.style.transform = `translateY(${dy}px)`; };
@@ -480,7 +482,7 @@
       const nomes = com.map((j) => j.nome), falas = com.map(fala);
       const junta = (l) => l.length > 1 ? l.slice(0, -1).join(', ') + ' e ' + l[l.length - 1] : l[0];
       desenhar(null, null);
-      com.forEach((j) => pula(j.pid, -16));
+      com.forEach((j) => { pula(j.pid, -16); Q.acao($('plFila').querySelector(`[data-pid="${j.pid}"]`), 'feliz'); });
       Q.sfx('sfx_espelho');
       $('plCont').textContent = 'Espelho';
       $('plTit').textContent = todos ? 'Todo mundo pegou Espelho!' : `${junta(nomes)} ${com.length > 1 ? 'pegaram' : 'pegou'} Espelho!`;
@@ -541,17 +543,18 @@
   let assocResp = {};
   function desenharColsAssoc() {
     const d = estado.d || {};
-    $('asCols').innerHTML = estado.jogadores.map((j) => {
+    Q.trocarHTML($('asCols'), estado.jogadores.map((j) => {
       const n = (d.prog || {})[j.pid] || 0, o = (d.terminou || []).indexOf(j.pid);
       let bl = '';
       for (let k = 9; k >= 0; k--) bl += k < n ? `<span class="bl" style="background:${COR_BLOCO[k]};box-shadow:0 4px 0 rgba(29,42,77,.25)"></span>` : '<span class="bl vazio"></span>';
       return `<div class="cj"><div class="pilha">${o >= 0 ? `<span class="medalha">${o + 1}º</span>` : `<span class="cont">${n}/10</span>`}<div class="blocos">${bl}</div></div>
-        <img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}"><span class="nometag">${Q.esc(j.nome)}</span></div>`;
-    }).join('');
+        ${B(j, o >= 0 ? 'feliz' : d.aberta ? 'pensando' : 'parado')}<span class="nometag">${Q.esc(j.nome)}</span></div>`;
+    }).join(''));
   }
 
   async function associacao(r, liderAntes, vivo) {
     const js = estado.jogadores, n = js.length;
+    let cacheAp = null;
     const set = sorteia(window.QSS_ASSOC), itens = set.itens.slice().sort(() => Math.random() - 0.5);
     // 14 · Explicação (some com "Pular explicações")
     if (!pularExplicacoes) {
@@ -598,6 +601,7 @@
       const k0 = Math.floor((t - 0.8) / 0.55); if (k0 !== somK && k0 >= 0 && k0 < 10) { somK = k0; Q.sfx('sfx_toque'); }
       const fim = t >= fimT;
       if (fim) $('apTit').textContent = 'Pontos da associação';
+      if (!cacheAp) cacheAp = {};
       $('apCols').innerHTML = dados.map((x, i) => {
         let soma = 0, bl = '';
         for (let k = 9; k >= 0; k--) {
@@ -615,8 +619,16 @@
         x.total = soma;
         const pulo = fim ? (-Math.abs(Math.sin(t * 5 + i)) * 14).toFixed(0) : 0;
         return `<div class="cj"><div class="pilha"><span class="total${fim ? ' final' : ''}" style="transform:scale(${fim ? (1 + 0.04 * Math.sin(t * 6)).toFixed(3) : 1})">${soma}</span>${bonus}<div class="blocos">${bl}</div></div>
-          <img src="${Q.img(x.j.char)}" alt="${Q.esc(x.j.nome)}" style="transform:translateY(${pulo}px)"><span class="nometag">${Q.esc(x.j.nome)}</span></div>`;
+          <i class="rigslot" data-k="${x.j.pid}" data-dy="${pulo}" data-acao="${fim ? 'feliz' : 'pensando'}"></i><span class="nometag">${Q.esc(x.j.nome)}</span></div>`;
       }).join('');
+      // os bonecos não são recriados a cada quadro: voltam para o lugar
+      $('apCols').querySelectorAll('.rigslot').forEach((sl) => {
+        const x = dados.find((d) => d.j.pid === sl.dataset.k);
+        let b = cacheAp[sl.dataset.k];
+        if (!b) { const tmp = document.createElement('div'); tmp.innerHTML = B(x.j, 'pensando'); b = cacheAp[sl.dataset.k] = tmp.firstElementChild; }
+        b.style.transform = `translateY(${sl.dataset.dy}px)`; Q.acao(b, sl.dataset.acao);
+        sl.replaceWith(b);
+      });
     });
     if (!vivo()) return liderAntes;
 
@@ -642,13 +654,14 @@
       <span class="txt oculta">?</span></div>`).join(''); // sem forma: cada celular tem a sua ordem de cores e formas
   }
   function desenharFigs() {
-    $('jogLayer').innerHTML = estado.jogadores.map((j) => `<div class="jc"><img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}"><span class="bolha"></span><span class="nometag">${Q.esc(j.nome)}</span></div>`).join('');
+    $('jogLayer').innerHTML = estado.jogadores.map((j) => `<div class="jc">${B(j, 'parado')}<span class="bolha"></span><span class="nometag">${Q.esc(j.nome)}</span></div>`).join('');
     figs = [...$('jogLayer').children];
     figs.forEach((f, i) => { f.style.left = cx0(i) + 'px'; f.style.bottom = '20px'; f.style.transform = ''; f.style.opacity = 1; });
   }
   function marcarRespondeu() {
     estado.jogadores.forEach((j, i) => {
       const b = figs[i] && figs[i].querySelector('.bolha'); if (!b) return;
+      Q.acao(figs[i], respostas[j.pid] ? 'pronto' : estado.d && estado.d.aberta ? 'pensando' : 'parado');
       b.outerHTML = respostas[j.pid] ? `<span class="bolha ok-bolha">${CHECK}</span>` : '<span class="bolha esp-bolha">?</span>';
     });
   }
@@ -721,7 +734,8 @@
         const rot = correndo && respostas[j.pid] ? (para > de ? 1 : -1) * 6 : 0;
         f.style.left = x + 'px'; f.style.bottom = y + 'px';
         f.style.transform = `rotate(${rot}deg)`;
-        f.querySelector('img').style.transform = correndo && para < de ? 'scaleX(-1)' : '';
+        corpo(f).style.transform = correndo && para < de ? 'scaleX(-1)' : '';
+        Q.acao(f, correndo ? (respostas[j.pid] ? 'correr' : 'perdido') : run >= 1 ? (respostas[j.pid] ? 'parado' : 'perdido') : 'parado');
       });
     });
     await vamos; if (!vivo()) return {};
@@ -735,7 +749,7 @@
       b.style.opacity = k === certa ? 1 : 0.45;
     });
     const acertou = (j) => respostas[j.pid] && respostas[j.pid].op === certa;
-    js.forEach((j, i) => { figs[i].querySelector('.nometag').style.background = acertou(j) ? '#6CC24A' : '#FFFFFF'; });
+    js.forEach((j, i) => { figs[i].querySelector('.nometag').style.background = acertou(j) ? '#6CC24A' : '#FFFFFF'; Q.acao(figs[i], acertou(j) ? 'comemora' : respostas[j.pid] ? 'triste' : 'perdido'); });
     Q.sfx(js.some(acertou) ? 'sfx_certo' : 'sfx_errado');
     let parar = false;
     const t0 = performance.now();
@@ -755,7 +769,7 @@
     await diz(reacao(n === js.length ? 'todos' : n === 0 ? 'nenhum' : n >= js.length / 2 ? 'ok' : 'erro'));
     parar = true;
     blocos[certa].style.transform = '';
-    js.forEach((j, i) => { figs[i].style.bottom = '20px'; figs[i].style.transform = ''; });
+    js.forEach((j, i) => { figs[i].style.bottom = '20px'; figs[i].style.transform = ''; Q.acao(figs[i], acertou(j) ? 'contente' : 'parado'); });
     // ordem de rapidez entre quem acertou
     const certos = js.filter(acertou).sort((a, b) => respostas[a.pid].ms - respostas[b.pid].ms);
     const ganho = {}; certos.forEach((j, k) => { ganho[j.pid] = Q.pontos(k, js.length); });
@@ -794,7 +808,7 @@
         const f = figs[i], kc = certos.indexOf(j), certo = kc >= 0;
         const spread = certo ? bc(certa) + (kc - (nC - 1) / 2) * 175 : x0(j, i);
         let x = lerp(x0(j, i), spread, zIn), y = 20, rot = 0;
-        if (run > 0) { x += run * run * 2600 + run * 300; y += Math.abs(Math.sin(t * 16 + i)) * 18; rot = 7; }
+        if (run > 0) { x += run * run * 2600 + run * 300; y += Math.abs(Math.sin(t * 16 + i)) * 18; rot = 7; Q.acao(f, 'correr'); }
         else if (certo && t > tPonto(kc) && t < tPonto(kc) + 0.45) y += Math.max(0, Math.sin((t - tPonto(kc)) * 7)) * 50;
         f.style.left = x + 'px'; f.style.bottom = y + 'px'; f.style.transform = `rotate(${rot}deg)`; f.style.zIndex = certo ? 3 : 1;
         f.style.opacity = certo ? 1 : (0.6 + 0.4 * cl(run * 3)).toFixed(2);
@@ -887,8 +901,8 @@
   }
   let pjs = [];
   function montarChars() {
-    $('pirChars').innerHTML = estado.jogadores.map((j) => `<div class="pj"><div class="in"><div class="topo"></div><img class="p" src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}"></div></div>`).join('');
-    pjs = [...$('pirChars').children].map((el) => ({ el, img: el.querySelector('img'), topo: el.querySelector('.topo'), html: '' }));
+    $('pirChars').innerHTML = estado.jogadores.map((j) => `<div class="pj"><div class="in"><div class="topo"></div>${B(j, 'parado', 'p')}</div></div>`).join('');
+    pjs = [...$('pirChars').children].map((el) => ({ el, img: el.querySelector('.p'), topo: el.querySelector('.topo'), html: '' }));
   }
   // Coloca cada personagem; extra(i) pode devolver {deg, u, dy, dx, fil, op, topo, lado}
   function posicionar(extra) {
@@ -898,7 +912,7 @@
       const p = pjs[i]; if (!p) return;
       p.el.style.left = x.toFixed(1) + 'px'; p.el.style.top = (y + (o.dy || 0)).toFixed(1) + 'px'; p.el.style.zIndex = Math.round(y) + (o.z || 0);
       p.el.style.opacity = o.op === undefined ? 1 : o.op;
-      p.img.style.height = h.toFixed(1) + 'px'; p.img.style.filter = o.fil || 'none'; p.img.style.transform = o.dx ? `translateX(${o.dx}px)` : '';
+      p.img.style.height = h.toFixed(1) + 'px'; Q.acao(p.img, o.acao || 'parado'); p.img.style.filter = o.fil || 'none'; p.img.style.transform = o.dx ? `translateX(${o.dx}px)` : '';
       const html = o.topo || '';
       if (html !== p.html) { p.html = html; p.topo.innerHTML = html; }
       p.topo.style.transform = o.tsc && o.tsc !== 1 ? `scale(${o.tsc})` : '';
@@ -1003,7 +1017,7 @@
       posicionar((i, j) => {
         const e = t - i * 0.18, feito = Math.max(0, e / PASSO), nivel = Math.min(j.inicio, Math.floor(feito));
         const u = e > 0 && nivel < j.inicio ? feito - Math.floor(feito) : 0, chegou = e > 0 && nivel >= j.inicio, ce = e - j.inicio * PASSO;
-        return { deg: nivel, u, topo: chegou ? `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${j.inicio}</span>` : '', tsc: chegou && ce < 0.2 ? (ce / 0.2 * 1.15).toFixed(2) : 1 };
+        return { deg: nivel, u, acao: chegou ? 'contente' : e > 0 ? 'subir' : 'parado', topo: chegou ? `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${j.inicio}</span>` : '', tsc: chegou && ce < 0.2 ? (ce / 0.2 * 1.15).toFixed(2) : 1 };
       });
     });
     js.forEach((j) => { j.deg = j.inicio; });
@@ -1042,6 +1056,7 @@
     enviarEstado();
     let seg = 99, avisou = false;
     const marca = () => posicionar((i, j) => Object.assign(fadeDesemp(i, j), nomeDesemp(j, ponto(i, j.deg)[0]), {
+      acao: !joga(j) ? 'parado' : respostas[j.pid] ? 'pronto' : 'pensando',
       topo: (desemp && joga(j) ? `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>` : '') + (respostas[j.pid] ? '<span class="exclama" aria-label="respondeu">!</span>' : '') }));
     marca();
     const relo = setInterval(() => {
@@ -1083,7 +1098,7 @@
         const ts = t - i * 0.06, ok = ganho(j) > 0, resp = !!respostas[j.pid];
         if (ts <= 0) return {};
         const selo = ok ? `<span class="selo-pir" style="background:#52B947;box-shadow:0 5px 0 #2F7A2A">✓ +${ganho(j)}</span>` : resp ? '<span class="selo-pir" style="background:#F2545B;box-shadow:0 5px 0 #B83239">✗</span>' : '<span class="selo-pir" style="background:#9AA6BF;box-shadow:0 5px 0 #6C7894">—</span>';
-        return { topo: selo, tsc: ts < 0.2 ? (ts / 0.2 * 1.2).toFixed(2) : 1, dy: ok ? -Math.abs(Math.sin(ts * 7)) * 18 : 0,
+        return { acao: ok ? 'feliz' : resp ? 'triste' : 'perdido', topo: selo, tsc: ts < 0.2 ? (ts / 0.2 * 1.2).toFixed(2) : 1, dy: ok ? -Math.abs(Math.sin(ts * 7)) * 18 : 0,
           fil: ok ? 'none' : 'grayscale(.65) brightness(.92)', dx: !ok && ts < 0.7 ? Math.sin(ts * 40) * 7 : 0 };
       });
     });
@@ -1094,15 +1109,15 @@
       Q.sfx('sfx_correr');
       await animar(dur, (t) => {
         posicionar((i, j) => {
-          const g = sobe[i]; if (!g && ganho(j) === 0) return { fil: 'grayscale(.65) brightness(.92)' };
+          const g = sobe[i]; if (!g && ganho(j) === 0) return { fil: 'grayscale(.65) brightness(.92)', acao: respostas[j.pid] ? 'triste' : 'perdido' };
           const o = certos.indexOf(j), e = t - o * 0.35, feito = Math.max(0, e / PASSO), sub = Math.min(g, Math.floor(feito));
           const u = e > 0 && sub < g ? feito - Math.floor(feito) : 0, fim = e > g * PASSO + 0.1;
-          return { deg: antes[j.pid] + sub, u, topo: fim ? `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${antes[j.pid] + g}</span>` : `<span class="selo-pir" style="background:#52B947;box-shadow:0 5px 0 #2F7A2A">✓ +${ganho(j)}</span>` };
+          return { deg: antes[j.pid] + sub, u, acao: fim ? 'contente' : e > 0 ? 'subir' : 'feliz', topo: fim ? `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${antes[j.pid] + g}</span>` : `<span class="selo-pir" style="background:#52B947;box-shadow:0 5px 0 #2F7A2A">✓ +${ganho(j)}</span>` };
         });
       });
       js.forEach((j, i) => { j.deg = antes[j.pid] + sobe[i]; });
     }
-    posicionar((i, j) => (j.deg !== antes[j.pid] ? { topo: `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${j.deg}</span>` } : {}));
+    posicionar((i, j) => (j.deg !== antes[j.pid] ? { acao: 'contente', topo: `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${j.deg}</span>` } : {}));
     if (!vivo()) return;
     if (js.some((j) => j.deg >= TOPO)) return; // alguém venceu: sem mais falas, a vitória entra na hora
     // Reações: subiu dois, quase no topo
@@ -1128,7 +1143,7 @@
     const [x, y, h] = ponto(li, lider.deg);
     brilhos([{ x, y: (y - h * 0.45).toFixed(1) }]);
     lousa('FALTAM', `<span style="color:#FFD23F;font-size:120px">${rest}</span>`, rest === 1 ? 'PERGUNTA' : 'PERGUNTAS');
-    await animar(1.4, (t) => posicionar((i, j) => (j === lider ? { topo: `<span class="chip-pir" style="font-size:24px;padding:4px 12px">${Q.esc(j.nome)} · mais alto agora</span>${COROA}`, tsc: t < 0.25 ? (t / 0.25 * 1.15).toFixed(2) : 1, dy: t < 1.2 ? -Math.abs(Math.sin(t * 8)) * 16 : 0 } : {})));
+    await animar(1.4, (t) => posicionar((i, j) => (j === lider ? { acao: 'contente', topo: `<span class="chip-pir" style="font-size:24px;padding:4px 12px">${Q.esc(j.nome)} · mais alto agora</span>${COROA}`, tsc: t < 0.25 ? (t / 0.25 * 1.15).toFixed(2) : 1, dy: t < 1.2 ? -Math.abs(Math.sin(t * 8)) * 16 : 0 } : {})));
     cartao(null);
     await espera(800);
     brilhos([]);
@@ -1142,7 +1157,7 @@
     lousa('RODADA DE', '<span style="color:#FFD23F;font-size:48px">DESEMPATE</span>', 'DEGRAU ' + deg);
     const luzF = () => brilhos(finalistas.map((j) => { const i = js.indexOf(j), [x, y, h] = ponto(i, j.deg); return { x, y: (y - h * 0.45).toFixed(1) }; }));
     luzF();
-    posicionar((i, j) => (finalistas.includes(j) ? { topo: `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>`, lado: ponto(i, j.deg)[0] < 960 ? 'right' : 'left' } : { op: 0.45, fil: 'grayscale(.8)' }));
+    posicionar((i, j) => (finalistas.includes(j) ? { acao: 'pensando', topo: `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>`, lado: ponto(i, j.deg)[0] < 960 ? 'right' : 'left' } : { op: 0.45, fil: 'grayscale(.8)' }));
     Q.sfx('sfx_tempo');
     await faixa('Desempate!', '#FF7A59', '#C4502F', 5, '#FFFFFF', 100);
     const nomes = finalistas.map((j) => j.nome), lista = nomes.slice(0, -1).join(', ') + ' e ' + nomes[nomes.length - 1];
@@ -1156,14 +1171,14 @@
       const q = banco.shift(); if (!q) break;
       const res = await perguntaPir(0, 0, q, vivo, finalistas); if (!vivo() || !res) return null;
       // tempos de quem acertou
-      posicionar((i, j) => (finalistas.includes(j) ? { lado: ponto(i, j.deg)[0] < 960 ? 'right' : 'left', topo: `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>` + (res.certos.includes(j) ? `<span class="selo-pir" style="background:#52B947;box-shadow:0 5px 0 #2F7A2A;font-size:28px">✓ ${(respostas[j.pid].ms / 1000).toFixed(1).replace('.', ',')} s</span>` : respostas[j.pid] ? '<span class="selo-pir" style="background:#F2545B;box-shadow:0 5px 0 #B83239">✗</span>' : '') } : { op: 0.45, fil: 'grayscale(.8)' }));
+      posicionar((i, j) => (finalistas.includes(j) ? { acao: res.certos.includes(j) ? 'feliz' : respostas[j.pid] ? 'triste' : 'perdido', lado: ponto(i, j.deg)[0] < 960 ? 'right' : 'left', topo: `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>` + (res.certos.includes(j) ? `<span class="selo-pir" style="background:#52B947;box-shadow:0 5px 0 #2F7A2A;font-size:28px">✓ ${(respostas[j.pid].ms / 1000).toFixed(1).replace('.', ',')} s</span>` : respostas[j.pid] ? '<span class="selo-pir" style="background:#F2545B;box-shadow:0 5px 0 #B83239">✗</span>' : '') } : { op: 0.45, fil: 'grayscale(.8)' }));
       await espera(1200);
       if (res.certos.length) {
         const v = res.certos[0];
         await diz('Quem chegou primeiro foi… ' + fala(v) + '!');
         const vi = js.indexOf(v), [x, y, h] = ponto(vi, v.deg);
         brilhos([{ x, y: (y - h * 0.45).toFixed(1), s: 1.25, c: 'rgba(255,214,80,.95)' }]);
-        await animar(1.4, (t) => posicionar((i, j) => (j === v ? { lado: x < 960 ? 'right' : 'left', topo: `<div style="display:flex;align-items:center;gap:8px">${COROA}<span style="white-space:nowrap;font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;background:#FFD23F;color:#1D2A4D;border-radius:14px;padding:6px 16px;box-shadow:0 5px 0 #C49A0C">Venceu!</span></div>`, dy: -Math.abs(Math.sin(t * 7)) * 22 } : finalistas.includes(j) ? {} : { op: 0.45, fil: 'grayscale(.8)' })));
+        await animar(1.4, (t) => posicionar((i, j) => (j === v ? { acao: 'comemora', lado: x < 960 ? 'right' : 'left', topo: `<div style="display:flex;align-items:center;gap:8px">${COROA}<span style="white-space:nowrap;font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;background:#FFD23F;color:#1D2A4D;border-radius:14px;padding:6px 16px;box-shadow:0 5px 0 #C49A0C">Venceu!</span></div>`, dy: -Math.abs(Math.sin(t * 7)) * 22 } : finalistas.includes(j) ? {} : { op: 0.45, fil: 'grayscale(.8)' })));
         brilhos([]);
         return v;
       }
@@ -1213,7 +1228,7 @@
     Q.sfx('sfx_correr');
     await animar(passos * 0.3 + 0.2, (t) => {
       const feito = cl(t / (passos * 0.3)) * passos, nivel = Math.min(TOPO, de + Math.floor(feito)), u = nivel < TOPO ? feito - Math.floor(feito) : 0;
-      posicionar((i, j) => (j === venc ? { deg: nivel, u } : {}));
+      posicionar((i, j) => (j === venc ? { deg: nivel, u, acao: 'subir' } : {}));
     });
     venc.deg = TOPO;
     confete(true);
@@ -1223,7 +1238,7 @@
     const grito = diz('Quem sabe… SOBE!');
     await animar(2.2, (t) => {
       b.style.transform = `translate(-50%,-50%) scale(${t < 0.35 ? out(cl(t / 0.35)).toFixed(2) : 1}) rotate(-3deg)`;
-      posicionar((i, j) => (j === venc ? { dy: -Math.abs(Math.sin(t * 7)) * 22 } : { op: 0.75, fil: 'grayscale(.4)' }));
+      posicionar((i, j) => (j === venc ? { dy: -Math.abs(Math.sin(t * 7)) * 22, acao: 'comemora' } : { op: 0.75, fil: 'grayscale(.4)' }));
     });
     await grito; if (!vivo()) return;
     // Clarão e corte para o pódio
@@ -1239,10 +1254,10 @@
     const LUG = [[960, 600, 360], [600, 680, 290], [1320, 740, 280]], CHAO = [[270], [1530], [375], [1650], [1770]];
     const resto = ordem.slice(3);
     const pos = ordem.map((j, k) => (k < 3 ? LUG[k] : [[270, 1530, 375, 1650, 1770][k - 3] || 1770, 860, 210]));
-    $('podChars').innerHTML = ordem.map((j, k) => `<div class="pc" style="left:${pos[k][0]}px;top:${pos[k][1]}px;z-index:${500 + pos[k][1] + (k === 0 ? 50 : 0)}"><img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}" style="height:${pos[k][2]}px"></div>`).join('');
+    $('podChars').innerHTML = ordem.map((j, k) => `<div class="pc" style="left:${pos[k][0]}px;top:${pos[k][1]}px;z-index:${500 + pos[k][1] + (k === 0 ? 50 : 0)}">${Q.boneco(j.char, j.nome, '', k === 0 ? 'comemora' : 'contente', `height:${pos[k][2]}px`)}</div>`).join('');
     $('podFala').classList.add('oculto'); $('deNovoBox').classList.add('oculto');
     $('trofeu').style.transform = 'scale(0)';
-    const imgs = [...$('podChars').querySelectorAll('img')];
+    const imgs = [...$('podChars').querySelectorAll('.rig, img')];
     let vivoPod = true;
     const t0 = performance.now();
     (function festa() {

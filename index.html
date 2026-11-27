@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/base.css?v=202611270038">
+<link rel="stylesheet" href="css/base.css?v=202611270119">
 <style>
 /* O palco tem 1920×1080 e é escalado para caber em qualquer TV ou monitor */
 #palco{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;
@@ -46,7 +46,7 @@
 #vagas{position:absolute;left:790px;top:150px;width:1040px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 .vaga{height:330px;border-radius:28px;background:rgba(255,255,255,.55);border:4px dashed #BCD5F6;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:14px;position:relative}
 .vaga.cheia{background:#fff;border:0;box-shadow:0 8px 0 var(--sombra-card),0 18px 30px rgba(29,42,77,.1)}
-.vaga img{height:210px;margin-bottom:8px}
+.vaga img,.vaga .rig{height:210px;margin-bottom:8px}
 .vaga .nome{font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .vaga .pers{font-size:18px;font-weight:800;color:var(--tinta2)}
 .vaga .vazio{font-family:Fredoka,sans-serif;font-weight:700;font-size:90px;color:#BCD5F6;margin:auto}
@@ -85,12 +85,12 @@
 .porta .placa span.longo{font-size:26px;white-space:normal;text-align:center;max-width:220px}
 .pw.apagada{opacity:.45}
 .pw .grupo{position:absolute;top:430px;left:50%;transform:translateX(-50%);display:flex;justify-content:center;align-items:flex-end;white-space:nowrap}
-.pw .grupo img{height:190px;margin:0 -26px}
+.pw .grupo img,.pw .grupo .rig{height:190px;margin:0 -26px}
 #vRelogio{position:absolute;right:90px;top:100px}
 /* Fileira de personagens (07 e 11) */
 .fileira{position:absolute;left:0;right:0;bottom:22px;display:flex;justify-content:center;gap:49px;align-items:flex-end;transition:opacity .3s}
 .fj{position:relative;width:170px;display:flex;flex-direction:column;align-items:center;gap:4px}
-.fj > img{height:170px}
+.fj > img,.fj > .rig{height:170px}
 .nometag{font-family:Fredoka,sans-serif;font-weight:700;font-size:24px;background:#FFFFFF;border-radius:999px;padding:2px 14px;box-shadow:0 4px 0 #D3E2F7;white-space:nowrap}
 .ok-bolha{position:absolute;top:-6px;right:-4px;width:40px;height:40px;border-radius:50%;background:#6CC24A;border:4px solid #FFFFFF;display:flex;align-items:center;justify-content:center}
 .esp-bolha{position:absolute;top:-6px;right:-10px;background:#FFFFFF;border-radius:999px;padding:2px 10px;font-family:Fredoka,sans-serif;font-weight:700;font-size:22px;box-shadow:0 3px 0 #D3E2F7;color:#4A5878}
@@ -113,7 +113,7 @@
 #pRelogio{position:absolute;right:90px;top:96px;transition:opacity .4s}
 #jogLayer{position:absolute;inset:0;pointer-events:none}
 .jc{position:absolute;bottom:20px;width:170px;margin-left:-85px;display:flex;flex-direction:column;align-items:center;gap:4px;transform-origin:50% 100%}
-.jc img{height:220px}
+.jc img,.jc .rig{height:220px}
 .jc .ok-bolha{top:-8px;right:4px;width:44px;height:44px}
 .jc .esp-bolha{top:-4px;right:-2px;border-radius:18px;padding:0 12px;font-size:26px}
 .selo-pts{position:absolute;bottom:300px;display:flex;flex-direction:column;align-items:center;gap:4px}
@@ -140,14 +140,14 @@
 #ppIcones{position:absolute;left:0;right:0;top:420px;display:flex;justify-content:center;gap:30px}
 .pico{width:96px;height:96px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 .pico img{width:110px;height:110px;margin-top:-14px}
-.fileira.f220 .fj > img{height:220px}
+.fileira.f220 .fj > img,.fileira.f220 .fj > .rig{height:220px}
 .fileira.f220 .nometag{font-size:26px;padding:2px 16px}
 #plCont{position:absolute;right:120px;top:150px;font-family:Fredoka,sans-serif;font-weight:700;font-size:28px;background:#FFFFFF;border-radius:16px;padding:8px 20px;box-shadow:0 5px 0 #D3E2F7}
 #plArco{position:absolute;left:0;top:0}
 #plBola{position:absolute;width:130px;height:130px;border-radius:50%;background:#FFFFFF;border:6px solid #fff;box-shadow:0 10px 0 rgba(29,42,77,.15);display:none;align-items:center;justify-content:center;z-index:4}
 #plBola img{width:140px;height:140px;margin-top:-22px}
 #plFila .fj{transition:opacity .25s}
-#plFila .fj > img{height:200px}
+#plFila .fj > img,#plFila .fj > .rig{height:200px}
 #plFila .nometag{font-size:26px;padding:2px 16px;transition:background .2s,color .2s}
 .hits{position:absolute;top:-34px;display:flex;padding-left:10px}
 .hits span{width:50px;height:50px;border-radius:50%;border:3px solid #FFFFFF;display:flex;align-items:center;justify-content:center;margin-left:-10px}
@@ -162,8 +162,8 @@
 .cj .bl{position:relative;width:110px;height:34px;border-radius:9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:20px;color:#FFFFFF}
 .cj .bl.vazio{background:rgba(255,255,255,.6);border:3px dashed #BCD5F6}
 .cj .bl .pop{position:absolute;right:-48px;font-family:Fredoka,sans-serif;font-weight:700;font-size:26px;text-shadow:0 2px 0 #FFFFFF}
-.cj > img{height:170px;margin-top:6px}
-#asPontos .cj > img{height:150px}
+.cj > img,.cj > .rig{height:170px;margin-top:6px}
+#asPontos .cj > img,#asPontos .cj > .rig{height:150px}
 .cj .cont{position:absolute;top:-46px;left:50%;transform:translateX(-50%);font-family:Fredoka,sans-serif;font-weight:700;font-size:28px;background:#FFFFFF;border-radius:14px;padding:2px 12px;box-shadow:0 4px 0 #D3E2F7;white-space:nowrap}
 .cj .medalha{position:absolute;top:-58px;left:50%;transform:translateX(-50%) rotate(-6deg);width:74px;height:74px;border-radius:50%;background:#FFD23F;border:5px solid #FFFFFF;box-shadow:0 5px 10px rgba(29,42,77,.2);display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;box-sizing:border-box}
 .cj .total{font-family:Fredoka,sans-serif;font-weight:700;font-size:40px;min-width:96px;text-align:center;background:#FFFFFF;border-radius:18px;padding:2px 14px;box-shadow:0 5px 0 #D3E2F7}
@@ -193,7 +193,7 @@
 #pirRelogio{position:absolute;inset:0;pointer-events:none}
 #pirChars .pj{position:absolute;transform:translate(-50%,-100%)}
 #pirChars .pj .in{position:relative;display:flex;flex-direction:column;align-items:center}
-#pirChars .pj img.p{display:block}
+#pirChars .pj .p{display:block}
 #pirChars .topo{position:absolute;bottom:calc(100% + 4px);display:flex;flex-direction:column;align-items:center;gap:4px}
 .chip-pir{white-space:nowrap;font-family:Fredoka,sans-serif;font-weight:700;font-size:22px;background:#1D2A4D;color:#FFFFFF;border-radius:12px;padding:3px 10px}
 .exclama{width:44px;height:44px;border-radius:50%;background:#FFFFFF;box-shadow:0 4px 0 #D3E2F7;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:28px;color:#2F5FB8}
@@ -227,7 +227,7 @@
 .degP .studs{display:flex;gap:22px}.degP .studs span{width:44px;height:18px;border-radius:9px 9px 0 0}
 .degP .corpo{border-radius:18px 18px 6px 6px;box-shadow:inset 0 -16px 0 rgba(0,0,0,.1);display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:110px;color:#FFFFFF}
 #podChars .pc{position:absolute;transform:translate(-50%,-100%)}
-#podChars .pc img{display:block}
+#podChars .pc img,#podChars .pc .rig{display:block}
 #trofeu{position:absolute;left:1055px;z-index:900;transform-origin:50% 100%}
 #podCorujaBox{position:absolute;left:20px;bottom:10px;height:270px;width:215px;z-index:2000}
 #podFala{left:270px;bottom:34px;width:1100px;z-index:2001;padding:20px 34px}
@@ -242,6 +242,7 @@
 #dnN{margin-left:auto;font-family:Fredoka,sans-serif;font-weight:700;font-size:24px;color:#FFD23F}
 /* Aviso de configuração e conexão */
 #aviso{position:absolute;left:50%;top:40px;transform:translateX(-50%);z-index:9;font-size:22px;font-weight:900;border-radius:999px;padding:10px 22px;background:var(--vermelho);color:#fff}
+svg.rig{display:block;width:auto;flex:none}
 </style>
 </head>
 <body>
@@ -516,13 +517,15 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
-<script src="js/config.js?v=202611270038"></script>
-<script src="js/comum.js?v=202611270038"></script>
-<script src="js/perguntas.js?v=202611270038"></script>
-<script src="js/associacao.js?v=202611270038"></script>
-<script src="js/piramide-pos.js?v=202611270038"></script>
-<script src="js/inuteis.js?v=202611270038"></script>
-<script src="js/coruja.js?v=202611270038"></script>
-<script src="js/tv.js?v=202611270038"></script>
+<script src="js/config.js?v=202611270119"></script>
+<script src="js/comum.js?v=202611270119"></script>
+<script src="js/perguntas.js?v=202611270119"></script>
+<script src="js/associacao.js?v=202611270119"></script>
+<script src="js/piramide-pos.js?v=202611270119"></script>
+<script src="js/inuteis.js?v=202611270119"></script>
+<script src="js/rig-dados.js?v=202611270119"></script>
+<script src="js/rig.js?v=202611270119"></script>
+<script src="js/coruja.js?v=202611270119"></script>
+<script src="js/tv.js?v=202611270119"></script>
 </body>
 </html>

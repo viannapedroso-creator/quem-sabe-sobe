@@ -56,3 +56,9 @@ Telas 08, 09 e 10 e os efeitos no celular.
 - **Só espelho na rodada**: se ninguém lançou poder mas alguém pegou Espelho, a tela de lançamento mostra "Todo mundo pegou Espelho!" (ou quem pegou) e a Coruja explica que ninguém foi atingido.
 - **Opções embaralhadas**: cada celular mostra as 4 opções numa ordem própria; cores e formas seguem a posição. Na TV, os blocos mostram só o texto e a resposta certa vem com um ✓.
 - **Empate no ranking**: pontos iguais ficam na mesma posição (1, 1, 3…); empate na liderança é anunciado.
+
+## Personagens animados (27/11)
+- Os personagens da TV usam o rig em partes (`js/rig.js` + `js/rig-dados.js`, imagens em `img/rig/`): pernas, braços, tronco e 6 rostos.
+- Cada boneco tem uma ação no atributo `data-acao`: parado, contente, pronto, pensando, feliz, comemora, vibra, triste, assustado, perdido, correr, subir.
+- Avatares pequenos (ranking, celular) continuam com a imagem parada.
+- A versão anterior, com personagens parados, está guardada no branch `versao-estatica`.
