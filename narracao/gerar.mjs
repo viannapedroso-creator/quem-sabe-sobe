@@ -34,11 +34,14 @@ const CONFIG = JSON.parse(fs.readFileSync(path.join(RAIZ, 'narracao/config.json'
 const ARQ_ESTADO = path.join(RAIZ, 'narracao/estado.json');
 const estado = fs.existsSync(ARQ_ESTADO) ? JSON.parse(fs.readFileSync(ARQ_ESTADO, 'utf8')) : {};
 const chave = (t) => String(t).normalize('NFC').replace(/\s+/g, ' ').trim();
-const prefixo = (mapa, id) => { let m = ''; for (const k of Object.keys(mapa || {})) if ((id === k || id.startsWith(k + '_')) && k.length > m.length) m = k; return m ? mapa[m] : undefined; };
-const tom = (f) => { const t = prefixo(CONFIG.tom_por_fala, f.id); return t !== undefined ? t : (CONFIG.tom_por_grupo || {})[f.grupo] || ''; };
+const prefixo = (mapa, id) => { let m = ''; for (const k of Object.keys(mapa || {})) if ((id === k || id.startsWith(k + '_')) && k.length > m.length) m = k;
+  if (!m) return undefined; return m ? mapa[m] : undefined; };
+const tom = (f) => { if (f.grupo === 'perguntas' && f.id.endsWith('_resposta') && CONFIG.tom_resposta) return CONFIG.tom_resposta;
+  const t = prefixo(CONFIG.tom_por_fala, f.id); return t !== undefined ? t : (CONFIG.tom_por_grupo || {})[f.grupo] || ''; };
 const textoEnviado = (f) => {
-  const base = (CONFIG.texto_falado || {})[f.id] || f.texto;
-  const t = /v3|v4/.test(CONFIG.modelo) ? tom(f) : '';
+  const proprio = (CONFIG.texto_falado || {})[f.id];
+  const base = proprio || f.texto;
+  const t = /v3|v4/.test(CONFIG.modelo) && !proprio ? tom(f) : '';
   return (t ? t + ' ' : '') + base;
 };
 const refazer = (id) => REFAZER.some((r) => id === r || id.startsWith(r + '_') || id.startsWith(r));
