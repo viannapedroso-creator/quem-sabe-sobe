@@ -7438,5 +7438,45 @@
   "modelo": "eleven_v4",
   "voz": "HReOQZPV9tH5iTEnSbGo",
   "em": "2026-11-27T15:03:10.844Z"
+ },
+ "P301_resposta": {
+  "texto": "A resposta certa é… O diafragma!",
+  "enviado": "[dramatically] A resposta certa é… O diafragma!",
+  "arquivo": "perguntas/P301_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:04:00.925Z"
+ },
+ "P302_pergunta": {
+  "texto": "Qual célula do sangue combate as infecções?",
+  "enviado": "[curious] Qual célula do sangue combate as infecções?",
+  "arquivo": "perguntas/P302_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:04:02.081Z"
+ },
+ "P302_resposta": {
+  "texto": "A resposta certa é… O leucócito, ou glóbulo branco!",
+  "enviado": "[dramatically] A resposta certa é… O leucócito, ou glóbulo branco!",
+  "arquivo": "perguntas/P302_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:04:03.830Z"
+ },
+ "P303_pergunta": {
+  "texto": "Qual parte do cérebro coordena o equilíbrio?",
+  "enviado": "[curious] Qual parte do cérebro coordena o equilíbrio?",
+  "arquivo": "perguntas/P303_pergunta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:04:04.987Z"
+ },
+ "P303_resposta": {
+  "texto": "A resposta certa é… O cerebelo!",
+  "enviado": "[dramatically] A resposta certa é… O cerebelo!",
+  "arquivo": "perguntas/P303_resposta.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T15:04:06.426Z"
  }
 }

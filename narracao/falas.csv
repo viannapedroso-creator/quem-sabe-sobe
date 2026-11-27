@@ -929,8 +929,8 @@ P299_resposta,perguntas,"A resposta certa é… O negativo!",46,sim,perguntas/P2
 P300_pergunta,perguntas,"Quantos dentes de leite tem uma criança?",50,sim,perguntas/P300_pergunta.mp3
 P300_resposta,perguntas,"A resposta certa é… Vinte dentes!",48,sim,perguntas/P300_resposta.mp3
 P301_pergunta,perguntas,"Qual músculo separa o tórax do abdômen e ajuda na respiração?",71,sim,perguntas/P301_pergunta.mp3
-P301_resposta,perguntas,"A resposta certa é… O diafragma!",47,nao,
-P302_pergunta,perguntas,"Qual célula do sangue combate as infecções?",53,nao,
-P302_resposta,perguntas,"A resposta certa é… O leucócito, ou glóbulo branco!",66,nao,
-P303_pergunta,perguntas,"Qual parte do cérebro coordena o equilíbrio?",54,nao,
-P303_resposta,perguntas,"A resposta certa é… O cerebelo!",46,nao,
+P301_resposta,perguntas,"A resposta certa é… O diafragma!",47,sim,perguntas/P301_resposta.mp3
+P302_pergunta,perguntas,"Qual célula do sangue combate as infecções?",53,sim,perguntas/P302_pergunta.mp3
+P302_resposta,perguntas,"A resposta certa é… O leucócito, ou glóbulo branco!",66,sim,perguntas/P302_resposta.mp3
+P303_pergunta,perguntas,"Qual parte do cérebro coordena o equilíbrio?",54,sim,perguntas/P303_pergunta.mp3
+P303_resposta,perguntas,"A resposta certa é… O cerebelo!",46,sim,perguntas/P303_resposta.mp3
