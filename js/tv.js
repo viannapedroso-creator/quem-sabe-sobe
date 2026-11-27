@@ -33,6 +33,11 @@
   document.querySelectorAll('.cena').forEach((sec) => luzes(sec, sec.querySelector('.piso').nextSibling));
   luzes($('mundo'), $('mundo').querySelector('.piso')); luzes($('mundo'), $('mundo').querySelector('.piso'), 1920);
 
+  // Coruja animada: todas as Corujas das telas mexem a boca enquanto a voz fala
+  document.querySelectorAll('.coruja-viva').forEach((el) => window.QSS_CORUJA.montar(el));
+  // a boca mexe enquanto a voz fala (e, sem voz no navegador, pelo tempo de leitura)
+  function falaVoz(texto) { const p = Q.falar(texto); window.QSS_CORUJA.falar(Promise.all([p, espera(Math.min(6000, 700 + texto.length * 45))])); return p; }
+
   function mostrar(id) { document.querySelectorAll('.tela').forEach((t) => t.classList.toggle('oculto', t.id !== id)); }
   function aviso(txt) { const a = $('aviso'); a.textContent = txt || ''; a.classList.toggle('oculto', !txt); }
 
@@ -55,7 +60,7 @@
   function mudar(fase, d) { estado.fase = fase; estado.d = d || null; enviarEstado(); }
 
   // Voz da Coruja: espera a fala terminar, mas nunca menos que o tempo de leitura (navegador sem voz)
-  function diz(texto) { return Promise.all([Q.falar(texto), espera(Math.min(6000, 700 + texto.length * 45))]); }
+  function diz(texto) { return Promise.all([falaVoz(texto), espera(Math.min(6000, 700 + texto.length * 45))]); }
   // Reações curtas: sorteia uma das 3 variações sem repetir a anterior
   const REACOES = {
     ok: ['Isso aí!', 'Mandaram bem!', 'Acertaram em cheio!'],
@@ -121,7 +126,7 @@
         const trocou = j.char !== m.char;
         j.char = m.char; j.pronto = false; j.novo = true;
         Q.sfx('sfx_entrar');
-        if (trocou) Q.falar('Chegou… ' + Q.pers(m.char).fala + '!'); // sala_02
+        if (trocou) falaVoz('Chegou… ' + Q.pers(m.char).fala + '!'); // sala_02
         break;
       }
       case 'pronto':
@@ -183,7 +188,7 @@
   // sala_03: quando todos já escolheram o personagem
   function avisoSala() {
     const js = estado.jogadores, todos = js.length >= 2 && js.every((x) => x.char);
-    if (todos && !avisouSala && !js.some((x) => x.pronto)) { avisouSala = true; setTimeout(() => Q.falar('Todo mundo pronto? Segurem o botão Iniciar por três segundos.'), 1800); }
+    if (todos && !avisouSala && !js.some((x) => x.pronto)) { avisouSala = true; setTimeout(() => falaVoz('Todo mundo pronto? Segurem o botão Iniciar por três segundos.'), 1800); }
     if (!todos) avisouSala = false;
   }
 
@@ -224,6 +229,8 @@
         'E dá para atrapalhar os outros com poderes.',
         'Na final, os pontos viram degraus. Quem chegar ao topo vence! Quem sabe… SOBE!'
       ]) { await diz(f); if (!vivo()) return; }
+      window.QSS_CORUJA.reagir('rindo');
+      await espera(1200);
       jaExplicou = true;
     }
 
@@ -655,7 +662,7 @@
       const rest = Math.max(0, d.prazo - Date.now()); relogioPergunta(rest);
       const s = Math.ceil(rest / 1000);
       if (s !== seg && s > 0) { seg = s; Q.sfx('sfx_tictac'); }
-      if (!avisou && rest <= 5000 && rest > 0) { avisou = true; Q.falar(reacao('tempo')); }
+      if (!avisou && rest <= 5000 && rest > 0) { avisou = true; falaVoz(reacao('tempo')); }
     }, 100);
     await aguardar(Q.TEMPO_RESPOSTA, () => { const on = estado.jogadores.filter(online); return on.length > 0 && on.every((j) => respostas[j.pid]); });
     clearInterval(relo);
@@ -740,7 +747,7 @@
     const certos = res.certos || [], nC = certos.length;
     const antes = {}; js.forEach((j) => { antes[j.pid] = j.pontos || 0; });
     $('pCard').style.opacity = 0;
-    if (nC) Q.falar('Quem acertou ganha pontos, e quem respondeu mais rápido ganha bônus!');
+    if (nC) falaVoz('Quem acertou ganha pontos, e quem respondeu mais rápido ganha bônus!');
 
     // Posições de partida: cada um embaixo do bloco que escolheu
     const x0 = (j, i) => { const rr = respostas[j.pid]; if (!rr) return cx0(i); const g = res.grupos[rr.op], k = g.indexOf(j.pid); return bc(rr.op) + (k - (g.length - 1) / 2) * 92; };
@@ -841,7 +848,7 @@
       else if (st === 'CHANNEL_ERROR' || st === 'TIMED_OUT' || st === 'CLOSED') aviso('Reconectando à sala…');
     });
     mostrar('sala'); desenharSala();
-    Q.falar('Entrem na sala! Apontem a câmera do celular para o QR code, ou digitem a senha.');
+    falaVoz('Entrem na sala! Apontem a câmera do celular para o QR code, ou digitem a senha.');
     setInterval(() => {
       if (estado.fase === 'sala') {
         const antes = estado.jogadores.length;
