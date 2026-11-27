@@ -20,7 +20,10 @@ Segue o quadro "Quem sabe sobe! · Telas do jogo" (telas 06 a 13) e o roteiro de
 5. **13 · Pontuação**: acertou = 10 + bônus de rapidez (o mais rápido entre os que acertaram ganha N de bônus, N = número de jogadores; o segundo, N−1…). Errou = 0. A câmera aproxima, os pontos aparecem um por um, o cenário corre e o ranking reordena com setas. Celular: "Olhe para a TV".
 6. Fim da Fase 1: ranking final. Para jogar de novo, todos seguram o botão no celular.
 
-- 10 rodadas ("Pergunta X de dez"). Ainda não entram: a associação (rodada 6, pulada por enquanto) e a pirâmide (telas 17 a 21).
+- 10 rodadas ("Pergunta X de dez"). Ainda não entra: a pirâmide (telas 17 a 21).
+
+## Rodada 6 · Associação (telas 14, 15 e 16)
+Sem categoria e sem poderes. A Coruja explica, e cada um tem 20 s para ligar 10 itens no celular (tocar no lado ou arrastar o item). A TV mostra uma pilha de blocos por jogador, sem dizer se acertou. Depois confere item por item: certa +2, errada −1, sem resposta 0, e bônus para quem terminou primeiro (N para o 1º, N−1 para o 2º…, N = número de jogadores). Em seguida, o ranking. Os itens vêm de `js/associacao.js` (aba "Associação" da planilha).
 
 ## Poderes (rodadas 2 a 10, menos a 6)
 Telas 08, 09 e 10 e os efeitos no celular.
@@ -36,5 +39,5 @@ Telas 08, 09 e 10 e os efeitos no celular.
    - Encolhe: letras ainda menores (zoom vai mais longe).
 
 - Perguntas: `js/perguntas.js`, gerado da planilha "Banco de perguntas do MVP". O celular nunca recebe a resposta certa antes da revelação.
-- Teste rápido: abra a TV com `?rodadas=2`.
+- Teste rápido: `?rodadas=2` joga só até a rodada 2; `?inicio=6` começa direto na rodada 6 (dá para juntar: `?inicio=6&rodadas=7`).
 - A voz da Coruja ainda é a do navegador; os áudios da ElevenLabs entram depois.

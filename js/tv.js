@@ -11,6 +11,8 @@
   const params = new URLSearchParams(location.search);
   // Para testar mais rápido: ?rodadas=2 joga só as duas primeiras rodadas
   const ULTIMA = Math.max(1, Math.min(Q.RODADAS, parseInt(params.get('rodadas'), 10) || Q.RODADAS));
+  // Para testar uma rodada específica: ?inicio=6 começa direto na rodada 6
+  const PRIMEIRA = Math.max(1, Math.min(Q.RODADAS, parseInt(params.get('inicio'), 10) || 1));
   const CHECK = '<svg width="20" height="20" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" stroke="#1D2A4D" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   // ---------- Palco 1920×1080 ----------
@@ -149,6 +151,18 @@
         Q.sfx('sfx_toque'); desenharFilaPoder();
         break;
       }
+      case 'assoc': {
+        if (!j || estado.fase !== 'assoc' || !d || !d.aberta || !Array.isArray(m.resp)) break;
+        const atual = assocResp[j.pid] || [];
+        if (m.resp.length <= atual.length) break;
+        const novas = m.resp.slice(atual.length, 10).filter((x) => x === 'E' || x === 'D');
+        assocResp[j.pid] = atual.concat(novas).slice(0, 10);
+        d.prog[j.pid] = assocResp[j.pid].length;
+        if (assocResp[j.pid].length === 10 && !d.terminou.includes(j.pid)) { d.terminou.push(j.pid); Q.sfx('sfx_pronto'); }
+        else Q.sfx('sfx_toque');
+        desenharColsAssoc();
+        break;
+      }
       case 'responder':
         if (!j || estado.fase !== 'pergunta' || !d || !d.aberta || m.qid !== d.q.id) break;
         if (respostas[j.pid] || !(m.op >= 0 && m.op <= 3)) break;
@@ -215,8 +229,8 @@
 
     const banco = window.QSS_PERGUNTAS.filter((p) => p.fase === 'fase1').slice();
     let lider = null;
-    for (let r = 1; r <= ULTIMA && banco.length; r++) {
-      if (r === Q.RODADA_ASSOCIACAO) continue; // rodada 6 (associação) entra na próxima etapa
+    for (let r = PRIMEIRA; r <= ULTIMA && banco.length; r++) {
+      if (r === Q.RODADA_ASSOCIACAO) { lider = await associacao(r, lider, vivo); if (!vivo()) return; continue; } // rodada 6
       const cat = await votacao(r, banco, vivo); if (!vivo()) return;
       const doCat = banco.filter((p) => p.cat === cat), q = sorteia(doCat);
       banco.splice(banco.indexOf(q), 1);
@@ -493,6 +507,99 @@
     return final;
   }
 
+
+  // ---------- Rodada 6 · Associação (telas 14, 15 e 16) ----------
+  const TEMPO_ASSOC = 20000;
+  const COR_BLOCO = ['#F2545B', '#F2A33A', '#FFD23F', '#6CC24A', '#2EC4B6', '#4F8DF7', '#A77BF3', '#F6B6B8', '#F2545B', '#F2A33A'];
+  let assocResp = {};
+  function desenharColsAssoc() {
+    const d = estado.d || {};
+    $('asCols').innerHTML = estado.jogadores.map((j) => {
+      const n = (d.prog || {})[j.pid] || 0, o = (d.terminou || []).indexOf(j.pid);
+      let bl = '';
+      for (let k = 9; k >= 0; k--) bl += k < n ? `<span class="bl" style="background:${COR_BLOCO[k]};box-shadow:0 4px 0 rgba(29,42,77,.25)"></span>` : '<span class="bl vazio"></span>';
+      return `<div class="cj"><div class="pilha">${o >= 0 ? `<span class="medalha">${o + 1}º</span>` : `<span class="cont">${n}/10</span>`}<div class="blocos">${bl}</div></div>
+        <img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}"><span class="nometag">${Q.esc(j.nome)}</span></div>`;
+    }).join('');
+  }
+
+  async function associacao(r, liderAntes, vivo) {
+    const js = estado.jogadores, n = js.length;
+    const set = sorteia(window.QSS_ASSOC), itens = set.itens.slice().sort(() => Math.random() - 0.5);
+    // 14 · Explicação
+    mudar('asExplica'); mostrar('asExplica');
+    $('aeBonus').textContent = '+' + n;
+    $('aeBonusTx').textContent = `para quem terminar primeiro (o 2º leva ${n - 1}, e assim por diante)`;
+    for (const f of ['Rodada especial! Sem categoria e sem poderes.', 'Vocês têm vinte segundos para ligar dez itens. Certo vale dois pontos, errado tira um.', 'E quem terminar primeiro ganha bônus!']) {
+      await diz(f); if (!vivo()) return liderAntes;
+    }
+    // 15 · Em andamento
+    assocResp = {};
+    const lado = (x) => ({ nome: x.nome, cor: x.cor, sombra: x.sombra, tx: x.tx, icone: x.icone });
+    const d = { rodada: r, titulo: set.titulo, esq: lado(set.esq), dir: lado(set.dir), itens: itens.map((x) => x.t), aberta: false, prazo: 0, prog: {}, terminou: [] };
+    mudar('assoc', d); mostrar('assoc');
+    $('asTit').textContent = set.titulo;
+    desenharColsAssoc();
+    const relogio = (rest) => { $('asRelogio').innerHTML = Q.relogio(100, Math.ceil(rest / 1000), rest / TEMPO_ASSOC, '#2EC4B6'); };
+    relogio(TEMPO_ASSOC);
+    await diz('Valendo!'); if (!vivo()) return liderAntes;
+    d.aberta = true; d.prazo = Date.now() + TEMPO_ASSOC; enviarEstado();
+    let seg = 99;
+    const relo = setInterval(() => {
+      const rest = Math.max(0, d.prazo - Date.now()); relogio(rest);
+      const sg = Math.ceil(rest / 1000); if (sg !== seg && sg > 0) { seg = sg; Q.sfx('sfx_tictac'); }
+    }, 100);
+    await aguardar(TEMPO_ASSOC, () => { const on = js.filter(online); return on.length > 0 && on.every((j) => d.terminou.includes(j.pid)); });
+    clearInterval(relo);
+    d.aberta = false; d.prazo = 0; enviarEstado();
+    if (!vivo()) return liderAntes;
+    const todos = js.every((j) => d.terminou.includes(j.pid));
+    await diz(todos ? 'Todo mundo respondeu! Vamos contar os pontos.' : 'Tempo esgotado! Vamos contar os pontos.');
+
+    // 16 · Conferindo item por item, de baixo para cima, e depois o bônus de quem terminou
+    const dados = js.map((j) => {
+      const rs = assocResp[j.pid] || [], ordem = d.terminou.indexOf(j.pid) + 1;
+      return { j, rs, ordem, certo: (k) => rs[k] === itens[k].lado, bonus: ordem ? n - (ordem - 1) : 0 };
+    });
+    const NT = d.terminou.length, tB = (k) => 0.8 + k * 0.55, tBonus = (o) => 6.8 + (o - 1) * 0.5, fimT = 6.8 + NT * 0.5 + 0.6;
+    mudar('asPontos'); mostrar('asPontos');
+    $('apTit').textContent = 'Hora de conferir!';
+    let somK = -1;
+    await animar(fimT + 1.6, (t) => {
+      const k0 = Math.floor((t - 0.8) / 0.55); if (k0 !== somK && k0 >= 0 && k0 < 10) { somK = k0; Q.sfx('sfx_toque'); }
+      const fim = t >= fimT;
+      if (fim) $('apTit').textContent = 'Pontos da associação';
+      $('apCols').innerHTML = dados.map((x, i) => {
+        let soma = 0, bl = '';
+        for (let k = 9; k >= 0; k--) {
+          const resp = k < x.rs.length, ok = resp && x.certo(k), e = t - tB(k), visto = resp && e >= 0;
+          if (visto) soma += ok ? 2 : -1;
+          const cai = visto && !ok ? cl(e / 0.4) : 0;
+          const bg = !resp ? '' : !visto ? COR_BLOCO[k] : ok ? '#6CC24A' : '#F2545B';
+          const sh = !visto ? 'rgba(29,42,77,.25)' : ok ? '#43892A' : '#B83239';
+          const pop = visto && e < 0.9 ? `<span class="pop" style="top:${(-e * 30).toFixed(0)}px;color:${ok ? '#43892A' : '#B83239'};opacity:${cl(1 - e / 0.9).toFixed(2)}">${ok ? '+2' : '−1'}</span>` : '';
+          bl += resp ? `<span class="bl" style="background:${bg};box-shadow:0 4px 0 ${sh};transform:translate(${(cai * 10).toFixed(1)}px,0) rotate(${(cai * 8).toFixed(1)}deg);opacity:${!visto || ok ? 1 : (1 - 0.45 * cai).toFixed(2)}">${visto ? (ok ? '✓' : '✕') : ''}${pop}</span>` : '<span class="bl vazio"></span>';
+        }
+        const eb = x.ordem ? t - tBonus(x.ordem) : -1;
+        if (x.ordem && eb > 0.6) soma += x.bonus;
+        const bonus = x.ordem && eb < 0.9 ? `<span class="bonus" style="top:${eb > 0.3 ? (40 - cl((eb - 0.3) / 0.3) * 60).toFixed(0) : 40}px;transform:rotate(-8deg) scale(${eb > 0 && eb < 0.25 ? 1.25 : 1});opacity:${eb > 0.3 ? cl(1 - (eb - 0.3) / 0.6).toFixed(2) : 1}"><b>${eb > 0 ? '+' + x.bonus : x.ordem + 'º'}</b><small>${eb > 0 ? x.ordem + 'º a terminar' : 'lugar'}</small></span>` : '';
+        x.total = soma;
+        const pulo = fim ? (-Math.abs(Math.sin(t * 5 + i)) * 14).toFixed(0) : 0;
+        return `<div class="cj"><div class="pilha"><span class="total${fim ? ' final' : ''}" style="transform:scale(${fim ? (1 + 0.04 * Math.sin(t * 6)).toFixed(3) : 1})">${soma}</span>${bonus}<div class="blocos">${bl}</div></div>
+          <img src="${Q.img(x.j.char)}" alt="${Q.esc(x.j.nome)}" style="transform:translateY(${pulo}px)"><span class="nometag">${Q.esc(x.j.nome)}</span></div>`;
+      }).join('');
+    });
+    if (!vivo()) return liderAntes;
+
+    // Ranking, como nas outras rodadas
+    const antes = {}, ganho = {}; dados.forEach((x) => { antes[x.j.pid] = x.j.pontos || 0; ganho[x.j.pid] = x.total; });
+    $('pCard').style.opacity = 0; $('pRelogio').style.opacity = 0; $('blocos').innerHTML = ''; $('jogLayer').innerHTML = '';
+    $('camera').style.transform = ''; $('mundo').style.transform = 'translateX(-1920px)';
+    mudar('pontos'); mostrar('pergunta');
+    const ordemTermino = (j) => { const o = d.terminou.indexOf(j.pid); return o < 0 ? 99 : o; };
+    return ranking(`depois da rodada ${r} de ${Q.RODADAS}`, antes, ganho, ordemTermino, liderAntes, vivo);
+  }
+
   // ---------- 11 · Pergunta ----------
   const N = () => estado.jogadores.length;
   const ESPACO = (1700 - 170) / 7; // distância entre personagens com a sala cheia (8)
@@ -675,15 +782,21 @@
     if (!vivo()) return liderAntes;
     figs.forEach((f) => { f.style.opacity = 0; });
 
-    // Ranking: entra na ordem antiga, soma os pontos e reordena
-    js.forEach((j) => { j.pontos = antes[j.pid] + (res.ganho[j.pid] || 0); });
-    const velha = js.slice().sort((a, b) => antes[b.pid] - antes[a.pid] || js.indexOf(a) - js.indexOf(b));
     const vel = (j) => (certos.indexOf(j) >= 0 ? certos.indexOf(j) : 99);
-    const nova = js.slice().sort((a, b) => b.pontos - a.pontos || vel(a) - vel(b) || velha.indexOf(a) - velha.indexOf(b));
-    $('rSub').textContent = `depois da pergunta ${r} de ${Q.RODADAS}`;
+    return ranking(`depois da pergunta ${r} de ${Q.RODADAS}`, antes, res.ganho, vel, liderAntes, vivo);
+  }
+
+  // Ranking (fim da tela 13): entra na ordem antiga, soma os pontos e reordena com setas
+  async function ranking(rotulo, antes, ganho, desempate, liderAntes, vivo) {
+    const js = estado.jogadores;
+    js.forEach((j) => { j.pontos = antes[j.pid] + (ganho[j.pid] || 0); });
+    const velha = js.slice().sort((a, b) => antes[b.pid] - antes[a.pid] || js.indexOf(a) - js.indexOf(b));
+    const nova = js.slice().sort((a, b) => b.pontos - a.pontos || desempate(a) - desempate(b) || velha.indexOf(a) - velha.indexOf(b));
+    $('rSub').textContent = rotulo;
+    const chip = (g) => !g ? '' : g > 0 ? `<span class="gn">+${g}</span>` : `<span class="gn" style="background:#F2545B;box-shadow:0 4px 0 #B83239;color:#fff">−${-g}</span>`;
     $('rLinhas').innerHTML = velha.map((j, i) => `<div class="rl" data-pid="${j.pid}" style="top:${i * 94}px;opacity:0;transform:translateX(-500px)">
       <span class="pos">${i + 1}</span><span class="av"><img src="${Q.img(j.char)}" alt=""></span>
-      <span class="nm">${Q.esc(j.nome)}</span>${res.ganho[j.pid] ? `<span class="gn">+${res.ganho[j.pid]}</span>` : ''}<span class="seta"></span>
+      <span class="nm">${Q.esc(j.nome)}</span>${chip(ganho[j.pid])}<span class="seta"></span>
       <span class="pt">${antes[j.pid]}</span></div>`).join('');
     $('ranking').style.visibility = 'visible';
     const linhas = velha.map((j) => $('rLinhas').querySelector(`[data-pid="${j.pid}"]`));
@@ -693,7 +806,7 @@
     });
     await animar(1.3, (t) => {
       const u = cl(t / 1.3);
-      velha.forEach((j, i) => { linhas[i].querySelector('.pt').textContent = Math.round(antes[j.pid] + (res.ganho[j.pid] || 0) * u); });
+      velha.forEach((j, i) => { linhas[i].querySelector('.pt').textContent = Math.round(antes[j.pid] + (ganho[j.pid] || 0) * u); });
     });
     await espera(500);
     linhas.forEach((l) => { const g = l.querySelector('.gn'); if (g) g.style.opacity = 0.35; });

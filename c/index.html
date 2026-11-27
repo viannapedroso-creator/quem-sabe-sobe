@@ -150,6 +150,25 @@ input:focus{box-shadow:0 5px 0 var(--azul)}
 #travado span{font-family:Fredoka,sans-serif;font-weight:700;font-size:46px;color:#fff;text-shadow:0 4px 0 #1D2A4D}
 #zoomChip{position:absolute;right:6px;top:-10px;z-index:4;font-family:Fredoka,sans-serif;font-weight:700;font-size:14px;background:#fff;border-radius:999px;padding:2px 10px;box-shadow:0 3px 0 #D3E2F7}
 #enviado{z-index:5}
+/* Associação (15) */
+#assocCel{flex-direction:column;align-items:stretch;gap:10px}
+#assocCel .barra{display:flex;align-items:center;justify-content:space-between}
+#assocCel .barra .esq{display:flex;align-items:center;gap:10px}
+#aRel svg{width:clamp(70px,22vh,110px);height:auto}
+.chip-as{font-size:12px;font-weight:900;letter-spacing:.1em;background:#2EC4B6;border-radius:999px;padding:3px 10px}
+#aProg{display:flex;gap:4px}
+#aProg span{width:26px;height:16px;border-radius:5px}
+#aArea{flex:1;min-height:0;display:flex;align-items:stretch;gap:16px}
+.lado{width:clamp(150px,25vw,210px);border:0;border-radius:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;font-family:Fredoka,sans-serif;font-weight:700;font-size:32px;transition:transform .15s}
+.lado svg{width:56px;height:56px}
+#aMeio{flex:1;position:relative;display:flex;align-items:center;justify-content:center;touch-action:none}
+#aCarta{width:min(270px,100%);height:min(190px,48vh);border-radius:26px;background:#FFFFFF;box-shadow:0 8px 0 #D3E2F7,0 0 0 6px #FFD23F;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:16px;box-sizing:border-box}
+#aCarta small{font-size:13px;font-weight:900;letter-spacing:.1em;color:var(--tinta2)}
+#aCarta b{font-family:Fredoka,sans-serif;font-weight:700;font-size:clamp(26px,9vh,38px);line-height:1.05}
+#aFim{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+#aFim b{font-family:Fredoka,sans-serif;font-size:40px}
+#aFim span{font-size:18px;font-weight:800;color:var(--tinta2)}
+#aDica{position:absolute;bottom:0;font-size:13px;font-weight:800;color:var(--tinta2)}
 #status{position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:10;font-size:13px;font-weight:900;border-radius:999px;padding:5px 12px;background:var(--vermelho);color:#fff}
 </style>
 </head>
@@ -213,6 +232,19 @@ input:focus{box-shadow:0 5px 0 var(--azul)}
     <div id="pwEspelho" class="oculto"><img id="pwEuImg" src="" alt=""><span>O Espelho é usado em você. Ele devolve os poderes que jogarem em você nesta rodada.</span></div>
     <div id="pwAlvos"></div>
     <button type="button" id="pwOk" disabled>Escolha um poder</button>
+  </div>
+</section>
+
+<section id="assocCel" class="tela oculto">
+  <div class="barra"><div class="esq"><span id="aRel"></span><span class="chip-as">RODADA 6 · ASSOCIAÇÃO</span></div><div id="aProg"></div></div>
+  <div id="aArea">
+    <button type="button" class="lado" id="aEsq"></button>
+    <div id="aMeio">
+      <div id="aCarta"><small id="aNum"></small><b id="aItem"></b></div>
+      <div id="aFim" class="oculto"><b>Terminou!</b><span id="aFimTx"></span></div>
+      <span id="aDica">Toque num lado ou arraste o item</span>
+    </div>
+    <button type="button" class="lado" id="aDir"></button>
   </div>
 </section>
 

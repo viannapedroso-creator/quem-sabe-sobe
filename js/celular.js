@@ -145,6 +145,7 @@
 
 
   // ---------- Partida (telas 06, 07 e 11 do quadro) ----------
+  let asResp = [], asItens = [], asSai = 0, asOrdem = -1;
   let respostaUI = null, pw = { poder: null, alvo: null, enviado: false };
   let prazoLocal = 0, totalRel = 1, relEl = null, relCor = '#FFD23F', relR = 52, chaveTela = '', meuVoto = {}, minhaResp = {}, vibrou = '';
 
@@ -226,6 +227,25 @@
         mostrar('pergunta');
         break;
       }
+      case 'assoc': {
+        // 15 · Associação: um item no meio, toque ou arraste para o lado certo
+        const total = (d.itens || []).length;
+        if (chaveTela !== 'a' + d.rodada) {
+          chaveTela = 'a' + d.rodada; asResp = []; asSai = 0;
+          const btn = (el, x) => { el.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="${x.tx}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${x.icone}</svg>${Q.esc(x.nome)}`; el.style.background = x.cor; el.style.boxShadow = '0 7px 0 ' + x.sombra; el.style.color = x.tx; };
+          btn($('aEsq'), d.esq); btn($('aDir'), d.dir);
+        }
+        const naTv = (d.prog || {})[pid] || 0;
+        if (asResp.length > naTv && d.aberta && rede) rede.enviar('assoc', { pid, resp: asResp }); // reenvia se perdeu
+        const terminou = asResp.length >= total && total > 0, o = (d.terminou || []).indexOf(pid);
+        if (!d.aberta && !terminou) { olhe(); break; }
+        asItens = d.itens || [];
+        desenharAssoc(o);
+        relogio($('aRel'), 40, '#2EC4B6', 20000, d.aberta ? d : null);
+        if (d.aberta) chamar('a' + d.rodada);
+        mostrar('assocCel');
+        break;
+      }
       case 'podEscolha': {
         // 09 · Escolher poder e alvo
         if (!d.aberta) { olhe(); break; }
@@ -299,6 +319,50 @@
     rede.enviar('poder', { pid, poder: pw.poder, alvo: pw.poder === 'espelho' ? null : pw.alvo });
     redesenharPoder();
   });
+
+
+  // ---------- Associação ----------
+  function desenharAssoc(o) {
+    if (o !== undefined) asOrdem = o;
+    const total = asItens.length, i = asResp.length, fim = i >= total;
+    $('aProg').innerHTML = asItens.map((_, k) => `<span style="background:${k < i ? '#2EC4B6' : k === i && !fim ? '#FFD23F' : '#FFFFFF'};box-shadow:0 3px 0 ${k < i ? '#1A8A80' : '#D3E2F7'}"></span>`).join('');
+    $('aCarta').classList.toggle('oculto', fim); $('aDica').classList.toggle('oculto', fim);
+    $('aFim').classList.toggle('oculto', !fim);
+    $('aEsq').disabled = fim; $('aDir').disabled = fim;
+    if (fim) { $('aFimTx').textContent = asOrdem >= 0 ? `Você foi o ${asOrdem + 1}º a terminar. Olhe para a TV.` : 'Olhe para a TV.'; return; }
+    $('aNum').textContent = `ITEM ${i + 1} DE ${total}`;
+    $('aItem').textContent = asItens[i];
+  }
+  function ligar(l) {
+    if (asSai || asResp.length >= asItens.length || !rede || !ultimo || !(ultimo.d || {}).aberta) return;
+    asSai = l === 'E' ? -1 : 1;
+    const b = $(l === 'E' ? 'aEsq' : 'aDir'); b.style.transform = 'scale(1.06)';
+    const c = $('aCarta'); c.style.transition = 'transform .25s ease, opacity .25s ease'; c.style.transform = `translateX(${asSai * 520}px) rotate(${asSai * 24}deg)`; c.style.opacity = 0;
+    Q.sfx('sfx_toque'); vibrar(15);
+    setTimeout(() => {
+      asResp.push(l); asSai = 0; b.style.transform = '';
+      c.style.transition = 'none'; c.style.transform = ''; c.style.opacity = 1;
+      rede.enviar('assoc', { pid, resp: asResp });
+      if (asResp.length >= asItens.length) { Q.sfx('sfx_pronto'); vibrar([30, 40, 60]); }
+      desenharAssoc();
+    }, 260);
+  }
+  $('aEsq').addEventListener('click', () => ligar('E'));
+  $('aDir').addEventListener('click', () => ligar('D'));
+  // Arrastar o item para um dos lados
+  let arrX = null, arrDx = 0;
+  $('aMeio').addEventListener('pointerdown', (e) => { if (asSai) return; arrX = e.clientX; arrDx = 0; $('aCarta').style.transition = 'none'; });
+  $('aMeio').addEventListener('pointermove', (e) => {
+    if (arrX === null) return; arrDx = e.clientX - arrX;
+    $('aCarta').style.transform = `translateX(${arrDx}px) rotate(${(arrDx / 22).toFixed(1)}deg)`;
+    $('aEsq').style.transform = arrDx < -60 ? 'scale(1.06)' : ''; $('aDir').style.transform = arrDx > 60 ? 'scale(1.06)' : '';
+  });
+  const soltarArr = () => {
+    if (arrX === null) return; arrX = null;
+    if (arrDx < -90) ligar('E'); else if (arrDx > 90) ligar('D');
+    else { const c = $('aCarta'); c.style.transition = 'transform .25s ease'; c.style.transform = ''; $('aEsq').style.transform = ''; $('aDir').style.transform = ''; }
+  };
+  $('aMeio').addEventListener('pointerup', soltarArr); $('aMeio').addEventListener('pointercancel', soltarArr);
 
   // Volta sozinho para a sala depois de recarregar a página
   if (daUrl && ler('nome') && ler('sala') === daUrl && Q.configurado()) entrar(daUrl, ler('nome'));

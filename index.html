@@ -143,6 +143,24 @@
 .hits{position:absolute;top:-34px;display:flex;padding-left:10px}
 .hits span{width:50px;height:50px;border-radius:50%;border:3px solid #FFFFFF;display:flex;align-items:center;justify-content:center;margin-left:-10px}
 .hits img{width:50px;height:50px;margin-top:-6px}
+/* Associação (14, 15, 16) */
+.chip-assoc{align-self:flex-start;font-size:20px;font-weight:900;letter-spacing:.12em;background:#2EC4B6;border-radius:999px;padding:6px 16px}
+#asRelogio{position:absolute;right:90px;top:90px}
+.colunas{position:absolute;left:0;right:0;bottom:20px;display:flex;justify-content:center;gap:49px;align-items:flex-end}
+.cj{display:flex;flex-direction:column;align-items:center;gap:6px;width:170px}
+.cj .pilha{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px}
+.cj .blocos{display:flex;flex-direction:column;gap:5px}
+.cj .bl{position:relative;width:110px;height:34px;border-radius:9px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:20px;color:#FFFFFF}
+.cj .bl.vazio{background:rgba(255,255,255,.6);border:3px dashed #BCD5F6}
+.cj .bl .pop{position:absolute;right:-48px;font-family:Fredoka,sans-serif;font-weight:700;font-size:26px;text-shadow:0 2px 0 #FFFFFF}
+.cj > img{height:170px;margin-top:6px}
+#asPontos .cj > img{height:150px}
+.cj .cont{position:absolute;top:-46px;left:50%;transform:translateX(-50%);font-family:Fredoka,sans-serif;font-weight:700;font-size:28px;background:#FFFFFF;border-radius:14px;padding:2px 12px;box-shadow:0 4px 0 #D3E2F7;white-space:nowrap}
+.cj .medalha{position:absolute;top:-58px;left:50%;transform:translateX(-50%) rotate(-6deg);width:74px;height:74px;border-radius:50%;background:#FFD23F;border:5px solid #FFFFFF;box-shadow:0 5px 10px rgba(29,42,77,.2);display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:30px;box-sizing:border-box}
+.cj .total{font-family:Fredoka,sans-serif;font-weight:700;font-size:40px;min-width:96px;text-align:center;background:#FFFFFF;border-radius:18px;padding:2px 14px;box-shadow:0 5px 0 #D3E2F7}
+.cj .total.final{background:#FFD23F;box-shadow:0 5px 0 #C49A0C}
+.cj .bonus{position:absolute;right:-34px;width:70px;height:70px;border-radius:50%;background:#FFD23F;border:5px solid #FFFFFF;box-shadow:0 5px 10px rgba(29,42,77,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;line-height:1;z-index:3;box-sizing:border-box}
+.cj .bonus b{font-size:26px}.cj .bonus small{font-size:13px;text-align:center}
 /* Aviso de configuração e conexão */
 #aviso{position:absolute;left:50%;top:40px;transform:translateX(-50%);z-index:9;font-size:22px;font-weight:900;border-radius:999px;padding:10px 22px;background:var(--vermelho);color:#fff}
 </style>
@@ -311,6 +329,45 @@
     <div id="plFila" class="fileira"></div>
   </section>
 
+  <section id="asExplica" class="tela cena oculto" aria-label="A Coruja explica a associação">
+    <div class="piso p210"></div>
+  <div style="position:absolute;left:60px;bottom:40px;width:430px;height:900px">
+    <div style="position:absolute;left:0;bottom:0;width:380px;height:130px;background:#2EC4B6;border-radius:26px;box-shadow:0 12px 0 #1A8A80"></div>
+    <img src="img/coruja.png" alt="Coruja apresentadora" style="position:absolute;left:10px;bottom:130px;height:470px">
+    <div style="position:absolute;left:10px;top:0;width:410px;background:#FFFFFF;border-radius:34px;padding:26px 30px;box-sizing:border-box;box-shadow:0 8px 0 #D3E2F7,0 18px 30px rgba(29,42,77,.12);z-index:2">
+      <p style="margin:0;font-family:Fredoka,sans-serif;font-weight:700;font-size:38px;line-height:1.1">Rodada especial!</p>
+      <p style="margin:10px 0 0;font-size:24px;font-weight:800;line-height:1.35;color:#4A5878">Sem categoria e sem poderes. Vocês têm 20 segundos para ligar 10 itens.</p>
+      <span style="position:absolute;left:130px;bottom:-30px;width:0;height:0;border-left:22px solid transparent;border-right:22px solid transparent;border-top:34px solid #FFFFFF" aria-hidden="true"></span>
+    </div>
+  </div>
+  <div style="position:absolute;left:540px;right:70px;top:140px;display:flex;flex-direction:column;gap:30px">
+    <div style="display:flex;flex-direction:column;gap:6px"><span style="align-self:flex-start;font-size:20px;font-weight:900;letter-spacing:.12em;background:#2EC4B6;color:#1D2A4D;border-radius:999px;padding:6px 16px">RODADA 6</span><h1 style="margin:0;font-family:Fredoka,sans-serif;font-weight:700;font-size:60px;line-height:1">Associação</h1>
+    <p style="margin:0;font-size:28px;font-weight:800;color:#4A5878">No celular aparece um item no meio. Toque (ou arraste) para o lado certo.</p></div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:26px">
+      <div style="width:250px;height:250px;border-radius:30px;background:#4F8DF7;box-shadow:0 10px 0 #2F5FB8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#FFFFFF"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 5l2 4M12 5l2 4M17 5l2 4"/></svg><span style="font-family:Fredoka,sans-serif;font-weight:700;font-size:44px">Filmes</span></div>
+      <svg width="90" height="40" viewBox="0 0 90 40" aria-hidden="true"><path d="M86 20 H10 M24 6 L8 20 L24 34" stroke="#1D2A4D" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div style="width:300px;height:200px;border-radius:30px;background:#FFFFFF;box-shadow:0 10px 0 #D3E2F7,0 0 0 8px #FFD23F;display:flex;align-items:center;justify-content:center;text-align:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:46px;line-height:1.05;padding:20px;box-sizing:border-box">Titanic</div>
+      <svg width="90" height="40" viewBox="0 0 90 40" aria-hidden="true" opacity=".25"><path d="M4 20 H80 M66 6 L82 20 L66 34" stroke="#1D2A4D" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div style="width:250px;height:250px;border-radius:30px;background:#F2A33A;box-shadow:0 10px 0 #B86E14;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#1D2A4D"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#1D2A4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="13" rx="2.5"/><path d="M8 3l4 3 4-3M8 22h8"/></svg><span style="font-family:Fredoka,sans-serif;font-weight:700;font-size:44px">Séries</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px"><div style="display:flex;align-items:center;gap:16px;background:#FFFFFF;border-radius:22px;box-shadow:0 6px 0 #D3E2F7;padding:12px 20px"><span style="min-width:84px;height:64px;border-radius:18px;background:#6CC24A;box-shadow:0 5px 0 #43892A;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:36px;color:#1D2A4D">+2</span><span style="font-size:24px;font-weight:800;line-height:1.3">cada associação certa</span></div><div style="display:flex;align-items:center;gap:16px;background:#FFFFFF;border-radius:22px;box-shadow:0 6px 0 #D3E2F7;padding:12px 20px"><span style="min-width:84px;height:64px;border-radius:18px;background:#F2545B;box-shadow:0 5px 0 #B83239;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:36px;color:#FFFFFF">−1</span><span style="font-size:24px;font-weight:800;line-height:1.3">cada associação errada</span></div><div style="display:flex;align-items:center;gap:16px;background:#FFFFFF;border-radius:22px;box-shadow:0 6px 0 #D3E2F7;padding:12px 20px"><span style="min-width:84px;height:64px;border-radius:18px;background:#FFD23F;box-shadow:0 5px 0 #C49A0C;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:36px;color:#1D2A4D"><span id="aeBonus">+8</span></span><span style="font-size:24px;font-weight:800;line-height:1.3" id="aeBonusTx">para quem terminar primeiro (o 2º leva 7, e assim por diante)</span></div></div>
+  </div>
+
+  </section>
+
+  <section id="assoc" class="tela cena oculto" aria-label="Associação em andamento">
+    <div class="piso p210"></div>
+    <div class="titulo-tv" style="top:130px"><span class="chip-assoc">RODADA 6 · ASSOCIAÇÃO</span><h1 id="asTit" style="font-size:58px"></h1><p style="font-size:26px">Cada bloco é um item ligado. Os acertos só aparecem no fim.</p></div>
+    <div id="asRelogio"></div>
+    <div id="asCols" class="colunas"></div>
+  </section>
+
+  <section id="asPontos" class="tela cena oculto" aria-label="Contagem dos pontos da associação">
+    <div class="piso p210"></div>
+    <div class="titulo-tv" style="top:120px"><span class="chip-assoc">RODADA 6 · ASSOCIAÇÃO</span><h1 id="apTit" style="font-size:58px">Hora de conferir!</h1><p style="font-size:26px">Certa +2 · Errada −1 · Sem resposta 0 · Bônus para quem terminou primeiro</p></div>
+    <div id="apCols" class="colunas"></div>
+  </section>
+
   <section id="pergunta" class="tela oculto" aria-label="Pergunta" style="background:#EAF4FF;overflow:hidden">
     <div id="camera">
       <div id="mundo">
@@ -332,6 +389,7 @@
 <script src="js/config.js"></script>
 <script src="js/comum.js"></script>
 <script src="js/perguntas.js"></script>
+<script src="js/associacao.js"></script>
 <script src="js/tv.js"></script>
 </body>
 </html>
