@@ -1069,12 +1069,10 @@
     posicionar((i, j) => (j.deg !== antes[j.pid] ? { topo: `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${j.deg}</span>` } : {}));
     if (!vivo()) return;
     if (js.some((j) => j.deg >= TOPO)) return; // alguém venceu: sem mais falas, a vitória entra na hora
-    // Reações: subiu dois, quase no topo, degrau com poder novo
+    // Reações: subiu dois, quase no topo
     if (js.some((j) => j.deg - antes[j.pid] >= 2)) { await diz(reacao('dois')); if (!vivo()) return; }
     const quase = js.filter((j) => j.deg >= 14 && j.deg < TOPO && antes[j.pid] < 14).sort((a, b) => b.deg - a.deg)[0];
     if (quase) { await diz(sorteia([`${fala(quase)} está quase no topo!`, `Olha quem está chegando lá em cima: ${fala(quase)}!`, `Falta pouco para ${fala(quase)}!`])); if (!vivo()) return; }
-    const novo = js.filter((j) => j.deg < TOPO && poderDoDegrau(j.deg) && poderDoDegrau(j.deg) !== poderDoDegrau(antes[j.pid])).sort((a, b) => b.deg - a.deg)[0];
-    if (novo) { await diz(`Cuidado! Esse degrau tem ${Q.poder(poderDoDegrau(novo.deg)).fala}!`); if (!vivo()) return; }
     await espera(600);
   }
 
