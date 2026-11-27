@@ -45,7 +45,7 @@
   // ---------- Estado ----------
   // jogadores: {pid, nome, char, pronto, visto, pontos}
   const estado = { fase: 'sala', jogadores: [], d: null };
-  let rede = null, codigo = '', partida = 0, jaExplicou = false, pularExplicacoes = false, avisouSala = false, explicouPoderes = false;
+  let rede = null, codigo = '', partida = 0, jaExplicou = false, pularExplicacoes = false, avisouSala = false, falaSala = Promise.resolve(), explicouPoderes = false;
   const online = (j) => Date.now() - j.visto < 12000;
   const fala = (j) => (Q.pers(j.char) || {}).fala || j.nome;
   // Boneco animado (rig) no lugar da imagem parada; a ação muda pelo data-acao
@@ -134,7 +134,7 @@
         const trocou = j.char !== m.char;
         j.char = m.char; j.pronto = false; j.novo = true;
         Q.sfx('sfx_entrar');
-        if (trocou) falaVoz(T('sala_chegou', m.char)); // sala_02
+        if (trocou) falaSala = falaVoz(T('sala_chegou', m.char)); // sala_02
         break;
       }
       case 'pronto':
@@ -198,8 +198,15 @@
   // sala_03: quando todos já escolheram o personagem
   function avisoSala() {
     const js = estado.jogadores, todos = js.length >= 2 && js.every((x) => x.char);
-    if (todos && !avisouSala && !js.some((x) => x.pronto)) { avisouSala = true; setTimeout(() => falaVoz(T('sala_prontos')), 1800); }
+    if (todos && !avisouSala && !js.some((x) => x.pronto)) { avisouSala = true; avisarProntos(); }
     if (!todos) avisouSala = false;
+  }
+  // Espera a Coruja terminar o "Chegou… o X" (de quem entrou por último) antes de pedir o botão
+  async function avisarProntos() {
+    let p;
+    do { p = falaSala; await Promise.all([p, espera(1800)]); } while (p !== falaSala);
+    await espera(400);
+    if (estado.fase === 'sala' && avisouSala && !estado.jogadores.some((x) => x.pronto)) falaVoz(T('sala_prontos'));
   }
 
   // ---------- Sala de espera ----------

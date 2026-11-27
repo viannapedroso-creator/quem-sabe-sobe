@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/base.css?v=202611271457">
+<link rel="stylesheet" href="css/base.css?v=202611271519">
 <style>
 /* O palco tem 1920×1080 e é escalado para caber em qualquer TV ou monitor */
 #palco{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;
@@ -188,13 +188,16 @@
 #pirFundo{position:absolute;left:0;top:0;width:1920px;height:1080px;clip-path:inset(22px 0 0 0)}
 #pirCeu{position:absolute;left:-200px;top:-400px;width:2320px;height:424px;background-color:#EFF6FF;background-image:radial-gradient(circle,#C5DAF5 3.4px,rgba(197,218,245,0) 4.4px);background-size:54px 54px;background-position:-0.5px 5.5px}
 #pirLuzes,#pirChars{position:absolute;left:0;top:0;width:1920px;height:1080px}
-#lousa{position:absolute;left:86px;top:128px;width:306px;height:268px;border-radius:14px;background:#2F5A4C;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center}
+#pirPlaca{position:absolute;left:34px;top:172px;width:392px;height:430px;transform:scale(.7);transform-origin:0 0;z-index:5;pointer-events:none}
+#pirPlaca>img,#pirRelogioBox>img{position:absolute;left:0;top:0}
+#pirRelogioBox{position:absolute;left:1488px;top:172px;width:402px;height:404px;transform:scale(.7);transform-origin:100% 0;z-index:5;pointer-events:none}
+#lousa{position:absolute;left:42px;top:32px;width:306px;height:268px;border-radius:14px;background:#2F5A4C;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center}
 #lousa .a{font-family:Fredoka,sans-serif;font-weight:600;font-size:30px;letter-spacing:4px;color:#FFFFFF;opacity:.85}
 #lousa .b{font-family:Fredoka,sans-serif;font-weight:700;font-size:96px;line-height:1;color:#FFFFFF}
 #lousa .b small{font-size:44px;opacity:.7}
 #lousa .c{font-size:22px;font-weight:900;letter-spacing:2px;background:#FFC531;border-radius:999px;padding:6px 18px;text-transform:uppercase}
 #lousa .c.longo{font-size:16px;letter-spacing:1px;padding:6px 14px;max-width:270px;text-align:center;line-height:1.15}
-#pirRelogio{position:absolute;inset:0;pointer-events:none}
+#pirRelogio{position:absolute;left:-1464px;top:-100px;width:1920px;height:1080px;pointer-events:none}
 #pirChars .pj{position:absolute;transform:translate(-50%,-100%)}
 #pirChars .pj .in{position:relative;display:flex;flex-direction:column;align-items:center}
 #pirChars .pj .p{display:block}
@@ -492,8 +495,8 @@ svg.rig{display:block;width:auto;flex:none}
       <div id="pirLuzes"></div>
       <div id="pirChars"></div>
     </div>
-    <div id="lousa"></div>
-    <svg id="pirRelogio" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Relógio"></svg>
+    <div id="pirPlaca"><img src="img/lousa.png" alt=""><div id="lousa"></div></div>
+    <div id="pirRelogioBox"><img src="img/relogio.png" alt=""><svg id="pirRelogio" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Relógio"></svg></div>
     <div id="pirFaixa" class="faixa oculto"><div class="studs"></div><div class="corpo"></div></div>
     <div id="bordao" class="oculto"><span>Quem sabe...</span><span>SOBE!</span></div>
     <div id="pirCorujaBox" class="coruja-viva"></div>
@@ -524,16 +527,16 @@ svg.rig{display:block;width:auto;flex:none}
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
-<script src="js/config.js?v=202611271457"></script>
-<script src="js/comum.js?v=202611271457"></script>
-<script src="js/perguntas.js?v=202611271457"></script>
-<script src="js/associacao.js?v=202611271457"></script>
-<script src="js/piramide-pos.js?v=202611271457"></script>
-<script src="js/inuteis.js?v=202611271457"></script>
-<script src="js/rig-dados.js?v=202611271457"></script>
-<script src="js/rig.js?v=202611271457"></script>
-<script src="js/coruja.js?v=202611271457"></script>
-<script src="js/falas.js?v=202611271457"></script>
-<script src="js/tv.js?v=202611271457"></script>
+<script src="js/config.js?v=202611271519"></script>
+<script src="js/comum.js?v=202611271519"></script>
+<script src="js/perguntas.js?v=202611271519"></script>
+<script src="js/associacao.js?v=202611271519"></script>
+<script src="js/piramide-pos.js?v=202611271519"></script>
+<script src="js/inuteis.js?v=202611271519"></script>
+<script src="js/rig-dados.js?v=202611271519"></script>
+<script src="js/rig.js?v=202611271519"></script>
+<script src="js/coruja.js?v=202611271519"></script>
+<script src="js/falas.js?v=202611271519"></script>
+<script src="js/tv.js?v=202611271519"></script>
 </body>
 </html>
