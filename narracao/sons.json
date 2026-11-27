@@ -1,0 +1,184 @@
+[
+ {
+  "id": "sfx_entrar",
+  "tipo": "efeito",
+  "duracao": 1.0,
+  "descricao": "Jogador entrou na sala",
+  "prompt": "Cheerful cartoon pop with a little sparkle when a new player joins the lobby, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_pronto",
+  "tipo": "efeito",
+  "duracao": 0.7,
+  "descricao": "Jogador pronto",
+  "prompt": "Short happy toy bell double ding, ready confirmation, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_comecar",
+  "tipo": "efeito",
+  "duracao": 2.5,
+  "descricao": "Começo da partida",
+  "prompt": "Game start sting: toy drum roll into a bright toy trumpet flourish, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_sair",
+  "tipo": "efeito",
+  "duracao": 0.8,
+  "descricao": "Jogador saiu",
+  "prompt": "Soft descending cartoon whoosh, someone leaves, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_toque",
+  "tipo": "efeito",
+  "duracao": 0.5,
+  "descricao": "Toque e voto no celular",
+  "prompt": "Very short soft plastic toy button click, clean UI tap, no reverb"
+ },
+ {
+  "id": "sfx_sorteio",
+  "tipo": "efeito",
+  "duracao": 2.5,
+  "descricao": "Sorteio das portas empatadas",
+  "prompt": "Small toy roulette wheel spinning and ticking with tiny bells, slowing down, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_porta",
+  "tipo": "efeito",
+  "duracao": 1.5,
+  "descricao": "Porta da categoria abrindo",
+  "prompt": "Cartoon toy box door opening: small wooden door creak followed by a bright magical chime sparkle, playful game show style"
+ },
+ {
+  "id": "sfx_pergunta",
+  "tipo": "efeito",
+  "duracao": 1.2,
+  "descricao": "Pergunta aparecendo",
+  "prompt": "Question reveal sting: playful glockenspiel rising arpeggio with a soft whoosh, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_tictac",
+  "tipo": "efeito",
+  "duracao": 0.5,
+  "descricao": "Tic-tac do relógio",
+  "prompt": "Single crisp wooden toy clock tick, one tick only, dry"
+ },
+ {
+  "id": "sfx_tempo",
+  "tipo": "efeito",
+  "duracao": 1.2,
+  "descricao": "Tempo esgotado",
+  "prompt": "Toy alarm clock bell ringing briefly, time is up, comedic, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_correr",
+  "tipo": "efeito",
+  "duracao": 1.0,
+  "descricao": "Personagens correndo",
+  "prompt": "Cartoon running feet scurrying quickly, comedic pitter patter, short"
+ },
+ {
+  "id": "sfx_certo",
+  "tipo": "efeito",
+  "duracao": 1.0,
+  "descricao": "Resposta certa",
+  "prompt": "Correct answer sound for a family party quiz game: cheerful rising xylophone and toy bells ding, short and happy"
+ },
+ {
+  "id": "sfx_ponto",
+  "tipo": "efeito",
+  "duracao": 0.6,
+  "descricao": "Pontos somando",
+  "prompt": "Short coin-like toy chime with sparkle, points added, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_ranking",
+  "tipo": "efeito",
+  "duracao": 1.5,
+  "descricao": "Ranking aparecendo",
+  "prompt": "Leaderboard reveal: short toy snare drum roll ending with a cymbal tap, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_ranking_sobe",
+  "tipo": "efeito",
+  "duracao": 0.8,
+  "descricao": "Subiu no ranking / degrau",
+  "prompt": "Quick upward slide whistle with a sparkle, moving up, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_lancar",
+  "tipo": "efeito",
+  "duracao": 0.9,
+  "descricao": "Poder sendo lançado",
+  "prompt": "Cartoon slingshot launch whoosh, throwing a magic power, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_acerta_poder",
+  "tipo": "efeito",
+  "duracao": 0.9,
+  "descricao": "Poder atingindo o alvo",
+  "prompt": "Comedic cartoon bonk impact with a wobble, a prank hits a player, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_espelho",
+  "tipo": "efeito",
+  "duracao": 1.0,
+  "descricao": "Espelho rebatendo",
+  "prompt": "Magical mirror shimmer and bright reflective ping, deflecting a spell back, toy box party quiz game, playful cartoon style"
+ },
+ {
+  "id": "sfx_bum",
+  "tipo": "efeito",
+  "duracao": 0.8,
+  "descricao": "Bomba explodindo no celular",
+  "prompt": "Small comedic cartoon bomb pop with puff of smoke, playful, not scary"
+ },
+ {
+  "id": "sfx_gelo",
+  "tipo": "efeito",
+  "duracao": 0.8,
+  "descricao": "Gelo quebrando",
+  "prompt": "Ice crystals cracking and shattering, magical crunchy, short, cartoon"
+ },
+ {
+  "id": "sfx_gosma",
+  "tipo": "efeito",
+  "duracao": 0.8,
+  "descricao": "Gosma espalhando",
+  "prompt": "Gooey slime splat, squishy and funny, cartoon"
+ },
+ {
+  "id": "sfx_vitoria",
+  "tipo": "efeito",
+  "duracao": 3.0,
+  "descricao": "Vitória",
+  "prompt": "Victory fanfare for a toy-themed party game show: toy trumpets and glockenspiel triumphant fanfare with confetti pop and children's party cheer"
+ },
+ {
+  "id": "musica_sala",
+  "tipo": "musica",
+  "duracao": 60,
+  "descricao": "Música da sala de espera",
+  "prompt": "Upbeat, playful instrumental loop for a family party quiz game lobby. Toy box theme: ukulele, glockenspiel, toy piano, hand claps, light percussion. Happy and welcoming, 120 bpm, no vocals."
+ },
+ {
+  "id": "musica_jogo",
+  "tipo": "musica",
+  "duracao": 60,
+  "descricao": "Música de fundo da primeira fase",
+  "prompt": "Light, curious instrumental background for a quiz game while players think. Pizzicato strings, marimba, toy piano, soft bass, playful gentle tension, 100 bpm, steady, no vocals, not distracting."
+ },
+ {
+  "id": "musica_piramide",
+  "tipo": "musica",
+  "duracao": 60,
+  "descricao": "Música da pirâmide (final)",
+  "prompt": "Exciting instrumental for a game show grand final where players climb a pyramid. Building drums, bouncy toy synths, bright brass stabs, rising tension and fun, 125 bpm, no vocals."
+ },
+ {
+  "id": "musica_podio",
+  "tipo": "musica",
+  "duracao": 30,
+  "descricao": "Música do pódio",
+  "prompt": "Joyful celebratory instrumental for a winner on the podium. Toy brass band, glockenspiel, claps, confetti party feel, triumphant and happy, no vocals."
+ }
+]
