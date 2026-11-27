@@ -147,7 +147,7 @@
       const s = Math.sin(k / 12 * 6.283), c = Math.cos(k / 12 * 6.283);
       marcas += `<line x1="${n(cx + s * R * 0.82)}" y1="${n(cy - c * R * 0.82)}" x2="${n(cx + s * R * 0.92)}" y2="${n(cy - c * R * 0.92)}" stroke="#1D2A4D" stroke-width="${k % 3 ? 3 : 5}" stroke-linecap="round"/>`;
     }
-    return `<svg width="${W}" height="${W + 10}" viewBox="0 0 ${W} ${W + 10}" role="img" aria-label="${num} segundos">
+    return `<svg width="${W}" height="${W + 10}" viewBox="0 0 ${W} ${W + 10}" style="overflow:visible" role="img" aria-label="${num} segundos">
       <path d="M${n(cx - r * 0.6)} ${n(cy - r * 1.12)} a${n(r * 0.42)} ${n(r * 0.42)} 0 0 0 -${n(r * 0.66)} ${n(r * 0.52)} z" fill="#FFD23F" stroke="#C49A0C" stroke-width="4"/><path d="M${n(cx + r * 0.6)} ${n(cy - r * 1.12)} a${n(r * 0.42)} ${n(r * 0.42)} 0 0 1 ${n(r * 0.66)} ${n(r * 0.52)} z" fill="#FFD23F" stroke="#C49A0C" stroke-width="4"/>
       <path d="M${n(cx - r * 0.64)} ${n(cy + r * 0.8)} l-${n(r * 0.2)} ${n(r * 0.34)}" stroke="#B83239" stroke-width="${n(r * 0.12)}" stroke-linecap="round"/><path d="M${n(cx + r * 0.64)} ${n(cy + r * 0.8)} l${n(r * 0.2)} ${n(r * 0.34)}" stroke="#B83239" stroke-width="${n(r * 0.12)}" stroke-linecap="round"/>
       <circle cx="${cx}" cy="${cy}" r="${r}" fill="#F2545B" stroke="#B83239" stroke-width="5"/>
