@@ -65,38 +65,41 @@ input:focus{box-shadow:0 5px 0 var(--azul)}
 #dicaIos b{color:var(--amarelo)}
 #dicaIos .aa{display:inline-block;font-family:Fredoka,sans-serif;font-weight:700;background:#fff;color:var(--tinta);border-radius:6px;padding:0 6px;margin:0 2px}
 #dicaIos .btn{font-size:16px;min-height:44px;padding:8px 16px;flex:none}
-/* ===== Partida ===== */
-.cabeca{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.cabeca .chip{align-self:center}
-.cabeca small{font-size:14px;font-weight:900;color:var(--tinta2)}
-.tempo{height:10px;border-radius:999px;background:#DCEBFF;overflow:hidden;flex:none}
-.tempo i{display:block;height:100%;width:100%;background:var(--azul);border-radius:999px}
-.tempo.urgente i{background:var(--vermelho)}
-#porta,#responder{flex-direction:column;align-items:stretch;gap:10px}
-#portasCel{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.pt{border:0;border-radius:20px 20px 10px 10px;font:700 clamp(18px,5vh,28px)/1.1 Fredoka,sans-serif;padding:10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
-.pt small{font-size:clamp(30px,10vh,54px);opacity:.4}
-.pt.c0{background:var(--amarelo);box-shadow:0 6px 0 var(--amarelo-esc)}
-.pt.c1{background:var(--azul);color:#fff;box-shadow:0 6px 0 var(--azul-esc)}
-.pt.c2{background:var(--vermelho);color:#fff;box-shadow:0 6px 0 var(--vermelho-esc)}
-.pt.meu{outline:5px solid var(--tinta);outline-offset:3px}
-.pt.apagada{opacity:.3}
-#qTexto{font-family:Fredoka,sans-serif;font-weight:700;font-size:clamp(16px,4.4vh,22px);line-height:1.15;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-#opsCel{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px}
-.oc{border:0;border-radius:18px;background:#fff;box-shadow:0 5px 0 var(--sombra-card);display:flex;align-items:center;gap:12px;padding:8px 14px;text-align:left;font-size:clamp(16px,4.6vh,24px);font-weight:900;cursor:pointer;min-height:0;overflow:hidden}
-.oc b{flex:none;width:clamp(34px,10vh,48px);height:clamp(34px,10vh,48px);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Fredoka,sans-serif;font-size:clamp(18px,5vh,26px)}
-.oc0 b{background:var(--azul)}.oc1 b{background:var(--amarelo-esc)}.oc2 b{background:var(--verde-esc)}.oc3 b{background:var(--vermelho)}
-.oc:disabled{cursor:default}
-#opsCel.fechado .oc{opacity:.5}
-.oc.meu{background:var(--amarelo);box-shadow:0 5px 0 var(--amarelo-esc);opacity:1!important}
-#opsCel.enviado .oc:not(.meu){opacity:.3}
-#qMsg{font-size:15px;min-height:20px}
-.bola{width:min(190px,52vh);height:min(190px,52vh);border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-family:Fredoka,sans-serif;font-weight:700;font-size:min(110px,30vh);color:#fff;animation:pula .5s ease-out}
-.bola.ok{background:var(--verde);box-shadow:0 8px 0 var(--verde-esc)}
-.bola.erro{background:var(--vermelho);box-shadow:0 8px 0 var(--vermelho-esc)}
-.bola.nada{background:#9AA6BF;box-shadow:0 8px 0 #6C7894}
-@keyframes pula{0%{transform:scale(.6)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
-.grande{font-family:Fredoka,sans-serif;font-weight:700;font-size:clamp(36px,10vh,56px);line-height:1;color:var(--tinta)}
+/* ===== Partida: telas do quadro aprovado (06, 07, 11) ===== */
+#votacao,#pergunta{gap:16px;align-items:stretch}
+.lado-relogio{width:clamp(110px,18vw,150px);flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.lado-relogio svg{width:100%;height:auto;max-height:52vh}
+.lado-relogio small{font-size:13px;font-weight:900;letter-spacing:.08em;color:var(--tinta2);text-align:center}
+#votacao .col{gap:10px;justify-content:center}
+#votacao h1{font-size:clamp(20px,6.5vh,26px)}
+#portasCel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;height:min(300px,74vh)}
+.pc2{position:relative;border:0;padding:0;cursor:pointer;background:transparent;font-family:Nunito,sans-serif;transition:opacity .2s}
+.pc2 .aro{position:absolute;inset:0;border-radius:80px 80px 14px 14px;box-shadow:0 6px 0 #1D2A4D}
+.pc2 .folha{position:absolute;left:10px;right:10px;top:10px;bottom:0;border-radius:70px 70px 8px 8px}
+.pc2 .mac{position:absolute;right:16px;top:62%;width:18px;height:18px;border-radius:50%;background:#FFD23F;border:3px solid #C49A0C;box-sizing:border-box}
+.pc2 .placa{position:absolute;left:50%;top:22%;transform:translateX(-50%);background:#fff;border-radius:14px;padding:8px 8px;display:flex;flex-direction:column;align-items:center;gap:4px;width:calc(100% - 20px);max-width:150px;box-sizing:border-box}
+.pc2 .placa span{font-family:Fredoka,sans-serif;font-weight:700;font-size:clamp(13px,5vh,19px);color:var(--tinta);line-height:1.05;text-align:center}
+.pc2.sel .aro{outline:5px solid var(--tinta);outline-offset:4px}
+.pc2.outra{opacity:.45}
+.pc2 .seu{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:var(--tinta);color:#fff;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:900;white-space:nowrap}
+#pergunta .esq{width:clamp(200px,30vw,250px);flex:none;display:flex;flex-direction:column;gap:10px;justify-content:center}
+#pergunta .esq .topo{display:flex;align-items:center;gap:10px}
+#pergunta .esq .topo svg{width:clamp(90px,15vw,128px);height:auto}
+#qCat{font-size:12px;font-weight:900;letter-spacing:.1em;color:#fff;border-radius:999px;padding:3px 10px;text-transform:uppercase}
+#qTexto{margin:0;font-weight:900;font-size:clamp(15px,5.4vh,21px);line-height:1.3;color:var(--tinta)}
+#qDir{flex:1;min-width:0;position:relative}
+#opsCel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:14px;height:100%}
+.oc2{position:relative;border:0;border-radius:18px;cursor:pointer;display:flex;align-items:center;gap:14px;padding:0 16px;font-family:Fredoka,sans-serif;font-weight:700;min-height:0;transition:opacity .2s}
+.oc2 .fm{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;flex:none}
+.oc2 .tx{flex:1;min-width:0;height:85%;display:flex;align-items:center;font-size:44px;line-height:1.05;overflow:hidden;text-align:left}
+.oc2.sel{outline:5px solid var(--tinta);outline-offset:3px}
+.oc2.outra{opacity:.4}
+.oc2:disabled{cursor:default}
+#opsCel.esperando .oc2{opacity:.55}
+#enviado{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);background:var(--tinta);color:#fff;border-radius:999px;padding:6px 16px;font-size:14px;font-weight:900;white-space:nowrap}
+.pontinhos{display:flex;align-items:center;gap:8px}
+.pontinhos span{width:14px;height:14px;border-radius:50%;background:var(--azul)}
+.pontinhos span:nth-child(2){opacity:.55}.pontinhos span:nth-child(3){opacity:.25}
 #status{position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:10;font-size:13px;font-weight:900;border-radius:999px;padding:5px 12px;background:var(--vermelho);color:#fff}
 </style>
 </head>
@@ -137,31 +140,27 @@ input:focus{box-shadow:0 5px 0 var(--azul)}
   <div class="col">
     <span class="chip" id="olheChip">A CORUJA ESTÁ FALANDO</span>
     <h1 id="olheTit">Olhe para a TV!</h1>
-    <p id="olheTxt">Agora é hora de ouvir. Quando for a sua vez, o celular mostra o que fazer.</p>
+    <p id="olheTxt">Agora é hora de ouvir. Quando for a sua vez, o celular vibra e mostra o que fazer.</p>
+    <div class="pontinhos" aria-hidden="true"><span></span><span></span><span></span></div>
   </div>
 </section>
 
-<section id="porta" class="tela oculto">
-  <div class="cabeca"><span class="chip">ESCOLHA A PORTA</span><small id="portaNum"></small></div>
-  <div class="tempo" id="portaTempo"><i></i></div>
-  <div id="portasCel"></div>
-</section>
-
-<section id="responder" class="tela oculto">
-  <div class="cabeca"><span class="chip" id="qCat"></span><small id="qNum"></small></div>
-  <div class="tempo" id="qTempo"><i></i></div>
-  <div id="qTexto"></div>
-  <div id="opsCel"></div>
-  <p id="qMsg"></p>
-</section>
-
-<section id="resultado" class="tela oculto">
-  <div class="bola" id="rBola"></div>
+<section id="votacao" class="tela oculto">
+  <div class="lado-relogio"><div id="vRel"></div><small>SEGUNDOS PARA VOTAR</small></div>
   <div class="col">
-    <h1 id="rTit"></h1>
-    <span class="grande" id="rPts"></span>
-    <p id="rCerta"></p>
-    <p id="rPos"></p>
+    <h1>Escolha a categoria</h1>
+    <div id="portasCel"></div>
+  </div>
+</section>
+
+<section id="pergunta" class="tela oculto">
+  <div class="esq">
+    <div class="topo"><span id="qRel"></span><span id="qCat"></span></div>
+    <p id="qTexto"></p>
+  </div>
+  <div id="qDir">
+    <div id="opsCel"></div>
+    <span id="enviado" class="oculto">Resposta enviada!</span>
   </div>
 </section>
 
