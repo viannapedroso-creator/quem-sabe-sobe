@@ -576,20 +576,20 @@
   "em": "2026-11-27T14:26:34.152Z"
  },
  "regras_dois": {
-  "texto": "Acertou, sobe um degrau. Os dois mais rápidos sobem dois.",
-  "enviado": "[warmly] Acertou, sobe um degrau. Os dois mais rápidos sobem dois.",
+  "texto": "Quem acertar, sobe um degrau. Os dois mais rápidos sobem dois.",
+  "enviado": "[warmly] Quem acertar, sobe um degrau. Os dois mais rápidos sobem dois.",
   "arquivo": "fixas/regras_dois.mp3",
   "modelo": "eleven_v4",
   "voz": "HReOQZPV9tH5iTEnSbGo",
-  "em": "2026-11-27T14:26:35.571Z"
+  "em": "2026-11-27T17:58:51.593Z"
  },
  "regras_um": {
-  "texto": "Acertou, sobe um degrau. O mais rápido sobe dois.",
-  "enviado": "[warmly] Acertou, sobe um degrau. O mais rápido sobe dois.",
+  "texto": "Quem acertar, sobe um degrau. O mais rápido sobe dois.",
+  "enviado": "[warmly] Quem acertar, sobe um degrau. O mais rápido sobe dois.",
   "arquivo": "fixas/regras_um.mp3",
   "modelo": "eleven_v4",
   "voz": "HReOQZPV9tH5iTEnSbGo",
-  "em": "2026-11-27T14:26:36.944Z"
+  "em": "2026-11-27T17:58:53.089Z"
  },
  "regras_poder": {
   "texto": "Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!",
@@ -3617,11 +3617,11 @@
  },
  "P066_resposta": {
   "texto": "A resposta certa é… WALL-E!",
-  "enviado": "[dramatically] A resposta certa é… WALL-E!",
+  "enviado": "[dramatically] A resposta certa é… /ˈwɔ.li/!",
   "arquivo": "perguntas/P066_resposta.mp3",
   "modelo": "eleven_v4",
   "voz": "HReOQZPV9tH5iTEnSbGo",
-  "em": "2026-11-27T14:35:13.024Z"
+  "em": "2026-11-27T17:58:54.270Z"
  },
  "P067_pergunta": {
   "texto": "Em qual saga aparece o mago Gandalf?",
@@ -5737,11 +5737,11 @@
  },
  "P195_pergunta": {
   "texto": "Qual animal é o símbolo da ONG WWF?",
-  "enviado": "[curious] Qual animal é o símbolo da ONG WWF?",
+  "enviado": "[curious] Qual animal é o símbolo da /ˈõ.ɡi/ WWF?",
   "arquivo": "perguntas/P195_pergunta.mp3",
   "modelo": "eleven_v4",
   "voz": "HReOQZPV9tH5iTEnSbGo",
-  "em": "2026-11-27T14:58:56.615Z"
+  "em": "2026-11-27T17:58:55.808Z"
  },
  "P195_resposta": {
   "texto": "A resposta certa é… O panda!",

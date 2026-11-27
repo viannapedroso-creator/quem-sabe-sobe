@@ -187,8 +187,8 @@ reacao_dois_3,reacoes,"Dois degraus, que velocidade!",39,sim,reacoes/reacao_dois
 final_comeca,fixas,"A primeira fase acabou! Agora começa a grande final: a Pirâmide do Conhecimento!",95,sim,fixas/final_comeca.mp3
 final_lugar,fixas,"Cada um para o seu degrau!",36,sim,fixas/final_lugar.mp3
 final_degraus,fixas,"Seus pontos viraram degraus! Quem fez mais pontos começa mais alto. Cada um para o seu lugar!",102,sim,fixas/final_degraus.mp3
-regras_dois,fixas,"Quem acertar, sobe um degrau. Os dois mais rápidos sobem dois.",71,nao,
-regras_um,fixas,"Quem acertar, sobe um degrau. O mais rápido sobe dois.",63,nao,
+regras_dois,fixas,"Quem acertar, sobe um degrau. Os dois mais rápidos sobem dois.",71,sim,fixas/regras_dois.mp3
+regras_um,fixas,"Quem acertar, sobe um degrau. O mais rápido sobe dois.",63,sim,fixas/regras_um.mp3
 regras_poder,fixas,"Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!",95,sim,fixas/regras_poder.mp3
 pir_pergunta_1,numeros,"Pergunta um!",22,sim,numeros/pir_pergunta_1.mp3
 pir_pergunta_2,numeros,"Pergunta dois!",24,sim,numeros/pir_pergunta_2.mp3
