@@ -1246,7 +1246,12 @@
     await animar(0.3, (t) => { fl.style.opacity = cl(t / 0.3); });
     b.classList.add('oculto');
     const ordem = classificacao(venc);
-    const inutil = sorteia(window.QSS_INUTEIS);
+    // Prêmio: não repete curiosidade até passar por todas
+    let ditos = []; try { ditos = JSON.parse(localStorage.getItem('qss_inuteis') || '[]'); } catch (e) {}
+    let livres = window.QSS_INUTEIS.filter((x) => !ditos.includes(x));
+    if (!livres.length) { ditos = []; livres = window.QSS_INUTEIS.slice(); }
+    const inutil = sorteia(livres);
+    try { localStorage.setItem('qss_inuteis', JSON.stringify(ditos.concat(inutil))); } catch (e) {}
     mudar('fim', { vencedor: venc.pid, inutil, ordem: ordem.map((j) => j.pid), degraus: Object.fromEntries(js.map((j) => [j.pid, j.deg])) });
     js.forEach((j) => { j.pronto = false; });
     mostrar('podio');
