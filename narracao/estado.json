@@ -1,1 +1,1130 @@
-{}
+{
+ "sala_entrem": {
+  "texto": "Entrem na sala! Apontem a câmera do celular para o QR code, ou digitem a senha.",
+  "enviado": "[excited] Entrem na sala! Apontem a câmera do celular para o QR code, ou digitem a senha.",
+  "arquivo": "fixas/sala_entrem.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:07.702Z"
+ },
+ "sala_prontos": {
+  "texto": "Todo mundo pronto? Segurem o botão Iniciar por três segundos.",
+  "enviado": "[playful] Todo mundo pronto? Segurem o botão Iniciar por três segundos.",
+  "arquivo": "fixas/sala_prontos.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:09.167Z"
+ },
+ "explica_1": {
+  "texto": "É assim que se joga! Prestem atenção, que eu só explico uma vez.",
+  "enviado": "[mischievously] É assim que se joga! Prestem atenção, que eu só explico uma vez.",
+  "arquivo": "fixas/explica_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:10.931Z"
+ },
+ "explica_2": {
+  "texto": "Eu leio a pergunta, e vocês têm quinze segundos para responder no celular.",
+  "enviado": "[warmly] Eu leio a pergunta, e vocês têm quinze segundos para responder no celular.",
+  "arquivo": "fixas/explica_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:12.459Z"
+ },
+ "explica_3": {
+  "texto": "Acertou, ganhou pontos. Quem acerta mais rápido leva um bônus.",
+  "enviado": "[happy] Acertou, ganhou pontos. Quem acerta mais rápido leva um bônus.",
+  "arquivo": "fixas/explica_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:14.102Z"
+ },
+ "explica_4": {
+  "texto": "E dá para atrapalhar os outros com poderes.",
+  "enviado": "[mischievously] E dá para atrapalhar os outros com poderes.",
+  "arquivo": "fixas/explica_4.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:15.373Z"
+ },
+ "explica_5": {
+  "texto": "Na final, os pontos viram degraus. Quem chegar ao topo vence! Quem sabe… SOBE!",
+  "enviado": "[excited] Na final, os pontos viram degraus. Quem chegar ao topo vence! [shouting] Quem sabe… SOBE!",
+  "arquivo": "fixas/explica_5.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:17.697Z"
+ },
+ "rodada_1": {
+  "texto": "Rodada um! Qual vai ser a categoria? Votem no celular!",
+  "enviado": "[excited] Rodada um! Qual vai ser a categoria? Votem no celular!",
+  "arquivo": "numeros/rodada_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:18.932Z"
+ },
+ "rodada_2": {
+  "texto": "Rodada dois! Qual vai ser a categoria? Votem no celular!",
+  "enviado": "[excited] Rodada dois! Qual vai ser a categoria? Votem no celular!",
+  "arquivo": "numeros/rodada_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:20.425Z"
+ },
+ "rodada_3": {
+  "texto": "Rodada três! Qual vai ser a categoria? Votem no celular!",
+  "enviado": "[excited] Rodada três! Qual vai ser a categoria? Votem no celular!",
+  "arquivo": "numeros/rodada_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:21.873Z"
+ },
+ "rodada_4": {
+  "texto": "Rodada quatro! Qual vai ser a categoria? Votem no celular!",
+  "enviado": "[excited] Rodada quatro! Qual vai ser a categoria? Votem no celular!",
+  "arquivo": "numeros/rodada_4.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:23.343Z"
+ },
+ "rodada_5": {
+  "texto": "Rodada cinco! Qual vai ser a categoria? Votem no celular!",
+  "enviado": "[excited] Rodada cinco! Qual vai ser a categoria? Votem no celular!",
+  "arquivo": "numeros/rodada_5.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:24.642Z"
+ },
+ "rodada_7": {
+  "texto": "Rodada sete! Qual vai ser a categoria? Votem no celular!",
+  "enviado": "[excited] Rodada sete! Qual vai ser a categoria? Votem no celular!",
+  "arquivo": "numeros/rodada_7.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:26.041Z"
+ },
+ "rodada_8": {
+  "texto": "Rodada oito! Qual vai ser a categoria? Votem no celular!",
+  "enviado": "[excited] Rodada oito! Qual vai ser a categoria? Votem no celular!",
+  "arquivo": "numeros/rodada_8.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:27.404Z"
+ },
+ "rodada_9": {
+  "texto": "Rodada nove! Qual vai ser a categoria? Votem no celular!",
+  "enviado": "[excited] Rodada nove! Qual vai ser a categoria? Votem no celular!",
+  "arquivo": "numeros/rodada_9.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:28.722Z"
+ },
+ "rodada_10": {
+  "texto": "Rodada dez! Qual vai ser a categoria? Votem no celular!",
+  "enviado": "[excited] Rodada dez! Qual vai ser a categoria? Votem no celular!",
+  "arquivo": "numeros/rodada_10.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:30.021Z"
+ },
+ "voto_empate": {
+  "texto": "Deu empate! Vou sortear entre as portas.",
+  "enviado": "[mischievously] Deu empate! Vou sortear entre as portas.",
+  "arquivo": "fixas/voto_empate.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:31.366Z"
+ },
+ "porta_geografia": {
+  "texto": "A porta escolhida foi… Geografia!",
+  "enviado": "[dramatically] A porta escolhida foi… Geografia!",
+  "arquivo": "categorias/porta_geografia.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:32.430Z"
+ },
+ "porta_ciencia": {
+  "texto": "A porta escolhida foi… Ciência!",
+  "enviado": "[dramatically] A porta escolhida foi… Ciência!",
+  "arquivo": "categorias/porta_ciencia.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:33.646Z"
+ },
+ "porta_esportes": {
+  "texto": "A porta escolhida foi… Esportes!",
+  "enviado": "[dramatically] A porta escolhida foi… Esportes!",
+  "arquivo": "categorias/porta_esportes.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:34.715Z"
+ },
+ "porta_cinema-e-tv": {
+  "texto": "A porta escolhida foi… Cinema e TV!",
+  "enviado": "[dramatically] A porta escolhida foi… Cinema e TV!",
+  "arquivo": "categorias/porta_cinema-e-tv.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:36.270Z"
+ },
+ "porta_comidas-e-bebidas": {
+  "texto": "A porta escolhida foi… Comidas e bebidas!",
+  "enviado": "[dramatically] A porta escolhida foi… Comidas e bebidas!",
+  "arquivo": "categorias/porta_comidas-e-bebidas.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:37.556Z"
+ },
+ "porta_musica": {
+  "texto": "A porta escolhida foi… Música!",
+  "enviado": "[dramatically] A porta escolhida foi… Música!",
+  "arquivo": "categorias/porta_musica.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:38.613Z"
+ },
+ "poder_explica_1": {
+  "texto": "Agora vale atrapalhar! A cada rodada, escolham um poder e um alvo. Cada poder pode ser usado duas vezes.",
+  "enviado": "[mischievously] Agora vale atrapalhar! A cada rodada, escolham um poder e um alvo. Cada poder pode ser usado duas vezes.",
+  "arquivo": "fixas/poder_explica_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:41.693Z"
+ },
+ "poder_explica_2": {
+  "texto": "Poderes diferentes no mesmo alvo se somam. E o mesmo poder, vindo de vários jogadores, fica mais forte.",
+  "enviado": "[mischievously] Poderes diferentes no mesmo alvo se somam. E o mesmo poder, vindo de vários jogadores, fica mais forte.",
+  "arquivo": "fixas/poder_explica_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:44.294Z"
+ },
+ "poder_hora": {
+  "texto": "Hora de atrapalhar! Escolham um poder e um alvo.",
+  "enviado": "[mischievously] Hora de atrapalhar! Escolham um poder e um alvo.",
+  "arquivo": "fixas/poder_hora.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:45.741Z"
+ },
+ "espelho_todos": {
+  "texto": "Todo mundo pegou espelho! Ninguém lançou poder, então ninguém foi atingido.",
+  "enviado": "[laughs] Todo mundo pegou espelho! Ninguém lançou poder, então ninguém foi atingido.",
+  "arquivo": "fixas/espelho_todos.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:47.816Z"
+ },
+ "espelho_alguns": {
+  "texto": "Teve gente que pegou espelho! Mas ninguém lançou poder, então ninguém foi atingido.",
+  "enviado": "[laughs] Teve gente que pegou espelho! Mas ninguém lançou poder, então ninguém foi atingido.",
+  "arquivo": "fixas/espelho_alguns.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:49.799Z"
+ },
+ "assoc_explica_1": {
+  "texto": "Rodada especial! Sem categoria e sem poderes.",
+  "enviado": "[excited] Rodada especial! Sem categoria e sem poderes.",
+  "arquivo": "fixas/assoc_explica_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:50.933Z"
+ },
+ "assoc_explica_2": {
+  "texto": "Vocês têm vinte segundos para ligar dez itens. Certo vale dois pontos, errado tira um.",
+  "enviado": "[warmly] Vocês têm vinte segundos para ligar dez itens. Certo vale dois pontos, errado tira um.",
+  "arquivo": "fixas/assoc_explica_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:53.028Z"
+ },
+ "assoc_explica_3": {
+  "texto": "E quem terminar primeiro ganha bônus!",
+  "enviado": "[excited] E quem terminar primeiro ganha bônus!",
+  "arquivo": "fixas/assoc_explica_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:53.921Z"
+ },
+ "assoc_valendo": {
+  "texto": "Valendo!",
+  "enviado": "[shouting] Valendo!",
+  "arquivo": "fixas/assoc_valendo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:54.534Z"
+ },
+ "assoc_todos": {
+  "texto": "Todo mundo respondeu! Vamos contar os pontos.",
+  "enviado": "[happy] Todo mundo respondeu! Vamos contar os pontos.",
+  "arquivo": "fixas/assoc_todos.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:55.846Z"
+ },
+ "assoc_tempo": {
+  "texto": "Tempo esgotado! Vamos contar os pontos.",
+  "enviado": "[surprised] Tempo esgotado! Vamos contar os pontos.",
+  "arquivo": "fixas/assoc_tempo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:56.931Z"
+ },
+ "pergunta_de_dez_1": {
+  "texto": "Pergunta um de dez!",
+  "enviado": "[excited] Pergunta um de dez!",
+  "arquivo": "numeros/pergunta_de_dez_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:57.680Z"
+ },
+ "pergunta_de_dez_2": {
+  "texto": "Pergunta dois de dez!",
+  "enviado": "[excited] Pergunta dois de dez!",
+  "arquivo": "numeros/pergunta_de_dez_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:58.544Z"
+ },
+ "pergunta_de_dez_3": {
+  "texto": "Pergunta três de dez!",
+  "enviado": "[excited] Pergunta três de dez!",
+  "arquivo": "numeros/pergunta_de_dez_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:25:59.444Z"
+ },
+ "pergunta_de_dez_4": {
+  "texto": "Pergunta quatro de dez!",
+  "enviado": "[excited] Pergunta quatro de dez!",
+  "arquivo": "numeros/pergunta_de_dez_4.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:00.268Z"
+ },
+ "pergunta_de_dez_5": {
+  "texto": "Pergunta cinco de dez!",
+  "enviado": "[excited] Pergunta cinco de dez!",
+  "arquivo": "numeros/pergunta_de_dez_5.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:00.973Z"
+ },
+ "pergunta_de_dez_7": {
+  "texto": "Pergunta sete de dez!",
+  "enviado": "[excited] Pergunta sete de dez!",
+  "arquivo": "numeros/pergunta_de_dez_7.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:01.893Z"
+ },
+ "pergunta_de_dez_8": {
+  "texto": "Pergunta oito de dez!",
+  "enviado": "[excited] Pergunta oito de dez!",
+  "arquivo": "numeros/pergunta_de_dez_8.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:02.701Z"
+ },
+ "pergunta_de_dez_9": {
+  "texto": "Pergunta nove de dez!",
+  "enviado": "[excited] Pergunta nove de dez!",
+  "arquivo": "numeros/pergunta_de_dez_9.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:03.772Z"
+ },
+ "pergunta_de_dez_10": {
+  "texto": "Pergunta dez de dez!",
+  "enviado": "[excited] Pergunta dez de dez!",
+  "arquivo": "numeros/pergunta_de_dez_10.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:04.677Z"
+ },
+ "resp_todos": {
+  "texto": "Todo mundo respondeu!",
+  "enviado": "[happy] Todo mundo respondeu!",
+  "arquivo": "fixas/resp_todos.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:05.459Z"
+ },
+ "resp_tempo": {
+  "texto": "Tempo esgotado!",
+  "enviado": "[surprised] Tempo esgotado!",
+  "arquivo": "fixas/resp_tempo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:06.146Z"
+ },
+ "rev_vamos": {
+  "texto": "Vamos ver quem acertou…",
+  "enviado": "[curious] Vamos ver quem acertou…",
+  "arquivo": "fixas/rev_vamos.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:07.019Z"
+ },
+ "pontos_explica": {
+  "texto": "Quem acertou ganha pontos, e quem respondeu mais rápido ganha bônus!",
+  "enviado": "[warmly] Quem acertou ganha pontos, e quem respondeu mais rápido ganha bônus!",
+  "arquivo": "fixas/pontos_explica.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:08.661Z"
+ },
+ "ranking_empate": {
+  "texto": "Olha o ranking! Empate na frente!",
+  "enviado": "[surprised] Olha o ranking! Empate na frente!",
+  "arquivo": "fixas/ranking_empate.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:09.792Z"
+ },
+ "reacao_ok_1": {
+  "texto": "Isso aí!",
+  "enviado": "[happy] Isso aí!",
+  "arquivo": "reacoes/reacao_ok_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:10.428Z"
+ },
+ "reacao_ok_2": {
+  "texto": "Mandaram bem!",
+  "enviado": "[happy] Mandaram bem!",
+  "arquivo": "reacoes/reacao_ok_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:11.090Z"
+ },
+ "reacao_ok_3": {
+  "texto": "Acertaram em cheio!",
+  "enviado": "[happy] Acertaram em cheio!",
+  "arquivo": "reacoes/reacao_ok_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:11.965Z"
+ },
+ "reacao_erro_1": {
+  "texto": "Ih, essa foi difícil!",
+  "enviado": "[laughs] Ih, essa foi difícil!",
+  "arquivo": "reacoes/reacao_erro_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:13.039Z"
+ },
+ "reacao_erro_2": {
+  "texto": "Quase!",
+  "enviado": "[sighs] Quase!",
+  "arquivo": "reacoes/reacao_erro_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:14.053Z"
+ },
+ "reacao_erro_3": {
+  "texto": "Ninguém esperava essa!",
+  "enviado": "[surprised] Ninguém esperava essa!",
+  "arquivo": "reacoes/reacao_erro_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:14.896Z"
+ },
+ "reacao_todos_1": {
+  "texto": "Todo mundo acertou? Essa estava fácil!",
+  "enviado": "[laughs] Todo mundo acertou? Essa estava fácil!",
+  "arquivo": "reacoes/reacao_todos_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:16.240Z"
+ },
+ "reacao_todos_2": {
+  "texto": "Turma afiada!",
+  "enviado": "[excited] Turma afiada!",
+  "arquivo": "reacoes/reacao_todos_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:16.996Z"
+ },
+ "reacao_todos_3": {
+  "texto": "Cem por cento de acerto!",
+  "enviado": "[excited] Cem por cento de acerto!",
+  "arquivo": "reacoes/reacao_todos_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:17.860Z"
+ },
+ "reacao_nenhum_1": {
+  "texto": "Ninguém acertou! Era pegadinha.",
+  "enviado": "[laughs] Ninguém acertou! Era pegadinha.",
+  "arquivo": "reacoes/reacao_nenhum_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:19.081Z"
+ },
+ "reacao_nenhum_2": {
+  "texto": "Ixi, zero acertos!",
+  "enviado": "[surprised] Ixi, zero acertos!",
+  "arquivo": "reacoes/reacao_nenhum_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:20.142Z"
+ },
+ "reacao_nenhum_3": {
+  "texto": "Essa pegou todo mundo!",
+  "enviado": "[laughs] Essa pegou todo mundo!",
+  "arquivo": "reacoes/reacao_nenhum_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:21.054Z"
+ },
+ "reacao_tempo_1": {
+  "texto": "Cinco segundos!",
+  "enviado": "[urgently] Cinco segundos!",
+  "arquivo": "reacoes/reacao_tempo_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:21.884Z"
+ },
+ "reacao_tempo_2": {
+  "texto": "Corre, corre!",
+  "enviado": "[urgently] Corre, corre!",
+  "arquivo": "reacoes/reacao_tempo_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:22.643Z"
+ },
+ "reacao_tempo_3": {
+  "texto": "O tempo está acabando!",
+  "enviado": "[urgently] O tempo está acabando!",
+  "arquivo": "reacoes/reacao_tempo_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:23.298Z"
+ },
+ "reacao_virada_1": {
+  "texto": "Temos um novo líder!",
+  "enviado": "[excited] Temos um novo líder!",
+  "arquivo": "reacoes/reacao_virada_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:24.091Z"
+ },
+ "reacao_virada_2": {
+  "texto": "Virou o jogo!",
+  "enviado": "[excited] Virou o jogo!",
+  "arquivo": "reacoes/reacao_virada_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:24.926Z"
+ },
+ "reacao_virada_3": {
+  "texto": "Mudou tudo no ranking!",
+  "enviado": "[excited] Mudou tudo no ranking!",
+  "arquivo": "reacoes/reacao_virada_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:25.876Z"
+ },
+ "reacao_dois_1": {
+  "texto": "Subiu dois de uma vez!",
+  "enviado": "[excited] Subiu dois de uma vez!",
+  "arquivo": "reacoes/reacao_dois_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:26.959Z"
+ },
+ "reacao_dois_2": {
+  "texto": "Que pulo!",
+  "enviado": "[excited] Que pulo!",
+  "arquivo": "reacoes/reacao_dois_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:27.618Z"
+ },
+ "reacao_dois_3": {
+  "texto": "Dois degraus, que velocidade!",
+  "enviado": "[excited] Dois degraus, que velocidade!",
+  "arquivo": "reacoes/reacao_dois_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:28.646Z"
+ },
+ "final_comeca": {
+  "texto": "A primeira fase acabou! Agora começa a grande final: a Pirâmide do Conhecimento!",
+  "enviado": "[dramatically] A primeira fase acabou! Agora começa a grande final: a Pirâmide do Conhecimento!",
+  "arquivo": "fixas/final_comeca.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:31.067Z"
+ },
+ "final_lugar": {
+  "texto": "Cada um para o seu degrau!",
+  "enviado": "[excited] Cada um para o seu degrau!",
+  "arquivo": "fixas/final_lugar.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:31.960Z"
+ },
+ "final_degraus": {
+  "texto": "Seus pontos viraram degraus! Quem fez mais pontos começa mais alto. Cada um para o seu lugar!",
+  "enviado": "[warmly] Seus pontos viraram degraus! Quem fez mais pontos começa mais alto. Cada um para o seu lugar!",
+  "arquivo": "fixas/final_degraus.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:34.152Z"
+ },
+ "regras_dois": {
+  "texto": "Acertou, sobe um degrau. Os dois mais rápidos sobem dois.",
+  "enviado": "[warmly] Acertou, sobe um degrau. Os dois mais rápidos sobem dois.",
+  "arquivo": "fixas/regras_dois.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:35.571Z"
+ },
+ "regras_um": {
+  "texto": "Acertou, sobe um degrau. O mais rápido sobe dois.",
+  "enviado": "[warmly] Acertou, sobe um degrau. O mais rápido sobe dois.",
+  "arquivo": "fixas/regras_um.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:36.944Z"
+ },
+ "regras_poder": {
+  "texto": "Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!",
+  "enviado": "[mischievously] Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!",
+  "arquivo": "fixas/regras_poder.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:40.013Z"
+ },
+ "pir_pergunta_1": {
+  "texto": "Pergunta um!",
+  "enviado": "[excited] Pergunta um!",
+  "arquivo": "numeros/pir_pergunta_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:40.712Z"
+ },
+ "pir_pergunta_2": {
+  "texto": "Pergunta dois!",
+  "enviado": "[excited] Pergunta dois!",
+  "arquivo": "numeros/pir_pergunta_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:41.377Z"
+ },
+ "pir_pergunta_3": {
+  "texto": "Pergunta três!",
+  "enviado": "[excited] Pergunta três!",
+  "arquivo": "numeros/pir_pergunta_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:42.111Z"
+ },
+ "pir_pergunta_4": {
+  "texto": "Pergunta quatro!",
+  "enviado": "[excited] Pergunta quatro!",
+  "arquivo": "numeros/pir_pergunta_4.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:42.901Z"
+ },
+ "pir_pergunta_5": {
+  "texto": "Pergunta cinco!",
+  "enviado": "[excited] Pergunta cinco!",
+  "arquivo": "numeros/pir_pergunta_5.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:43.625Z"
+ },
+ "pir_pergunta_6": {
+  "texto": "Pergunta seis!",
+  "enviado": "[excited] Pergunta seis!",
+  "arquivo": "numeros/pir_pergunta_6.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:44.385Z"
+ },
+ "pir_pergunta_7": {
+  "texto": "Pergunta sete!",
+  "enviado": "[excited] Pergunta sete!",
+  "arquivo": "numeros/pir_pergunta_7.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:45.415Z"
+ },
+ "pir_pergunta_8": {
+  "texto": "Pergunta oito!",
+  "enviado": "[excited] Pergunta oito!",
+  "arquivo": "numeros/pir_pergunta_8.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:46.090Z"
+ },
+ "pir_pergunta_9": {
+  "texto": "Pergunta nove!",
+  "enviado": "[excited] Pergunta nove!",
+  "arquivo": "numeros/pir_pergunta_9.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:46.913Z"
+ },
+ "pir_pergunta_10": {
+  "texto": "Pergunta dez!",
+  "enviado": "[excited] Pergunta dez!",
+  "arquivo": "numeros/pir_pergunta_10.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:47.706Z"
+ },
+ "pir_pergunta_11": {
+  "texto": "Pergunta onze!",
+  "enviado": "[excited] Pergunta onze!",
+  "arquivo": "numeros/pir_pergunta_11.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:48.532Z"
+ },
+ "pir_pergunta_12": {
+  "texto": "Pergunta doze!",
+  "enviado": "[excited] Pergunta doze!",
+  "arquivo": "numeros/pir_pergunta_12.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:49.287Z"
+ },
+ "pir_pergunta_13": {
+  "texto": "Pergunta treze!",
+  "enviado": "[excited] Pergunta treze!",
+  "arquivo": "numeros/pir_pergunta_13.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:50.106Z"
+ },
+ "pir_pergunta_14": {
+  "texto": "Pergunta catorze!",
+  "enviado": "[excited] Pergunta catorze!",
+  "arquivo": "numeros/pir_pergunta_14.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:50.906Z"
+ },
+ "pir_pergunta_15": {
+  "texto": "Pergunta quinze!",
+  "enviado": "[excited] Pergunta quinze!",
+  "arquivo": "numeros/pir_pergunta_15.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:51.657Z"
+ },
+ "pir_pergunta_16": {
+  "texto": "Pergunta dezesseis!",
+  "enviado": "[excited] Pergunta dezesseis!",
+  "arquivo": "numeros/pir_pergunta_16.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:52.522Z"
+ },
+ "pir_pergunta_17": {
+  "texto": "Pergunta dezessete!",
+  "enviado": "[excited] Pergunta dezessete!",
+  "arquivo": "numeros/pir_pergunta_17.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:53.410Z"
+ },
+ "pir_pergunta_18": {
+  "texto": "Pergunta dezoito!",
+  "enviado": "[excited] Pergunta dezoito!",
+  "arquivo": "numeros/pir_pergunta_18.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:54.293Z"
+ },
+ "pir_pergunta_19": {
+  "texto": "Pergunta dezenove!",
+  "enviado": "[excited] Pergunta dezenove!",
+  "arquivo": "numeros/pir_pergunta_19.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:55.111Z"
+ },
+ "pir_pergunta_20": {
+  "texto": "Pergunta vinte!",
+  "enviado": "[excited] Pergunta vinte!",
+  "arquivo": "numeros/pir_pergunta_20.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:55.923Z"
+ },
+ "pir_sobe": {
+  "texto": "Quem acertou, sobe!",
+  "enviado": "[excited] Quem acertou, sobe!",
+  "arquivo": "fixas/pir_sobe.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:56.931Z"
+ },
+ "pir_ninguem": {
+  "texto": "Ninguém acertou! Todo mundo fica onde está.",
+  "enviado": "[laughs] Ninguém acertou! Todo mundo fica onde está.",
+  "arquivo": "fixas/pir_ninguem.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:58.289Z"
+ },
+ "faltam_atencao": {
+  "texto": "Atenção! Ninguém consegue mais chegar ao topo.",
+  "enviado": "[dramatically] Atenção! Ninguém consegue mais chegar ao topo.",
+  "arquivo": "fixas/faltam_atencao.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:26:59.774Z"
+ },
+ "faltam_uma": {
+  "texto": "Falta só uma pergunta!",
+  "enviado": "[dramatically] Falta só uma pergunta!",
+  "arquivo": "fixas/faltam_uma.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:00.896Z"
+ },
+ "faltam_2": {
+  "texto": "Faltam só dois perguntas!",
+  "enviado": "[dramatically] Faltam só dois perguntas!",
+  "arquivo": "numeros/faltam_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:01.927Z"
+ },
+ "faltam_3": {
+  "texto": "Faltam só três perguntas!",
+  "enviado": "[dramatically] Faltam só três perguntas!",
+  "arquivo": "numeros/faltam_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:03.159Z"
+ },
+ "faltam_4": {
+  "texto": "Faltam só quatro perguntas!",
+  "enviado": "[dramatically] Faltam só quatro perguntas!",
+  "arquivo": "numeros/faltam_4.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:04.296Z"
+ },
+ "faltam_5": {
+  "texto": "Faltam só cinco perguntas!",
+  "enviado": "[dramatically] Faltam só cinco perguntas!",
+  "arquivo": "numeros/faltam_5.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:05.267Z"
+ },
+ "faltam_6": {
+  "texto": "Faltam só seis perguntas!",
+  "enviado": "[dramatically] Faltam só seis perguntas!",
+  "arquivo": "numeros/faltam_6.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:06.359Z"
+ },
+ "faltam_7": {
+  "texto": "Faltam só sete perguntas!",
+  "enviado": "[dramatically] Faltam só sete perguntas!",
+  "arquivo": "numeros/faltam_7.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:07.558Z"
+ },
+ "faltam_8": {
+  "texto": "Faltam só oito perguntas!",
+  "enviado": "[dramatically] Faltam só oito perguntas!",
+  "arquivo": "numeros/faltam_8.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:08.830Z"
+ },
+ "faltam_9": {
+  "texto": "Faltam só nove perguntas!",
+  "enviado": "[dramatically] Faltam só nove perguntas!",
+  "arquivo": "numeros/faltam_9.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:09.908Z"
+ },
+ "faltam_10": {
+  "texto": "Faltam só dez perguntas!",
+  "enviado": "[dramatically] Faltam só dez perguntas!",
+  "arquivo": "numeros/faltam_10.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:11.002Z"
+ },
+ "faltam_11": {
+  "texto": "Faltam só onze perguntas!",
+  "enviado": "[dramatically] Faltam só onze perguntas!",
+  "arquivo": "numeros/faltam_11.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:12.138Z"
+ },
+ "faltam_12": {
+  "texto": "Faltam só doze perguntas!",
+  "enviado": "[dramatically] Faltam só doze perguntas!",
+  "arquivo": "numeros/faltam_12.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:13.339Z"
+ },
+ "faltam_13": {
+  "texto": "Faltam só treze perguntas!",
+  "enviado": "[dramatically] Faltam só treze perguntas!",
+  "arquivo": "numeros/faltam_13.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:14.358Z"
+ },
+ "faltam_14": {
+  "texto": "Faltam só catorze perguntas!",
+  "enviado": "[dramatically] Faltam só catorze perguntas!",
+  "arquivo": "numeros/faltam_14.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:15.416Z"
+ },
+ "faltam_15": {
+  "texto": "Faltam só quinze perguntas!",
+  "enviado": "[dramatically] Faltam só quinze perguntas!",
+  "arquivo": "numeros/faltam_15.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:16.365Z"
+ },
+ "faltam_16": {
+  "texto": "Faltam só dezesseis perguntas!",
+  "enviado": "[dramatically] Faltam só dezesseis perguntas!",
+  "arquivo": "numeros/faltam_16.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:17.553Z"
+ },
+ "faltam_17": {
+  "texto": "Faltam só dezessete perguntas!",
+  "enviado": "[dramatically] Faltam só dezessete perguntas!",
+  "arquivo": "numeros/faltam_17.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:18.966Z"
+ },
+ "faltam_18": {
+  "texto": "Faltam só dezoito perguntas!",
+  "enviado": "[dramatically] Faltam só dezoito perguntas!",
+  "arquivo": "numeros/faltam_18.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:19.968Z"
+ },
+ "faltam_19": {
+  "texto": "Faltam só dezenove perguntas!",
+  "enviado": "[dramatically] Faltam só dezenove perguntas!",
+  "arquivo": "numeros/faltam_19.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:21.048Z"
+ },
+ "faltam_20": {
+  "texto": "Faltam só vinte perguntas!",
+  "enviado": "[dramatically] Faltam só vinte perguntas!",
+  "arquivo": "numeros/faltam_20.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:22.225Z"
+ },
+ "faltam_fim": {
+  "texto": "No fim, vence quem estiver mais alto na pirâmide.",
+  "enviado": "[warmly] No fim, vence quem estiver mais alto na pirâmide.",
+  "arquivo": "fixas/faltam_fim.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:23.692Z"
+ },
+ "empate_degrau_1": {
+  "texto": "Empate no degrau um!",
+  "enviado": "[surprised] Empate no degrau um!",
+  "arquivo": "numeros/empate_degrau_1.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:24.443Z"
+ },
+ "empate_degrau_2": {
+  "texto": "Empate no degrau dois!",
+  "enviado": "[surprised] Empate no degrau dois!",
+  "arquivo": "numeros/empate_degrau_2.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:25.312Z"
+ },
+ "empate_degrau_3": {
+  "texto": "Empate no degrau três!",
+  "enviado": "[surprised] Empate no degrau três!",
+  "arquivo": "numeros/empate_degrau_3.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:26.251Z"
+ },
+ "empate_degrau_4": {
+  "texto": "Empate no degrau quatro!",
+  "enviado": "[surprised] Empate no degrau quatro!",
+  "arquivo": "numeros/empate_degrau_4.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:27.254Z"
+ },
+ "empate_degrau_5": {
+  "texto": "Empate no degrau cinco!",
+  "enviado": "[surprised] Empate no degrau cinco!",
+  "arquivo": "numeros/empate_degrau_5.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:28.252Z"
+ },
+ "empate_degrau_6": {
+  "texto": "Empate no degrau seis!",
+  "enviado": "[surprised] Empate no degrau seis!",
+  "arquivo": "numeros/empate_degrau_6.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:29.136Z"
+ },
+ "empate_degrau_7": {
+  "texto": "Empate no degrau sete!",
+  "enviado": "[surprised] Empate no degrau sete!",
+  "arquivo": "numeros/empate_degrau_7.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:29.970Z"
+ },
+ "empate_degrau_8": {
+  "texto": "Empate no degrau oito!",
+  "enviado": "[surprised] Empate no degrau oito!",
+  "arquivo": "numeros/empate_degrau_8.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:30.812Z"
+ },
+ "empate_degrau_9": {
+  "texto": "Empate no degrau nove!",
+  "enviado": "[surprised] Empate no degrau nove!",
+  "arquivo": "numeros/empate_degrau_9.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:31.669Z"
+ },
+ "empate_degrau_10": {
+  "texto": "Empate no degrau dez!",
+  "enviado": "[surprised] Empate no degrau dez!",
+  "arquivo": "numeros/empate_degrau_10.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:32.651Z"
+ },
+ "empate_degrau_11": {
+  "texto": "Empate no degrau onze!",
+  "enviado": "[surprised] Empate no degrau onze!",
+  "arquivo": "numeros/empate_degrau_11.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:33.672Z"
+ },
+ "empate_degrau_12": {
+  "texto": "Empate no degrau doze!",
+  "enviado": "[surprised] Empate no degrau doze!",
+  "arquivo": "numeros/empate_degrau_12.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:34.580Z"
+ },
+ "empate_degrau_13": {
+  "texto": "Empate no degrau treze!",
+  "enviado": "[surprised] Empate no degrau treze!",
+  "arquivo": "numeros/empate_degrau_13.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:35.553Z"
+ },
+ "empate_degrau_14": {
+  "texto": "Empate no degrau catorze!",
+  "enviado": "[surprised] Empate no degrau catorze!",
+  "arquivo": "numeros/empate_degrau_14.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:36.709Z"
+ },
+ "empate_degrau_15": {
+  "texto": "Empate no degrau quinze!",
+  "enviado": "[surprised] Empate no degrau quinze!",
+  "arquivo": "numeros/empate_degrau_15.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:37.638Z"
+ },
+ "empate_degrau_16": {
+  "texto": "Empate no degrau dezesseis!",
+  "enviado": "[surprised] Empate no degrau dezesseis!",
+  "arquivo": "numeros/empate_degrau_16.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:38.631Z"
+ },
+ "desempate_vao": {
+  "texto": "Os empatados vão para o desempate.",
+  "enviado": "[dramatically] Os empatados vão para o desempate.",
+  "arquivo": "fixas/desempate_vao.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:39.671Z"
+ },
+ "desempate_regra": {
+  "texto": "Só os finalistas respondem, e quem acertar mais rápido vence!",
+  "enviado": "[excited] Só os finalistas respondem, e quem acertar mais rápido vence!",
+  "arquivo": "fixas/desempate_regra.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:41.277Z"
+ },
+ "desempate_ninguem": {
+  "texto": "Ninguém acertou! Vamos para mais uma pergunta de desempate.",
+  "enviado": "[laughs] Ninguém acertou! Vamos para mais uma pergunta de desempate.",
+  "arquivo": "fixas/desempate_ninguem.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:43.016Z"
+ },
+ "grito": {
+  "texto": "Quem sabe… SOBE!",
+  "enviado": "[shouting] Quem sabe… SOBE!",
+  "arquivo": "fixas/grito.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:44.055Z"
+ },
+ "premio": {
+  "texto": "O seu prêmio já está no seu celular: um conhecimento inútil! Leia em voz alta para todo mundo.",
+  "enviado": "[mischievously] O seu prêmio já está no seu celular: um conhecimento inútil! Leia em voz alta para todo mundo.",
+  "arquivo": "fixas/premio.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:46.422Z"
+ },
+ "de_novo": {
+  "texto": "Querem jogar de novo? Segurem o botão no celular.",
+  "enviado": "[warmly] Querem jogar de novo? Segurem o botão no celular.",
+  "arquivo": "fixas/de_novo.mp3",
+  "modelo": "eleven_v4",
+  "voz": "HReOQZPV9tH5iTEnSbGo",
+  "em": "2026-11-27T14:27:47.939Z"
+ }
+}

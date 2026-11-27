@@ -1,6 +1,6 @@
 codigo,grupo,texto,caracteres,gravado,arquivo
-sala_entrem,fixas,"Entrem na sala! Apontem a câmera do celular para o QR code, ou digitem a senha.",89,nao,
-sala_prontos,fixas,"Todo mundo pronto? Segurem o botão Iniciar por três segundos.",71,nao,
+sala_entrem,fixas,"Entrem na sala! Apontem a câmera do celular para o QR code, ou digitem a senha.",89,sim,fixas/sala_entrem.mp3
+sala_prontos,fixas,"Todo mundo pronto? Segurem o botão Iniciar por três segundos.",71,sim,fixas/sala_prontos.mp3
 sala_chegou_bombeiro,personagens,"Chegou… o Bombeiro!",29,nao,
 sala_chegou_astronauta,personagens,"Chegou… o Astronauta!",31,nao,
 sala_chegou_marinheiro,personagens,"Chegou… o Marinheiro!",31,nao,
@@ -13,30 +13,30 @@ sala_chegou_dinossauro,personagens,"Chegou… o Dinossauro!",31,nao,
 sala_chegou_coxinha,personagens,"Chegou… a Coxinha!",28,nao,
 sala_chegou_mergulhador,personagens,"Chegou… o Mergulhador!",32,nao,
 sala_chegou_vovo,personagens,"Chegou… a Vovó!",25,nao,
-explica_1,fixas,"É assim que se joga! Prestem atenção, que eu só explico uma vez.",80,nao,
-explica_2,fixas,"Eu leio a pergunta, e vocês têm quinze segundos para responder no celular.",83,nao,
-explica_3,fixas,"Acertou, ganhou pontos. Quem acerta mais rápido leva um bônus.",70,nao,
-explica_4,fixas,"E dá para atrapalhar os outros com poderes.",59,nao,
-explica_5,fixas,"Na final, os pontos viram degraus. Quem chegar ao topo vence! Quem sabe… SOBE!",99,nao,
-rodada_1,numeros,"Rodada um! Qual vai ser a categoria? Votem no celular!",64,nao,
-rodada_2,numeros,"Rodada dois! Qual vai ser a categoria? Votem no celular!",66,nao,
-rodada_3,numeros,"Rodada três! Qual vai ser a categoria? Votem no celular!",66,nao,
-rodada_4,numeros,"Rodada quatro! Qual vai ser a categoria? Votem no celular!",68,nao,
-rodada_5,numeros,"Rodada cinco! Qual vai ser a categoria? Votem no celular!",67,nao,
-rodada_7,numeros,"Rodada sete! Qual vai ser a categoria? Votem no celular!",66,nao,
-rodada_8,numeros,"Rodada oito! Qual vai ser a categoria? Votem no celular!",66,nao,
-rodada_9,numeros,"Rodada nove! Qual vai ser a categoria? Votem no celular!",66,nao,
-rodada_10,numeros,"Rodada dez! Qual vai ser a categoria? Votem no celular!",65,nao,
-voto_empate,fixas,"Deu empate! Vou sortear entre as portas.",56,nao,
-porta_geografia,categorias,"A porta escolhida foi… Geografia!",48,nao,
-porta_ciencia,categorias,"A porta escolhida foi… Ciência!",46,nao,
-porta_esportes,categorias,"A porta escolhida foi… Esportes!",47,nao,
-porta_cinema-e-tv,categorias,"A porta escolhida foi… Cinema e TV!",50,nao,
-porta_comidas-e-bebidas,categorias,"A porta escolhida foi… Comidas e bebidas!",56,nao,
-porta_musica,categorias,"A porta escolhida foi… Música!",45,nao,
-poder_explica_1,fixas,"Agora vale atrapalhar! A cada rodada, escolham um poder e um alvo. Cada poder pode ser usado duas vezes.",120,nao,
-poder_explica_2,fixas,"Poderes diferentes no mesmo alvo se somam. E o mesmo poder, vindo de vários jogadores, fica mais forte.",119,nao,
-poder_hora,fixas,"Hora de atrapalhar! Escolham um poder e um alvo.",64,nao,
+explica_1,fixas,"É assim que se joga! Prestem atenção, que eu só explico uma vez.",80,sim,fixas/explica_1.mp3
+explica_2,fixas,"Eu leio a pergunta, e vocês têm quinze segundos para responder no celular.",83,sim,fixas/explica_2.mp3
+explica_3,fixas,"Acertou, ganhou pontos. Quem acerta mais rápido leva um bônus.",70,sim,fixas/explica_3.mp3
+explica_4,fixas,"E dá para atrapalhar os outros com poderes.",59,sim,fixas/explica_4.mp3
+explica_5,fixas,"Na final, os pontos viram degraus. Quem chegar ao topo vence! Quem sabe… SOBE!",99,sim,fixas/explica_5.mp3
+rodada_1,numeros,"Rodada um! Qual vai ser a categoria? Votem no celular!",64,sim,numeros/rodada_1.mp3
+rodada_2,numeros,"Rodada dois! Qual vai ser a categoria? Votem no celular!",66,sim,numeros/rodada_2.mp3
+rodada_3,numeros,"Rodada três! Qual vai ser a categoria? Votem no celular!",66,sim,numeros/rodada_3.mp3
+rodada_4,numeros,"Rodada quatro! Qual vai ser a categoria? Votem no celular!",68,sim,numeros/rodada_4.mp3
+rodada_5,numeros,"Rodada cinco! Qual vai ser a categoria? Votem no celular!",67,sim,numeros/rodada_5.mp3
+rodada_7,numeros,"Rodada sete! Qual vai ser a categoria? Votem no celular!",66,sim,numeros/rodada_7.mp3
+rodada_8,numeros,"Rodada oito! Qual vai ser a categoria? Votem no celular!",66,sim,numeros/rodada_8.mp3
+rodada_9,numeros,"Rodada nove! Qual vai ser a categoria? Votem no celular!",66,sim,numeros/rodada_9.mp3
+rodada_10,numeros,"Rodada dez! Qual vai ser a categoria? Votem no celular!",65,sim,numeros/rodada_10.mp3
+voto_empate,fixas,"Deu empate! Vou sortear entre as portas.",56,sim,fixas/voto_empate.mp3
+porta_geografia,categorias,"A porta escolhida foi… Geografia!",48,sim,categorias/porta_geografia.mp3
+porta_ciencia,categorias,"A porta escolhida foi… Ciência!",46,sim,categorias/porta_ciencia.mp3
+porta_esportes,categorias,"A porta escolhida foi… Esportes!",47,sim,categorias/porta_esportes.mp3
+porta_cinema-e-tv,categorias,"A porta escolhida foi… Cinema e TV!",50,sim,categorias/porta_cinema-e-tv.mp3
+porta_comidas-e-bebidas,categorias,"A porta escolhida foi… Comidas e bebidas!",56,sim,categorias/porta_comidas-e-bebidas.mp3
+porta_musica,categorias,"A porta escolhida foi… Música!",45,sim,categorias/porta_musica.mp3
+poder_explica_1,fixas,"Agora vale atrapalhar! A cada rodada, escolham um poder e um alvo. Cada poder pode ser usado duas vezes.",120,sim,fixas/poder_explica_1.mp3
+poder_explica_2,fixas,"Poderes diferentes no mesmo alvo se somam. E o mesmo poder, vindo de vários jogadores, fica mais forte.",119,sim,fixas/poder_explica_2.mp3
+poder_hora,fixas,"Hora de atrapalhar! Escolham um poder e um alvo.",64,sim,fixas/poder_hora.mp3
 manda_bombeiro_gosma,personagens,"O Bombeiro manda a Gosma!",41,nao,
 manda_bombeiro_gelo,personagens,"O Bombeiro manda o Gelo!",40,nao,
 manda_bombeiro_bombas,personagens,"O Bombeiro manda as Bombas!",43,nao,
@@ -121,27 +121,27 @@ espelho_volta_dinossauro,personagens,"Espelho! Voltou tudo para o Dinossauro!",5
 espelho_volta_coxinha,personagens,"Espelho! Voltou tudo para a Coxinha!",48,nao,
 espelho_volta_mergulhador,personagens,"Espelho! Voltou tudo para o Mergulhador!",52,nao,
 espelho_volta_vovo,personagens,"Espelho! Voltou tudo para a Vovó!",45,nao,
-espelho_todos,fixas,"Todo mundo pegou espelho! Ninguém lançou poder, então ninguém foi atingido.",84,nao,
-espelho_alguns,fixas,"Teve gente que pegou espelho! Mas ninguém lançou poder, então ninguém foi atingido.",92,nao,
-assoc_explica_1,fixas,"Rodada especial! Sem categoria e sem poderes.",55,nao,
-assoc_explica_2,fixas,"Vocês têm vinte segundos para ligar dez itens. Certo vale dois pontos, errado tira um.",95,nao,
-assoc_explica_3,fixas,"E quem terminar primeiro ganha bônus!",47,nao,
-assoc_valendo,fixas,"Valendo!",19,nao,
-assoc_todos,fixas,"Todo mundo respondeu! Vamos contar os pontos.",53,nao,
-assoc_tempo,fixas,"Tempo esgotado! Vamos contar os pontos.",51,nao,
-pergunta_de_dez_1,numeros,"Pergunta um de dez!",29,nao,
-pergunta_de_dez_2,numeros,"Pergunta dois de dez!",31,nao,
-pergunta_de_dez_3,numeros,"Pergunta três de dez!",31,nao,
-pergunta_de_dez_4,numeros,"Pergunta quatro de dez!",33,nao,
-pergunta_de_dez_5,numeros,"Pergunta cinco de dez!",32,nao,
-pergunta_de_dez_7,numeros,"Pergunta sete de dez!",31,nao,
-pergunta_de_dez_8,numeros,"Pergunta oito de dez!",31,nao,
-pergunta_de_dez_9,numeros,"Pergunta nove de dez!",31,nao,
-pergunta_de_dez_10,numeros,"Pergunta dez de dez!",30,nao,
-resp_todos,fixas,"Todo mundo respondeu!",29,nao,
-resp_tempo,fixas,"Tempo esgotado!",27,nao,
-rev_vamos,fixas,"Vamos ver quem acertou…",33,nao,
-pontos_explica,fixas,"Quem acertou ganha pontos, e quem respondeu mais rápido ganha bônus!",77,nao,
+espelho_todos,fixas,"Todo mundo pegou espelho! Ninguém lançou poder, então ninguém foi atingido.",84,sim,fixas/espelho_todos.mp3
+espelho_alguns,fixas,"Teve gente que pegou espelho! Mas ninguém lançou poder, então ninguém foi atingido.",92,sim,fixas/espelho_alguns.mp3
+assoc_explica_1,fixas,"Rodada especial! Sem categoria e sem poderes.",55,sim,fixas/assoc_explica_1.mp3
+assoc_explica_2,fixas,"Vocês têm vinte segundos para ligar dez itens. Certo vale dois pontos, errado tira um.",95,sim,fixas/assoc_explica_2.mp3
+assoc_explica_3,fixas,"E quem terminar primeiro ganha bônus!",47,sim,fixas/assoc_explica_3.mp3
+assoc_valendo,fixas,"Valendo!",19,sim,fixas/assoc_valendo.mp3
+assoc_todos,fixas,"Todo mundo respondeu! Vamos contar os pontos.",53,sim,fixas/assoc_todos.mp3
+assoc_tempo,fixas,"Tempo esgotado! Vamos contar os pontos.",51,sim,fixas/assoc_tempo.mp3
+pergunta_de_dez_1,numeros,"Pergunta um de dez!",29,sim,numeros/pergunta_de_dez_1.mp3
+pergunta_de_dez_2,numeros,"Pergunta dois de dez!",31,sim,numeros/pergunta_de_dez_2.mp3
+pergunta_de_dez_3,numeros,"Pergunta três de dez!",31,sim,numeros/pergunta_de_dez_3.mp3
+pergunta_de_dez_4,numeros,"Pergunta quatro de dez!",33,sim,numeros/pergunta_de_dez_4.mp3
+pergunta_de_dez_5,numeros,"Pergunta cinco de dez!",32,sim,numeros/pergunta_de_dez_5.mp3
+pergunta_de_dez_7,numeros,"Pergunta sete de dez!",31,sim,numeros/pergunta_de_dez_7.mp3
+pergunta_de_dez_8,numeros,"Pergunta oito de dez!",31,sim,numeros/pergunta_de_dez_8.mp3
+pergunta_de_dez_9,numeros,"Pergunta nove de dez!",31,sim,numeros/pergunta_de_dez_9.mp3
+pergunta_de_dez_10,numeros,"Pergunta dez de dez!",30,sim,numeros/pergunta_de_dez_10.mp3
+resp_todos,fixas,"Todo mundo respondeu!",29,sim,fixas/resp_todos.mp3
+resp_tempo,fixas,"Tempo esgotado!",27,sim,fixas/resp_tempo.mp3
+rev_vamos,fixas,"Vamos ver quem acertou…",33,sim,fixas/rev_vamos.mp3
+pontos_explica,fixas,"Quem acertou ganha pontos, e quem respondeu mais rápido ganha bônus!",77,sim,fixas/pontos_explica.mp3
 ranking_frente_bombeiro,personagens,"Olha o ranking! Na frente está… o Bombeiro!",53,nao,
 ranking_frente_astronauta,personagens,"Olha o ranking! Na frente está… o Astronauta!",55,nao,
 ranking_frente_marinheiro,personagens,"Olha o ranking! Na frente está… o Marinheiro!",55,nao,
@@ -154,56 +154,56 @@ ranking_frente_dinossauro,personagens,"Olha o ranking! Na frente está… o Dino
 ranking_frente_coxinha,personagens,"Olha o ranking! Na frente está… a Coxinha!",52,nao,
 ranking_frente_mergulhador,personagens,"Olha o ranking! Na frente está… o Mergulhador!",56,nao,
 ranking_frente_vovo,personagens,"Olha o ranking! Na frente está… a Vovó!",49,nao,
-ranking_empate,fixas,"Olha o ranking! Empate na frente!",45,nao,
-reacao_ok_1,reacoes,"Isso aí!",16,nao,
-reacao_ok_2,reacoes,"Mandaram bem!",21,nao,
-reacao_ok_3,reacoes,"Acertaram em cheio!",27,nao,
-reacao_erro_1,reacoes,"Ih, essa foi difícil!",30,nao,
-reacao_erro_2,reacoes,"Quase!",14,nao,
-reacao_erro_3,reacoes,"Ninguém esperava essa!",34,nao,
-reacao_todos_1,reacoes,"Todo mundo acertou? Essa estava fácil!",47,nao,
-reacao_todos_2,reacoes,"Turma afiada!",23,nao,
-reacao_todos_3,reacoes,"Cem por cento de acerto!",34,nao,
-reacao_nenhum_1,reacoes,"Ninguém acertou! Era pegadinha.",40,nao,
-reacao_nenhum_2,reacoes,"Ixi, zero acertos!",30,nao,
-reacao_nenhum_3,reacoes,"Essa pegou todo mundo!",31,nao,
-reacao_tempo_1,reacoes,"Cinco segundos!",26,nao,
-reacao_tempo_2,reacoes,"Corre, corre!",24,nao,
-reacao_tempo_3,reacoes,"O tempo está acabando!",33,nao,
-reacao_virada_1,reacoes,"Temos um novo líder!",30,nao,
-reacao_virada_2,reacoes,"Virou o jogo!",23,nao,
-reacao_virada_3,reacoes,"Mudou tudo no ranking!",32,nao,
-reacao_dois_1,reacoes,"Subiu dois de uma vez!",32,nao,
-reacao_dois_2,reacoes,"Que pulo!",19,nao,
-reacao_dois_3,reacoes,"Dois degraus, que velocidade!",39,nao,
-final_comeca,fixas,"A primeira fase acabou! Agora começa a grande final: a Pirâmide do Conhecimento!",95,nao,
-final_lugar,fixas,"Cada um para o seu degrau!",36,nao,
-final_degraus,fixas,"Seus pontos viraram degraus! Quem fez mais pontos começa mais alto. Cada um para o seu lugar!",102,nao,
-regras_dois,fixas,"Acertou, sobe um degrau. Os dois mais rápidos sobem dois.",66,nao,
-regras_um,fixas,"Acertou, sobe um degrau. O mais rápido sobe dois.",58,nao,
-regras_poder,fixas,"Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!",95,nao,
-pir_pergunta_1,numeros,"Pergunta um!",22,nao,
-pir_pergunta_2,numeros,"Pergunta dois!",24,nao,
-pir_pergunta_3,numeros,"Pergunta três!",24,nao,
-pir_pergunta_4,numeros,"Pergunta quatro!",26,nao,
-pir_pergunta_5,numeros,"Pergunta cinco!",25,nao,
-pir_pergunta_6,numeros,"Pergunta seis!",24,nao,
-pir_pergunta_7,numeros,"Pergunta sete!",24,nao,
-pir_pergunta_8,numeros,"Pergunta oito!",24,nao,
-pir_pergunta_9,numeros,"Pergunta nove!",24,nao,
-pir_pergunta_10,numeros,"Pergunta dez!",23,nao,
-pir_pergunta_11,numeros,"Pergunta onze!",24,nao,
-pir_pergunta_12,numeros,"Pergunta doze!",24,nao,
-pir_pergunta_13,numeros,"Pergunta treze!",25,nao,
-pir_pergunta_14,numeros,"Pergunta catorze!",27,nao,
-pir_pergunta_15,numeros,"Pergunta quinze!",26,nao,
-pir_pergunta_16,numeros,"Pergunta dezesseis!",29,nao,
-pir_pergunta_17,numeros,"Pergunta dezessete!",29,nao,
-pir_pergunta_18,numeros,"Pergunta dezoito!",27,nao,
-pir_pergunta_19,numeros,"Pergunta dezenove!",28,nao,
-pir_pergunta_20,numeros,"Pergunta vinte!",25,nao,
-pir_sobe,fixas,"Quem acertou, sobe!",29,nao,
-pir_ninguem,fixas,"Ninguém acertou! Todo mundo fica onde está.",52,nao,
+ranking_empate,fixas,"Olha o ranking! Empate na frente!",45,sim,fixas/ranking_empate.mp3
+reacao_ok_1,reacoes,"Isso aí!",16,sim,reacoes/reacao_ok_1.mp3
+reacao_ok_2,reacoes,"Mandaram bem!",21,sim,reacoes/reacao_ok_2.mp3
+reacao_ok_3,reacoes,"Acertaram em cheio!",27,sim,reacoes/reacao_ok_3.mp3
+reacao_erro_1,reacoes,"Ih, essa foi difícil!",30,sim,reacoes/reacao_erro_1.mp3
+reacao_erro_2,reacoes,"Quase!",14,sim,reacoes/reacao_erro_2.mp3
+reacao_erro_3,reacoes,"Ninguém esperava essa!",34,sim,reacoes/reacao_erro_3.mp3
+reacao_todos_1,reacoes,"Todo mundo acertou? Essa estava fácil!",47,sim,reacoes/reacao_todos_1.mp3
+reacao_todos_2,reacoes,"Turma afiada!",23,sim,reacoes/reacao_todos_2.mp3
+reacao_todos_3,reacoes,"Cem por cento de acerto!",34,sim,reacoes/reacao_todos_3.mp3
+reacao_nenhum_1,reacoes,"Ninguém acertou! Era pegadinha.",40,sim,reacoes/reacao_nenhum_1.mp3
+reacao_nenhum_2,reacoes,"Ixi, zero acertos!",30,sim,reacoes/reacao_nenhum_2.mp3
+reacao_nenhum_3,reacoes,"Essa pegou todo mundo!",31,sim,reacoes/reacao_nenhum_3.mp3
+reacao_tempo_1,reacoes,"Cinco segundos!",26,sim,reacoes/reacao_tempo_1.mp3
+reacao_tempo_2,reacoes,"Corre, corre!",24,sim,reacoes/reacao_tempo_2.mp3
+reacao_tempo_3,reacoes,"O tempo está acabando!",33,sim,reacoes/reacao_tempo_3.mp3
+reacao_virada_1,reacoes,"Temos um novo líder!",30,sim,reacoes/reacao_virada_1.mp3
+reacao_virada_2,reacoes,"Virou o jogo!",23,sim,reacoes/reacao_virada_2.mp3
+reacao_virada_3,reacoes,"Mudou tudo no ranking!",32,sim,reacoes/reacao_virada_3.mp3
+reacao_dois_1,reacoes,"Subiu dois de uma vez!",32,sim,reacoes/reacao_dois_1.mp3
+reacao_dois_2,reacoes,"Que pulo!",19,sim,reacoes/reacao_dois_2.mp3
+reacao_dois_3,reacoes,"Dois degraus, que velocidade!",39,sim,reacoes/reacao_dois_3.mp3
+final_comeca,fixas,"A primeira fase acabou! Agora começa a grande final: a Pirâmide do Conhecimento!",95,sim,fixas/final_comeca.mp3
+final_lugar,fixas,"Cada um para o seu degrau!",36,sim,fixas/final_lugar.mp3
+final_degraus,fixas,"Seus pontos viraram degraus! Quem fez mais pontos começa mais alto. Cada um para o seu lugar!",102,sim,fixas/final_degraus.mp3
+regras_dois,fixas,"Acertou, sobe um degrau. Os dois mais rápidos sobem dois.",66,sim,fixas/regras_dois.mp3
+regras_um,fixas,"Acertou, sobe um degrau. O mais rápido sobe dois.",58,sim,fixas/regras_um.mp3
+regras_poder,fixas,"Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!",95,sim,fixas/regras_poder.mp3
+pir_pergunta_1,numeros,"Pergunta um!",22,sim,numeros/pir_pergunta_1.mp3
+pir_pergunta_2,numeros,"Pergunta dois!",24,sim,numeros/pir_pergunta_2.mp3
+pir_pergunta_3,numeros,"Pergunta três!",24,sim,numeros/pir_pergunta_3.mp3
+pir_pergunta_4,numeros,"Pergunta quatro!",26,sim,numeros/pir_pergunta_4.mp3
+pir_pergunta_5,numeros,"Pergunta cinco!",25,sim,numeros/pir_pergunta_5.mp3
+pir_pergunta_6,numeros,"Pergunta seis!",24,sim,numeros/pir_pergunta_6.mp3
+pir_pergunta_7,numeros,"Pergunta sete!",24,sim,numeros/pir_pergunta_7.mp3
+pir_pergunta_8,numeros,"Pergunta oito!",24,sim,numeros/pir_pergunta_8.mp3
+pir_pergunta_9,numeros,"Pergunta nove!",24,sim,numeros/pir_pergunta_9.mp3
+pir_pergunta_10,numeros,"Pergunta dez!",23,sim,numeros/pir_pergunta_10.mp3
+pir_pergunta_11,numeros,"Pergunta onze!",24,sim,numeros/pir_pergunta_11.mp3
+pir_pergunta_12,numeros,"Pergunta doze!",24,sim,numeros/pir_pergunta_12.mp3
+pir_pergunta_13,numeros,"Pergunta treze!",25,sim,numeros/pir_pergunta_13.mp3
+pir_pergunta_14,numeros,"Pergunta catorze!",27,sim,numeros/pir_pergunta_14.mp3
+pir_pergunta_15,numeros,"Pergunta quinze!",26,sim,numeros/pir_pergunta_15.mp3
+pir_pergunta_16,numeros,"Pergunta dezesseis!",29,sim,numeros/pir_pergunta_16.mp3
+pir_pergunta_17,numeros,"Pergunta dezessete!",29,sim,numeros/pir_pergunta_17.mp3
+pir_pergunta_18,numeros,"Pergunta dezoito!",27,sim,numeros/pir_pergunta_18.mp3
+pir_pergunta_19,numeros,"Pergunta dezenove!",28,sim,numeros/pir_pergunta_19.mp3
+pir_pergunta_20,numeros,"Pergunta vinte!",25,sim,numeros/pir_pergunta_20.mp3
+pir_sobe,fixas,"Quem acertou, sobe!",29,sim,fixas/pir_sobe.mp3
+pir_ninguem,fixas,"Ninguém acertou! Todo mundo fica onde está.",52,sim,fixas/pir_ninguem.mp3
 quase_1_bombeiro,personagens,"O Bombeiro está quase no topo!",40,nao,
 quase_1_astronauta,personagens,"O Astronauta está quase no topo!",42,nao,
 quase_1_marinheiro,personagens,"O Marinheiro está quase no topo!",42,nao,
@@ -240,46 +240,46 @@ quase_3_dinossauro,personagens,"Falta pouco para o Dinossauro!",40,nao,
 quase_3_coxinha,personagens,"Falta pouco para a Coxinha!",37,nao,
 quase_3_mergulhador,personagens,"Falta pouco para o Mergulhador!",41,nao,
 quase_3_vovo,personagens,"Falta pouco para a Vovó!",34,nao,
-faltam_atencao,fixas,"Atenção! Ninguém consegue mais chegar ao topo.",61,nao,
-faltam_uma,fixas,"Falta só uma pergunta!",37,nao,
-faltam_2,numeros,"Faltam só dois perguntas!",40,nao,
-faltam_3,numeros,"Faltam só três perguntas!",40,nao,
-faltam_4,numeros,"Faltam só quatro perguntas!",42,nao,
-faltam_5,numeros,"Faltam só cinco perguntas!",41,nao,
-faltam_6,numeros,"Faltam só seis perguntas!",40,nao,
-faltam_7,numeros,"Faltam só sete perguntas!",40,nao,
-faltam_8,numeros,"Faltam só oito perguntas!",40,nao,
-faltam_9,numeros,"Faltam só nove perguntas!",40,nao,
-faltam_10,numeros,"Faltam só dez perguntas!",39,nao,
-faltam_11,numeros,"Faltam só onze perguntas!",40,nao,
-faltam_12,numeros,"Faltam só doze perguntas!",40,nao,
-faltam_13,numeros,"Faltam só treze perguntas!",41,nao,
-faltam_14,numeros,"Faltam só catorze perguntas!",43,nao,
-faltam_15,numeros,"Faltam só quinze perguntas!",42,nao,
-faltam_16,numeros,"Faltam só dezesseis perguntas!",45,nao,
-faltam_17,numeros,"Faltam só dezessete perguntas!",45,nao,
-faltam_18,numeros,"Faltam só dezoito perguntas!",43,nao,
-faltam_19,numeros,"Faltam só dezenove perguntas!",44,nao,
-faltam_20,numeros,"Faltam só vinte perguntas!",41,nao,
-faltam_fim,fixas,"No fim, vence quem estiver mais alto na pirâmide.",58,nao,
-empate_degrau_1,numeros,"Empate no degrau um!",32,nao,
-empate_degrau_2,numeros,"Empate no degrau dois!",34,nao,
-empate_degrau_3,numeros,"Empate no degrau três!",34,nao,
-empate_degrau_4,numeros,"Empate no degrau quatro!",36,nao,
-empate_degrau_5,numeros,"Empate no degrau cinco!",35,nao,
-empate_degrau_6,numeros,"Empate no degrau seis!",34,nao,
-empate_degrau_7,numeros,"Empate no degrau sete!",34,nao,
-empate_degrau_8,numeros,"Empate no degrau oito!",34,nao,
-empate_degrau_9,numeros,"Empate no degrau nove!",34,nao,
-empate_degrau_10,numeros,"Empate no degrau dez!",33,nao,
-empate_degrau_11,numeros,"Empate no degrau onze!",34,nao,
-empate_degrau_12,numeros,"Empate no degrau doze!",34,nao,
-empate_degrau_13,numeros,"Empate no degrau treze!",35,nao,
-empate_degrau_14,numeros,"Empate no degrau catorze!",37,nao,
-empate_degrau_15,numeros,"Empate no degrau quinze!",36,nao,
-empate_degrau_16,numeros,"Empate no degrau dezesseis!",39,nao,
-desempate_vao,fixas,"Os empatados vão para o desempate.",49,nao,
-desempate_regra,fixas,"Só os finalistas respondem, e quem acertar mais rápido vence!",71,nao,
+faltam_atencao,fixas,"Atenção! Ninguém consegue mais chegar ao topo.",61,sim,fixas/faltam_atencao.mp3
+faltam_uma,fixas,"Falta só uma pergunta!",37,sim,fixas/faltam_uma.mp3
+faltam_2,numeros,"Faltam só dois perguntas!",40,sim,numeros/faltam_2.mp3
+faltam_3,numeros,"Faltam só três perguntas!",40,sim,numeros/faltam_3.mp3
+faltam_4,numeros,"Faltam só quatro perguntas!",42,sim,numeros/faltam_4.mp3
+faltam_5,numeros,"Faltam só cinco perguntas!",41,sim,numeros/faltam_5.mp3
+faltam_6,numeros,"Faltam só seis perguntas!",40,sim,numeros/faltam_6.mp3
+faltam_7,numeros,"Faltam só sete perguntas!",40,sim,numeros/faltam_7.mp3
+faltam_8,numeros,"Faltam só oito perguntas!",40,sim,numeros/faltam_8.mp3
+faltam_9,numeros,"Faltam só nove perguntas!",40,sim,numeros/faltam_9.mp3
+faltam_10,numeros,"Faltam só dez perguntas!",39,sim,numeros/faltam_10.mp3
+faltam_11,numeros,"Faltam só onze perguntas!",40,sim,numeros/faltam_11.mp3
+faltam_12,numeros,"Faltam só doze perguntas!",40,sim,numeros/faltam_12.mp3
+faltam_13,numeros,"Faltam só treze perguntas!",41,sim,numeros/faltam_13.mp3
+faltam_14,numeros,"Faltam só catorze perguntas!",43,sim,numeros/faltam_14.mp3
+faltam_15,numeros,"Faltam só quinze perguntas!",42,sim,numeros/faltam_15.mp3
+faltam_16,numeros,"Faltam só dezesseis perguntas!",45,sim,numeros/faltam_16.mp3
+faltam_17,numeros,"Faltam só dezessete perguntas!",45,sim,numeros/faltam_17.mp3
+faltam_18,numeros,"Faltam só dezoito perguntas!",43,sim,numeros/faltam_18.mp3
+faltam_19,numeros,"Faltam só dezenove perguntas!",44,sim,numeros/faltam_19.mp3
+faltam_20,numeros,"Faltam só vinte perguntas!",41,sim,numeros/faltam_20.mp3
+faltam_fim,fixas,"No fim, vence quem estiver mais alto na pirâmide.",58,sim,fixas/faltam_fim.mp3
+empate_degrau_1,numeros,"Empate no degrau um!",32,sim,numeros/empate_degrau_1.mp3
+empate_degrau_2,numeros,"Empate no degrau dois!",34,sim,numeros/empate_degrau_2.mp3
+empate_degrau_3,numeros,"Empate no degrau três!",34,sim,numeros/empate_degrau_3.mp3
+empate_degrau_4,numeros,"Empate no degrau quatro!",36,sim,numeros/empate_degrau_4.mp3
+empate_degrau_5,numeros,"Empate no degrau cinco!",35,sim,numeros/empate_degrau_5.mp3
+empate_degrau_6,numeros,"Empate no degrau seis!",34,sim,numeros/empate_degrau_6.mp3
+empate_degrau_7,numeros,"Empate no degrau sete!",34,sim,numeros/empate_degrau_7.mp3
+empate_degrau_8,numeros,"Empate no degrau oito!",34,sim,numeros/empate_degrau_8.mp3
+empate_degrau_9,numeros,"Empate no degrau nove!",34,sim,numeros/empate_degrau_9.mp3
+empate_degrau_10,numeros,"Empate no degrau dez!",33,sim,numeros/empate_degrau_10.mp3
+empate_degrau_11,numeros,"Empate no degrau onze!",34,sim,numeros/empate_degrau_11.mp3
+empate_degrau_12,numeros,"Empate no degrau doze!",34,sim,numeros/empate_degrau_12.mp3
+empate_degrau_13,numeros,"Empate no degrau treze!",35,sim,numeros/empate_degrau_13.mp3
+empate_degrau_14,numeros,"Empate no degrau catorze!",37,sim,numeros/empate_degrau_14.mp3
+empate_degrau_15,numeros,"Empate no degrau quinze!",36,sim,numeros/empate_degrau_15.mp3
+empate_degrau_16,numeros,"Empate no degrau dezesseis!",39,sim,numeros/empate_degrau_16.mp3
+desempate_vao,fixas,"Os empatados vão para o desempate.",49,sim,fixas/desempate_vao.mp3
+desempate_regra,fixas,"Só os finalistas respondem, e quem acertar mais rápido vence!",71,sim,fixas/desempate_regra.mp3
 desempate_venceu_bombeiro,personagens,"Quem chegou primeiro foi… o Bombeiro!",47,nao,
 desempate_venceu_astronauta,personagens,"Quem chegou primeiro foi… o Astronauta!",49,nao,
 desempate_venceu_marinheiro,personagens,"Quem chegou primeiro foi… o Marinheiro!",49,nao,
@@ -292,8 +292,8 @@ desempate_venceu_dinossauro,personagens,"Quem chegou primeiro foi… o Dinossaur
 desempate_venceu_coxinha,personagens,"Quem chegou primeiro foi… a Coxinha!",46,nao,
 desempate_venceu_mergulhador,personagens,"Quem chegou primeiro foi… o Mergulhador!",50,nao,
 desempate_venceu_vovo,personagens,"Quem chegou primeiro foi… a Vovó!",43,nao,
-desempate_ninguem,fixas,"Ninguém acertou! Vamos para mais uma pergunta de desempate.",68,nao,
-grito,fixas,"Quem sabe… SOBE!",27,nao,
+desempate_ninguem,fixas,"Ninguém acertou! Vamos para mais uma pergunta de desempate.",68,sim,fixas/desempate_ninguem.mp3
+grito,fixas,"Quem sabe… SOBE!",27,sim,fixas/grito.mp3
 vitoria_topo_bombeiro,personagens,"Parabéns! O Bombeiro chegou ao topo da Pirâmide do Conhecimento!",74,nao,
 vitoria_topo_astronauta,personagens,"Parabéns! O Astronauta chegou ao topo da Pirâmide do Conhecimento!",76,nao,
 vitoria_topo_marinheiro,personagens,"Parabéns! O Marinheiro chegou ao topo da Pirâmide do Conhecimento!",76,nao,
@@ -318,8 +318,8 @@ vitoria_limite_dinossauro,personagens,"Parabéns! O Dinossauro terminou mais alt
 vitoria_limite_coxinha,personagens,"Parabéns! A Coxinha terminou mais alto na pirâmide!",61,nao,
 vitoria_limite_mergulhador,personagens,"Parabéns! O Mergulhador terminou mais alto na pirâmide!",65,nao,
 vitoria_limite_vovo,personagens,"Parabéns! A Vovó terminou mais alto na pirâmide!",58,nao,
-premio,fixas,"O seu prêmio já está no seu celular: um conhecimento inútil! Leia em voz alta para todo mundo.",110,nao,
-de_novo,fixas,"Querem jogar de novo? Segurem o botão no celular.",58,nao,
+premio,fixas,"O seu prêmio já está no seu celular: um conhecimento inútil! Leia em voz alta para todo mundo.",110,sim,fixas/premio.mp3
+de_novo,fixas,"Querem jogar de novo? Segurem o botão no celular.",58,sim,fixas/de_novo.mp3
 P01_pergunta,perguntas,"Quantos jogadores um time de vôlei tem em quadra?",59,nao,
 P01_resposta,perguntas,"A resposta certa é… Seis jogadores!",50,nao,
 P02_pergunta,perguntas,"Qual é o planeta mais próximo do Sol?",47,nao,
