@@ -49,6 +49,21 @@
   const online = (j) => Date.now() - j.visto < 12000;
   const fala = (j) => (Q.pers(j.char) || {}).fala || j.nome;
   // Boneco animado (rig) no lugar da imagem parada; a ação muda pelo data-acao
+  // Perguntas já usadas nesta TV: as próximas partidas priorizam as que ainda não saíram
+  const USADAS = 'qss_usadas';
+  const usadas = () => { try { return new Set(JSON.parse(localStorage.getItem(USADAS) || '[]')); } catch (e) { return new Set(); } };
+  const marcarUsada = (id) => { try { const u = usadas(); u.add(id); localStorage.setItem(USADAS, JSON.stringify([...u])); } catch (e) {} };
+  // Novas primeiro; se as novas não bastam, esquece as usadas daquela fase e recomeça
+  function bancoFresco(fase, minimo) {
+    const todas = window.QSS_PERGUNTAS.filter((p) => p.fase === fase), u = usadas();
+    let novas = todas.filter((p) => !u.has(p.id));
+    if (novas.length < minimo) {
+      try { localStorage.setItem(USADAS, JSON.stringify([...u].filter((id) => !todas.some((p) => p.id === id)))); } catch (e) {}
+      novas = todas.slice();
+    }
+    const mistura = (l) => l.sort(() => Math.random() - 0.5);
+    return mistura(novas).concat(mistura(todas.filter((p) => !novas.includes(p))));
+  }
   const B = (j, acao, cls) => Q.boneco(j.char, j.nome, cls, acao);
   const corpo = (el) => el && el.querySelector('.rig, img');
 
@@ -244,13 +259,14 @@
       jaExplicou = true;
     }
 
-    const banco = window.QSS_PERGUNTAS.filter((p) => p.fase === 'fase1').slice();
+    // Fase 1: só perguntas novas, com folga para cada categoria (9 rodadas)
+    const banco = bancoFresco('fase1', 40).filter((p) => !usadas().has(p.id));
     let lider = null;
     for (let r = PRIMEIRA; r <= ULTIMA && banco.length; r++) {
       if (r === Q.RODADA_ASSOCIACAO) { lider = await associacao(r, lider, vivo); if (!vivo()) return; continue; } // rodada 6
       const cat = await votacao(r, banco, vivo); if (!vivo()) return;
       const doCat = banco.filter((p) => p.cat === cat), q = sorteia(doCat);
-      banco.splice(banco.indexOf(q), 1);
+      banco.splice(banco.indexOf(q), 1); marcarUsada(q.id);
       let efeitos = {};
       if (!Q.RODADAS_SEM_PODER.includes(r)) {
         // Rodada 2 em diante: (só na primeira vez) a Coruja explica os poderes, escolha e lançamento
@@ -555,7 +571,11 @@
   async function associacao(r, liderAntes, vivo) {
     const js = estado.jogadores, n = js.length;
     let cacheAp = null;
-    const set = sorteia(window.QSS_ASSOC), itens = set.itens.slice().sort(() => Math.random() - 0.5);
+    let temas = []; try { temas = JSON.parse(localStorage.getItem('qss_temas') || '[]'); } catch (e) {}
+    let livres = window.QSS_ASSOC.filter((x) => !temas.includes(x.titulo));
+    if (!livres.length) { temas = []; livres = window.QSS_ASSOC.slice(); }
+    const set = sorteia(livres); try { localStorage.setItem('qss_temas', JSON.stringify(temas.concat(set.titulo))); } catch (e) {}
+    const itens = set.itens.slice().sort(() => Math.random() - 0.5);
     // 14 · Explicação (some com "Pular explicações")
     if (!pularExplicacoes) {
       mudar('asExplica'); mostrar('asExplica');
@@ -1032,6 +1052,7 @@
   // ---------- 18 · Pergunta na pirâmide ----------
   async function perguntaPir(k, total, q, vivo, finalistas) {
     const js = estado.jogadores, desemp = !!finalistas;
+    marcarUsada(q.id);
     const joga = (j) => !desemp || finalistas.includes(j);
     respostas = {};
     // poder do degrau entra sozinho no celular (no desempate, sem poder)
@@ -1284,8 +1305,8 @@
   async function finalPiramide(vivo) {
     const js = estado.jogadores;
     await transicao(vivo); if (!vivo()) return;
-    const banco = window.QSS_PERGUNTAS.filter((p) => p.fase === 'piramide').sort(() => Math.random() - 0.5);
-    const extra = window.QSS_PERGUNTAS.filter((p) => p.fase === 'desempate').sort(() => Math.random() - 0.5);
+    const banco = bancoFresco('piramide', 20);
+    const extra = bancoFresco('desempate', 4);
     const total = Math.min(20, banco.length, parseInt(params.get('pir'), 10) || 20); // ?pir=3 limita as perguntas (teste)
     let avisouFaltam = false, venc = null;
     for (let k = 1; k <= total; k++) {

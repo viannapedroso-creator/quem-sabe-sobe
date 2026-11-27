@@ -62,3 +62,7 @@ Telas 08, 09 e 10 e os efeitos no celular.
 - Cada boneco tem uma ação no atributo `data-acao`: parado, contente, pronto, pensando, feliz, comemora, vibra, triste, assustado, perdido, correr, subir.
 - Avatares pequenos (ranking, celular) continuam com a imagem parada.
 - A versão anterior, com personagens parados, está guardada no branch `versao-estatica`.
+
+## Banco ampliado (27/11)
+- 159 perguntas: 99 da Fase 1 (16 a 17 por categoria), 48 da pirâmide e 12 de desempate. 4 temas de associação.
+- A TV guarda no navegador as perguntas e os temas já usados; as próximas partidas priorizam o que ainda não saiu e recomeçam quando acaba.
