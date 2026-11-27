@@ -841,6 +841,8 @@
   // Fase 2 · Pirâmide do Conhecimento (telas 17 a 21)
   // =====================================================================
   const TOPO = 16;
+  // De 5 a 8 jogadores, os 2 mais rápidos que acertaram sobem 2; com 4 ou menos, só o mais rápido
+  const rapidosQueSobemDois = () => (N() >= 5 ? 2 : 1);
   // Poder de cada degrau (nota da tela 18)
   function poderDoDegrau(d) {
     if (d >= 14) return 'gosma'; if (d >= 12) return 'gelo'; if (d >= 10) return 'redemoinho';
@@ -970,8 +972,9 @@
       });
     });
     js.forEach((j) => { j.deg = j.inicio; });
-    cartao({ texto: 'Acertou, sobe um degrau.', aviso: 'Os dois mais rápidos sobem dois. Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!', fs: 36 });
-    await diz('Acertou, sobe um degrau. Os dois mais rápidos sobem dois.'); if (!vivo()) return;
+    const doisRap = rapidosQueSobemDois() === 2;
+    cartao({ texto: 'Acertou, sobe um degrau.', aviso: (doisRap ? 'Os dois mais rápidos sobem dois.' : 'O mais rápido sobe dois.') + ' Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!', fs: 36 });
+    await diz(doisRap ? 'Acertou, sobe um degrau. Os dois mais rápidos sobem dois.' : 'Acertou, sobe um degrau. O mais rápido sobe dois.'); if (!vivo()) return;
     await diz('Aqui ninguém joga poder: cada degrau tem o seu. Quanto mais alto, mais difícil!'); if (!vivo()) return;
     posicionar();
   }
@@ -1034,7 +1037,8 @@
   // Selos ✓ ✗ e subida (2 mais rápidos sobem 2)
   async function subida(res, vivo) {
     const js = estado.jogadores, certos = res.certos, PASSO = 0.3;
-    const ganho = (j) => { const o = certos.indexOf(j); return o < 0 ? 0 : o < 2 ? 2 : 1; };
+    const rapidos = rapidosQueSobemDois();
+    const ganho = (j) => { const o = certos.indexOf(j); return o < 0 ? 0 : o < rapidos ? 2 : 1; };
     const antes = {}; js.forEach((j) => { antes[j.pid] = j.deg; });
     const sobe = js.map((j) => Math.min(ganho(j), TOPO - j.deg));
     // selos
@@ -1064,6 +1068,7 @@
     }
     posicionar((i, j) => (j.deg !== antes[j.pid] ? { topo: `<span class="chip-pir">${Q.esc(j.nome)} · degrau ${j.deg}</span>` } : {}));
     if (!vivo()) return;
+    if (js.some((j) => j.deg >= TOPO)) return; // alguém venceu: sem mais falas, a vitória entra na hora
     // Reações: subiu dois, quase no topo, degrau com poder novo
     if (js.some((j) => j.deg - antes[j.pid] >= 2)) { await diz(reacao('dois')); if (!vivo()) return; }
     const quase = js.filter((j) => j.deg >= 14 && j.deg < TOPO && antes[j.pid] < 14).sort((a, b) => b.deg - a.deg)[0];
@@ -1164,6 +1169,9 @@
   }
   async function vitoria(venc, porLimite, vivo) {
     const js = estado.jogadores, vi = js.indexOf(venc);
+    // Tudo para: corta qualquer fala da Coruja e toca a fanfarra da vitória
+    try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
+    Q.sfx('sfx_vitoria');
     mudar('pirVitoria');
     cartao(null); $('pirRelogio').innerHTML = ''; brilhos([]);
     lousa('DEGRAU', '<span style="color:#FFD23F;font-size:110px">16</span>', 'TOPO!');
@@ -1177,7 +1185,7 @@
     confete(true);
     const b = $('bordao'); b.classList.remove('oculto');
     const out = (u) => { const k = 1.70158; return 1 + (k + 1) * Math.pow(u - 1, 3) + k * Math.pow(u - 1, 2); };
-    Q.sfx('sfx_fim'); window.QSS_CORUJA.reagir('rindo', 3);
+    window.QSS_CORUJA.reagir('rindo', 3);
     const grito = diz('Quem sabe… SOBE!');
     await animar(2.2, (t) => {
       b.style.transform = `translate(-50%,-50%) scale(${t < 0.35 ? out(cl(t / 0.35)).toFixed(2) : 1}) rotate(-3deg)`;

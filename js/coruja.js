@@ -40,7 +40,7 @@
         const F = {};
         for (const n of ROSTOS) {
           const f = ly.faces[n];
-          const im = el('image', { href: B + 'cabeca_' + n + '.png?v=2', width: f.w, height: f.h, x: (f.x - ly.px).toFixed(1), y: (f.y - ly.py).toFixed(1) });
+          const im = el('image', { href: B + 'cabeca_' + n + '.png?v=3', width: f.w, height: f.h, x: (f.x - ly.px).toFixed(1), y: (f.y - ly.py).toFixed(1) });
           im.style.display = n === 'neutra' ? '' : 'none'; lg.append(im); F[n] = im;
         }
         L.faces = F;

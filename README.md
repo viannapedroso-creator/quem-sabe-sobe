@@ -24,10 +24,10 @@ Segue o quadro "Quem sabe sobe! · Telas do jogo" (telas 06 a 13) e o roteiro de
 
 ## Final: Pirâmide do Conhecimento (telas 17 a 21)
 1. **Transição**: ranking final da Fase 1, o cenário corre até a Coruja, íris fecha e abre na pirâmide. Os pontos viram degraus: o líder começa no 8; os outros, proporcional aos pontos.
-2. **Pergunta**: acertou sobe 1; os 2 mais rápidos que acertaram sobem 2; errou fica parado. O poder do degrau entra sozinho no celular (4–5 Cupins, 6–7 Encolhe, 8–9 Bombas, 10–11 Redemoinho, 12–13 Gelo, 14–15 Gosma).
+2. **Pergunta**: acertou sobe 1; os mais rápidos que acertaram sobem 2 (os 2 mais rápidos com 5 a 8 jogadores; só o mais rápido com 4 ou menos); errou fica parado. O poder do degrau entra sozinho no celular (4–5 Cupins, 6–7 Encolhe, 8–9 Bombas, 10–11 Redemoinho, 12–13 Gelo, 14–15 Gosma).
 3. **Faltam**: aparece uma vez, quando ninguém mais consegue chegar ao topo (degrau mais alto + 2 × perguntas que restam < 16).
 4. **Desempate**: se o limite de perguntas acaba com empate no degrau mais alto, só os finalistas respondem, sem poder; vence quem acertar mais rápido. Se todos erram, vem outra pergunta.
-5. **Vitória**: quem chega ao degrau 16 vence na hora. "Quem sabe… SOBE!", clarão, pódio, troféu e o prêmio (um conhecimento inútil) abre só no celular do vencedor. Jogar de novo: todos seguram o botão.
+5. **Vitória**: quem chega ao degrau 16 vence na hora: a narração para e toca a fanfarra. "Quem sabe… SOBE!", clarão, pódio, troféu e o prêmio (um conhecimento inútil) abre só no celular do vencedor. Jogar de novo: todos seguram o botão.
 - Limite de perguntas: 20 ou o que houver no banco (hoje 12 da Pirâmide). Testes: `?inicio=11` vai direto para a final; `?pir=3` limita a 3 perguntas.
 - Depois de mudar JS ou CSS, rode `python3 versao.py` antes de publicar: ele atualiza o `?v=` dos arquivos para o navegador não usar código velho do cache.
 

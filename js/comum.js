@@ -63,9 +63,22 @@
 
   // Efeitos sonoros provisórios: bipes com os mesmos nomes do roteiro, trocados depois pelos arquivos finais.
   let ctx = null;
+  // Fanfarra de vitória (provisória, até entrar o som final): corneta de brinquedo + sininhos
+  function fanfarra() {
+    const notas = [[523, 0, 0.16], [659, 0.16, 0.16], [784, 0.32, 0.16], [1046, 0.48, 0.42], [784, 0.95, 0.14], [1046, 1.1, 0.7],
+      [1318, 1.1, 0.7], [1568, 1.85, 0.18], [2093, 2.0, 0.6]];
+    notas.forEach(([f, ini, dur]) => {
+      const o = ctx.createOscillator(), g = ctx.createGain(), t = ctx.currentTime + ini;
+      o.type = f > 1500 ? 'sine' : 'square'; o.frequency.value = f;
+      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(f > 1500 ? 0.12 : 0.08, t + 0.02);
+      g.gain.setValueAtTime(f > 1500 ? 0.12 : 0.08, t + dur * 0.7); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + dur + 0.05);
+    });
+  }
   function sfx(nome) {
     try {
       ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      if (nome === 'sfx_vitoria') { fanfarra(); return; }
       const tons = {
         sfx_entrar: [660, 990], sfx_toque: [520], sfx_comecar: [523, 659, 784, 1046], sfx_pronto: [784, 1046], sfx_sair: [440, 330],
         sfx_voto: [700, 760], sfx_porta: [392, 523, 659], sfx_sorteio: [880], sfx_correr: [600, 640, 600, 640], sfx_ponto: [988, 1318], sfx_ranking_sobe: [523, 659, 784], sfx_lancar: [330, 440, 554], sfx_acerta_poder: [196, 147], sfx_espelho: [1318, 1568, 1318], sfx_bum: [110, 82], sfx_gelo: [1760], sfx_gosma: [180], sfx_tictac: [1400], sfx_pergunta: [659, 880], sfx_resposta: [880], sfx_tique: [1200],
