@@ -68,7 +68,7 @@
       ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
       const tons = {
         sfx_entrar: [660, 990], sfx_toque: [520], sfx_comecar: [523, 659, 784, 1046], sfx_pronto: [784, 1046], sfx_sair: [440, 330],
-        sfx_voto: [700, 760], sfx_porta: [392, 523, 659], sfx_sorteio: [880], sfx_correr: [600, 640, 600, 640], sfx_ponto: [988, 1318], sfx_ranking_sobe: [523, 659, 784], sfx_tictac: [1400], sfx_pergunta: [659, 880], sfx_resposta: [880], sfx_tique: [1200],
+        sfx_voto: [700, 760], sfx_porta: [392, 523, 659], sfx_sorteio: [880], sfx_correr: [600, 640, 600, 640], sfx_ponto: [988, 1318], sfx_ranking_sobe: [523, 659, 784], sfx_lancar: [330, 440, 554], sfx_acerta_poder: [196, 147], sfx_espelho: [1318, 1568, 1318], sfx_bum: [110, 82], sfx_gelo: [1760], sfx_gosma: [180], sfx_tictac: [1400], sfx_pergunta: [659, 880], sfx_resposta: [880], sfx_tique: [1200],
         sfx_tempo: [330, 262], sfx_certo: [659, 880, 1175], sfx_errado: [220, 196], sfx_ranking: [523, 784], sfx_fim: [523, 659, 784, 1046, 1318]
       };
       (tons[nome] || [600]).forEach((f, i) => {
@@ -110,6 +110,24 @@
     return `<svg width="${tam}" height="${tam}" viewBox="0 0 24 24" fill="none" stroke="${cor || c.sombra}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONES[c.icone]}</svg>`;
   }
 
+
+  // ---------- Poderes (telas 08 a 10 e efeitos no celular) ----------
+  // Cada poder pode ser usado 2 vezes na Fase 1. Poderes diferentes no mesmo alvo se somam;
+  // o mesmo poder vindo de 2 ou mais jogadores fica "forte" (mais difícil de vencer).
+  const USOS_PODER = 2;
+  const PODERES = [
+    { id: 'gosma', nome: 'Gosma', fala: 'a Gosma', cor: '#A77BF3', sombra: '#6E46B8', desc: 'Cobre as respostas. Esfregue a tela para limpar.', dica: 'Esfregue a tela para limpar a gosma.' },
+    { id: 'gelo', nome: 'Gelo', fala: 'o Gelo', cor: '#4F8DF7', sombra: '#2F5FB8', desc: 'Congela os botões. 3 toques para quebrar.', dica: 'Toque 3 vezes para quebrar o gelo. O 4º toque escolhe.', dicaForte: 'Gelo duplo: toque 5 vezes para quebrar. O 6º toque escolhe.' },
+    { id: 'bombas', nome: 'Bombas', fala: 'as Bombas', cor: '#6CC24A', sombra: '#43892A', desc: 'Bombas sobre as respostas. Tocou, travou.', dica: 'Não toque nas bombas! Elas travam você por um instante.' },
+    { id: 'cupins', nome: 'Cupins', fala: 'os Cupins', cor: '#F2A33A', sombra: '#B86E14', desc: 'Comem pedaços das letras.', dica: 'Os cupins comeram pedaços das letras. Leia com atenção!' },
+    { id: 'redemoinho', nome: 'Redemoinho', fala: 'o Redemoinho', cor: '#2EC4B6', sombra: '#1A8A80', desc: 'As respostas trocam de lugar.', dica: 'As respostas trocam de lugar a cada 1,5 segundo.', dicaForte: 'Redemoinho duplo: as respostas trocam de lugar a cada segundo.' },
+    { id: 'encolhe', nome: 'Encolhe', fala: 'o Encolhe', cor: '#FFD23F', sombra: '#C49A0C', desc: 'Respostas minúsculas. Dê zoom.', dica: 'Respostas minúsculas! Use dois dedos para dar zoom (no computador, a rodinha do mouse).' },
+    { id: 'espelho', nome: 'Espelho', fala: 'o Espelho', cor: '#F6B6B8', sombra: '#D78A8D', desc: 'Defesa: devolve o que jogarem em você.' }
+  ];
+  function poder(id) { return PODERES.find((p) => p.id === id); }
+  function imgPoder(id) { return (window.QSS_BASE || '') + 'img/poderes/' + id + '.png'; }
+  const RODADAS_SEM_PODER = [1, 6]; // rodada 1 e a associação (rodada 6) não têm poderes
+
   // Blocos de resposta: cor e forma de cada letra (telas 11 e 12)
   const ALTS = [
     { l: 'A', cor: '#4F8DF7', sh: '#2F5FB8', tx: '#FFFFFF', forma: '<circle cx="10" cy="10" r="8" fill="#1D2A4D"/>' },
@@ -145,5 +163,5 @@
   }
   function fmt(n) { return Number(n || 0).toLocaleString('pt-BR'); }
 
-  window.QSS = { PERSONAGENS, MAX_JOGADORES, TEMPO_RESPOSTA, TEMPO_VOTO, RODADAS, RODADA_ASSOCIACAO, NUMEROS, CATEGORIAS, ALTS, novoCodigo, limparCodigo, limparNome, uid, esc, img, pers, configurado, conectar, falar, sfx, pontos, categoria, iconeCat, forma, relogio, caber, fmt };
+  window.QSS = { USOS_PODER, PODERES, RODADAS_SEM_PODER, poder, imgPoder, PERSONAGENS, MAX_JOGADORES, TEMPO_RESPOSTA, TEMPO_VOTO, RODADAS, RODADA_ASSOCIACAO, NUMEROS, CATEGORIAS, ALTS, novoCodigo, limparCodigo, limparNome, uid, esc, img, pers, configurado, conectar, falar, sfx, pontos, categoria, iconeCat, forma, relogio, caber, fmt };
 })();

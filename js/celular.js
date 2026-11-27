@@ -145,9 +145,11 @@
 
 
   // ---------- Partida (telas 06, 07 e 11 do quadro) ----------
+  let respostaUI = null, pw = { poder: null, alvo: null, enviado: false };
   let prazoLocal = 0, totalRel = 1, relEl = null, relCor = '#FFD23F', relR = 52, chaveTela = '', meuVoto = {}, minhaResp = {}, vibrou = '';
 
   function olhe() {
+    if (respostaUI) { respostaUI.destruir(); respostaUI = null; }
     $('olheChip').textContent = 'A CORUJA ESTÁ FALANDO'; $('olheTit').textContent = 'Olhe para a TV!';
     $('olheTxt').textContent = 'Agora é hora de ouvir. Quando for a sua vez, o celular vibra e mostra o que fazer.';
     mostrar('olhe');
@@ -159,6 +161,7 @@
   }
   let ultimoSeg = -1;
   (function anima() {
+    if ($('poderSel') && !$('poderSel').classList.contains('oculto') && prazoLocal) $('pwSeg').textContent = Math.ceil(Math.max(0, prazoLocal - Date.now()) / 1000) + ' s';
     if (relEl && relEl.offsetParent) {
       const rest = prazoLocal ? Math.max(0, prazoLocal - Date.now()) : totalRel;
       const seg = Math.ceil(rest / 1000) + (prazoLocal ? 0 : 1000);
@@ -192,29 +195,49 @@
         break;
       }
       case 'pergunta': {
-        // Enquanto a Coruja lê a pergunta, o celular fica em "Olhe para a TV". As opções aparecem com o relógio.
-        if (!d.aberta && !(d.respondeu || []).includes(pid) && minhaResp[(d.q || {}).id] === undefined) { olhe(); break; }
         const q = d.q || {}, c = Q.categoria(q.cat);
         const minha = minhaResp[q.id] !== undefined ? minhaResp[q.id] : null;
         const naTv = (d.respondeu || []).includes(pid), enviada = minha !== null || naTv;
+        // Enquanto a Coruja lê a pergunta, o celular fica em "Olhe para a TV". As opções aparecem com o relógio.
+        if (!d.aberta && !enviada) { olhe(); break; }
         if (minha !== null && d.aberta && !naTv && rede) rede.enviar('responder', { pid, qid: q.id, op: minha });
         $('qCat').textContent = q.cat || ''; $('qCat').style.background = c.sombra;
         $('qTexto').textContent = q.texto || '';
-        const chave = q.id + '|' + d.aberta + '|' + minha + '|' + enviada;
-        if (chave !== chaveTela) {
-          chaveTela = chave;
-          $('opsCel').className = d.aberta ? '' : 'esperando';
-          $('opsCel').innerHTML = (q.ops || []).map((o, k) => {
-            const a = Q.ALTS[k], sel = minha === k;
-            return `<button type="button" class="oc2${sel ? ' sel' : minha !== null ? ' outra' : ''}" data-op="${k}" aria-pressed="${sel}" style="background:${a.cor};box-shadow:0 6px 0 ${a.sh};color:${a.tx}" ${!d.aberta || enviada ? 'disabled' : ''}>
-              <span class="fm">${Q.forma(k, 22)}</span><span class="tx">${Q.esc(o)}</span></button>`;
-          }).join('');
-          requestAnimationFrame(() => $('opsCel').querySelectorAll('.tx').forEach((t) => Q.caber(t, 44, 15)));
+        const meus = (d.efeitos || {})[pid] || [];
+        if (chaveTela !== 'q' + q.id) {
+          chaveTela = 'q' + q.id;
+          if (respostaUI) respostaUI.destruir();
+          $('qDica').innerHTML = window.QSS_EFEITOS.dica(meus);
+          $('qDica').classList.toggle('oculto', !meus.length);
+          mostrar('pergunta');
+          respostaUI = window.QSS_EFEITOS.criar({
+            dir: $('qDir'), ops: q.ops || [], efeitos: enviada ? [] : meus,
+            sacudir: (px) => { $('pergunta').style.transform = px ? `translate(${px}px,0)` : ''; },
+            aoEscolher: (k) => {
+              if (minhaResp[q.id] !== undefined || !rede) return;
+              minhaResp[q.id] = k; Q.sfx('sfx_toque'); vibrar(30);
+              rede.enviar('responder', { pid, qid: q.id, op: k });
+            }
+          });
+          if (minha !== null) respostaUI.escolhido(minha);
         }
-        $('enviado').classList.toggle('oculto', !enviada);
         relogio($('qRel'), 34, '#FFD23F', Q.TEMPO_RESPOSTA, d.aberta ? d : null);
         if (d.aberta) chamar('q' + q.id);
         mostrar('pergunta');
+        break;
+      }
+      case 'podEscolha': {
+        // 09 · Escolher poder e alvo
+        if (!d.aberta) { olhe(); break; }
+        const chave = 'p' + d.rodada;
+        if (chaveTela !== chave) { chaveTela = chave; pw = { poder: null, alvo: null, enviado: false }; }
+        const ja = (d.escolhas || {})[pid];
+        if (ja) { pw.poder = ja.poder; pw.alvo = ja.alvo; pw.enviado = true; }
+        else if (pw.enviado && rede) rede.enviar('poder', { pid, poder: pw.poder, alvo: pw.alvo }); // reenvia se perdeu
+        desenharPoder(m, eu);
+        relogio(null, 0, '', Q.TEMPO_VOTO, d);
+        if (pw.poder === null) chamar(chave);
+        mostrar('poderSel');
         break;
       }
       case 'fim':
@@ -234,13 +257,47 @@
     rede.enviar('votar', { pid, i });
     desenharPartida(ultimo, (ultimo.jogadores || []).find((j) => j.pid === pid));
   });
-  $('opsCel').addEventListener('click', (e) => {
-    const b = e.target.closest('.oc2'); if (!b || b.disabled || !rede || !ultimo) return;
-    const q = (ultimo.d || {}).q || {};
-    if (minhaResp[q.id] !== undefined) return;
-    minhaResp[q.id] = +b.dataset.op; Q.sfx('sfx_toque'); vibrar(30);
-    rede.enviar('responder', { pid, qid: q.id, op: +b.dataset.op });
-    desenharPartida(ultimo, (ultimo.jogadores || []).find((j) => j.pid === pid));
+
+
+
+  function desenharPoder(m, eu) {
+    const usos = eu.usos || {};
+    $('pwGrade').innerHTML = Q.PODERES.map((p) => {
+      const n = usos[p.id] || 0, esg = n <= 0, s = pw.poder === p.id;
+      return `<button type="button" class="pwc${s ? ' sel' : ''}${pw.enviado ? ' travado' : ''}" data-p="${p.id}" ${esg || pw.enviado ? 'disabled' : ''} aria-pressed="${s}" aria-label="${p.nome}${esg ? ', esgotado' : ', resta ' + n}">
+        <span class="ci" style="background:${p.cor}"><img src="${Q.imgPoder(p.id)}" alt=""></span>
+        <span class="nm">${p.nome}</span><span class="us">${esg ? 'Esgotado' : 'Resta ' + n + 'x'}</span></button>`;
+    }).join('');
+    const espelho = pw.poder === 'espelho';
+    $('pwEspelho').classList.toggle('oculto', !espelho);
+    $('pwAlvos').classList.toggle('oculto', espelho);
+    $('pwEuImg').src = Q.img(eu.char);
+    $('pwAlvos').innerHTML = (m.jogadores || []).filter((j) => j.pid !== pid).map((j) => {
+      const s = pw.alvo === j.pid;
+      return `<button type="button" class="alv${s ? ' sel' : ''}" data-a="${j.pid}" ${pw.enviado ? 'disabled' : ''} aria-pressed="${s}"><span class="av"><img src="${Q.img(j.char)}" alt=""></span><span>${Q.esc(j.nome)}</span></button>`;
+    }).join('');
+    const alvoNome = ((m.jogadores || []).find((j) => j.pid === pw.alvo) || {}).nome;
+    const pronto = pw.poder && (espelho || pw.alvo);
+    const b = $('pwOk');
+    b.classList.toggle('pronto', !!pronto && !pw.enviado);
+    b.disabled = !pronto || pw.enviado;
+    b.textContent = pw.enviado ? 'Poder escolhido!' : !pw.poder ? 'Escolha um poder' : espelho ? 'Usar Espelho' : !pw.alvo ? 'Escolha o alvo' : 'Jogar em ' + alvoNome;
+  }
+  const redesenharPoder = () => { if (ultimo) desenharPoder(ultimo, (ultimo.jogadores || []).find((j) => j.pid === pid) || {}); };
+  $('pwGrade').addEventListener('click', (e) => {
+    const b = e.target.closest('.pwc'); if (!b || b.disabled || pw.enviado) return;
+    pw.poder = b.dataset.p; Q.sfx('sfx_toque'); vibrar(15); redesenharPoder();
+  });
+  $('pwAlvos').addEventListener('click', (e) => {
+    const b = e.target.closest('.alv'); if (!b || b.disabled || pw.enviado) return;
+    pw.alvo = b.dataset.a; Q.sfx('sfx_toque'); vibrar(15); redesenharPoder();
+  });
+  $('pwOk').addEventListener('click', () => {
+    if (pw.enviado || !pw.poder || !rede) return;
+    if (pw.poder !== 'espelho' && !pw.alvo) return;
+    pw.enviado = true; Q.sfx('sfx_pronto'); vibrar([30, 40, 60]);
+    rede.enviar('poder', { pid, poder: pw.poder, alvo: pw.poder === 'espelho' ? null : pw.alvo });
+    redesenharPoder();
   });
 
   // Volta sozinho para a sala depois de recarregar a página

@@ -100,6 +100,56 @@ input:focus{box-shadow:0 5px 0 var(--azul)}
 .pontinhos{display:flex;align-items:center;gap:8px}
 .pontinhos span{width:14px;height:14px;border-radius:50%;background:var(--azul)}
 .pontinhos span:nth-child(2){opacity:.55}.pontinhos span:nth-child(3){opacity:.25}
+/* Poderes: escolha (09) e efeitos (Efeito no celular) */
+#poderSel{gap:16px;align-items:stretch}
+#poderSel .col{gap:8px;justify-content:flex-start}
+.passo{display:flex;align-items:center;gap:10px}
+.passo b{width:26px;height:26px;border-radius:50%;background:var(--tinta);color:#fff;font-family:Fredoka,sans-serif;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none}
+.passo h1,.passo h2{margin:0;font-family:Fredoka,sans-serif;font-weight:700;font-size:clamp(17px,5.6vh,22px)}
+#pwGrade{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pwc{position:relative;width:calc(25% - 6px);height:min(150px,37vh);border:4px solid transparent;border-radius:18px;background:#fff;box-shadow:0 5px 0 #D3E2F7;padding:4px 2px 8px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;cursor:pointer;font-family:Nunito,sans-serif;color:var(--tinta)}
+.pwc .ci{width:min(74px,19vh);height:min(74px,19vh);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.pwc .ci img{width:116%;height:116%;margin-top:-16%}
+.pwc .nm{font-family:Fredoka,sans-serif;font-weight:700;font-size:15px;line-height:1.1}
+.pwc .us{font-size:12px;font-weight:900;color:var(--tinta2)}
+.pwc.sel{border-color:var(--tinta);box-shadow:0 5px 0 var(--tinta)}
+.pwc:disabled{opacity:.4;cursor:not-allowed}
+.pwc.travado:not(.sel){opacity:.45}
+#pwDir{width:clamp(210px,30vw,250px);flex:none;display:flex;flex-direction:column;gap:8px}
+#pwDir .topo{display:flex;align-items:center;justify-content:space-between}
+#pwSeg{font-family:Fredoka,sans-serif;font-weight:700;font-size:18px;background:#fff;border-radius:12px;padding:2px 10px;box-shadow:0 3px 0 #D3E2F7}
+#pwAlvos{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;overflow:auto}
+.alv{width:calc(50% - 3px);height:min(52px,13vh);border:3px solid transparent;border-radius:14px;background:#fff;box-shadow:0 4px 0 #D3E2F7;display:flex;align-items:center;gap:6px;padding:0 8px 0 2px;cursor:pointer;overflow:hidden;font-family:Nunito,sans-serif;color:var(--tinta)}
+.alv .av{width:40px;height:46px;overflow:hidden;flex:none;display:flex;justify-content:center}
+.alv .av img{height:80px;margin-top:2px}
+.alv span:last-child{font-weight:900;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.alv.sel{border-color:var(--tinta);background:#FFD23F}
+#pwEspelho{flex:1;min-height:0;border-radius:18px;background:#fff;box-shadow:0 5px 0 #D3E2F7;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;text-align:center}
+#pwEspelho img{height:min(120px,30vh)}
+#pwEspelho span{font-size:15px;font-weight:800;line-height:1.3}
+#pwOk{margin-top:auto;font-family:Fredoka,sans-serif;font-weight:700;font-size:20px;border:0;border-radius:16px;min-height:54px;background:#DCEBFF;color:var(--tinta2);box-shadow:0 6px 0 #D3E2F7;cursor:pointer}
+#pwOk.pronto{background:#2F5FB8;color:#fff;box-shadow:0 6px 0 #1D2A4D}
+/* Efeitos durante a pergunta */
+#qDica{display:flex;gap:8px;align-items:center;background:var(--tinta);color:#fff;border-radius:16px;padding:8px 12px;margin-top:auto}
+#qDica .ics{display:flex;flex:none}
+#qDica .ics img{width:40px;height:40px;margin:-8px -6px 0 0}
+#qDica .t{font-size:12px;font-weight:800;line-height:1.3}
+#qDica .t b{color:#FFD23F;font-weight:900}
+#opsCel.abs{display:block;position:relative}
+#opsCel.abs .oc2{position:absolute;width:calc(50% - 7px);height:calc(50% - 7px);transition:left .35s ease,top .35s ease,transform .35s ease}
+.oc2 .tx .mord{position:absolute;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50% 40% 55% 45%}
+.oc2 .tx .in{position:relative;display:inline-block}
+.oc2 .gelo{position:absolute;inset:-4px;border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.85),rgba(190,220,255,.7) 45%,rgba(150,195,250,.75));border:3px solid #fff;box-shadow:inset 0 0 14px rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;pointer-events:none}
+.oc2 .gelo svg{position:absolute;inset:0;width:100%;height:100%}
+.oc2 .gelo em{position:relative;font-style:normal;font-family:Fredoka,sans-serif;font-weight:700;font-size:16px;color:#2F5FB8;background:rgba(255,255,255,.85);border-radius:999px;padding:2px 10px}
+#gosmaSvg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.bomba{position:absolute;width:84px;height:84px;margin:-42px 0 0 -42px;border:0;padding:0;background:transparent;cursor:pointer;z-index:4}
+.bomba img{width:84px;height:84px;pointer-events:none}
+#cupim{position:absolute;width:86px;height:86px;margin:-43px 0 0 -43px;z-index:4;pointer-events:none}
+#travado{position:absolute;inset:-10px;z-index:6;border-radius:22px;display:flex;align-items:center;justify-content:center}
+#travado span{font-family:Fredoka,sans-serif;font-weight:700;font-size:46px;color:#fff;text-shadow:0 4px 0 #1D2A4D}
+#zoomChip{position:absolute;right:6px;top:-10px;z-index:4;font-family:Fredoka,sans-serif;font-weight:700;font-size:14px;background:#fff;border-radius:999px;padding:2px 10px;box-shadow:0 3px 0 #D3E2F7}
+#enviado{z-index:5}
 #status{position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:10;font-size:13px;font-weight:900;border-radius:999px;padding:5px 12px;background:var(--vermelho);color:#fff}
 </style>
 </head>
@@ -153,10 +203,24 @@ input:focus{box-shadow:0 5px 0 var(--azul)}
   </div>
 </section>
 
+<section id="poderSel" class="tela oculto">
+  <div class="col">
+    <div class="passo"><b>1</b><h1>Escolha o poder</h1></div>
+    <div id="pwGrade"></div>
+  </div>
+  <div id="pwDir">
+    <div class="topo"><div class="passo"><b>2</b><h2>Escolha o alvo</h2></div><span id="pwSeg">15 s</span></div>
+    <div id="pwEspelho" class="oculto"><img id="pwEuImg" src="" alt=""><span>O Espelho é usado em você. Ele devolve os poderes que jogarem em você nesta rodada.</span></div>
+    <div id="pwAlvos"></div>
+    <button type="button" id="pwOk" disabled>Escolha um poder</button>
+  </div>
+</section>
+
 <section id="pergunta" class="tela oculto">
   <div class="esq">
     <div class="topo"><span id="qRel"></span><span id="qCat"></span></div>
     <p id="qTexto"></p>
+    <div id="qDica" class="oculto"></div>
   </div>
   <div id="qDir">
     <div id="opsCel"></div>
@@ -173,6 +237,7 @@ input:focus{box-shadow:0 5px 0 var(--azul)}
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="../js/config.js"></script>
 <script src="../js/comum.js"></script>
+<script src="../js/efeitos.js"></script>
 <script src="../js/celular.js"></script>
 </body>
 </html>

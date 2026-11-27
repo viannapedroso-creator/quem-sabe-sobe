@@ -37,7 +37,7 @@
   // ---------- Estado ----------
   // jogadores: {pid, nome, char, pronto, visto, pontos}
   const estado = { fase: 'sala', jogadores: [], d: null };
-  let rede = null, codigo = '', partida = 0, jaExplicou = false, avisouSala = false;
+  let rede = null, codigo = '', partida = 0, jaExplicou = false, avisouSala = false, explicouPoderes = false;
   const online = (j) => Date.now() - j.visto < 12000;
   const fala = (j) => (Q.pers(j.char) || {}).fala || j.nome;
 
@@ -47,7 +47,7 @@
     if (d && d.prazo) d = Object.assign({}, d, { restante: Math.max(0, d.prazo - Date.now()), prazo: undefined });
     rede.enviar('estado', {
       fase: estado.fase, d,
-      jogadores: estado.jogadores.map((j) => ({ pid: j.pid, nome: j.nome, char: j.char, pronto: j.pronto, online: online(j), pontos: j.pontos || 0 }))
+      jogadores: estado.jogadores.map((j) => ({ pid: j.pid, nome: j.nome, char: j.char, pronto: j.pronto, online: online(j), pontos: j.pontos || 0, usos: j.usos || null }))
     });
   }
   function mudar(fase, d) { estado.fase = fase; estado.d = d || null; enviarEstado(); }
@@ -136,6 +136,19 @@
         if (!(m.i >= 0 && m.i < d.portas.length)) break;
         if (d.votos[j.pid] !== m.i) { d.votos[j.pid] = m.i; Q.sfx('sfx_toque'); desenharFila(); }
         break;
+      case 'poder': {
+        if (!j || estado.fase !== 'podEscolha' || !d || !d.aberta || d.escolhas[j.pid]) break;
+        const pw = Q.poder(m.poder); if (!pw || !j.usos || !(j.usos[pw.id] > 0)) break;
+        let alvo = null;
+        if (pw.id !== 'espelho') {
+          const a = estado.jogadores.find((x) => x.pid === m.alvo);
+          if (!a || a === j) break;
+          alvo = a.pid;
+        }
+        d.escolhas[j.pid] = { poder: pw.id, alvo, ordem: Object.keys(d.escolhas).length };
+        Q.sfx('sfx_toque'); desenharFilaPoder();
+        break;
+      }
       case 'responder':
         if (!j || estado.fase !== 'pergunta' || !d || !d.aberta || m.qid !== d.q.id) break;
         if (respostas[j.pid] || !(m.op >= 0 && m.op <= 3)) break;
@@ -184,7 +197,7 @@
 
   async function iniciarPartida() {
     const id = ++partida, vivo = () => id === partida;
-    estado.jogadores.forEach((j) => { j.pontos = 0; j.pronto = false; });
+    estado.jogadores.forEach((j) => { j.pontos = 0; j.pronto = false; j.usos = {}; Q.PODERES.forEach((pw) => { j.usos[pw.id] = Q.USOS_PODER; }); });
     Q.sfx('sfx_comecar');
 
     // 06 · A Coruja explica (só na primeira partida da sala: "eu só explico uma vez")
@@ -207,7 +220,14 @@
       const cat = await votacao(r, banco, vivo); if (!vivo()) return;
       const doCat = banco.filter((p) => p.cat === cat), q = sorteia(doCat);
       banco.splice(banco.indexOf(q), 1);
-      await pergunta(r, q, vivo); if (!vivo()) return;
+      let efeitos = {};
+      if (!Q.RODADAS_SEM_PODER.includes(r)) {
+        // Rodada 2 em diante: (só na primeira vez) a Coruja explica os poderes, escolha e lançamento
+        if (!explicouPoderes) { await explicaPoderes(vivo); if (!vivo()) return; explicouPoderes = true; }
+        const escolhas = await escolhaPoderes(r, cat, vivo); if (!vivo()) return;
+        efeitos = await lancamento(escolhas, vivo); if (!vivo()) return;
+      }
+      await pergunta(r, q, vivo, efeitos); if (!vivo()) return;
       const res = await revelacao(q, vivo); if (!vivo()) return;
       lider = await pontuacao(r, q, res, lider, vivo); if (!vivo()) return;
     }
@@ -346,6 +366,133 @@
     voos.forEach((v) => { v.alvo.style.opacity = 1; v.voa.remove(); });
   }
 
+
+  // ---------- 08 · A Coruja explica os poderes (só na rodada 2) ----------
+  async function explicaPoderes(vivo) {
+    mudar('podExplica'); mostrar('podExplica');
+    for (const f of [
+      'Agora vale atrapalhar! A cada rodada, escolham um poder e um alvo. Cada poder pode ser usado duas vezes.',
+      'Poderes diferentes no mesmo alvo se somam. E o mesmo poder, vindo de vários jogadores, fica mais forte.'
+    ]) { await diz(f); if (!vivo()) return; }
+  }
+
+  // ---------- 09 · Escolha dos poderes (15 s) ----------
+  function desenharFilaPoder() {
+    const d = estado.d || {};
+    $('ppFila').innerHTML = estado.jogadores.map((j) => {
+      const ok = d.escolhas && d.escolhas[j.pid];
+      return `<div class="fj"><img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}">
+        ${ok ? `<span class="ok-bolha">${CHECK}</span>` : '<span class="esp-bolha">...</span>'}
+        <span class="nometag">${Q.esc(j.nome)}</span></div>`;
+    }).join('');
+  }
+  async function escolhaPoderes(r, cat, vivo) {
+    const d = { rodada: r, cat, escolhas: {}, aberta: false, prazo: 0 };
+    mudar('podEscolha', d); mostrar('podEscolha');
+    const c = Q.categoria(cat);
+    $('ppChip').textContent = `Rodada ${r} · ${cat}`; $('ppChip').style.background = c.cor;
+    $('ppIcones').innerHTML = Q.PODERES.map((pw) => `<div class="pico" style="background:${pw.cor};box-shadow:0 6px 0 ${pw.sombra}"><img src="${Q.imgPoder(pw.id)}" alt="${pw.nome}"></div>`).join('');
+    desenharFilaPoder();
+    const relogio = (rest) => { $('ppRelogio').innerHTML = Q.relogio(100, Math.ceil(rest / 1000), rest / Q.TEMPO_VOTO, '#6CC24A'); };
+    relogio(Q.TEMPO_VOTO);
+    await diz('Hora de atrapalhar! Escolham um poder e um alvo.'); if (!vivo()) return {};
+    d.aberta = true; d.prazo = Date.now() + Q.TEMPO_VOTO; enviarEstado();
+    let seg = 99;
+    const relo = setInterval(() => {
+      const rest = Math.max(0, d.prazo - Date.now()); relogio(rest);
+      const sg = Math.ceil(rest / 1000); if (sg !== seg && sg > 0) { seg = sg; Q.sfx('sfx_tictac'); }
+    }, 100);
+    const semUso = (j) => !j.usos || Object.values(j.usos).every((n) => n <= 0);
+    await aguardar(Q.TEMPO_VOTO, () => { const on = estado.jogadores.filter(online); return on.length > 0 && on.every((j) => d.escolhas[j.pid] || semUso(j)); });
+    clearInterval(relo);
+    d.aberta = false; d.prazo = 0;
+    // gasta um uso de cada poder escolhido
+    Object.entries(d.escolhas).forEach(([pid, e]) => { const j = estado.jogadores.find((x) => x.pid === pid); if (j && j.usos) j.usos[e.poder] = Math.max(0, j.usos[e.poder] - 1); });
+    enviarEstado();
+    await espera(400);
+    return d.escolhas;
+  }
+
+  // ---------- 10 · Lançamento, um de cada vez ----------
+  async function lancamento(escolhas, vivo) {
+    const js = estado.jogadores, porPid = (pid) => js.find((x) => x.pid === pid);
+    const espelhos = new Set(Object.keys(escolhas).filter((pid) => escolhas[pid].poder === 'espelho'));
+    const lances = Object.entries(escolhas).filter(([, e]) => e.poder !== 'espelho' && e.alvo)
+      .sort((a, b) => a[1].ordem - b[1].ordem)
+      .map(([pid, e]) => ({ de: pid, para: e.alvo, poder: e.poder, volta: espelhos.has(e.alvo) }));
+    const efeitos = {};
+    const acerta = (pid, l) => { (efeitos[pid] = efeitos[pid] || []).push({ poder: l.poder, de: porPid(l.de).nome }); };
+    if (!lances.length) return {};
+
+    mudar('podLanca'); mostrar('podLanca');
+    $('plSub').textContent = 'Um lançamento de cada vez, para todo mundo ver.';
+    const hits = {}; js.forEach((j) => { hits[j.pid] = espelhos.has(j.pid) ? ['espelho'] : []; });
+    const desenhar = (de, para) => {
+      $('plFila').innerHTML = js.map((j) => {
+        const op = !de || j.pid === de || j.pid === para ? 1 : 0.35;
+        const bg = j.pid === de ? '#2F5FB8' : j.pid === para ? '#F2545B' : '#FFFFFF', tx = j.pid === de || j.pid === para ? '#FFFFFF' : '#1D2A4D';
+        return `<div class="fj" data-pid="${j.pid}" style="opacity:${op}"><div class="hits">${hits[j.pid].map((h) => { const pw = Q.poder(h); return `<span style="background:${pw.cor}"><img src="${Q.imgPoder(h)}" alt="${pw.nome}"></span>`; }).join('')}</div>
+          <img src="${Q.img(j.char)}" alt="${Q.esc(j.nome)}"><span class="nometag" style="background:${bg};color:${tx}">${Q.esc(j.nome)}</span></div>`;
+      }).join('');
+    };
+    const centroX = (pid) => { const el = $('plFila').querySelector(`[data-pid="${pid}"]`), r = el.getBoundingClientRect(), b = $('palco').getBoundingClientRect(), s = escala(); return (r.left + r.width / 2 - b.left) / s; };
+    const pula = (pid, dy) => { const el = $('plFila').querySelector(`[data-pid="${pid}"]`); if (el) el.style.transform = `translateY(${dy}px)`; };
+    const voo = async (x1, x2, pw, esc) => {
+      const y0 = 700, mx = (x1 + x2) / 2, h = 300 + Math.abs(x2 - x1) * 0.15, bola = $('plBola'), arco = $('plArco').querySelector('path');
+      arco.setAttribute('d', `M${x1} ${y0} Q${mx} ${y0 - h * 2} ${x2} ${y0}`); arco.setAttribute('stroke', pw.sombra);
+      bola.querySelector('img').src = Q.imgPoder(pw.id); bola.style.borderColor = pw.sombra; bola.style.display = 'flex';
+      Q.sfx('sfx_lancar');
+      await animar(1.1 * esc, (t) => {
+        const f = cl(t / (1.1 * esc));
+        const qx = (1 - f) * (1 - f) * x1 + 2 * (1 - f) * f * mx + f * f * x2, qy = (1 - f) * (1 - f) * y0 + 2 * (1 - f) * f * (y0 - h * 2) + f * f * y0;
+        bola.style.left = (qx - 65) + 'px'; bola.style.top = (qy - 65) + 'px'; bola.style.transform = `rotate(${f * 360}deg)`;
+      });
+      bola.style.display = 'none'; arco.setAttribute('d', '');
+    };
+
+    for (let k = 0; k < lances.length; k++) {
+      const l = lances[k], pw = Q.poder(l.poder), de = porPid(l.de), para = porPid(l.para);
+      const esc = Math.abs(js.indexOf(de) - js.indexOf(para)) > 4 ? 1.5 : 1;
+      $('plCont').textContent = `Lançamento ${k + 1} de ${lances.length}`;
+      $('plTit').textContent = `${de.nome} jogou ${pw.nome} em ${para.nome}!`;
+      desenhar(l.de, l.para);
+      const falaLance = diz(`${fala(de)} manda ${pw.fala} para ${fala(para)}!`);
+      pula(l.de, -24); await espera(400 * esc); pula(l.de, 0);
+      await voo(centroX(l.de), centroX(l.para), pw, esc);
+      if (!vivo()) return {};
+      if (l.volta) {
+        // Espelho: o poder volta para quem jogou
+        Q.sfx('sfx_espelho'); pula(l.para, -16);
+        $('plTit').textContent = `Espelho! Voltou para ${de.nome}!`;
+        await falaLance; await espera(200);
+        const falaVolta = diz(`Espelho! Voltou tudo para ${fala(de)}!`);
+        pula(l.para, 0);
+        await voo(centroX(l.para), centroX(l.de), pw, esc);
+        hits[l.de].push(l.poder); acerta(l.de, l); desenhar(l.para, l.de); pula(l.de, 10);
+        Q.sfx('sfx_acerta_poder');
+        await Promise.all([falaVolta, espera(1100 * esc)]);
+      } else {
+        hits[l.para].push(l.poder); acerta(l.para, l); desenhar(l.de, l.para); pula(l.para, 10);
+        Q.sfx('sfx_acerta_poder');
+        await Promise.all([falaLance, espera(1100 * esc)]);
+      }
+      if (!vivo()) return {};
+    }
+    desenhar(null, null);
+    $('plCont').textContent = 'Fim';
+    $('plTit').textContent = 'Todos os poderes lançados!';
+    $('plSub').textContent = 'Os efeitos aparecem no celular de quem foi atingido.';
+    await espera(1800);
+    // Junta por alvo: o mesmo poder vindo de 2 ou mais jogadores fica forte
+    const final = {};
+    Object.entries(efeitos).forEach(([pid, lista]) => {
+      const por = {};
+      lista.forEach((e) => { (por[e.poder] = por[e.poder] || []).push(e.de); });
+      final[pid] = Object.entries(por).map(([poder, de]) => ({ poder, de, forte: de.length >= 2 }));
+    });
+    return final;
+  }
+
   // ---------- 11 · Pergunta ----------
   const N = () => estado.jogadores.length;
   const ESPACO = (1700 - 170) / 7; // distância entre personagens com a sala cheia (8)
@@ -373,9 +520,9 @@
     $('pRelogio').innerHTML = Q.relogio(110, Math.ceil(restante / 1000), restante / Q.TEMPO_RESPOSTA, '#FFD23F');
   }
 
-  async function pergunta(r, q, vivo) {
+  async function pergunta(r, q, vivo, efeitos) {
     respostas = {};
-    const d = { rodada: r, q: { id: q.id, cat: q.cat, texto: q.texto }, aberta: false, respondeu: [], prazo: 0 };
+    const d = { rodada: r, q: { id: q.id, cat: q.cat, texto: q.texto }, aberta: false, respondeu: [], prazo: 0, efeitos: efeitos || {} };
     mudar('pergunta', d);
     // Cena limpa
     $('camera').style.transform = ''; $('mundo').style.transform = '';
