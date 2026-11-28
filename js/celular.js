@@ -123,6 +123,8 @@
   let modoDeNovo = false;
   function desenharPronto(m, eu, deNovo) {
     modoDeNovo = !!deNovo;
+    // De volta à sala: some o resultado da partida anterior e volta a tela normal (com "Trocar personagem")
+    if (!deNovo) { $('pronto').classList.remove('modoFim'); $('fimInfo').classList.add('oculto'); }
     const p = Q.pers(eu.char);
     $('euImg').src = Q.img(eu.char); $('euNome').textContent = eu.nome; $('euPers').textContent = p ? p.nome : '';
     confirmado = !!eu.pronto;

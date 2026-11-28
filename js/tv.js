@@ -127,7 +127,7 @@
     if (!sim && acordar) acordar();
   }
   const ICONE_PAUSA = '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.4" fill="currentColor"/><rect x="14" y="4.5" width="4" height="15" rx="1.4" fill="currentColor"/></svg>';
-  const ICONE_PLAY = '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 4.8v14.4a1 1 0 0 0 1.5.86l11.2-7.2a1 1 0 0 0 0-1.72L9.5 3.94A1 1 0 0 0 8 4.8z" fill="currentColor"/></svg>';
+  const ICONE_PLAY = '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M6.6 4.8v14.4a1 1 0 0 0 1.5.86l11.2-7.2a1 1 0 0 0 0-1.72L8.1 3.94A1 1 0 0 0 6.6 4.8z" fill="currentColor"/></svg>';
   document.addEventListener('DOMContentLoaded', () => {
     $('bPausa').innerHTML = ICONE_PAUSA;
     $('bPausa').addEventListener('click', () => alternarPausa());
@@ -858,7 +858,10 @@
     Q.sfx('sfx_certo');
     await animar(tFim, (t) => {
       const zIn = nC ? ease(cl((t - 0.6) / 1.4)) : 0, zOut = ease(cl((t - tOut) / 0.6)), zz = zIn * (1 - zOut);
-      const z = 1 + 0.45 * zz, ccx = lerp(960, bc(certa), zz), ccy = lerp(540, 800, zz);
+      const z = 1 + 0.45 * zz;
+      // centro da câmera preso para a tela nunca mostrar além das bordas do cenário
+      const mx = 960 / z, my = 540 / z;
+      const ccx = Math.min(1920 - mx, Math.max(mx, lerp(960, bc(certa), zz))), ccy = Math.min(1080 - my, Math.max(my, lerp(540, 800, zz)));
       $('camera').style.transform = `translate(960px,540px) scale(${z.toFixed(4)}) translate(${(-ccx).toFixed(1)}px,${(-ccy).toFixed(1)}px)`;
       const run = cl((t - tRun) / 2.2);
       $('mundo').style.transform = `translateX(${(-1920 * ease(run)).toFixed(1)}px)`;
