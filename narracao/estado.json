@@ -3489,11 +3489,11 @@
  },
  "P058_resposta": {
   "texto": "A resposta certa é… Patrick!",
-  "enviado": "[dramatically] A resposta certa é… Patrick!",
+  "enviado": "[dramatically] A resposta certa é… Pátriqui!",
   "arquivo": "perguntas/P058_resposta.mp3",
   "modelo": "eleven_v4",
   "voz": "HReOQZPV9tH5iTEnSbGo",
-  "em": "2026-11-27T14:34:51.182Z"
+  "em": "2026-11-28T15:23:11.667Z"
  },
  "P059_pergunta": {
   "texto": "No seriado Chaves, qual personagem vive dentro de um barril?",
