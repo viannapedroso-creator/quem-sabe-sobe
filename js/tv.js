@@ -45,7 +45,7 @@
   // ---------- Estado ----------
   // jogadores: {pid, nome, char, pronto, visto, pontos}
   const estado = { fase: 'sala', jogadores: [], d: null };
-  let rede = null, codigo = '', partida = 0, jaExplicou = false, pularExplicacoes = false, avisouSala = false, falaSala = Promise.resolve(), explicouPoderes = false;
+  let rede = null, codigo = '', partida = 0, jaJogou = false, jaExplicou = false, pularExplicacoes = false, avisouSala = false, falaSala = Promise.resolve(), explicouPoderes = false;
   const online = (j) => Date.now() - j.visto < 12000;
   const fala = (j) => (Q.pers(j.char) || {}).fala || j.nome;
   // Boneco animado (rig) no lugar da imagem parada; a ação muda pelo data-acao
@@ -141,7 +141,12 @@
         if (!j || !j.char || (estado.fase !== 'sala' && estado.fase !== 'fim')) break;
         j.pronto = !!m.on;
         if (j.pronto) Q.sfx('sfx_pronto');
-        if (estado.fase === 'fim') desenharDeNovo();
+        if (estado.fase === 'fim') {
+          desenharDeNovo();
+          // Todos pediram para jogar de novo: volta para a sala, onde dá para trocar de personagem
+          if (estado.jogadores.length >= 2 && estado.jogadores.every((x) => x.pronto)) voltarSala();
+          break;
+        }
         verificarInicio();
         break;
       case 'sair':
@@ -195,6 +200,15 @@
     const js = estado.jogadores;
     if (js.length >= 2 && js.every((x) => x.char && x.pronto)) iniciarPartida();
   }
+  // Fim de jogo → todos seguraram "jogar de novo": de volta à sala de personagens
+  function voltarSala() {
+    partida++; jaJogou = true;
+    Q.calar(); confete(false); $('bordao').classList.add('oculto'); $('deNovoBox').classList.add('oculto');
+    estado.jogadores.forEach((x) => { x.pronto = false; x.novo = true; });
+    avisouSala = false;
+    mudar('sala'); mostrar('sala'); desenharSala(); Q.musica('musica_sala');
+    avisoSala();
+  }
   // sala_03: quando todos já escolheram o personagem
   function avisoSala() {
     const js = estado.jogadores, todos = js.length >= 2 && js.every((x) => x.char);
@@ -240,7 +254,8 @@
     Q.sfx('sfx_comecar');
 
     // 06 · A Coruja explica (só na primeira partida da sala: "eu só explico uma vez")
-    pularExplicacoes = $('pularExp').checked;
+    // A partir da segunda partida da sala, as explicações são puladas
+    pularExplicacoes = $('pularExp').checked || jaJogou;
     if (!jaExplicou && !pularExplicacoes) {
       mudar('explica'); mostrar('explica');
       for (const f of ['explica_1', 'explica_2', 'explica_3', 'explica_4', 'explica_5']) { await diz(T(f)); if (!vivo()) return; }

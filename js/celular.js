@@ -81,22 +81,27 @@
     mostrar('entrar');
   }
 
+  let escolhendoDeNovo = false;
   function aoReceber(m) {
     if (m.t === 'recusado' && m.pid === pid) { voltarEntrada(); erro(m.motivo || 'Não deu para entrar.'); return; }
     if (m.t !== 'estado') return;
     const eu = (m.jogadores || []).find((j) => j.pid === pid);
     if (!ultimo && !eu) { rede.enviar('entrar', { pid, nome: ler('nome') }); }
+    const anterior = ultimo;
     ultimo = m;
     if (!eu) return;
+    // Voltou do fim de jogo para a sala: mostra os personagens de novo, com o atual marcado
+    if (m.fase === 'sala' && anterior && anterior.fase === 'fim') escolhendoDeNovo = true;
+    if (m.fase !== 'sala') escolhendoDeNovo = false;
     clearTimeout(esperaTimer);
     $('bEntrar').disabled = false; $('bEntrar').textContent = 'Entrar';
     if (m.fase !== 'sala') { desenharPartida(m, eu); return; }
-    if (!eu.char) { desenharGrade(m, eu); mostrar('escolher'); return; }
+    if (!eu.char || escolhendoDeNovo) { desenharGrade(m, eu); mostrar('escolher'); return; }
     desenharPronto(m, eu); mostrar('pronto');
   }
 
   function desenharGrade(m, eu) {
-    $('olaNome').textContent = 'Oi, ' + eu.nome + '!';
+    $('olaNome').textContent = escolhendoDeNovo ? 'Quer trocar? Toque no seu personagem para continuar com ele, ou escolha outro.' : 'Oi, ' + eu.nome + '!';
     const donos = {}; (m.jogadores || []).forEach((j) => { if (j.char) donos[j.char] = j; });
     $('grade').innerHTML = Q.PERSONAGENS.map((p) => {
       const d = donos[p.id], meu = d && d.pid === pid, tomado = d && !meu;
@@ -107,6 +112,7 @@
   $('grade').addEventListener('click', (e) => {
     const b = e.target.closest('.pc'); if (!b || b.disabled || !rede) return;
     Q.sfx('sfx_toque'); vibrar(20);
+    escolhendoDeNovo = false;
     rede.enviar('escolher', { pid, char: b.dataset.id });
   });
 
