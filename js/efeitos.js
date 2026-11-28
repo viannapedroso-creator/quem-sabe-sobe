@@ -6,7 +6,6 @@
   const TRINCAS = ['', 'M100 8 L92 40 L108 55 L98 86', 'M100 8 L92 40 L108 55 L98 86 M92 40 L58 30 M108 55 L150 64', 'M100 8 L92 40 L108 55 L98 86 M92 40 L58 30 M108 55 L150 64 M58 30 L26 52 M150 64 L184 30 M98 86 L70 70'];
   const MORD = [[[22, 30, 13], [58, 62, 12], [84, 20, 11]], [[12, 70, 12], [44, 24, 13], [70, 60, 12], [92, 34, 10]], [[18, 26, 12], [50, 68, 13], [80, 30, 12]], [[30, 64, 13], [66, 22, 12]]];
   const MORD_FORTE = [[38, 50, 12], [74, 80, 11], [6, 36, 12]];
-  const GOSMA = 'M0 0 H540 V250 L512 250 C512 303 502 338 490 338 C478 338 468 303 468 250 L456 250 C456 324 440 374 420 374 C400 374 384 324 384 250 L386 250 C386 296 375 326 360 326 C345 326 334 296 334 250 L321 250 C321 311 307 352 290 352 C273 352 259 311 259 250 L245 250 C245 299 236 332 225 332 C214 332 205 299 205 250 L185 250 C185 321 170 368 150 368 C130 368 115 321 115 250 L119 250 C119 292 108 320 95 320 C82 320 71 292 71 250 L62 250 C62 305 48 342 30 342 C12 342 -2 305 -2 250 L0 250 Z';
   const BOMBAS5 = [[25, 25], [75, 25], [50, 50], [25, 75], [75, 75]];
   const BOMBAS8 = [[14, 25], [36, 25], [64, 25], [86, 25], [14, 75], [36, 75], [64, 75], [86, 75]];
   const NS = 'http://www.w3.org/2000/svg';
@@ -54,46 +53,70 @@
 
     function sacudir(px, ms) { o.sacudir && o.sacudir(px); timers.push(setTimeout(() => o.sacudir && o.sacudir(0), ms || 110)); }
 
-    // ---- Gosma: esfregar abre buracos na camada ----
-    let mascara = null; const furos = [];
+    // ---- Gosma: um pedaço de gosma em cima de cada resposta; esfregar abre buracos em cada pedaço ----
+    // Gosma em dobro: cada parte precisa de 2 passadas. A 1ª deixa a gosma 80% transparente, a 2ª limpa.
+    const GW = 220, GH = 120, FUROS_LIMPO = 9, RAIO = 26;
+    const pedacos = [];
+    function formaGosma(k) {
+      // contorno ondulado próprio de cada pedaço, com 2 ou 3 pingos escorrendo por baixo
+      let sem = 7 + k * 13; const rnd = () => { sem = (sem * 9301 + 49297) % 233280; return sem / 233280; };
+      const ond = (n) => (rnd() - 0.5) * n;
+      let d = `M${8 + ond(6)} ${10 + ond(6)}`;
+      for (let x = 40; x <= GW - 30; x += 36) d += ` Q${x - 18} ${ond(10) - 4} ${x} ${6 + ond(8)}`;
+      d += ` Q${GW + 2} ${ond(6)} ${GW - 4} ${30 + ond(8)}`;
+      d += ` Q${GW + 4 + ond(4)} ${GH / 2} ${GW - 3} ${GH - 22 + ond(6)}`;
+      const pingos = [0.78, 0.47, 0.2].slice(0, 2 + (k % 2)).map((f) => GW * f + ond(18));
+      let xAtual = GW - 6;
+      pingos.forEach((px) => {
+        const w = 9 + rnd() * 6, fundo = GH + 4 + rnd() * 16;
+        d += ` Q${(xAtual + px + w) / 2} ${GH - 6 + ond(6)} ${px + w} ${GH - 8}`;
+        d += ` C${px + w} ${fundo - 6} ${px + w * 0.5} ${fundo} ${px} ${fundo} C${px - w * 0.5} ${fundo} ${px - w} ${fundo - 6} ${px - w} ${GH - 8}`;
+        xAtual = px - w;
+      });
+      d += ` Q${xAtual / 2} ${GH - 4 + ond(6)} 6 ${GH - 20 + ond(6)}`;
+      d += ` Q${-4 + ond(4)} ${GH / 2} ${8 + ond(4)} ${10 + ond(6)} Z`;
+      return d;
+    }
     if (tem('gosma')) {
-      const svg = document.createElementNS(NS, 'svg'); svg.id = 'gosmaSvg';
-      svg.setAttribute('viewBox', '0 0 540 362'); svg.setAttribute('preserveAspectRatio', 'none'); svg.setAttribute('aria-hidden', 'true');
-      const id = 'm' + Math.random().toString(36).slice(2, 7);
-      svg.innerHTML = `<defs><linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9B6BE8"/><stop offset=".6" stop-color="#7E4FD6"/><stop offset="1" stop-color="#5E34B0"/></linearGradient>
-        <mask id="${id}"><rect width="540" height="362" fill="#fff"/><g class="cinza"></g><g class="preto"></g></mask>
-        <filter id="${id}v" x="-5%" y="-5%" width="110%" height="120%"><feGaussianBlur in="SourceAlpha" stdDeviation="6" result="b"/><feSpecularLighting in="b" surfaceScale="6" specularConstant=".9" specularExponent="28" lighting-color="#fff" result="s"><feDistantLight azimuth="235" elevation="50"/></feSpecularLighting><feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/><feComposite in="SourceGraphic" in2="s2" operator="arithmetic" k2="1" k3=".7"/></filter></defs>
-        <g mask="url(#${id})" filter="url(#${id}v)"><path d="${GOSMA}" fill="url(#${id}g)" opacity=".96"/>
-        <path d="M40 40 C120 20 220 60 300 34 S470 30 510 60" stroke="#E6D4FF" stroke-width="10" fill="none" stroke-linecap="round" opacity=".55"/>
-        <path d="M70 150 C140 128 200 170 260 146" stroke="#E6D4FF" stroke-width="6" fill="none" stroke-linecap="round" opacity=".4"/>
-        <circle cx="380" cy="120" r="9" fill="#E6D4FF" opacity=".6"/><circle cx="398" cy="140" r="5" fill="#E6D4FF" opacity=".5"/><circle cx="120" cy="210" r="7" fill="#E6D4FF" opacity=".5"/></g>`;
-      dir.appendChild(svg);
-      mascara = svg.querySelector('mask');
-      // Gosma em dobro: cada parte precisa de 2 passadas. A 1ª deixa a gosma 80% transparente, a 2ª limpa.
-      // Cada pedaço da tela (grade de 20 × 14) conta quantas passadas diferentes (toques separados) recebeu.
-      const camadas = forte('gosma') ? 2 : 1, celulas = {};
+      const camadas = forte('gosma') ? 2 : 1;
+      botoes.forEach((b, k) => {
+        const svg = document.createElementNS(NS, 'svg'); svg.setAttribute('class', 'gosmaPeca');
+        svg.setAttribute('viewBox', `0 0 ${GW} ${GH + 24}`); svg.setAttribute('preserveAspectRatio', 'none'); svg.setAttribute('aria-hidden', 'true');
+        const id = 'm' + k + Math.random().toString(36).slice(2, 7);
+        svg.innerHTML = `<defs><linearGradient id="${id}g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9B6BE8"/><stop offset=".6" stop-color="#7E4FD6"/><stop offset="1" stop-color="#5E34B0"/></linearGradient>
+          <mask id="${id}" maskUnits="userSpaceOnUse" x="-20" y="-20" width="${GW + 40}" height="${GH + 64}"><rect x="-20" y="-20" width="${GW + 40}" height="${GH + 64}" fill="#fff"/><g class="cinza"></g><g class="preto"></g></mask>
+          <filter id="${id}v" x="-10%" y="-10%" width="120%" height="130%"><feGaussianBlur in="SourceAlpha" stdDeviation="4" result="b"/><feSpecularLighting in="b" surfaceScale="5" specularConstant=".9" specularExponent="26" lighting-color="#fff" result="s"><feDistantLight azimuth="235" elevation="50"/></feSpecularLighting><feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/><feComposite in="SourceGraphic" in2="s2" operator="arithmetic" k2="1" k3=".7"/></filter></defs>
+          <g mask="url(#${id})" filter="url(#${id}v)"><path d="${formaGosma(k)}" fill="url(#${id}g)" opacity=".97"/>
+          <path d="M${26 + k * 6} 26 C70 16 120 36 ${170 - k * 5} 22" stroke="#E6D4FF" stroke-width="7" fill="none" stroke-linecap="round" opacity=".55"/>
+          <circle cx="${160 - k * 22}" cy="${70 + (k % 2) * 12}" r="6" fill="#E6D4FF" opacity=".55"/><circle cx="${174 - k * 22}" cy="${84 + (k % 2) * 12}" r="3.5" fill="#E6D4FF" opacity=".45"/></g>`;
+        b.appendChild(svg);
+        pedacos[k] = { svg, mascara: svg.querySelector('mask'), furos: [], celulas: {} };
+      });
       let passada = 0;
       const esfrega = (e) => {
         if (e.type === 'pointerdown') passada++;
         if (e.type === 'pointermove' && e.pointerType === 'mouse' && e.buttons === 0) return;
-        const r = dir.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * 540, y = (e.clientY - r.top) / r.height * 362;
-        const ch = Math.floor(x / 27) + ',' + Math.floor(y / 26), cel = celulas[ch] || (celulas[ch] = { n: 0, ultima: -1 });
-        if (cel.ultima !== passada) { cel.ultima = passada; cel.n++; }
-        const nivel = Math.min(camadas, cel.n);
-        const u = furos[furos.length - 1]; if (u && u.nivel === nivel && Math.hypot(u.x - x, u.y - y) < 12) return;
-        furos.push({ x, y, nivel }); if (furos.length > 800) furos.shift();
-        const c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', x.toFixed(0)); c.setAttribute('cy', y.toFixed(0)); c.setAttribute('r', 30);
-        const limpa = nivel >= camadas;
-        c.setAttribute('fill', limpa ? '#000' : '#333'); // #333 na máscara = 20% visível (80% transparente)
-        mascara.querySelector(limpa ? '.preto' : '.cinza').appendChild(c);
+        pedacos.forEach((p) => {
+          const r = p.svg.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width * GW, y = (e.clientY - r.top) / r.height * (GH + 24);
+          if (x < -RAIO || x > GW + RAIO || y < -RAIO || y > GH + 24 + RAIO) return;
+          const ch = Math.floor(x / 22) + ',' + Math.floor(y / 20), cel = p.celulas[ch] || (p.celulas[ch] = { n: 0, ultima: -1 });
+          if (cel.ultima !== passada) { cel.ultima = passada; cel.n++; }
+          const nivel = Math.min(camadas, cel.n);
+          const u = p.furos[p.furos.length - 1]; if (u && u.nivel === nivel && Math.hypot(u.x - x, u.y - y) < 10) return;
+          p.furos.push({ x, y, nivel }); if (p.furos.length > 400) p.furos.shift();
+          const c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', x.toFixed(0)); c.setAttribute('cy', y.toFixed(0)); c.setAttribute('r', RAIO);
+          const limpa = nivel >= camadas;
+          c.setAttribute('fill', limpa ? '#000' : '#333'); // #333 na máscara = 20% visível (80% transparente)
+          p.mascara.querySelector(limpa ? '.preto' : '.cinza').appendChild(c);
+        });
       };
       dir.addEventListener('pointerdown', esfrega, sig); dir.addEventListener('pointermove', esfrega, sig);
     }
     const limpo = (k) => {
       if (!tem('gosma')) return true;
-      const sl = slotDe(k), qx = sl % 2, qy = sl > 1 ? 1 : 0;
       const camadas = forte('gosma') ? 2 : 1;
-      return furos.filter((f) => f.nivel >= camadas && (f.x >= 270) === (qx === 1) && (f.y >= 181) === (qy === 1)).length >= 10;
+      return pedacos[k].furos.filter((f) => f.nivel >= camadas).length >= FUROS_LIMPO;
     };
 
     // ---- Bombas ----
