@@ -57,6 +57,34 @@
     return fetch(AUDIO_BASE + 'manifest.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}))
       .then((m) => { manifesto = {}; for (const k in m) manifesto[chave(k)] = m[k]; return manifesto; });
   }
+  // ---------- Pausa: relógio do jogo que para enquanto está pausado ----------
+  let pausadoEm = 0, totalPausado = 0;
+  const agora = () => Date.now() - totalPausado - (pausadoEm ? Date.now() - pausadoEm : 0);
+  const estaPausado = () => !!pausadoEm;
+  // Espera em tempo de jogo: não corre enquanto o jogo está pausado
+  function esperaJogo(ms) {
+    return new Promise((ok) => {
+      const alvo = agora() + ms;
+      const tique = () => { const f = alvo - agora(); if (f <= 0) ok(); else setTimeout(tique, pausadoEm ? 200 : Math.min(f, 1000)); };
+      tique();
+    });
+  }
+  function pausar(sim) {
+    if (!!sim === estaPausado()) return;
+    if (sim) {
+      pausadoEm = Date.now();
+      try { if (tocando) tocando.pause(); } catch (e) {}
+      try { window.speechSynthesis && window.speechSynthesis.pause(); } catch (e) {}
+      try { if (musicaAtual) musicaAtual.pause(); } catch (e) {}
+      try { if (ctx && ctx.state === 'running') ctx.suspend(); } catch (e) {}
+    } else {
+      totalPausado += Date.now() - pausadoEm; pausadoEm = 0;
+      try { if (tocando) tocando.play().catch(() => {}); } catch (e) {}
+      try { window.speechSynthesis && window.speechSynthesis.resume(); } catch (e) {}
+      try { if (musicaAtual) musicaAtual.play().catch(() => {}); } catch (e) {}
+      try { if (ctx && ctx.state === 'suspended') ctx.resume(); } catch (e) {}
+    }
+  }
   function calar() {
     try { if (tocando) { tocando.pause(); tocando.onended = null; tocando = null; } } catch (e) {}
     try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
@@ -70,7 +98,7 @@
         const v = ss.getVoices().find((x) => /pt[-_]BR/i.test(x.lang)); if (v) u.voice = v;
         const fim = () => ok(); u.onend = fim; u.onerror = fim;
         ss.speak(u);
-        setTimeout(fim, 15000);
+        esperaJogo(15000).then(fim);
       } catch (e) { ok(); }
     });
   }
@@ -88,7 +116,7 @@
       a.onended = fim;
       a.onerror = () => { if (!feito) { feito = true; falarNavegador(texto).then(ok); } };
       a.play().catch(() => { if (!feito) { feito = true; falarNavegador(texto).then(ok); } });
-      setTimeout(fim, 20000);
+      esperaJogo(20000).then(fim);
     });
   }
   carregarAudios();
@@ -271,5 +299,6 @@
   function fmt(n) { return Number(n || 0).toLocaleString('pt-BR'); }
 
   carregarSons();
-  window.QSS = { USOS_PODER, PODERES, RODADAS_SEM_PODER, poder, imgPoder, PERSONAGENS, MAX_JOGADORES, TEMPO_RESPOSTA, TEMPO_VOTO, RODADAS, RODADA_ASSOCIACAO, NUMEROS, CATEGORIAS, ALTS, novoCodigo, limparCodigo, limparNome, uid, esc, img, pers, configurado, conectar, falar, calar, carregarAudios, sfx, musica, pontos, categoria, iconeCat, forma, relogio, caber, fmt };
+  window.QSS = {
+    agora, esperaJogo, pausar, estaPausado, USOS_PODER, PODERES, RODADAS_SEM_PODER, poder, imgPoder, PERSONAGENS, MAX_JOGADORES, TEMPO_RESPOSTA, TEMPO_VOTO, RODADAS, RODADA_ASSOCIACAO, NUMEROS, CATEGORIAS, ALTS, novoCodigo, limparCodigo, limparNome, uid, esc, img, pers, configurado, conectar, falar, calar, carregarAudios, sfx, musica, pontos, categoria, iconeCat, forma, relogio, caber, fmt };
 })();

@@ -3,7 +3,7 @@
 (function () {
   const Q = window.QSS;
   const $ = (id) => document.getElementById(id);
-  const espera = (ms) => new Promise((r) => setTimeout(r, ms));
+  const espera = (ms) => Q.esperaJogo(ms); // para enquanto o jogo está pausado
   const cl = (v) => Math.max(0, Math.min(1, v));
   const ease = (u) => (u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2);
   const lerp = (a, b, u) => a + (b - a) * u;
@@ -71,13 +71,13 @@
   function enviarEstado() {
     if (!rede) return;
     let d = estado.d;
-    if (d && d.prazo) d = Object.assign({}, d, { restante: Math.max(0, d.prazo - Date.now()), prazo: undefined });
+    if (d && d.prazo) d = Object.assign({}, d, { restante: Math.max(0, d.prazo - Q.agora()), prazo: undefined });
     rede.enviar('estado', {
-      fase: estado.fase, d,
+      fase: estado.fase, d, pausado: Q.estaPausado(),
       jogadores: estado.jogadores.map((j) => ({ pid: j.pid, nome: j.nome, char: j.char, pronto: j.pronto, online: online(j), pontos: j.pontos || 0, usos: j.usos || null }))
     });
   }
-  function mudar(fase, d) { estado.fase = fase; estado.d = d || null; enviarEstado(); }
+  function mudar(fase, d) { estado.fase = fase; estado.d = d || null; enviarEstado(); atualizarBotaoPausa(); }
 
   // Voz da Coruja: espera a fala terminar, mas nunca menos que o tempo de leitura (navegador sem voz)
   function diz(texto) { return Promise.all([falaVoz(texto), espera(Math.min(6000, 700 + texto.length * 45))]); }
@@ -88,18 +88,19 @@
   let acordar = null;
   function aguardar(ms, pronto) {
     return new Promise((ok) => {
-      const fim = () => { clearTimeout(t); acordar = null; ok(); };
-      const t = setTimeout(fim, ms);
-      acordar = () => { if (pronto()) fim(); };
+      let feito = false;
+      const fim = () => { if (feito) return; feito = true; acordar = null; ok(); };
+      espera(ms).then(fim);
+      acordar = () => { if (!Q.estaPausado() && pronto()) fim(); };
       acordar();
     });
   }
   // Animação por quadros: chama fn(t em segundos) até durar `seg`
   function animar(seg, fn) {
     return new Promise((ok) => {
-      const t0 = performance.now();
-      const passo = (agora) => {
-        const t = (agora - t0) / 1000;
+      const t0 = Q.agora();
+      const passo = () => {
+        const t = (Q.agora() - t0) / 1000;
         fn(Math.min(t, seg));
         if (t < seg) requestAnimationFrame(passo); else ok();
       };
@@ -107,12 +108,43 @@
     });
   }
 
+  // ---------- Pausa (botão na TV, ou barra de espaço / tecla P) ----------
+  const FASES_SEM_PAUSA = ['inicio', 'sala', 'fim'];
+  function podePausar() { return !!estado.fase && !FASES_SEM_PAUSA.includes(estado.fase); }
+  function atualizarBotaoPausa() {
+    const b = $('bPausa'); if (!b) return;
+    b.classList.toggle('oculto', !podePausar() && !Q.estaPausado());
+  }
+  function alternarPausa(sim) {
+    if (sim === undefined) sim = !Q.estaPausado();
+    if (sim && !podePausar()) return;
+    Q.pausar(sim);
+    document.body.classList.toggle('pausado', sim);
+    $('pausaTela').classList.toggle('oculto', !sim);
+    $('bPausa').innerHTML = sim ? ICONE_PLAY : ICONE_PAUSA;
+    $('bPausa').setAttribute('aria-label', sim ? 'Continuar' : 'Pausar');
+    enviarEstado();
+    if (!sim && acordar) acordar();
+  }
+  const ICONE_PAUSA = '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="6" y="4.5" width="4" height="15" rx="1.4" fill="currentColor"/><rect x="14" y="4.5" width="4" height="15" rx="1.4" fill="currentColor"/></svg>';
+  const ICONE_PLAY = '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 4.8v14.4a1 1 0 0 0 1.5.86l11.2-7.2a1 1 0 0 0 0-1.72L9.5 3.94A1 1 0 0 0 8 4.8z" fill="currentColor"/></svg>';
+  document.addEventListener('DOMContentLoaded', () => {
+    $('bPausa').innerHTML = ICONE_PAUSA;
+    $('bPausa').addEventListener('click', () => alternarPausa());
+    $('pausaTela').addEventListener('click', () => alternarPausa(false));
+  });
+  document.addEventListener('keydown', (e) => {
+    if ((e.code === 'Space' || e.key === 'p' || e.key === 'P') && (podePausar() || Q.estaPausado()) && !/INPUT|TEXTAREA/.test(e.target.tagName)) { e.preventDefault(); alternarPausa(); }
+  });
+
   // ---------- Mensagens dos celulares ----------
   function aoReceber(m) {
     const agora = Date.now();
     const j = estado.jogadores.find((x) => x.pid === m.pid);
     if (j) j.visto = agora;
     const d = estado.d;
+    // Pausado: ninguém vota, responde ou joga poder até voltar
+    if (Q.estaPausado() && ['votar', 'poder', 'assoc', 'responder'].includes(m.t)) return;
     switch (m.t) {
       case 'ola': break;
       case 'entrar': {
@@ -186,7 +218,7 @@
         if (!j || estado.fase !== 'pergunta' || !d || !d.aberta || m.qid !== d.q.id) break;
         if (d.participantes && !d.participantes.includes(j.pid)) break; // desempate: só os finalistas
         if (respostas[j.pid] || !(m.op >= 0 && m.op <= 3)) break;
-        respostas[j.pid] = { op: m.op, ms: agora - inicioPergunta };
+        respostas[j.pid] = { op: m.op, ms: Q.agora() - inicioPergunta };
         d.respondeu.push(j.pid); Q.sfx('sfx_toque');
         marcarRespondeu();
         break;
@@ -321,10 +353,10 @@
     relogioVoto(Q.TEMPO_VOTO);
     await diz(T('rodada', r)); if (!vivo()) return cats[0];
 
-    d.prazo = Date.now() + Q.TEMPO_VOTO; enviarEstado();
+    d.prazo = Q.agora() + Q.TEMPO_VOTO; enviarEstado();
     let seg = 99;
     const relo = setInterval(() => {
-      const rest = Math.max(0, d.prazo - Date.now()); relogioVoto(rest);
+      const rest = Math.max(0, d.prazo - Q.agora()); relogioVoto(rest);
       const s = Math.ceil(rest / 1000); if (s !== seg && s > 0) { seg = s; Q.sfx('sfx_tictac'); }
     }, 100);
     await aguardar(Q.TEMPO_VOTO, () => { const on = estado.jogadores.filter(online); return on.length > 0 && on.every((j) => d.votos[j.pid] !== undefined); });
@@ -361,10 +393,10 @@
       // termina exatamente na vencedora
       const ordem = []; for (let n = passos.length; n >= 0; n--) ordem.unshift(empatadas[((empatadas.indexOf(venc) - n) % empatadas.length + empatadas.length) % empatadas.length]);
       Q.sfx('sfx_sorteio');
-      const t0 = performance.now(); let acum = 0;
+      const t0 = Q.agora(); let acum = 0;
       for (let n = 0; n < ordem.length; n++) {
         portas.forEach((pw, k) => pw.classList.toggle('acesa', k === ordem[n]));
-        if (n < passos.length) { acum += passos[n]; await espera(Math.max(0, t0 + acum - performance.now())); }
+        if (n < passos.length) { acum += passos[n]; await espera(Math.max(0, t0 + acum - Q.agora())); }
       }
       await espera(250);
       portas.forEach((pw) => pw.classList.remove('acesa'));
@@ -444,10 +476,10 @@
     const relogio = (rest) => { $('ppRelogio').innerHTML = Q.relogio(100, Math.ceil(rest / 1000), rest / Q.TEMPO_VOTO, '#6CC24A'); };
     relogio(Q.TEMPO_VOTO);
     await diz(T('poder_hora')); if (!vivo()) return {};
-    d.aberta = true; d.prazo = Date.now() + Q.TEMPO_VOTO; enviarEstado();
+    d.aberta = true; d.prazo = Q.agora() + Q.TEMPO_VOTO; enviarEstado();
     let seg = 99;
     const relo = setInterval(() => {
-      const rest = Math.max(0, d.prazo - Date.now()); relogio(rest);
+      const rest = Math.max(0, d.prazo - Q.agora()); relogio(rest);
       const sg = Math.ceil(rest / 1000); if (sg !== seg && sg > 0) { seg = sg; Q.sfx('sfx_tictac'); }
     }, 100);
     const semUso = (j) => !j.usos || Object.values(j.usos).every((n) => n <= 0);
@@ -601,10 +633,10 @@
     const relogio = (rest) => { $('asRelogio').innerHTML = Q.relogio(100, Math.ceil(rest / 1000), rest / TEMPO_ASSOC, '#2EC4B6'); };
     relogio(TEMPO_ASSOC);
     await diz(T('assoc_valendo')); if (!vivo()) return liderAntes;
-    d.aberta = true; d.prazo = Date.now() + TEMPO_ASSOC; enviarEstado();
+    d.aberta = true; d.prazo = Q.agora() + TEMPO_ASSOC; enviarEstado();
     let seg = 99;
     const relo = setInterval(() => {
-      const rest = Math.max(0, d.prazo - Date.now()); relogio(rest);
+      const rest = Math.max(0, d.prazo - Q.agora()); relogio(rest);
       const sg = Math.ceil(rest / 1000); if (sg !== seg && sg > 0) { seg = sg; Q.sfx('sfx_tictac'); }
     }, 100);
     await aguardar(TEMPO_ASSOC, () => { const on = js.filter(online); return on.length > 0 && on.every((j) => d.terminou.includes(j.pid)); });
@@ -715,12 +747,12 @@
     await diz(T('pergunta_de_dez', r)); if (!vivo()) return;
     await diz(F.pergunta(q)); if (!vivo()) return;
 
-    inicioPergunta = Date.now(); d.aberta = true; d.prazo = inicioPergunta + Q.TEMPO_RESPOSTA;
+    inicioPergunta = Q.agora(); d.aberta = true; d.prazo = inicioPergunta + Q.TEMPO_RESPOSTA;
     d.q.ops = q.ops; // as opções só chegam ao celular quando o relógio começa
     enviarEstado();
     let seg = 99, avisou = false;
     const relo = setInterval(() => {
-      const rest = Math.max(0, d.prazo - Date.now()); relogioPergunta(rest);
+      const rest = Math.max(0, d.prazo - Q.agora()); relogioPergunta(rest);
       const s = Math.ceil(rest / 1000);
       if (s !== seg && s > 0) { seg = s; Q.sfx('sfx_tictac'); }
       if (!avisou && rest <= 5000 && rest > 0) { avisou = true; falaVoz(reacao('tempo')); }
@@ -749,7 +781,7 @@
     figs.forEach((f) => { const b = f.querySelector('.bolha'); if (b) b.style.display = 'none'; });
 
     // 0–0,8 s respostas aparecem · 1–2,8 s corrida · espera · a certa acende
-    setTimeout(() => { if (vivo()) Q.sfx('sfx_correr'); }, 1000);
+    espera(1000).then(() => { if (vivo()) Q.sfx('sfx_correr'); });
     const vamos = espera(1000).then(() => vivo() && diz(T('rev_vamos')));
     await animar(2.9, (t) => {
       const tx = cl(t / 0.8), run = cl((t - 1) / 1.8), e = ease(run), correndo = run > 0 && run < 1;
@@ -778,9 +810,9 @@
     js.forEach((j, i) => { figs[i].querySelector('.nometag').style.background = acertou(j) ? '#6CC24A' : '#FFFFFF'; Q.acao(figs[i], acertou(j) ? 'comemora' : respostas[j.pid] ? 'triste' : 'perdido'); });
     Q.sfx(js.some(acertou) ? 'sfx_certo' : 'sfx_errado');
     let parar = false;
-    const t0 = performance.now();
+    const t0 = Q.agora();
     (function festa() {
-      const t = (performance.now() - t0) / 1000;
+      const t = (Q.agora() - t0) / 1000;
       blocos[certa].style.transform = `scale(${(1.04 + 0.02 * Math.sin(t * 8)).toFixed(3)})`;
       js.forEach((j, i) => {
         const f = figs[i]; let y = 20, sx = 1, sy = 1, rot = 0, op = 1;
@@ -1094,7 +1126,7 @@
     if (!desemp) { await diz(F.pergunta(q)); if (!vivo()) return null; }
     cartao({ cab, cabCor: desemp ? '#E0412F' : '#4A5878', texto: Q.esc(q.texto) });
 
-    inicioPergunta = Date.now(); d.aberta = true; d.prazo = inicioPergunta + Q.TEMPO_RESPOSTA; d.q.ops = q.ops;
+    inicioPergunta = Q.agora(); d.aberta = true; d.prazo = inicioPergunta + Q.TEMPO_RESPOSTA; d.q.ops = q.ops;
     enviarEstado();
     let seg = 99, avisou = false;
     const marca = () => posicionar((i, j) => Object.assign(fadeDesemp(i, j), nomeDesemp(j, ponto(i, j.deg)[0]), {
@@ -1102,7 +1134,7 @@
       topo: (desemp && joga(j) ? `<span class="chip-pir" style="font-size:26px;padding:4px 14px">${Q.esc(j.nome)}</span>` : '') + (respostas[j.pid] ? '<span class="exclama" aria-label="respondeu">!</span>' : '') }));
     marca();
     const relo = setInterval(() => {
-      const rest = Math.max(0, d.prazo - Date.now()), sg = Math.ceil(rest / 1000);
+      const rest = Math.max(0, d.prazo - Q.agora()), sg = Math.ceil(rest / 1000);
       relogioPir(rest / Q.TEMPO_RESPOSTA, sg);
       if (sg !== seg && sg > 0) { seg = sg; Q.sfx('sfx_tictac'); }
       if (!avisou && rest <= 5000 && rest > 0) { avisou = true; falaVoz(reacao('tempo')); }
@@ -1236,12 +1268,12 @@
   function confete(on) {
     confAtivo = on; const box = $('confete');
     if (!on) { box.innerHTML = ''; return; }
-    const cores = ['#F2545B', '#FFD23F', '#4F8DF7', '#6CC24A', '#FF7A59', '#B98CF2'], t0 = performance.now();
+    const cores = ['#F2545B', '#FFD23F', '#4F8DF7', '#6CC24A', '#FF7A59', '#B98CF2'], t0 = Q.agora();
     box.innerHTML = Array.from({ length: 70 }, () => '<span></span>').join('');
     const sp = [...box.children];
     (function anda() {
       if (!confAtivo) return;
-      const t = (performance.now() - t0) / 1000;
+      const t = (Q.agora() - t0) / 1000;
       sp.forEach((el, i) => {
         const s = Math.sin(i * 12.9898) * 43758.5453, r1 = s - Math.floor(s), s2 = Math.sin(i * 78.233) * 12345.678, r2 = s2 - Math.floor(s2);
         const vel = 180 + r2 * 160, per = 1300 / vel, a = (t + r1 * per) % per, y = -40 + a * vel;
@@ -1307,10 +1339,10 @@
     $('trofeu').style.transform = 'scale(0)';
     const imgs = [...$('podChars').querySelectorAll('.rig, img')];
     let vivoPod = true;
-    const t0 = performance.now();
+    const t0 = Q.agora();
     (function festa() {
       if (!vivoPod || estado.fase !== 'fim') return;
-      const t = (performance.now() - t0) / 1000;
+      const t = (Q.agora() - t0) / 1000;
       document.querySelector('#podio .raios').style.transform = `rotate(${(t * 12).toFixed(1)}deg) scale(${cl(t / 0.6).toFixed(2)})`;
       $('podTit').style.transform = `scale(${t < 0.5 ? out(cl((t - 0.1) / 0.4)).toFixed(2) : 1})`;
       imgs.forEach((im, k) => { const f = k === 0 ? Math.abs(Math.sin(t * 6)) * 24 : k < 3 ? Math.abs(Math.sin(t * 5 + k)) * 12 : Math.abs(Math.sin(t * 8 + k * 1.3)) * 8; im.style.transform = `translateY(${-f}px)`; });

@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/base.css?v=202611281227">
+<link rel="stylesheet" href="css/base.css?v=202611281502">
 <style>
 /* O palco tem 1920×1080 e é escalado para caber em qualquer TV ou monitor */
 #palco{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;
@@ -250,10 +250,20 @@
 /* Aviso de configuração e conexão */
 #aviso{position:absolute;left:50%;top:40px;transform:translateX(-50%);z-index:9;font-size:22px;font-weight:900;border-radius:999px;padding:10px 22px;background:var(--vermelho);color:#fff}
 svg.rig{display:block;width:auto;flex:none}
+#bPausa{position:absolute;right:28px;bottom:28px;width:72px;height:72px;border:0;border-radius:50%;background:rgba(29,42,77,.82);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3000;box-shadow:0 5px 0 rgba(14,22,48,.6);transition:transform .15s,background .15s}
+#bPausa:hover{transform:scale(1.08);background:#1D2A4D}
+#pausaTela{position:absolute;inset:0;z-index:2990;background:rgba(239,246,255,.72);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;cursor:pointer}
+#pausaTela .caixa{display:flex;flex-direction:column;align-items:center;gap:14px;font-family:Fredoka,sans-serif;color:#1D2A4D}
+#pausaTela .icone{width:200px;height:200px;border-radius:50%;background:#1D2A4D;color:#fff;display:flex;align-items:center;justify-content:center;padding-left:14px;box-shadow:0 10px 0 #0E1630}
+#pausaTela b{font-size:84px;font-weight:700}
+#pausaTela span{font-family:Nunito,sans-serif;font-weight:800;font-size:32px;color:#4A5878}
+body.pausado *,body.pausado *::before,body.pausado *::after{animation-play-state:paused!important}
 </style>
 </head>
 <body>
 <div id="palco">
+    <button id="bPausa" class="oculto" type="button" aria-label="Pausar"></button>
+    <div id="pausaTela" class="oculto"><div class="caixa"><div class="icone"><svg viewBox="0 0 24 24" width="110" height="110" aria-hidden="true"><path d="M8 4.8v14.4a1 1 0 0 0 1.5.86l11.2-7.2a1 1 0 0 0 0-1.72L9.5 3.94A1 1 0 0 0 8 4.8z" fill="currentColor"/></svg></div><b>Jogo pausado</b><span>Clique aqui ou aperte a barra de espaço para continuar</span></div></div>
     <svg id="luzes" width="1920" height="150" viewBox="0 0 1920 150" style="position:absolute;left:0;top:0" aria-hidden="true">
     <defs><filter id="brilho" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="9"/></filter></defs>
     <path d="M-20 18 Q960 96 1940 18" stroke="#3E4A66" stroke-width="3.5" fill="none"/>
@@ -527,16 +537,16 @@ svg.rig{display:block;width:auto;flex:none}
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
-<script src="js/config.js?v=202611281227"></script>
-<script src="js/comum.js?v=202611281227"></script>
-<script src="js/perguntas.js?v=202611281227"></script>
-<script src="js/associacao.js?v=202611281227"></script>
-<script src="js/piramide-pos.js?v=202611281227"></script>
-<script src="js/inuteis.js?v=202611281227"></script>
-<script src="js/rig-dados.js?v=202611281227"></script>
-<script src="js/rig.js?v=202611281227"></script>
-<script src="js/coruja.js?v=202611281227"></script>
-<script src="js/falas.js?v=202611281227"></script>
-<script src="js/tv.js?v=202611281227"></script>
+<script src="js/config.js?v=202611281502"></script>
+<script src="js/comum.js?v=202611281502"></script>
+<script src="js/perguntas.js?v=202611281502"></script>
+<script src="js/associacao.js?v=202611281502"></script>
+<script src="js/piramide-pos.js?v=202611281502"></script>
+<script src="js/inuteis.js?v=202611281502"></script>
+<script src="js/rig-dados.js?v=202611281502"></script>
+<script src="js/rig.js?v=202611281502"></script>
+<script src="js/coruja.js?v=202611281502"></script>
+<script src="js/falas.js?v=202611281502"></script>
+<script src="js/tv.js?v=202611281502"></script>
 </body>
 </html>

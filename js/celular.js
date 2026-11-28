@@ -89,6 +89,8 @@
     if (!ultimo && !eu) { rede.enviar('entrar', { pid, nome: ler('nome') }); }
     const anterior = ultimo;
     ultimo = m;
+    // TV pausou: tela de pausa por cima de tudo e relógio parado
+    congelado = !!m.pausado; $('pausaCel').classList.toggle('oculto', !congelado);
     if (!eu) return;
     // Voltou do fim de jogo para a sala: mostra os personagens de novo, com o atual marcado
     if (m.fase === 'sala' && anterior && anterior.fase === 'fim') escolhendoDeNovo = true;
@@ -175,8 +177,9 @@
     relEl = el; relR = r; relCor = cor; totalRel = total;
     prazoLocal = d && d.restante ? Date.now() + d.restante : 0;
   }
-  let ultimoSeg = -1;
+  let ultimoSeg = -1, congelado = false;
   (function anima() {
+    if (congelado) { requestAnimationFrame(anima); return; }
     if ($('poderSel') && !$('poderSel').classList.contains('oculto') && prazoLocal) $('pwSeg').textContent = Math.ceil(Math.max(0, prazoLocal - Date.now()) / 1000) + ' s';
     if (relEl && relEl.offsetParent) {
       const rest = prazoLocal ? Math.max(0, prazoLocal - Date.now()) : totalRel;
